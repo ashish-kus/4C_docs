@@ -1,0 +1,829 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C Panels</title><link>https://127.0.0.1:8080/docs/features/panels/</link><description>Recent content in 4C Panels on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://127.0.0.1:8080/docs/features/panels/index.xml" rel="self" type="application/rss+xml"/><item><title>4C Panels Change Log</title><link>https://127.0.0.1:8080/docs/features/panels/changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/changes/</guid><description>
+&lt;h2&gt;01 August 2012&lt;span class="hx:absolute hx:-mt-20" id="01-august-2012"&gt;&lt;/span&gt;
+&lt;a href="#01-august-2012" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.2.3 and higher&lt;/p&gt;
+&lt;h2&gt;01 May 2007&lt;span class="hx:absolute hx:-mt-20" id="01-may-2007"&gt;&lt;/span&gt;
+&lt;a href="#01-may-2007" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.4 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Panel Screen painter will show margins for List and ListView panels.&lt;/li&gt;
+&lt;li&gt;Panels can have a background color.&lt;/li&gt;
+&lt;li&gt;Panels can have a background image. See: &lt;a href="https://127.0.0.1:8080/docs/features/simages/"&gt;Using Screen Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;You can specify margin widths and heights and spacing in units of Pixels, Points, Inches, Millimeters, or DialogUnits.&lt;/li&gt;
+&lt;li&gt;You can specify a MinWidth, MinHeight, PrefWidth, and PrefHeight for a panel in units of Pixels, Points, Inches, Millimeters, or DialogUnits. This is useful for panels that have no children and are used only for displaying a background image.&lt;/li&gt;
+&lt;li&gt;Non leaf panels do not have to have child panels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;28 May 2006&lt;span class="hx:absolute hx:-mt-20" id="28-may-2006"&gt;&lt;/span&gt;
+&lt;a href="#28-may-2006" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.0 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;inplist and sellist sdftypes will use an extra space for displaying the dropdown arrow. This will be most noticeable in Form panels with very narrow dropdown lists. You can override this by specifying the ncols attribute.&lt;/li&gt;
+&lt;li&gt;The wpnlsp program will allow you to Align and Stretch dfields easily. This is most useful in Form panels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;01 May 2006&lt;span class="hx:absolute hx:-mt-20" id="01-may-2006"&gt;&lt;/span&gt;
+&lt;a href="#01-may-2006" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.0 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you define a &amp;ldquo;fixed&amp;rdquo; font class in your font def file, form children will use this instead of list in the paint mode. It will look for it first under &amp;ldquo;tiny&amp;rdquo;, then &amp;ldquo;small&amp;rdquo;, then &amp;ldquo;default&amp;rdquo;. If not found, then it will still use the &amp;ldquo;list&amp;rdquo; font when drawing on the form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;09 April 2006&lt;span class="hx:absolute hx:-mt-20" id="09-april-2006"&gt;&lt;/span&gt;
+&lt;a href="#09-april-2006" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.0 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Specifying a title, frame, and margins for a TabFolder panel will work.&lt;/li&gt;
+&lt;li&gt;You can specify a grabw or grabh value &amp;lt; 0 to prevent the subpanel from ever getting any of the extra available width and height.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;09 October 2005&lt;span class="hx:absolute hx:-mt-20" id="09-october-2005"&gt;&lt;/span&gt;
+&lt;a href="#09-october-2005" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The status area of the panel screen painter shows more display field info.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;12 September 2005&lt;span class="hx:absolute hx:-mt-20" id="12-september-2005"&gt;&lt;/span&gt;
+&lt;a href="#12-september-2005" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ctrl+shift+arrowkey&amp;gt;&lt;/code&gt; allows you to increase or decrease the ncols or nrows attribute of dfields.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;29 December 2003&lt;span class="hx:absolute hx:-mt-20" id="29-december-2003"&gt;&lt;/span&gt;
+&lt;a href="#29-december-2003" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;There is a new field in sys.pnl_hdr, sys.pnh_adjspcng, that is used to specify the percent of extra space that should be used for spacing in HRowCol and VRowCol panels.&lt;/li&gt;
+&lt;li&gt;For non-leaf panels, any extra space not explicitly constrained by the panel definition will be given to the children panels.&lt;/li&gt;
+&lt;li&gt;For leaf panels, any extra space adjustment not explicitly set in the panel specification will be given to the right and bottom margins.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HRowCol and VRowCol panels may be affected by the
+above changes, since the default was to give extra
+height in a VRowCol, and extra width in an HRowCol
+to spacing.
+Now, you need to explicitly set sys.pnh_adjspcng
+field when you need the extra height in a VRowCol or
+the extra width in an HRowCol to get used by spacing.&lt;/p&gt;
+&lt;p&gt;This can be set either through the bootstraps,
+or by using the PanelSP.&lt;/p&gt;
+&lt;h2&gt;28 December 2003&lt;span class="hx:absolute hx:-mt-20" id="28-december-2003"&gt;&lt;/span&gt;
+&lt;a href="#28-december-2003" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The PanelSP will show a thin line around panels that don&amp;rsquo;t have a frame in the Canvas view for the program. This will make it easier to see where you may want to insert new panels and dfields. There is a menu option, ShowPanels, in the File menu that allows for toggling this feature on a per program basis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class="hx:absolute hx:-mt-20" id="additional-notes"&gt;&lt;/span&gt;
+&lt;a href="#additional-notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;as long as both client&lt;/p&gt;
+&lt;p&gt;at least 5.2.3&lt;/p&gt;</description></item><item><title>Panels - Issues/Bugs</title><link>https://127.0.0.1:8080/docs/features/panels/issues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/issues/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;When using option panels, if the user navigates from an dfield in an option panel to the main scrolling panel, the timing can be unpredictable and the end field PCL may not always get executed. The best workaround for this is to desing you option panels so that the end field pcl is not the only way that a dfield is verifyied. You can use the VerifyPCL instead and you can also use an &amp;ldquo;Apply&amp;rdquo; cmdbtn that verifies the data as well as applies any changes made in the option panel. When users see the &amp;ldquo;Apply&amp;rdquo; cmdbtn they will know that they need to click it in order for their changes to be applied.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Option Panels</title><link>https://127.0.0.1:8080/docs/features/panels/optpanels/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/optpanels/</guid><description>
+&lt;h2&gt;Updated - 02 April 2020&lt;span class="hx:absolute hx:-mt-20" id="updated---02-april-2020"&gt;&lt;/span&gt;
+&lt;a href="#updated---02-april-2020" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;An option panel is a panel that can be processed outside of normal
+4C fld loop processing. An option panel can accept input even when input
+would not normally be allowed in the MainFldLp.
+When an option panel has the focus, traversal between fields stays inside
+of the option panel until focus is changed by the user or the application.
+There is no StartFldLp or EndFldLp processing within an option panel.
+When focus is outside of any option panel, field traversal is between all fields
+that are not in any option panel of the program.
+The StartFldLp and EndFldLp processing is always done when inside of
+this MainFldLp.
+Each option panel and the MainFldLp each maintain their own fld loop,
+but only the MainFldLp ever processes the StartFldLp PCL and EndFldLp PCL.&lt;/p&gt;
+&lt;p&gt;There are several scenarios that benefit from using option panels.
+Some of them are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use an option panel instead of a starter screen for scrolling screens. This lessens program clutter and obviates the need of having to pass lots of parameters or to share fields between a starter screen and a detail screen. When used this way, you will normally specify the option panel as an &amp;ldquo;Initial&amp;rdquo; option panel so that the user has a chance to enter search criteria before the program driver runs for the first time. You may also specify &amp;ldquo;Restart on Main Exit&amp;rdquo; if you want the option panel to run when the program would normally exit. The program search screen is set up like this now if you are connected to a 5.2 or later server with a 5.2 or later client. Notice that you do not need to exit the search details in order to reenter the search criteria.&lt;/li&gt;
+&lt;li&gt;For a scrolling screen where you might want to allow modifying a lot of options at once, define an option panel with the options and an apply button. When the user clicks the apply button, process all the selected rcds and apply the options.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some of the attributes that you can specify for option panels are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Initial Panel&amp;rdquo; - Only one option panel can have this attribute and it causes the option panel to run before the MainFldLoop. It is useful for inputting search criteria.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Restart On Main Exit&amp;rdquo; - Only an Initial option panel can have this attribute and it causes the program to restart at the Restart State. Neither the Init PCL nor the Open PCL will run, but the Start/Restart PCL will run every time this Initial option panel is restarted.&lt;/li&gt;
+&lt;li&gt;All option panels can be traversed to in Lookup mode, but you can specify whether they are enabled during Add, Modify, and Delete mode as well.&lt;/li&gt;
+&lt;li&gt;You can specify whether option panels that cannot be traversed to should be displayed normally, disabled, or hidden.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are some restrictions on option panels including&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No scrolling list of any type, other then a DFList DpyField, can be in an option panel. That means that you cannot use option panels to allow more than one scrolling list or listview for any program. Sorry. DFLists are allowed though.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are several ways to give the focus to an option panel&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the option panel is specified as &amp;ldquo;Initial&amp;rdquo; then it receives focus before the MainFldLoop and immediately after running the Start/Restart PCL for the first time.&lt;/li&gt;
+&lt;li&gt;If the option panel is specified as &amp;ldquo;Restart on Main Exit&amp;rdquo;, then when you exit the main program, then the Start/RestarPCL will be run again and the initial option panel gets the focus again.&lt;/li&gt;
+&lt;li&gt;The following FNKeys traverse between enabled option panels and the MainFldLp &lt;code&gt;&amp;lt;optiontabnext&amp;gt;&lt;/code&gt; - &lt;code&gt;&amp;lt;Alt&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt; - moves forward to the next option panel or MainFldLp and wraps if necessary. &lt;code&gt;&amp;lt;optiontabprev&amp;gt;&lt;/code&gt; - &lt;code&gt;&amp;lt;Alt&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;LeftArrow&amp;gt;&lt;/code&gt; - moves backward to the previous option panel or MainFldLp and wraps if necessary. &lt;code&gt;&amp;lt;optiontabhome&amp;gt;&lt;/code&gt; - &lt;code&gt;&amp;lt;Alt&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Home&amp;gt;&lt;/code&gt; - returns to the MainFldLoop You can use the mouse to move between option panels and the MainFldLp Pressing &lt;code&gt;&amp;lt;cancel&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;accept&amp;gt;&lt;/code&gt; inside of an option panel exits that panel and returns control to the MainFldLp unless the option panel is being processed as an Initial panel. In that case, &lt;code&gt;&amp;lt;cancel&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;accept&amp;gt;&lt;/code&gt; on the first input field will exit the program while &lt;code&gt;&amp;lt;cancel&amp;gt;&lt;/code&gt; on any other field will return to the first input field of the initial option panel and &lt;code&gt;&amp;lt;accept&amp;gt;&lt;/code&gt; on any field in an initial option panel other than the first will exit the initial option panel and start processing the MainFldLp.&lt;/li&gt;
+&lt;li&gt;The application can also choose to explicitly go to an option panel using one of the following methods sys.run_fldloop(&lt;code&gt;&amp;lt;fldidx&amp;gt;&lt;/code&gt; - If &lt;code&gt;&amp;lt;fldidx&amp;gt;&lt;/code&gt; is in a different FldLoop than the current FldLoop, this will switch to that FldLoop and continue processing where that FldLoop was last. If &lt;code&gt;&amp;lt;fldidx&amp;gt;&lt;/code&gt; is part of the current FldLoop, then it does nothing and returns -1. If the current input is a display field and not a scrolling list, then sys.exit_field(&lt;code&gt;&amp;lt;fldno&amp;gt;&lt;/code&gt;) will navigate to that field. call sys.stack_fkey(&amp;ldquo;optiontabhome&amp;rdquo; | &amp;ldquo;optiontabnext&amp;rdquo; | &amp;ldquo;optiontabprev&amp;rdquo;) call sys.exit_fldloop() to force return to the main fld loop.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When you use an Initial option panel with a scrolling program,
+you will normally enter the main fld loop
+processing by executing code similar to the following:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;if (sys.get_fltype()==FLTYPE_INIT)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sys.exit_fldloop();
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;else
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sys.dr_restart(`&amp;lt;asfile&amp;gt;`,DR_CLEAR);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;sys.get_fltype() will only return FLTYPE_INIT if the option panel is the
+Initial option panel and that option panelfld loop was started automatically
+by 4C following the Start/Restart PCL.
+If that option panel is traversed to via the mouse or keyboard then it is not
+running as an Initial Option panel and sys.get_fltype() will return
+FLTYPE_OPTION.&lt;/p&gt;
+&lt;p&gt;If the Initial Option panel is set to rerun on exit of the main fld loop,
+then it may be necessary to reset some variables either to their original
+shared in value or some other value.
+The following PCLs may be useful for this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/restoreshare/"&gt;sys.restore_share()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/flrestore/"&gt;sys.fl_restore()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/flsave/"&gt;sys.fl_save()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/getsaveval/"&gt;sys.get_saveval()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Code similar to the following might be useful in the Start/Restart PCL&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;if (firsttimef!=&amp;#39;y&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sys.restore_share(`&amp;lt;asfile&amp;gt;`);
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;else
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;firsttimef = &amp;#39;n&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;See Also&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/optpusage/"&gt;Typical Option Panel Usage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Typical Option Panel Usage</title><link>https://127.0.0.1:8080/docs/features/panels/optpusage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/optpusage/</guid><description>
+&lt;h2&gt;Updated - 04 August 2016&lt;span class="hx:absolute hx:-mt-20" id="updated---04-august-2016"&gt;&lt;/span&gt;
+&lt;a href="#updated---04-august-2016" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are different several different scenarios where using optiona panels
+increase the usability of the application.
+Some of them along with best practive guidelines are outlined here.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Search Programs&lt;span class="hx:absolute hx:-mt-20" id="search-programs"&gt;&lt;/span&gt;
+&lt;a href="#search-programs" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A search program that needs to allow the user to specify some search
+parameters before displaying the list of matching items should use an
+initial option panel to input the search parameters.
+Best practices for search programs are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set the Initial Option Panel to restart on exit. This allows the user to cancel from the list and input different search parameters without having to use the mouse.&lt;/li&gt;
+&lt;li&gt;Use a &amp;ldquo;Refresh&amp;rdquo; cmd btn as well as the &lt;code&gt;&amp;lt;user1&amp;gt;&lt;/code&gt; fkey and a context menu item to refresh the main panel. The &amp;ldquo;refresh&amp;rdquo; PCL will have code similar to the following. &lt;code&gt;if (sys.get_fltype()==FLTYPE_INIT) sys.exit_fldloop(); else sys.dr_restart(sys.program,DR_CLEAR);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Use a &amp;ldquo;restart&amp;rdquo; PCL to reset the initial passed in values to the program to their initial values. The code to use is &lt;code&gt;sys.restore_share(&lt;/code&gt;&lt;flname&gt;&lt;code&gt;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Use multiple context menus so that the same fkey can be used differently in the Initial Option panel fld loop and the Main field loop. Use the Option Panel Changed PCL to set the conext menu correctly. The code to use is &lt;code&gt;if (sys.get_fltype()==FLTYPE_INIT) sys.set_cmenu(CMINIT); else { if (sys.get_fltype()==FLTYPE_DRIVER) sys.set_cmenu(CMMAIN); else sys.set_cmenu(CMINIT); /* Not acting as the init panel */ }&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make the default SPC &lt;code&gt;&amp;lt;accept&amp;gt;&lt;/code&gt; and catch the &lt;code&gt;&amp;lt;accept&amp;gt;&lt;/code&gt; key and exit the program with code 0 when caught.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Examples of search programs that follow the above guidelines&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sys.pr.srch.1 - Program name search in the 4cSys application, called from many places, including the main development starter program, sys.prog.mstr.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See Also&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/optpanels/"&gt;4C Option Panels&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Screen Panels Intro</title><link>https://127.0.0.1:8080/docs/features/panels/panels/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/panels/</guid><description>
+&lt;h2&gt;29 September 2003&lt;span class="hx:absolute hx:-mt-20" id="29-september-2003"&gt;&lt;/span&gt;
+&lt;a href="#29-september-2003" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Starting with version 3.7.4, 4C will allow you to divide
+a screen program into panels.
+Both the server and client need to be at or above this release level.
+There are no known issues of connecting the newer client
+to an older server,
+however, even though older clients can connect to newer
+servers they will crash if they try to run any panel programs.
+Panels do not affect the logical processing of 4C, although
+there are some places this could change.
+(See the Unresolved Issues section.)
+4C will still process each display field individually and in the
+order the fields are defined in sys.dpy_field.&lt;/p&gt;
+&lt;p&gt;A panel is an area of the screen that can contain
+other panels (subpanels) or display fields.
+Panels can have titles and margins.
+Panels manage the layout of their children, whether they are
+other panels or display fields.
+One panel can not contain both subpanels and display fields.
+Panels work very much like screen layouts and have similar
+types.
+If you understand 4C Screen Layouts you will have no trouble
+understanding 4C Screen Panels.
+The main difference is that Screen Layouts
+manage the layout of multiple 4C screen programs, while panels
+manage the layout of subpanels and of display fields within
+a single 4C program.&lt;/p&gt;
+&lt;p&gt;Some advantages of using panels in screen programs are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can create better looking GUIs.&lt;/li&gt;
+&lt;li&gt;Adding fields to the GUI later will be easier.&lt;/li&gt;
+&lt;li&gt;You have more control over the way the GUI acts when resized.&lt;/li&gt;
+&lt;li&gt;There is a screen painter that works with panels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Panel Types&lt;span class="hx:absolute hx:-mt-20" id="panel-types"&gt;&lt;/span&gt;
+&lt;a href="#panel-types" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The types of panels that 4C allows and how they
+layout their children follow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HRowCol - This panel arranges it&amp;rsquo;s children in a row from left to right.&lt;/li&gt;
+&lt;li&gt;VRowCol - This panel arranges it&amp;rsquo;s children in a column from top to bottom.&lt;/li&gt;
+&lt;li&gt;Single - Can only contain one child.&lt;/li&gt;
+&lt;li&gt;TabFolder - Each child is a separate tab in the TabFolder.&lt;/li&gt;
+&lt;li&gt;Form - Similar to the current DataEntry screen class. Children, which must be display fields are arranged in a form using sys.df_row and sys.df_col to figure out placement. Rows and cols in a Form are relative to that Form only and do not affect any other panels. The first row and the first col used do not need to be 1.&lt;/li&gt;
+&lt;li&gt;Grid - Similar to the Overlay layout type. All children must be other panels. Each child, which must be a subpanel specifies it&amp;rsquo;s size and position as a percent of what&amp;rsquo;s available.&lt;/li&gt;
+&lt;li&gt;Overlay - Almost the same as a TabFolder panel, without the tabs. Only one child of an Overlay is visible at a time and it takes all of the space that the Overlay panel allows.&lt;/li&gt;
+&lt;li&gt;List - Similar to the current SrollList screen class. Children must be display fields and can be part of the header or the detail of the List. Like Form, List children also use sys.df_row and sys.df_col to indicate position.&lt;/li&gt;
+&lt;li&gt;ListView - New (to 4C) A ListView arranges it&amp;rsquo;s children, which must be display fields, in a list with optional sorting column headers. You can resize the columns in the list.&lt;/li&gt;
+&lt;li&gt;HSplitPane - Like an HRowCol except there is a slider between panels.&lt;/li&gt;
+&lt;li&gt;VSplitPane - Like a VRowCol except there is a slider between panels.&lt;/li&gt;
+&lt;li&gt;Title - This is a special panel type that can only have display field children. Fields in the Title panel show up in the title bar. Whether or not they actually show up depend on how the layout used specifies the title.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Panel Attributes&lt;span class="hx:absolute hx:-mt-20" id="panel-attributes"&gt;&lt;/span&gt;
+&lt;a href="#panel-attributes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are a lot of different attributes that you can
+specify along with the panel type.
+Not all attributes are used by all panel types.
+Some attributes that you can define are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Title - Text to display at the top of the panel. If the panel has a frame, then the title straddles the frame.&lt;/li&gt;
+&lt;li&gt;FrameType - Etched, Raised, or None&lt;/li&gt;
+&lt;li&gt;MarginHeight - How much space in pixels should be reserved for top and bottom margins.&lt;/li&gt;
+&lt;li&gt;MarginWidth - How much space in pixels should be reserved for left and right margins.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Panel sttributes that determine what to do with extra space
+all work with percentages.
+They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AdjustChildrenWidth - The percentage of extra width to give to children. The children determine what to do with the extra width.&lt;/li&gt;
+&lt;li&gt;AdjustChildrenHeight - The percentage of extra height to give to children. The children determine what to do with the extra height.&lt;/li&gt;
+&lt;li&gt;AdjustLeft - the pct of extra width to give to the left margin.&lt;/li&gt;
+&lt;li&gt;AdjustRight - the pct of extra width to give to the right margin&lt;/li&gt;
+&lt;li&gt;AdjustTop - the pct of extra height to give to the top margin&lt;/li&gt;
+&lt;li&gt;AdjustBottom - the pct of extra height to give to the bottom margin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Even though there are reasonable defaults used if none of these
+values are specified it is a good idea to specify them when
+you define a panel and to test what happens to your panels when they
+resize.&lt;/p&gt;
+&lt;p&gt;Some attributes affect only HRowCol and VRowCol panels.
+They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spacing - The minimum number of pixels to use to separate children. When extra space is available and not used by children or margins, it will end up here.&lt;/li&gt;
+&lt;li&gt;EqualWidth - Whether children should be equal width. Less wide children will be stretched. An example where you might want to use this is in a VRowCol with all cmdbtn children. EqualWidth is also used by VSplitPane panels.&lt;/li&gt;
+&lt;li&gt;EqualHeight - Whether children should be equal height. Less tall children will be stretched. EqualHeight is also used by HSplitPane panels.&lt;/li&gt;
+&lt;li&gt;DrawSep - Draw a separator between children.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The attributes that affect only Grid panels are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GridWidth&lt;/li&gt;
+&lt;li&gt;GridHeight&lt;/li&gt;
+&lt;li&gt;GridXPos&lt;/li&gt;
+&lt;li&gt;GridYPos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are 2 attributes that allow children to grab more of the
+extra space available than their siblings.
+These are used when the parent panel is an HRowCol/HSplitPane
+or a VRowCol/VSplitPane.
+Both are percentages of total extra space available.
+They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GrabWidth - Percentage of extra width that this child will grab when extra width is available. Use this when the parent panel is an HRowCol or HSplitPane.&lt;/li&gt;
+&lt;li&gt;GrabHeight - Percentage of extra height that this child will grab when extra height is available. Use this when the parent panel is a VRowCol or VSplitPane.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you specify a ngative number for either GrabWidth or GrabHeight,
+then that subpanel will not get any of the extra space even if
+the other sibling panels grab less than 100 % total.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Defining Panels&lt;span class="hx:absolute hx:-mt-20" id="defining-panels"&gt;&lt;/span&gt;
+&lt;a href="#defining-panels" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are 2 ways to define panels in 4C.
+The first method is using 4C bootstrap programs.
+The other method is to use the windows panel screen painter
+client program,
+&lt;a href="https://www.4csoftware.com/docs/Features/Clients/wpnlsp.html"target="_blank" rel="noopener"&gt;wpnlsp.&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;
+Both methods make use of two new bootstrap files.
+Understanding these files is important in understanding
+the way panels work.
+They new files are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sys.pnl_hdr - defines main attributes of the panels.&lt;/li&gt;
+&lt;li&gt;sys.pnl_det - defines a panels subpanels and how the subpanels are arranged.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition to the 2 new files, there are also 2 new fields
+in sys.dpy_field that are used by panel programs.
+The two fields are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sys.df_pnlname - The name of the panel that this field belongs to.&lt;/li&gt;
+&lt;li&gt;sys.df_pnlseq - The order of this field in the panel. sys.df_pnlseq is not used by Form or List panels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All panels have details.
+The details can be either other panels or they can be display
+fields.&lt;/p&gt;
+&lt;p&gt;One panel cannot have both subpanel and display field details.
+A panel that has display field details is said to be a leaf panel.&lt;/p&gt;
+&lt;p&gt;All display fields must be in a panel.&lt;/p&gt;
+&lt;p&gt;There are several steps involved in making a screen program a
+screen panel program.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set the program class to &amp;ldquo;Panel&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;From the Program characteristics screen, use the context menu to access panel definitions.&lt;/li&gt;
+&lt;li&gt;In the panel definition screen add the desired panels.&lt;/li&gt;
+&lt;li&gt;For each panel add the details for that panel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are currently 2 special panel names, &amp;ldquo;Root&amp;rdquo; and &amp;ldquo;Title&amp;rdquo;.
+Every panel program must have one Root panel.
+This panel can be a leaf or a non leaf panel.
+The Title panel is necessary only if you have display fields
+that you want in the title bar.&lt;/p&gt;
+&lt;p&gt;Every display field needs to belong to one and only one panel.
+As you add display fields to a panel program you need to assign
+them to a panel.
+You can do this as you define the display field, or you
+can do it later using the panel definition screens or with wpnlsp.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Miscellaneous&lt;span class="hx:absolute hx:-mt-20" id="miscellaneous"&gt;&lt;/span&gt;
+&lt;a href="#miscellaneous" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;One additional 4C feature makes using Panels easier.
+Display fields can have either a top label or a side label
+associated with them.
+You can define defaults for these labels in the data dictionary.
+If defaults are defined, then simply selecting top or side
+as a label type will set a default label.
+Scrolldet and lvitem display fields can only have top labels.
+Using display field labels greatly reduces the clutter
+in the display field definition screen.&lt;/p&gt;
+&lt;p&gt;In order to use ListViews, you need to have an lvitem defined
+in the s_dftype file.
+Copy from the system directory if necessary.&lt;/p&gt;
+&lt;p&gt;There are several new font classes that can be added
+to the 4csfont.def file that affect panels.
+Look at the entries in the default one in HOME_4C/lib
+to see what is new.&lt;/p&gt;
+&lt;p&gt;If you have bootstrap file definitions in your application
+directory make sure you update them from the system directory.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Examples&lt;span class="hx:absolute hx:-mt-20" id="examples"&gt;&lt;/span&gt;
+&lt;a href="#examples" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Before writing your own panel programs,
+it may be helpful to see a few in action.
+There are a bunch of examples currently in the 4cSys
+application directory.
+Some of these are just dumb programs that I have been playing with
+to test different features.
+Some however are real programs.
+Some of the more interesting ones are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;demo.hrc.1 - This is a copy of sys.pr.paste.exp except it does not update any files. This program doesn&amp;rsquo;t really do anything, but it shows several VRowCol and HRowCol panels working together. The Root panel is a VRowCol with 3 HRowCol subpanels. The 3 HRowCol subpanels are hrc1, hrc2, and cmdhrc. hrc1 has 2 subpanels, vrc1-1 and vrc1-2. hrc2 has 2 subpanels, specpnl and optpnl. specpnl is another HRowCol with 2 subpanels, specvrc and speccmdvrc. Run this program to see the results. Resize it and see how the panels act. Use the bootstraps to view the panel definitions in this program. Look at the details for each defined panel. Try changing some of the panel attributes and see how this affects the display. Look at the display field definitions for this program and notice that there are no literals defined as fields that are used as labels. Every display field that needs a label has the label defined as part of the display field. Try some of the other programs in the demo mod. Not all are panel programs though.&lt;/li&gt;
+&lt;li&gt;sys.prog.mstr - This is the main program development screen. Not complicated, just a little neater and probably fairly easy to follow the panel definitions.&lt;/li&gt;
+&lt;li&gt;sys.prog.maint - This is the program characteristics screen. Quite a bit more complicated because there are lots of nested panels. Notice that what used to be several programs is now combined into one and that similar fields are grouped together in tabs. Notice that even when a panel is hidden, if a field in that panel needs input, the panel will become visible. You can see this simply by pressing return on each field of sys.prog.maint. See also Unresolved Issues below.&lt;/li&gt;
+&lt;li&gt;sys.pf.maint - This is the program file definition screen. It is an HSplitPane with a ListView and some HRowCol and VRowCol panels. Notice that the ListView allows sorting by sequence, filename, and by asfile. The sorting is controlled by the program using command pcls and driver restarts. The HSplitPane allows the Splitter to move and resize the panels to the immediate left and right.&lt;/li&gt;
+&lt;li&gt;sys.df.fm.pnl - This is the display field definition screen you see for any panel program. Hopefully, you&amp;rsquo;ll agree that this is an easier screen to use for adding display fields.&lt;/li&gt;
+&lt;li&gt;sys.pnh.fm - This is the bootstrap program for adding panels. You will probably use the panel screen painter more often than this, but understanding this program may make the panel screen painter more intuitive.&lt;/li&gt;
+&lt;li&gt;sys.pnd.fm - This is the program for adding details to a non leaf panel. You can run it by double clicking on any non leaf panel in sys.pnh.fm.&lt;/li&gt;
+&lt;li&gt;sys.pnldf.sel - This program allows you to select display fields to add to a leaf panel. You can get to it by double clicking a leaf panel in sys.pnh.fm. This program works with sys.pnldf.fm&lt;/li&gt;
+&lt;li&gt;sys.pnldf.fm - This program works along with sys.pnldf.sel and allows you to reorder and delete display fields from a panel. Deleting display fields from a panel does not delete the display fields. It allows them to be used by another panel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Tutorial&lt;span class="hx:absolute hx:-mt-20" id="tutorial"&gt;&lt;/span&gt;
+&lt;a href="#tutorial" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The following will guide you through writing your first
+few panel programs.
+Before you start,
+make sure that you have the current file definitions in the
+application directory you will be using.
+You can set up a demo application directory suitable for this
+purpose by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;isrestoring the HOME_4C/lib/skel.df into a new directory&lt;/li&gt;
+&lt;li&gt;xlexporting the $sys and sys file definitions from the system directory&lt;/li&gt;
+&lt;li&gt;xlimporting them into your directory.&lt;/li&gt;
+&lt;li&gt;adding the application to your _4CSRVRCONFIG file. Make sure you specify sys.menu.tv as the program to run when the application starts.&lt;/li&gt;
+&lt;li&gt;running the application and adding a new category, demo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Follow these steps and you will have your first panel program.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run the 4cclient and connect to your server and application.&lt;/li&gt;
+&lt;li&gt;Select Mod Maintenance and add a new mod. Use demo progs as reason.&lt;/li&gt;
+&lt;li&gt;Select the new mod and then select progs from the context menu.&lt;/li&gt;
+&lt;li&gt;From the mod prog list select prog specs.&lt;/li&gt;
+&lt;li&gt;Add a new program with the name demo.panel.1 and category demo. Specify Panel as the program class and Default as the layout. Exit this program and you will be back in the mod prog list.&lt;/li&gt;
+&lt;li&gt;Select AddProg from the mod prog list context menu and enter demo.panel.1 at the Program: prompt. After successful add, exit the AddProg dialog. You will be back at the mod prog list with demo.panel.1 in the list. You can now make modifications to this program.&lt;/li&gt;
+&lt;li&gt;Goto the PrFiles definition screen for this program and add sys.program. Do not enter any driver info. Exit PrFiles. You should be back in the main development screen.&lt;/li&gt;
+&lt;li&gt;Goto the DisplayField definition screen. Add two fields, sys.pr_name and sys.pr_catg. For both specify inpdata as sdftype and Side as label type. Do not add any other info for either field. Notice that both fields have labels defaulted from the data dictionary.&lt;/li&gt;
+&lt;li&gt;Goto the program characteristics screen. From the context menu, select Panels.&lt;/li&gt;
+&lt;li&gt;Add a new panel, Name - Root Type - VRowCol Leaf - y Frame - y FrameStyle - Raised Title - First Panel Program Leave the defaulted values alone for now. We needed to specify &amp;lsquo;y&amp;rsquo; for leaf since this panel is going to contain display fields and not other panels.&lt;/li&gt;
+&lt;li&gt;Exit Add Mode and enter panel details. 2 programs should start at the bottom.&lt;/li&gt;
+&lt;li&gt;Select both available display fields. Then press the AddSelected button. Press ok when prompted. The two fields should show up in the left side program and disappear from the right side program. However, I think there&amp;rsquo;s a bug. If they don&amp;rsquo;t appear on the left, cancel and reenter panel details. They should show up.&lt;/li&gt;
+&lt;li&gt;Exit back to the main development screen. Compile and run your program.&lt;/li&gt;
+&lt;li&gt;Play with resizing it. Go back to the panel definitions and see what happens with changing some of the options.&lt;/li&gt;
+&lt;li&gt;Go back to the display fields program and notice that the panel info shows up there.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Congratulations, you&amp;rsquo;ve written a panel program. :)&lt;/p&gt;
+&lt;p&gt;We will now write a much more complicated program
+that embeds sub panels and makes use of multiple panel
+types.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new program named demo.panel.2 and put it on the same mod as demo.panel.1.&lt;/li&gt;
+&lt;li&gt;Goto PrFiles and add sys.program with no driver options specified.&lt;/li&gt;
+&lt;li&gt;Goto DpyFields and add the following Fields/SDFType/LabelType &lt;code&gt;sys.pr_name,inpdata,Side sys.pr_catg,inpdata,Side sys.pr_desc,inpdata,Top sys.pr_initpcl,inpdata,Side sys.pr_flpcl,inpdata,Side sys.pr_eflpcl,inpdata,Side sys.pr_endpcl,inpdata,Side sys.pr_inpflag,chkbox,Side sys.pr_drflag,chkbox,Side sys.pr_runprog,inpdata,Side sys.pr_btstyle,sellist,Side&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add the following Literals. Set SDFType to cmdbtn for all 3. Don&amp;rsquo;t specify any LabelType. It will default to None. &lt;code&gt;OK Apply Cancel&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now we can define the panels.
+What we want is a main data entry area on the left and
+some command buttons on the right.
+The data entry area will be further divided into
+some input fields at the top, and a tabfolder at the bottom.
+The tabfolder wil have two tabs,
+one that shows the pcl fields and one that
+shows some program options.
+Here&amp;rsquo;s how we do it.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to the Panel Definition screen. Add the following Panels. Root - The Root panel will have 2 subpanels, the main dataentry panel and the command button panel. Set the following options for Root: &lt;code&gt;Type - HRowCol Leaf - n MarginW - 3 MarginH - 3 Frame - y Framestyle - Raised Title - Root AdjChWidth - 100 AdjChHeight - 100 AdjLeft - 0 AdjRight - 0 AdjTop - 0 AdjBottom - 0 Spacing - 3 EqWidth - n EqHeight - y DrawSep - n&lt;/code&gt; mainvrc - This is our main data entry area. It will have 3 subpanels, a VRowCol, a Single, and a TabFolder. Set the following options for mainvrc: &lt;code&gt;Type - VRowCol Leaf - n MarginW - 3 MarginH - 3 Frame - y Framestyle - Etched Title - MainVRC AdjChWidth - 100 AdjChHeight - 100 AdjLeft - 0 AdjRight - 0 AdjTop - 0 AdjBottom - 0 Spacing - 3 EqWidth - y EqHeight - n DrawSep - n&lt;/code&gt; cmdvrc - This is our command button area. The buttons will be arranged vertically and be of equal width. Set the following options for cmdvrc: &lt;code&gt;Type - VRowCol Leaf - y MarginW - 3 MarginH - 3 Frame - y Framestyle - Etched Title - Commands AdjChWidth - 0 AdjChHeight - 0 AdjLeft - 50 AdjRight - 50 AdjTop - 0 AdjBottom - 50 Spacing - 3 EqWidth - y EqHeight - n DrawSep - n&lt;/code&gt; vrc1 - This panel will contain two input fields. It will be the first subpanel of mainvrc. Set the following options for vrc1: &lt;code&gt;Type - VRowCol Leaf - y MarginW - 3 MarginH - 3 Frame - y Framestyle - Etched Title - vrc1 AdjChWidth - 0 AdjChHeight - 0 AdjLeft - 50 AdjRight - 50 AdjTop - 0 AdjBottom - 100 Spacing - 3 EqWidth - n EqHeight - n DrawSep - n&lt;/code&gt; s1 - This panel will contain 1 input field. It will be the 2nd subpanel of mainvrc. Set the following options for s1: &lt;code&gt;Type - Single Leaf - y MarginW - 3 MarginH - 3 Frame - y Framestyle - Etched Title - Single AdjChWidth - 0 AdjChHeight - 0 AdjLeft - 50 AdjRight - 50 AdjTop - 50 AdjBottom - 50&lt;/code&gt; tabf - This will be our TabFolder and the 3rd child of mainvrc. Set the following options for tabf: &lt;code&gt;Type - TabFolder Leaf - n MarginW - 3 MarginH - 3 Frame - n Framestyle - Title - AdjChWidth - 100 AdjChHeight - 100 AdjLeft - 0 AdjRight - 0 AdjTop - 0 AdjBottom - 0&lt;/code&gt; vrc2 - This will contain the pcl fields and will be the first child of tabf. Set the following options for vrc2: &lt;code&gt;Type - VRowCol Leaf - y MarginW - 3 MarginH - 3 Frame - y Framestyle - Etched Title - PCLs AdjChWidth - 0 AdjChHeight - 0 AdjLeft - 50 AdjRight - 50 AdjTop - 0 AdjBottom - 100 Spacing - 3 EqWidth - n EqHeight - n DrawSep - n&lt;/code&gt; hrc1 - This panel will contain two other panels. It is the 2nd child of tabf. Set the following options for hrc1: &lt;code&gt;Type - HRowCol Leaf - n MarginW - 3 MarginH - 3 Frame - y Framestyle - Etched Title - Options AdjChWidth - 100 AdjChHeight - 100 AdjLeft - 0 AdjRight - 0 AdjTop - 0 AdjBottom - 0 Spacing - 3 EqWidth - n EqHeight - y DrawSep - n&lt;/code&gt; vrc3 - This will contain 2 checkboxes. It is the first child of hrc1. Set the following options for vrc3: &lt;code&gt;Type - VRowCol Leaf - y MarginW - 3 MarginH - 3 Frame - y Framestyle - Etched Title - vrc3 AdjChWidth - 0 AdjChHeight - 0 AdjLeft - 50 AdjRight - 50 AdjTop - 0 AdjBottom - 100 Spacing - 3 EqWidth - n EqHeight - n DrawSep - n&lt;/code&gt; vrc4 - This will contain 2 display fields. It is the first child of hrc1 and our last panel. Set the following options for vrc4: &lt;code&gt;Type - VRowCol Leaf - y MarginW - 3 MarginH - 3 Frame - y Framestyle - Etched Title - vrc4 AdjChWidth - 0 AdjChHeight - 0 AdjLeft - 50 AdjRight - 50 AdjTop - 0 AdjBottom - 100 Spacing - 3 EqWidth - n EqHeight - n DrawSep - n&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Next add the details for the 4 non leaf panels. Here&amp;rsquo;s how: Select root in the panel definition screen and press rtn. Add 2 details. Seq - 10, SubPanel - mainvrc, GrabW - 100 Seq - 20, SubPanel - cmdvrc Exit panel details. Select mainvrc and press rtn. Add 3 details for mainvrc. Seq - 10, SubPanel - vrc1 Seq - 20, SubPanel - s1 Seq - 30, SubPanel - tabf Exit panel details. Select tabf and press rtn. Add 2 details for tabf. Seq - 10, SubPanel - vrc2 Seq - 20, SubPanel - hrc1 Exit panel details. Select hrc1 and press rtn. Add 2 details for hrc1. Seq - 10, SubPanel - vrc3 Seq - 20, SubPanel - vrc4 Exit panel details.&lt;/li&gt;
+&lt;li&gt;Next add the details for the 6 leaf panels. Here&amp;rsquo;s how: Select cmdvrc and press return. Select the OK, Apply, and Cancel DFields. Press AddSelected Exit the details. Select vrc1 and press return. Select sys.pr_name and sys.pr_catg. Press AddSelected. Exit the details. Select s1 and press return. Select sys.pr_desc. Press AddSelected. Exit the details. Select vrc2 and press return. Select sys.pr_initpcl, sys.pr_flpcl, sys.pr_eflpcl, and sys.pr_endpcl. Press AddSelected. Exit the details. Select vrc3 and press return. Select sys.pr_inpflag and sys.pr_drflag. Press AddSelected. Exit the details. Select vrc4 and press return. Select sys.pr_runprog and sys.pr_btstyle. Press AddSelected. Exit the details.&lt;/li&gt;
+&lt;li&gt;Exit back to the main Prog Development screen. Compile and run the program. Fix my typos and compile/run again.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some features of demo.panel.2 worth noting are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The way GrabWidth works in the children of Root.&lt;/li&gt;
+&lt;li&gt;Titles in the children of TabFolders display in the Tab rather than in the Frame.&lt;/li&gt;
+&lt;li&gt;It doesn&amp;rsquo;t really do anything other than illustrate how panels can work together to make a reasonable GUI. In most programs, you probably won&amp;rsquo;t want quite so many titles or margins. In the example, it makes it easier to see the different panels at run time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you can understand the way panels work in this program,
+then I can consider myself a successful doc writer.
+Congratulations to both of us.
+If not, then please call or email and I will do my best to make it clearer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Panel Type Specifics&lt;span class="hx:absolute hx:-mt-20" id="panel-type-specifics"&gt;&lt;/span&gt;
+&lt;a href="#panel-type-specifics" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some panel behaviors are related to certain panel types.
+Some of these are temporary peculiarities that will be fixed in the future.
+Others are that way because they need to be.
+Those behaviors are described here.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HRowCol Any Non leaf HRowCol Panel usually should be set to EqualHeight.&lt;/li&gt;
+&lt;li&gt;VRowCol Any Non leaf VRowCol Panel usually should be set to EqualWidth.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Unresolved Issues&lt;span class="hx:absolute hx:-mt-20" id="unresolved-issues"&gt;&lt;/span&gt;
+&lt;a href="#unresolved-issues" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;So far, panels have been implemented without making any changes to the way that 4C runs display fields. They are always processed in order and fields are only skipped when the application specifically chooses to skip them. When a panel is hidden, either because it is in a panel TabFolder or a panel Overlay, the panel is automatically raised to allow input on the field. It may be desirable to be able specify as part of the panel definition how to traverse fields. This may mean automatically tabbing past hidden panels.&lt;/li&gt;
+&lt;li&gt;Sometimes it may be desirable to have some panels that are not part of the field loop at all. Panels that have cmdbtns, checkboxes, and rblists fall in to this category. This may require allowing fields other than cmdbtns to have a command pcl associated with them.&lt;/li&gt;
+&lt;li&gt;There currently isn&amp;rsquo;t any way to see which columns of a ListView will allow sorting.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Panel Screen Painter</title><link>https://127.0.0.1:8080/docs/features/panels/panelsp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/panelsp/</guid><description>
+&lt;h2&gt;29 October 2003&lt;span class="hx:absolute hx:-mt-20" id="29-october-2003"&gt;&lt;/span&gt;
+&lt;a href="#29-october-2003" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The 4C Panel Screen Painter is an interactive
+WYSIWYG editor.
+It allows you to create 4C Panels in a more
+interactive and intuitive way than using the
+4C bootstrap programs.
+It speeds up the GUI development.
+It consists of a client side program,
+&lt;a href="https://www.4csoftware.com/docs/Features/Clients/wpnlsp.html"target="_blank" rel="noopener"&gt;wpnlsp,&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;
+and
+a server side program, 4cpnlsp.
+In order to be able to use the Panel Screen Painter,
+you need to understand how 4C Panels work.
+The
+&lt;a href="https://127.0.0.1:8080/docs/features/panels/panels/"&gt;4C Panels&lt;/a&gt;
+doc describes 4C Panels in detail.&lt;/p&gt;
+&lt;p&gt;The rest of this document describes the 4C Panel Screen Painter in
+detail.
+It is divided into the following sections:
+&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Overview&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;PanelTV View&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Canvas View&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;DField View&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Selection&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Undo/Redo&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Commands&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Root Panel&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Creating New Panels&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Inserting DFields&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Deleting Panels&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Deleting DFields&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Drag And Drop&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Miscellaneous Dialog Windows&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;DField Properties&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Panel Properties&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Keyboard Shortcuts&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Panel Type Specifics&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Notes&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Unimplemented Features&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Startup&lt;span class="hx:absolute hx:-mt-20" id="startup"&gt;&lt;/span&gt;
+&lt;a href="#startup" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can start wpnlsp either from inside of 4C where
+you will be automatically connected and the correct app
+and program will be selected and displayed, or you
+can start it manually and go through the connect,
+app select, and program select by hand.&lt;/p&gt;
+&lt;p&gt;Before you can start editing anything you must connect to
+a 4csrvr and select an application.
+The server you are connected to and the current application
+are displayed in the title bar of wpnlsp.
+If an application has been selected then you can display
+a filtered list of Panel programs in that application
+by entering some text in the filter-by area and pressing return
+or clicking refresh.&lt;/p&gt;
+&lt;p&gt;When there are programs listed in the program list,
+you can open one for editing by double clicking on it,
+or by selecting it and pressing return.
+You can open multiple programs for editing at a time.
+Each will display as a different tab in the edit area,
+and each maintains it&amp;rsquo;s own undo/redo list.
+Some info will display in the StatusArea of the main window.
+Of special interest is whether the program is in read only
+mode or not.
+Programs that use source code control and are not currently
+edited can only be viewed in read only mode.
+Also, only one instance of wpnlsp can access a program
+in update mode.
+You can also see in the StatusArea whether changes have been
+made to the program since the last time you saved it.&lt;/p&gt;
+&lt;p&gt;The edit area consists of a TabFolder and a Canvas.&lt;/p&gt;
+&lt;p&gt;The TabFolder allows you to view one of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PanelTV - A TreeView depiction of the Panels and DFields. Each node of the TreeView corresponds to either a single Panel or a single DField.&lt;/li&gt;
+&lt;li&gt;DFieldsTab - Display Fields of the program subdivided into: InUseDFieldsList UnusedDFieldsList AllDFieldsList&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Canvas allows you to see and modify your GUI in a WYSIWYG way.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;PanelTV View&lt;span class="hx:absolute hx:-mt-20" id="paneltv-view"&gt;&lt;/span&gt;
+&lt;a href="#paneltv-view" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The PanelTV gives a TreeView view of your Panels
+and DFields.
+You can select items in the PanelTV as well as perform actions on
+them.&lt;/p&gt;
+&lt;p&gt;Selecting Panels and DFields in the PanelTV selects the same
+Panels and DFields in the Canvas.&lt;/p&gt;
+&lt;p&gt;Changes made in the PanelTV are shown immediately in the Canvas
+as well as in the PanelTV.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Canvas View&lt;span class="hx:absolute hx:-mt-20" id="canvas-view"&gt;&lt;/span&gt;
+&lt;a href="#canvas-view" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Canvas view is a close,
+although not exact copy of the way your GUI will look.
+The GUI is stretched out and there is more area around borders to
+allow highlighting selected items.
+This extra spacing also allows
+you to see where items may be inserted during dragging and when
+creating new Panels.&lt;/p&gt;
+&lt;p&gt;Selecting Panels and DFields in the Canvas selects the same
+Panels and DFields in the PanelTV.&lt;/p&gt;
+&lt;p&gt;Making changes in the Canvas view updates the PanelTV view also.&lt;/p&gt;
+&lt;p&gt;If the Canvas is too crowded to see things clearly,
+you can Zoom to a single Panel.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;DField View&lt;span class="hx:absolute hx:-mt-20" id="dfield-view"&gt;&lt;/span&gt;
+&lt;a href="#dfield-view" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The DField view allows you to view your Display Fields.
+You can view one of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;InUse DFields - These DFields are used in a Panel.&lt;/li&gt;
+&lt;li&gt;Unused DFields - These DFields are not used by any Panel yet.&lt;/li&gt;
+&lt;li&gt;All DFields - All DFields defined in your program.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Selection in any of the lists in the DField tab work independently
+of selections in any other view.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Selection&lt;span class="hx:absolute hx:-mt-20" id="selection"&gt;&lt;/span&gt;
+&lt;a href="#selection" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Selection here refers only to the PanelTV and the Canvas.
+When an item is selected in the PanelTV it is also selected in the
+Canvas and vice versa.
+At any one time you can have either 1 Panel selected or
+multiple DFields.
+You cannot select more than one Panel at a time and you cannot
+select Panels and DFields together.
+The currently selected items are highlighted in the PanelTV and
+in the Canvas.
+In addition to selected items, there is also always
+one current item, called the FocusItem.
+The FocusItem does not need to be selected, but if it is
+you can tell it is the FocusItem by the darker rectangle outside
+of the highlight rectangle.
+Some ways of selecting and deselecting items are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clicking the left mouse button with neither the &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt; keys pressed over either a DField item or a Panel item in either the PanelTV or the Canvas. If the item is unselected, it will become selected and focused and all other items will become unselected. If the item is already selected, it will remain selected, and it will become the FocusItem. Other selected DFields will remain selected.&lt;/li&gt;
+&lt;li&gt;Clicking the left mouse button with the &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt; key pressed over a DField item in either the PanelTV or the Canvas. If the DField item is currently selected, it will become unselected. If the DField item is currently unselected, it will become selected. The DField item will become the FocusItem. Any other selected DFields will remain selected. If there is a selected Panel item, it will become unselected.&lt;/li&gt;
+&lt;li&gt;Clicking the left mouse button with the &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt; key pressed over a DField item in the PanelTV. If the FocusItem is a DField, then all DField items between the FocusItem and the DField item under the mouse cursor will be selected, including any hidden DFields. The DField item under the cursor will become the FocusItem.&lt;/li&gt;
+&lt;li&gt;When a Panel with DField children is selected, you can select all the DField children from the context menu or from the Edit menu. The Panel will become unselected, all DField children will become selected, and the first DField child will become the FocusItem.&lt;/li&gt;
+&lt;li&gt;Use the &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt; and arrow keys in the Canvas to change the selected item. &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Left&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Right&amp;gt;&lt;/code&gt; switches selection between siblings. &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Up&amp;gt;&lt;/code&gt; changes the selection to the parent of the FocusItem. &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Down&amp;gt;&lt;/code&gt; changes the selection to the first child of the FocusItem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Undo/Redo&lt;span class="hx:absolute hx:-mt-20" id="undoredo"&gt;&lt;/span&gt;
+&lt;a href="#undoredo" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Any action that changes your GUI in any way can be undone and redone.
+If an action results in multiple changes,
+then undoing the action reverses all of the changes together.
+Redoing the action will redo all the changes that were part of the original
+action.&lt;/p&gt;
+&lt;p&gt;Actions can be redone only if no new actions are performed after the
+undo.&lt;/p&gt;
+&lt;p&gt;Currently, a maximum of up to 100 actions are saved on the undo list
+for each edited program.
+If this turns out not to be enough, it can be changed.&lt;/p&gt;
+&lt;p&gt;There are accelerator keys to allow quick undo and redo.
+Look at the Edit menu to see what these keys are.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Commands&lt;span class="hx:absolute hx:-mt-20" id="commands"&gt;&lt;/span&gt;
+&lt;a href="#commands" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some of the things you can do to an open program are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new Panel&lt;/li&gt;
+&lt;li&gt;Save Changes to Current Program. If there are unsaved changes, then the program is written back to the server.&lt;/li&gt;
+&lt;li&gt;Save changes to all edited programs.&lt;/li&gt;
+&lt;li&gt;Write out current program. The program is written to the server whether or not there are unsaved changes.&lt;/li&gt;
+&lt;li&gt;Write all programs back to server.&lt;/li&gt;
+&lt;li&gt;Close current program. If changes have been made, you will be prompted to save them.&lt;/li&gt;
+&lt;li&gt;Close all programs. If changes have been made to any open program, you will be prompted to save them.&lt;/li&gt;
+&lt;li&gt;Test the GUI.&lt;/li&gt;
+&lt;li&gt;Redraw the Canvas. Hopefully not necessary, but if it doesn&amp;rsquo;t look quite right use this.&lt;/li&gt;
+&lt;li&gt;SelectAll&lt;/li&gt;
+&lt;li&gt;Delete selected Panel or selected DFields.&lt;/li&gt;
+&lt;li&gt;Insert a new Panel.&lt;/li&gt;
+&lt;li&gt;Insert the selected UnusedDFields.&lt;/li&gt;
+&lt;li&gt;Zoom in or out of the selected Panel.&lt;/li&gt;
+&lt;li&gt;Modify Panel Properties&lt;/li&gt;
+&lt;li&gt;Modify DField Properties&lt;/li&gt;
+&lt;li&gt;Undo last change&lt;/li&gt;
+&lt;li&gt;Redo the last undone change.&lt;/li&gt;
+&lt;li&gt;Exit the PanelSP. If there are unsaved changes, you will be prompted to save them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can access any of these commands from one of the menubar menus,
+or from the context menu.
+If a command allows an accelerator key, this will be shown in
+the menu as well.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Root Panel&lt;span class="hx:absolute hx:-mt-20" id="root-panel"&gt;&lt;/span&gt;
+&lt;a href="#root-panel" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;All Panel programs need to have a Root Panel.
+When you open a program without a Root Panel in PanelSP,
+the Canvas will not be displayed.
+Before you can create other Panels or add DFields to any
+Panels, you will need to define the Root Panel.
+There will be a Root Panel in the PanelTV.
+Double click this and define the Root Panel properties.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Creating New Panels&lt;span class="hx:absolute hx:-mt-20" id="creating-new-panels"&gt;&lt;/span&gt;
+&lt;a href="#creating-new-panels" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are 2 ways to create a new Panel.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select NewPanel from the context menu, move the the mouse to the area of the canvas you want to insert the new Panel and click the left mouse button. Notice that the shape of the cursor indicates whether you can insert a new Panel beneath the mouse cursor or not. With some Panel types you will see a drop rectangle (drawn in green) showing where the new Panel will be inserted. The true size of the Panel is not shown by the drop rectangle. Regardless of whether you can insert a new panel at the mouse cursor location or not, a black rectangle will be drawn showing the outline of the innermost Panel below the mouse cursor. Additional info on where you are inserting the new Panel shows up in the StatusArea. This method acts like the drag and drop method of moving Panels and nodes.&lt;/li&gt;
+&lt;li&gt;You can also select a Panel that allows Panel children or siblings and then select Insert==&amp;gt;Panel from the context menu. You will be prompted whether you are inserting a child or sibling Panel and whether you want this to be the first or last child or the prev or next sibling.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both methods of inserting new Panels will take you to the Panel Properties
+to let you specify the details of the new Panel.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Inserting DFields&lt;span class="hx:absolute hx:-mt-20" id="inserting-dfields"&gt;&lt;/span&gt;
+&lt;a href="#inserting-dfields" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are two ways of inserting DFields onto a Panel.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The easiest way is probably to select one or more DFields from the PanelTV/UnusedDField branch and to drag them to the Canvas. Initiate the drag by holding down the left mouse button above one of the selected DFields and then move the mouse cursor to where you want to drop the DFields. You will see a visual indication of whether dropping the DFields below the mouse cursor is allowed or not as well as some messages in the StatusArea.&lt;/li&gt;
+&lt;li&gt;The other way is to first select one or more DFields from the UnusedDFieldsList and then select either a Panel you want to add the DFields to, or a DField that will be a sibling of the new DFields. Next, select Insert==&amp;gt;&lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt;DFields&amp;hellip; from the context menu. You will be prompted to specify the relative location of the insert.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Only DFields that are already defined to 4C can be added to a Panel.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Deleting Panels&lt;span class="hx:absolute hx:-mt-20" id="deleting-panels"&gt;&lt;/span&gt;
+&lt;a href="#deleting-panels" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can delete a Panel by selecting it and then selecting Delete from
+either the Edit menu or the context menu.&lt;/p&gt;
+&lt;p&gt;If the deleted Panel has any children,
+then the deleted Panel will show up in the Deleted Panels branch of the
+PanelTV.&lt;/p&gt;
+&lt;p&gt;If the deleted Panel has no children, then it will not show up in the PanelTV.
+The only way to get it back is to undo the delete.&lt;/p&gt;
+&lt;p&gt;Not all Panels can be deleted.
+Specifically, you cannot delete the Root or Title Panel.
+Neither can you delete the UnusedPanels or UnusedDFields branch
+from the PanelTV.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Deleting DFields&lt;span class="hx:absolute hx:-mt-20" id="deleting-dfields"&gt;&lt;/span&gt;
+&lt;a href="#deleting-dfields" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can delete DFields from a Panel by selecting the ones you want to
+delete and then selecting Delete from either the Edit or Context menu.&lt;/p&gt;
+&lt;p&gt;DFields that are deleted are not deleted from 4C.
+They are just removed from their Panel.
+They will show up in the PanelTV UnusedDFields branch and
+they will also show up in the UnusedDFieldsList.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Drag And Drop&lt;span class="hx:absolute hx:-mt-20" id="drag-and-drop"&gt;&lt;/span&gt;
+&lt;a href="#drag-and-drop" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The PanelSP supports dragging of Panels and of DFields
+to new locations.&lt;/p&gt;
+&lt;p&gt;To drag a Panel, select it and then initiate the drag by pressing the left
+mouse button while the mouse cursor is over the selected Panel.
+You can initiate the drag from either the PanelTV or the Canvas.
+With the left mouse button held down, move the mouse cursor to where
+you want the Panel dropped and then release the left mouse button.&lt;/p&gt;
+&lt;p&gt;You will see visual indication of whether a drop is allowed or not.
+The indications include a drop rectangle, a crosshair mouse cursor,
+and messages in the StatusArea.&lt;/p&gt;
+&lt;p&gt;Regardless of whether you drop a panel at the mouse cursor
+location or not, a black rectangle will be drawn showing the outline
+of the innermost Panel below the mouse cursor.&lt;/p&gt;
+&lt;p&gt;If a drop is not allowed, the mouse cursor and the StatusArea
+will reflect this.
+When dragging a Panel, all SubPanels and DFields
+are moved with the Panel.&lt;/p&gt;
+&lt;p&gt;To drag DFields to a new location, select them as usual,
+initiate the drag as usual and then drop them in their
+new location.&lt;/p&gt;
+&lt;p&gt;You will see the same visual cues when dragging DFields that
+you see when dragging a Panel.&lt;/p&gt;
+&lt;p&gt;It is possible to drag DFields from different Panels and drop
+them into the same Panel in one operation.&lt;/p&gt;
+&lt;p&gt;There are several ways to cancel a drag operation.
+The easiest are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Release the left mouse button over an area that does not accept the drop.&lt;/li&gt;
+&lt;li&gt;Press the escape key while dragging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that not all Panel types show the drop rectangle when a drop is
+allowed.
+You can still tell that a drop is allowed by the shape of the mouse
+cursor and by the StatusArea messages.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Miscellaneous Dialog Windows&lt;span class="hx:absolute hx:-mt-20" id="miscellaneous-dialog-windows"&gt;&lt;/span&gt;
+&lt;a href="#miscellaneous-dialog-windows" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When the PanelSP needs mor information, it
+will pop up a Dialog Window prompting for information.
+All these Dialog Windows work the same way regarding traversal
+between items and ending the Dialog.
+In Particular:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pressing &lt;code&gt;&amp;lt;return&amp;gt;&lt;/code&gt; accepts the current field and moves to the next field.&lt;/li&gt;
+&lt;li&gt;Pressing &lt;code&gt;&amp;lt;tab&amp;gt;&lt;/code&gt; will move ahead to a logical TabStop.&lt;/li&gt;
+&lt;li&gt;Pressing the &lt;code&gt;&amp;lt;cancel&amp;gt;&lt;/code&gt; key will work as if you pressed the &lt;code&gt;&amp;lt;Cancel&amp;gt;&lt;/code&gt; button.&lt;/li&gt;
+&lt;li&gt;Pressing the &lt;code&gt;&amp;lt;accept&amp;gt;&lt;/code&gt; key will work as if you pressed the &lt;code&gt;&amp;lt;OK&amp;gt;&lt;/code&gt; button.&lt;/li&gt;
+&lt;li&gt;Pressing &lt;code&gt;&amp;lt;return&amp;gt;&lt;/code&gt; on the last input field will traverse to the first input field.&lt;/li&gt;
+&lt;li&gt;When input is not allowed on a certain item, the item will be disabled.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;DField Properties&lt;span class="hx:absolute hx:-mt-20" id="dfield-properties"&gt;&lt;/span&gt;
+&lt;a href="#dfield-properties" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The DField Properties are pretty much the same as what
+shows up in display field definition in the 4C Bootstraps.
+You can access DField Properties by left double clicking
+on a DField item on either the PanelTV or the Canvas.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Panel Properties&lt;span class="hx:absolute hx:-mt-20" id="panel-properties"&gt;&lt;/span&gt;
+&lt;a href="#panel-properties" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Panel properties correspond to the attributes that you can define
+in the sys.pnl_hdr and sys.pnl_det file using the 4C bootstraps.
+You can access Panel Properties by left double clicking
+on a Panel item on either the PanelTV or the Canvas.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Keyboard Shortcuts&lt;span class="hx:absolute hx:-mt-20" id="keyboard-shortcuts"&gt;&lt;/span&gt;
+&lt;a href="#keyboard-shortcuts" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are several standard keyboard combinations used by
+most panels and dfields.
+Not all panel types or dfields support all of these
+keyboard shortcuts.
+They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;LeftArrow&amp;gt;&lt;/code&gt; - Move selected panel or dfields to the left&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt; - Move selected panel or dfields to the right&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;UpArrow&amp;gt;&lt;/code&gt; - Move selected panel or dfields up&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;DownArrow&amp;gt;&lt;/code&gt; - Move selected panel or dfields down&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;LeftArrow&amp;gt;&lt;/code&gt; - Select the prev sibling of currently selected panel or dfield&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt; - Select the next sibling of currently selected panel or dfield&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;UpArrow&amp;gt;&lt;/code&gt; - Select the parent of the currently selected panel or dfield&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;DownArrow&amp;gt;&lt;/code&gt; - Select first child of currently selected panel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;LeftArrow&amp;gt;&lt;/code&gt; - Increase the ncols attr of all selected dfields&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt; - Decrease the ncols attr of all selected dfields&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;UpArrow&amp;gt;&lt;/code&gt; - Decrease the nrows attr of all selected dfields&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;DownArrow&amp;gt;&lt;/code&gt; - Increase the nrows attr of all selected dfields&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Panel Type Specifics&lt;span class="hx:absolute hx:-mt-20" id="panel-type-specifics"&gt;&lt;/span&gt;
+&lt;a href="#panel-type-specifics" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some behavior in the PanelSP is specific to certain panel types.
+Some of these are temporary peculiarities that will be fixed in the future.
+Others are that way because they need to be.
+Those behaviors are described here.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HRowCol The HRowCol allows you to move children of the HRowCol using either &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;LeftArrow&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;HSplitPane The HSplitPane allows you to move children of the HSplitPane using either &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;LeftArrow&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt;. The Splitter in the HSplitPane is drawn differently on the Canvas than it is in the real GUI.&lt;/li&gt;
+&lt;li&gt;VRowCol The VRowCol allows you to move children of the VRowCol using either &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+UpArrow&amp;gt; or &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;DownArrow&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;VSplitPane The VSplitPane allows you to move children of the VSplitPane using either &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+UpArrow&amp;gt; or &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;DownArrow&amp;gt;&lt;/code&gt;. The Splitter in the VSplitPane is drawn differently on the Canvas than it is in the real GUI.&lt;/li&gt;
+&lt;li&gt;Single&lt;/li&gt;
+&lt;li&gt;TabFolder When working in the Canvas area with TabFolders, only one is visible at a time. You can use &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;LeftArrow&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt; to move among the TabFolder children raising each one in turn.. Alternately, you can click on a TabFolder child in the PanelTV and it will be raised in Canvas area. The TabFolder allows you to move children of the TabFolder using either &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;LeftArrow&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt;. When the TabFolder is a target of a drop, the drop rectangle is not displayed. When you drop onto a TabFolder, the dropped item is always positioned as the first tab. You can use &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt; to move it.&lt;/li&gt;
+&lt;li&gt;Overlay When working in the Canvas area with Overlays, only one is visible at a time. You can use &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;LeftArrow&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt; to move among the Overlay children raising each one in turn.. Alternately, you can click on an Overlay child in the PanelTV and it will be raised in Canvas area. The Overlay allows you to move children of the Overlay using either &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;LeftArrow&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt;. When the Overlay is a target of a drop, the drop rectangle is not displayed. When you drop onto an Overlay, the dropped item is always positioned as the first child of the Overlay. You can use &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;RightArrow&amp;gt;&lt;/code&gt; to move it.&lt;/li&gt;
+&lt;li&gt;ListView The display of the ListView in the Canvas uses an HRrowCol to arrange the individualo fields of the ListView. Each individual field is made up of a VRowCol (TopLabel and DField). The TestGUI uses the same format temporarily.&lt;/li&gt;
+&lt;li&gt;Form&lt;/li&gt;
+&lt;li&gt;Grid&lt;/li&gt;
+&lt;li&gt;List&lt;/li&gt;
+&lt;li&gt;Title&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Notes&lt;span class="hx:absolute hx:-mt-20" id="notes"&gt;&lt;/span&gt;
+&lt;a href="#notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Changes made to a 4C program using the PanelSP are made locally
+until you explicitly save your changes.
+Because of this, you need to be careful about switching between
+the PanelSP and the 4C bootstrap programs for making changes.
+The main place you need to be careful is in display fields.
+Some things that are easier using the bootstraps are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Modifying a single attribute on multiple DFields.&lt;/li&gt;
+&lt;li&gt;Adding more display fields.&lt;/li&gt;
+&lt;li&gt;Deleting display fields from the program.&lt;/li&gt;
+&lt;li&gt;Reordering display fields.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you need to switch between the PanelSP and the 4C bootstraps,
+you should:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Save your changes in the PanelSP&lt;/li&gt;
+&lt;li&gt;Close the program in the PanelSP&lt;/li&gt;
+&lt;li&gt;Use the 4C Bootstraps to start up the DField bootstrap program. If it is currently running, you need to close and restart it.&lt;/li&gt;
+&lt;li&gt;Make the changes in the bootstraps&lt;/li&gt;
+&lt;li&gt;Close the 4C DField program.&lt;/li&gt;
+&lt;li&gt;Open the program in the PanelSP.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Currently Unimplemented Features&lt;span class="hx:absolute hx:-mt-20" id="currently-unimplemented-features"&gt;&lt;/span&gt;
+&lt;a href="#currently-unimplemented-features" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some features that currently are not implemented are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Even though you can drag from the PanelTV, you cannot drop onto the PanelTV yet.&lt;/li&gt;
+&lt;li&gt;Dragging from DFields/Unused is not implemented yet. However, you can drag from the Unused DField branch of the PanelTV.&lt;/li&gt;
+&lt;li&gt;There is no way to recover from a lost network connection. So remember to occasionally save your work.&lt;/li&gt;
+&lt;li&gt;The bootstraps do not prevent you from making changes to a program that may conflict with changes you are making in the PanelSP.&lt;/li&gt;
+&lt;li&gt;Not all Panel types show the drop rectangle when dragging nodes or inserting new Panels.&lt;/li&gt;
+&lt;li&gt;There is no way to Copy/Paste Panels between different programs.&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

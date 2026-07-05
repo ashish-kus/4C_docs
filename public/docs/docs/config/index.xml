@@ -1,0 +1,756 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C Environment Variables and Config Files</title>
+    <link>http://localhost:1313/docs/docs/config/</link>
+    <description>Recent content in 4C Environment Variables and Config Files on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/docs/docs/config/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C.info</title>
+      <link>http://localhost:1313/docs/docs/config/4cinfo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/config/4cinfo/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The 4C.info file resides in the HOME_4C directory.&lt;/p&gt;
+&lt;p&gt;It is used by the 4C install process to know where
+to install files and how to set the permissions
+on installed files.&lt;/p&gt;
+&lt;p&gt;It is also used by 4c server processes
+to set the default values for some
+env vars if _4CSRVRCONFIG does not set
+them.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Env And Config Files Change Log</title>
+      <link>http://localhost:1313/docs/docs/config/changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/config/changes/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;22 October 2011&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;22-october-2011&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#22-october-2011&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.0.6 and later&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can set the &amp;ldquo;Path&amp;rdquo; option in the _4CSRVRCONFIG file to indicate that all following applications should be grouped together under the same menu under Application submenu.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;01 March 2009&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;01-march-2009&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#01-march-2009&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.6.3 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The follwing are new &lt;a href=&#34;http://localhost:1313/docs/docs/config/cl-pref/&#34;&gt;4C Client Preferences&lt;/a&gt; DisableTypeAhead - Disables TypeAhead buffering. ShowUser - Displays authenticated username in the layout title. ShowDate - Displays current date in the layout title. ShowTime - Displays current time in the layout title. PSHDrConnInfo - Prints connection info in the hdr of a PrintScreen page. PSHdrUser - Prints authenticated username in the hdr of a PrintScreen page. PSHdrDate - Prints current date in the hdr of a PrintScreen page. PSHdrTime - Prints current time in the hdr of a PrintScreen page. PSHdrLayoutTitle - Prints the layout title in the hdr of a PrintScreen page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;12 June 2008&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;12-june-2008&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#12-june-2008&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.8 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can specify Client Timeouts as well as Server Timeouts in the XLCONFIG file. See: &lt;a href=&#34;http://localhost:1313/docs/docs/config/xlconfig/&#34;&gt;XLCONFIG&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;26 March 2008&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;26-march-2008&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#26-march-2008&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.7 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Env vars can be used in the directory path lists used in _4CSRVRCONFIG. For example you could use the following to specify a program path list for a particular application: &lt;code&gt;prog_lst=${HOME}/test1.d:${XLSYSTEM}&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;21 November 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;21-november-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#21-november-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;You can specify ReconnectTimeout in the _4CSRVRCONFIG file. If set, you do not need to set AllowReconnect also.&lt;/li&gt;
+&lt;li&gt;You can modify the default values for FC_APPDATA(Unix only), FC_COMMONAPPDATA(Unix Only), FC_DOCUMENTS(Unix only), and FC_TEMP (Win32 and Unix) See: &lt;a href=&#34;http://localhost:1313/docs/docs/config/envvars/&#34;&gt;4C Environment Variables&lt;/a&gt; for details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;28 June 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;28-june-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#28-june-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/config/cl-conn/&#34;&gt;Client Connection Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/config/cl-pref/&#34;&gt;Client Preferences Files&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;01 May 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;01-may-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#01-may-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Env var FC_SESSION will be set for both 4C server and 4C client processes, version 4.4.4 and higher. It will be different for each 4C process and will be deleted at the end of the session.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;05 March 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;05-march-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#05-march-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The following env vars will be guaranteed to be set for both clients and servers running Version 4.4.2 or higher. FC_APPDATA FC_COMMONAPPDATA FC_DOCUMENTS FC_HOME FC_TEMP See &lt;a href=&#34;http://localhost:1313/docs/docs/config/envvars/&#34;&gt;EnvVars&lt;/a&gt; for more details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;18 December 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;18-december-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#18-december-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;There are 2 new options you can set in the _4CSRVRCONFIG file. They are: AllowReconnect - Set this to True to allow clients to reconnect to the same 4c srvr process if the network connection is lost. ContinueWork - Set this to true to allow 4C programs to continue running when the client is no longer there.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;27 November 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;27-november-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#27-november-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;There is a little info on how to configure the 4C shared memory in &lt;a href=&#34;http://localhost:1313/docs/docs/config/sysmem/&#34;&gt;Configuring 4C Shared Memory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;05 July 2005&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;05-july-2005&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#05-july-2005&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;You can specify MinClientVersion in the the application section of the _4CSRVRCONFIG file.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Client Connections</title>
+      <link>http://localhost:1313/docs/docs/config/cl-conn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/config/cl-conn/</guid>
+      <description>
+        
+        
+        &lt;p&gt;For 4C Client Versions 4.4.4 and higher,
+connection info is stored in one or more connection files
+rather than in the windows registry.
+These files are simple text files that can be edited with a text editor
+or with the 4C Client Connection Dialog.
+There are 2 default connection files, ${FC_APPDATA}/cl-conn.txt and
+${FC_COMMONAPPDATA}/cl-conn.txt.
+You can change these defaults using the 4c preferences dialog.
+The format of the connection text file is as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lines starting with &amp;lsquo;#&amp;rsquo; are comments&lt;/li&gt;
+&lt;li&gt;Name &lt;code&gt;&amp;lt;name&amp;gt;&lt;/code&gt; - The Name entry specifies the label that should show up on the connection menu for this file when this file has submenus. There should only be one Name entry per connection file.&lt;/li&gt;
+&lt;li&gt;Path &lt;code&gt;&amp;lt;path&amp;gt;&lt;/code&gt; - Path entries help organize connections in a heirarchical manner.&lt;/li&gt;
+&lt;li&gt;Label &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; - A Label entry inserts a label in the current path of the connection menu hierarchy.&lt;/li&gt;
+&lt;li&gt;Separator A Separator entry inserts a separator in the current path of the connection menu hierarchy.&lt;/li&gt;
+&lt;li&gt;Connection &lt;code&gt;&amp;lt;ConnName&amp;gt;&lt;/code&gt; - The rest of the connection info is on successive lines each starting with white space.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most users will be able to get by with simple connection files,
+but if you need to store connection info for hundreds of users,
+it will be worthwhile to organize this file a bit.
+Here&amp;rsquo;s an example of a simple connection file:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 4CClient Connections
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name Global
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection fedora4c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.16,Type=TCP,Port=1414
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection localhost
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=localhost,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kevin&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Here&amp;rsquo;s a little more complicated one:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 4CClient Connections
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name Private
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Path /Main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection fedora4c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.16,Type=TCP,Port=1414
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection 4cDemoMachine
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=4chelp.com,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Separator
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Path /Trafxs/System1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection Production
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.65,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=trafxs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Path /Trafxs/System2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection &amp;#34;Test&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=test1,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=trafxs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection &amp;#34;Production&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=prod1,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=trafxs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Path /Main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection fedora4c-dsl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=206.228.139.110,Type=TCP,Port=1416
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection centos4c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.17,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection fc60
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.60,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection vista-23
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.23,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kevin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection localhost
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=localhost,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kevin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection centos4c-dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.17,Type=TCP,Port=1414
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Client Preferences</title>
+      <link>http://localhost:1313/docs/docs/config/cl-pref/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/config/cl-pref/</guid>
+      <description>
+        
+        
+        &lt;p&gt;4C Client version 4.4.4 and higher stores client preferences in text files
+rather than in the clseqf.sxl file.
+There are two client preferences file.
+Both are text files that can be easily edited with a text editor
+or with the 4C Client Preferences Dialog.
+The 4C Client Preferences Dialog is available from the 4C Client Menu
+and from the CtrlF8 Dialog.
+They are stored in ${FC_APPDATA}/cl-pref.txt and
+${FC_COMMONAPPDATA}/cl-pref.txt.
+The current user preferences always take precedence over the
+all users preferences.
+The preferences file has the following format:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lines starting with a &lt;code&gt;#&lt;/code&gt; are comments&lt;/li&gt;
+&lt;li&gt;Blank lines are ignored&lt;/li&gt;
+&lt;li&gt;PreferenceName &lt;code&gt;&amp;lt;PreferenceValue&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here are the Preference names and values:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Help - Value can be either True or False. Default is False. If True, then field help messages are displayed automatically.&lt;/li&gt;
+&lt;li&gt;ListAddStyle - Value can be Top, Bottom, or Relative. Default is Relative. This determines where the window for adding list items pops up.&lt;/li&gt;
+&lt;li&gt;BtnReturnActivate - Value can be True or False. Default is False. If True, and a cmdbtn has the Focus, pressing rtn activates the button. I think this is a very bad idea and that only the spacebar should be used as a way to activate buttons with the keyboard.&lt;/li&gt;
+&lt;li&gt;TabstopAll - Value can be True or False. Default is False. If True then &lt;code&gt;&amp;lt;tab&amp;gt;&lt;/code&gt; will stop at all input fields regardless of whether there is a tabstop set on the input field.&lt;/li&gt;
+&lt;li&gt;DisableTypeAhead - Value can be True or False. Default is False. If True then input is not buffered by the 4cclient until the 4csrvr is ready.&lt;/li&gt;
+&lt;li&gt;GetAnswerType - Value can be Text, Dialog, or Default. Default value is Default, meaning it uses whatever the sys.get_answer() call specified.&lt;/li&gt;
+&lt;li&gt;ShowConnInfo - Value can be True or False. Default is False. If set to True, then Connection Info shows up in the main layout title bar.&lt;/li&gt;
+&lt;li&gt;ShowUser - Value can be True or False. Default is False. If set to True, then the authenticated username is displayed in the main layout title bar.&lt;/li&gt;
+&lt;li&gt;ShowDate - Value can be True or False. Default is False. If set to True, then the current date is displayed in the main layout title bar.&lt;/li&gt;
+&lt;li&gt;ShowTime - Value can be True or False. Default is False. If set to True, then the current time is displayed in the main layout title bar.&lt;/li&gt;
+&lt;li&gt;PSHDrConnInfo - Value can be True or False. Default is False. If True, then connection info is printed in the hdr of a PrintScreen page.&lt;/li&gt;
+&lt;li&gt;PSHdrUser - Value can be True or False. Default is False. If True, then authenticated username is printed in the hdr of a PrintScreen page.&lt;/li&gt;
+&lt;li&gt;PSHdrDate - Value can be True or False. Default is False. If True, then the current date is printed in the hdr of a PrintScreen page.&lt;/li&gt;
+&lt;li&gt;PSHdrTime - Value can be True or False. Default is False. If True, then the current time is printed in the hdr of a PrintScreen page.&lt;/li&gt;
+&lt;li&gt;PSHdrLayoutTitle - Value can be True or False. Default is False. If True, then the layout title isprinted in the hdr of a PrintScreen page.&lt;/li&gt;
+&lt;li&gt;FontFileList - Value can be a comma separated list of 4c font definition files. When no absolute path is given, the files are assumed to be in ${FC_APPDATA}/ for the current user preference and in ${FC_COMMONAPPDATA} for all users preferences.&lt;/li&gt;
+&lt;li&gt;ConnFileList - Value can be a comma separated list of 4c client connection files. When no absolute path is given, the files are assumed to be in ${FC_APPDATA}/ for the current user preference and in ${FC_COMMONAPPDATA} for all users preferences.&lt;/li&gt;
+&lt;li&gt;FKeyFileList - Value can be a comma separated list of 4c client fkey definition files. When no absolute path is given, the files are assumed to be in ${FC_APPDATA}/ for the current user preference and in ${FC_COMMONAPPDATA} for all users preferences.&lt;/li&gt;
+&lt;li&gt;MaxConnHist - Numeric value specifying how many recent connections you want to keep saved for easy access with QuickConnect&lt;/li&gt;
+&lt;li&gt;MaxInstances - The maximum number of w4ccl sessions that are allowed. If not set the default is 2.&lt;/li&gt;
+&lt;li&gt;MaxInstanceOverride - This is an All Users preference only. If set, then this is the max number of w4ccl sessions that any one user can run no matter how high they set their own MaxInstances preference.&lt;/li&gt;
+&lt;li&gt;WarnAfter - This is the number of w4ccl sessions you are allowed to run per user before getting a warning that there are alread so many sessions running. It defaults to 1.&lt;/li&gt;
+&lt;li&gt;SysAddr - This is a global preference only. There should be no reason to change this preference, so leave it alone unless you really know what you are doing. It is the address that 4cclients will attach their shared memory at. Here are some possible values: -2 - Use the operating system default address. Only use this if the only client you run is w4ccl. If you run any other 4c clients, such as wpnlsp, wpcled, or 4ccl it will probably cause conflicts . -1 - Disable using shared memory. 0 - Let 4C determine where memory should be attached. Currently this is at 200M and works on all systems tested. &amp;gt; 0 and &amp;lt;= 10 - Ignored - same as 0 &amp;gt; 10 - Then attach the shared mem at &lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt; * 1M. If you specify 20, then the shared mem segment will be attached at address: 0x01400000. Be careful changing this parameter. Setting it improperly may prevent w4ccl from being able to run. If this happens, then use notepad to change it, or start w4ccl with the &amp;ldquo;&amp;ndash;noshare&amp;rdquo; option.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Environment Variables</title>
+      <link>http://localhost:1313/docs/docs/config/envvars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/config/envvars/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The following are environment variables used by 4C.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HOME_4C - This must be set in order to install 4C. It is the name of the main 4C system directory. It is the home of the 4C.info file This should be set by the script that starts the 4C Server Daemon process. It should also be set in _4CSRVRCONFIG.&lt;/li&gt;
+&lt;li&gt;_4CSRVRCONFIG - The name of the 4C Server Config file. This should be set by the script that starts the 4C Server Daemon process.&lt;/li&gt;
+&lt;li&gt;XLCONFIG - The name of the config file used by all 4C processes for setting shared mem structures. This should be set in the _4CSRVRCONFIG file.&lt;/li&gt;
+&lt;li&gt;JISCONFIG - The name of the config file used by JIsam. This should be set in _4CSRVRCONFIG. It also needs to be set in the .profile of users that may be running JIsam processes from a command prompt. An easy way to set it for interactive users is to source the HOME_4C/4Crc file from a login script. It is important to note that any JISAM processes that access the same JISAM files must use the same JISCONFIG file. The above env vars also need to be set for any users running 4C processes from a command prompt. An easy way to set them for interactive users is to source the HOME_4C/4Crc file from a login script.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition to using env vars that are set externally to 4C,
+4C sets some env vars and the 4C application can query
+the values, but should not change them.
+Any process started by any 4csrvr process will have these vars set.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LOGIN - The name of the user connected.&lt;/li&gt;
+&lt;li&gt;USER - Same&lt;/li&gt;
+&lt;li&gt;LOGNAME - Same&lt;/li&gt;
+&lt;li&gt;HOME - The home directory of the connected user.&lt;/li&gt;
+&lt;li&gt;APPDATA - The name of a directory that the application may store user specific data. On Windows systems this is the CSIDL_APPDATA directory, and is usually HOME/Application Data. Of course this changes from release to release and you should never depend on it being in a known place. On Unix systems, this is usually the users home directory. If you store data in this directory, you should use your own subdirectory underneath APPDATA. On Unix this directory will normally be something like &amp;ldquo;.AppName&amp;rdquo; and on Win32 simply &amp;ldquo;AppName&amp;rdquo;. 4C will create directories as needed when creating files. So if you try to open a file with an external name of ${APPDATA}/MyApp/tmp.txt and the MyApp directory does not exist yet, 4C will create it if possible. 4C Does not automatically set this var on clients. It may or may not be set depending on Op Sys.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other env vars used by 4C that should be set in _4CSRVRCONFIG
+in the non-application area are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FCSHELL - The pathname of the command shell.&lt;/li&gt;
+&lt;li&gt;system_lst or XLSYSTEM - The pathname of the 4C bootstrap directory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Env vars that should be set by each application in _4CSRVRCONFIG
+are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;prog_lst or XLPROG&lt;/li&gt;
+&lt;li&gt;data_lst or XLDATA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Every time the user switches applications,
+4C will set:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;exp_dir or XLEXP - The directory that the source code control system uses as it&amp;rsquo;s root. This will be the the first directory in the prog_lst path list unless the application sets it otherwise.&lt;/li&gt;
+&lt;li&gt;app_dir or XLAPP - Also the first directory in the prog_lst path list.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following env vars are also available for both client and
+server versions 4.4.2 and higher.
+These will normally be used by an application that wants to
+write temporary or permanent (non data) files to the client
+or to the server.
+They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FC_APPDATA - 4C Application specific directory for current user. This will be ${APPDATA}/4C on WIN32 systems and ${APPDATA}/.4C on Unix systems. On Unix systems, you can change the default location of this directory by adding an Env line for it in the XLCONFIG file. In most cases this is not necessary, but on systems where different users share the same home directory, A line like the following may be useful &lt;code&gt;Env FC_APPDATA ${HOME}/${USER}&lt;/code&gt; This will prevent permission problems and allow users to keep their own data private. All in all though, it is better not to have different users sharing the same home directory.&lt;/li&gt;
+&lt;li&gt;FC_COMMONAPPDATA - 4C Application specific directory for all users. On Windows systems this will be CSIDL_COMMON_APPDATA/4C and on Unix systems it will be ${HOME_4C}/share. Data stored in this directory will normally be viewable by all users. On Unix systems, you can change the default location of this directory by adding an Env line for it in the XLCONFIG file.&lt;/li&gt;
+&lt;li&gt;FC_DOCUMENTS - The current users document directory. On Windows systems this is the &amp;ldquo;My Documents&amp;rdquo; directory and on Unix systems it is the users home directory. On Unix systems, you can change the default location of this directory by adding an Env line for it in the XLCONFIG file. dir.&lt;/li&gt;
+&lt;li&gt;FC_HOME - This the directory where 4C is installed and is the same as ${HOME_4C}.&lt;/li&gt;
+&lt;li&gt;FC_TEMP - This is the 4C temp directory and is ${HOME_4C}/tmp I&amp;rsquo;ve done my best to make sure that this directory has permissions set so that all users can create,read and delete files there on all systems running 4.4.2 or higher. This is a good directory to use for storing temp files. If you create a lot of temp files, you need to remember to remove them as well. There are lots of techniques for doing this. Dont leave 10000 files in FC_TEMP or anywhere else. You can change the default location of this directory by adding an Env line in the XLCONFIG file. This will work on any system.&lt;/li&gt;
+&lt;li&gt;FC_SESSION - This the directory that both 4C server and 4C client processes create at startup. Each process will have a different FC_SESSION. Only 4C server and 4C client versions 4.4.4 and higher create the session directory set the FC_SESION env var. On the client machine, it is currently used for storing non permanent images. It could be used by the application to store non permanent data on either the client or server. This directory is created everytime a 4c process starts and it is removed, along with all files in it, when the process exits.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>JISCONFIG</title>
+      <link>http://localhost:1313/docs/docs/config/jisconfig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/config/jisconfig/</guid>
+      <description>
+        
+        
+        &lt;p&gt;JISCONFIG is used to define options necessary
+for JISAM to work.
+Use the isconfig program for setting these options.
+The most important thing to know about JISCONFIG
+is that all processes that may access the same
+JISAM file absolutely must use the same JISCONFIG
+file.
+For this reason, the best place to define the
+JISCONFIG environment variable is in _4CSRVRCONFIG.&lt;/p&gt;
+&lt;p&gt;To see the options that can be specified for JISCONFIG
+run isconfig with no options.
+You should rarely want to change any of the default options
+other than:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-f - Max number of open JISAM files&lt;/li&gt;
+&lt;li&gt;-F - Max number of open files per user&lt;/li&gt;
+&lt;li&gt;-b - Number of JISAM buffers&lt;/li&gt;
+&lt;li&gt;-B - Max number of buffers per file&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>_4CSRVRCONFIG</title>
+      <link>http://localhost:1313/docs/docs/config/srvrcnf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/config/srvrcnf/</guid>
+      <description>
+        
+        
+        &lt;p&gt;_4CSRVRCONFIG, named for the env var you use to name it,
+is the main server side configuration file.
+There must be a unique _4CSRVRCONFIG file for each 4csrvrd daemon
+running.
+Most systems will use only one.
+_4CSRVRCONFIG is used to set the runtime environment for the
+different 4C server processes.
+You use it to specify default system options,
+environment variables,
+and to define applications that different 4c clients may access.
+As in other 4C config files, a line starting with a &amp;lsquo;#&amp;rsquo; is a comment.
+Each option that can be specified starts on a new line.
+Option arguments are separated by white space.
+If an option argument needs embedded white space,
+enclose the argument in double quotes.
+Option arguments can be on separate lines as long as there
+is white space at the front of the line.
+The system options that can be specified are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LogFile - The name of log file that may be used for debugging. This option should usually be disabled in a stable system.&lt;/li&gt;
+&lt;li&gt;Connect - Connect information for 4csrvrd. You shouldn&amp;rsquo;t need to change this except if you are changing the Port that 4csrvrd will listen on.&lt;/li&gt;
+&lt;li&gt;ServerDir - The directory where the 4C server process are located.&lt;/li&gt;
+&lt;li&gt;WorkDir - The directory that the 4C server process should use as a working directory.&lt;/li&gt;
+&lt;li&gt;MaxProcesses - The maximum number of 4c server processes to allow to run from this _4CSRVRCONFIG. You should not need to specify this unless you expect to have more than 500 4c server processes running at a time.&lt;/li&gt;
+&lt;li&gt;DpyAlarm - How frequently should the 4csrvr check and see if client needs update of display fields. Nothing will be sent if no changes. The default, if not specified in _4CSRVRCONFIG, is 60 seconds.&lt;/li&gt;
+&lt;li&gt;ClUpdAlarm - How often should the 4csrvr force flushing data being sent to the client. The default is 60 seconds, unless specified in _4CSRVRCONFIG.&lt;/li&gt;
+&lt;li&gt;DataEncryption - This is meant to be a temporary measure to secure application data transmitted across the network. This can be one of: None - no encryption is done. 4C - A weak encryption scheme is used. Both client and server need to be version 4.0.6 or higher for this to work. If either is an earlier version, then no data is encrypted. Please note that the algorithm used for 4C data encryption is weak and is no where near current cryptograpy standards. There will be a strong encryption algorithm sometime in the future. This option is ignored when both Client and Server are at versions 4.4 or higher as long as one of the more secure encryption methods is specified in the &lt;a href=&#34;https://www.4csoftware.com/docs/Security/config.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Security Configuration.&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DefaultLogon - Can be specified to allow remote 4csrvrs to connect to a 4cfs process, without supplying a login and password, and read 4C files from this machine. Think twice before using this option and never use root. This option should not be used on version 4.4 or higher servers. Use methods found in &lt;a href=&#34;http://localhost:1313/docs/docs/security/&#34;&gt;4C Security&lt;/a&gt; instead.&lt;/li&gt;
+&lt;li&gt;LogonSecurity - How 4C checks a logon. This can be one of: Default PAM MD5 Default, will work on most systems, except where PAM is used.&lt;/li&gt;
+&lt;li&gt;AllowReconnect - Set this to True to allow interactive clients to reconnect to the same 4csrvr process if a connection is lost due to network problems. In most cases the client will be able to reconnect and continue work exactly where they were. Other than the delay in reconnecting there will be no detrimental effect on either the 4client process of the 4c srvr process. In some cases a reconnect may not be possible and the client will exit as it always has. Both client and server need to be running version 4.4.1 or higher.&lt;/li&gt;
+&lt;li&gt;ReconnectTimeout - Number of seconds that a 4csrvr process should wait for a client to try to reconnect. The default is 120. If you set this option to a value &amp;lt;= 0, then AllowReconnect is automatically set to False. If you set this option to a value &amp;gt; 0, then AllowReconnect is automatically set to True. The default value for the timeout, if not set is 2 minutes.&lt;/li&gt;
+&lt;li&gt;ContinueWork - Set this to True if you want the 4csrvr process to continue working even when the client is now longer there. Any 4C program that needs requires user input when there is no client to get the input from will exit with $wexit_code set to EXIT_KILL. If you are not sure if you want this option enabled consider the case where a user starts a long update and then shuts down their PC. If you wan the update to be able to continue running and preserve the consistency of your data then set this option to True. If you prefer for the update to stop and leave your data in an inconsistent state then set this option to False.&lt;/li&gt;
+&lt;li&gt;AllowPasswordSave - This can have the value &amp;ldquo;True&amp;rdquo; or &amp;ldquo;False&amp;rdquo; If set to False, then the 4csrvr will instruct any 4cclients that connect to this machine to not allow the user to save the password. (Client and Server both need to be at Version 3.6.7 OR higher)&lt;/li&gt;
+&lt;li&gt;SessionControl - Specify the default SessionControl dialog options that the client will show when the user press &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Alt&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;F8&amp;gt;&lt;/code&gt;. &lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Alt&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;F8&amp;gt;&lt;/code&gt; should also work. The second key sequence may be necessary on some HP computers that run hkcmd at startup. This option can be overridden by individual applications. Values for this can be one or more of the following: All None [+-]NoErrorWait [+-]Debug [+-]ExitProg [+-]ExitSession [+-]ChangePassword Separate multiple options by commas. SessionControl defaults can be overriden in each application. (Client and Server both need to be at Version 3.6.7 OR higher)&lt;/li&gt;
+&lt;li&gt;GetAnswerType - The default way that the sys.get_answer() SysPCL displays it&amp;rsquo;s question. This can be overriden in each application. Value you can specify are: Text Dialog&lt;/li&gt;
+&lt;li&gt;Env - Default environment variables for each 4C server process. Separate the env name from the value by whitespace. Environment variabels can be overridden bt each application. Note, however, that defining environment vars in the application section uses a different syntax. You can use the value of another env var when setting env vars by using the standard shell syntax &amp;ldquo;${ENVVAR}&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;SecurityGroup - The security group context that 4csrvrd should run in. (This is specific to NT systems and not used on Unix systems.&lt;/li&gt;
+&lt;li&gt;ExecProg - Here you can specify commands to run when when the 4csrvrd process first starts. &amp;lt;!&amp;ndash;&lt;/li&gt;
+&lt;li&gt;SODebugAddr - An option that can be set to turn on network debugging for a specific ip address. &amp;ndash;&amp;gt;&lt;/li&gt;
+&lt;li&gt;Path &lt;code&gt;&amp;lt;pathname&amp;gt;&lt;/code&gt; The menu you want this application to display under. Requires 4csrvr 5.0.6 or later and 4cclient 5.0.6 or later.&lt;/li&gt;
+&lt;li&gt;Application - Definition of one application. This is where each individual application defines it&amp;rsquo;s options. Application options are all separated by whitespace and can be specified on separate lines as long as the start of the line has some white space. The first option is always the application name and has no arguments. Application options arguments are always separated from the option by an equal sign. Multiple arguments to the same option are separated by commas. The options and arguments you can specify for an application are: Desc - Description of the application. Prog - The program to run when a user connects to this application. Group - The name to give the 4C group that runs when this app starts. Not to be confused with the Groups option. Users - Which users are allowed to run or are forbidden from running this app. Separate multiple users by commas. To prevent a user from accessing this application, precede the usename with a minus sign. Groups - Which groups are allowed to run or are forbidden from running this app. Users may belong to more than one os security group. Separate multiple groups by commas. To prevent a group from accessing this application, precede the usename with a minus sign. Startup - &amp;ldquo;True&amp;rdquo; or &amp;ldquo;False&amp;rdquo; If an application is a startup up, it runs everytime a 4csrvr process starts. It can be used to check client versions or possibly to check client security credentials. Other possibilities include setting a users profile based on their login name. Ignore - &amp;ldquo;True&amp;rdquo; or &amp;ldquo;False&amp;rdquo; Ignore this App. Hide - &amp;ldquo;True&amp;rdquo; or &amp;ldquo;False&amp;rdquo; Hide this app from client menus. The app can still be used by 4cfs for allowing remote file access. prog_lst, ProgList, or XLPROG - Three ways to set the XLPROG env var. data_lst, DataList, or XLDATA - Three ways to set XLDATA exp_dir, ExpDir, or XLEXP - Three ways to set XLEXP Icon - The name of the icon to use for the application. The file needs to exist on the server in the images directory. It will be copied to the client one time only. PrtWinTitle - The title to use for the window when displaying reports. ShellWinTitle - The title to use for the 4C Shell window. ErrorWinTitle - The title to use for the 4C Error window InfoWinTitle - The title to use for the 4C Info window. GetAnswerWinTitle - The title to use for the 4C GetAnswerWin. SessionControl - This will override the default SessionControl that may be specified as a system option. GetAnswerType - This will override the default GetAnswerType specified as a system option. MinClientVersion - The minimum version of the 4cclient that is necessary to tun the application. Specify this with a line similar to: MinClientVersion=v.r.l Everything else is assumed to be an environment var of the form ENVVAR=VALUE. All application env vars will be set each time the application starts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The _4CSRVRCONFIG created by the 4C install process has examples
+of most of the above options.&lt;/p&gt;
+&lt;p&gt;For 4C Server versions earlier than 4.4,
+this file must be readable by any user allowed to connect to 4C.&lt;/p&gt;
+&lt;p&gt;For 4C Server versions 4.4 and higher,
+this file should only be readable by the root/administrator users.&lt;/p&gt;
+&lt;p&gt;It should not be writable except by the root/administrator users.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>SysMemory</title>
+      <link>http://localhost:1313/docs/docs/config/sysmem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/config/sysmem/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The SysMemory option in XLCONFIG tells 4C how much
+shared memory to allocate.
+SysMemory is used for storing data that
+may be needed my multiple processes at the
+same time.
+This includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;File specifications.&lt;/li&gt;
+&lt;li&gt;Program specifications.&lt;/li&gt;
+&lt;li&gt;Layout specifications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;4C currently only allocates the shared memory segment
+once and it cannot grow, so it is important
+to make sure you specify it correctly.
+Nowadays, with so much memory available there is little
+sense in trying to keep shared memory to a minimum.
+I would recommend setting it high to start with and
+monitor how it is used.
+16 or 32 meg are reasonable numbers to start with.
+Here are several ways to specify these values.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SysMemory 32768 1 - 32 meg allocated all in one segment&lt;/li&gt;
+&lt;li&gt;SysMemory 4096 8 - 32 meg allocated in 8 segments.&lt;/li&gt;
+&lt;li&gt;SysMemory 16384 1 - 16 meg allocated all in one segment&lt;/li&gt;
+&lt;li&gt;SysMemory 4096 4 - 16 meg allocated in 4 segments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The only reason in using multiple segments
+is that some Unix kernels default to low values
+for maximum size of a shared memory segment.
+Allocating multiple smaller segments helps
+you avoid having to reconfigure the kernel.
+When possible, you should try to use as few segments
+as possible.&lt;/p&gt;
+&lt;p&gt;In addition to the size of SysMemory there are
+two other parameters in XLCONFIG that affect how shared
+memory is used.
+They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Files &lt;code&gt;&amp;lt;nfiles&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Programs &lt;code&gt;&amp;lt;nprograms&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both of theses parameters take one argument, the number
+of file specs or the number of program specs that you want to try
+to keep in shared memory.
+Determining this number can be tricky, is installation and application
+dependant, and may change over time as the number of users increase
+on a system.
+Here are some guidelines that may help:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The number of files to keep in shared memory should be high enough so that any currently running program will have all of it&amp;rsquo;s file definitions in shared memory.&lt;/li&gt;
+&lt;li&gt;The number of programs to keep in shared memory should be high enough to account for the maximum number of unique programs you expect to have running at the same time plus a little extra.&lt;/li&gt;
+&lt;li&gt;If you set the number of files too low, then 4C will end up allocating some file definitions in UsrMemory and you will see file (SFL) slot faults in the sys.mem.summary program.&lt;/li&gt;
+&lt;li&gt;If you set the number of programs too low, then 4C will allocate program specs in UsrMemory and you will see program (SP) slot faults in the sys.mem.summary program.&lt;/li&gt;
+&lt;li&gt;If you set the number of programs or files too high, you risk fragmenting the shared memory and you will probably see program (SP) mem faults or file (SFL) mem faults in sys.mem.summary.&lt;/li&gt;
+&lt;li&gt;Another error you may see when either the number of programs or the number of files is set too high is: &amp;ldquo;Layout: &lt;code&gt;&amp;lt;name&amp;gt;&lt;/code&gt; not in SysMem Yet&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While 4C tries to deal with shared memory problems by allocating
+program specs and file specs in UsrMemory when necessary,
+it is important to get these settings as correct as possible.
+You will not get these values right by guessing or by using
+the default 4CConfig file.
+You can only get them right by monitoring
+new installations and by checking older ones as usage changes.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s one scenario to start with.&lt;/p&gt;
+&lt;p&gt;Set the SysMemory, Files, and Programs as follows:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SysMemory 16384 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Files 1000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Programs 100&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This allocates 16meg shared memory all as one segment,
+allows up to 1000 different file specs and 100 different
+program specs to be kept in memory at the same time.&lt;/p&gt;
+&lt;p&gt;When the system is up and running under heavy load,
+run the sys.mem.summary 4C program and look for the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If SFL slot faults &amp;gt; 0 then you probably need to increase the number of files allowed in SysMemory.&lt;/li&gt;
+&lt;li&gt;If SP slot faults is &amp;gt; 0 then you probably need to increase # programs allowed in SysMemory.&lt;/li&gt;
+&lt;li&gt;If either SFL or SP mem faults is &amp;gt; 0 then you either have to increases the amount of shared memory used, or decreases the number of programs and/or number of files allowed in shared memory.&lt;/li&gt;
+&lt;li&gt;If there are no faults of any kind and if there is a lot of unused shared memory, then you can lower the SysMemory or increase the number of files or programs allowed in shared memory.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Until 4C adapts to changing usage and shared mem requirements automatically
+you should run this program:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On new installs&lt;/li&gt;
+&lt;li&gt;On running systems whenever usage changes&lt;/li&gt;
+&lt;li&gt;On running systems whenever XLCONFIG changes&lt;/li&gt;
+&lt;li&gt;On any system experiencing mysterious crashes or strange 4C errors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another way of checking for 4C shared memory problems is to run:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xlview -v
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;or
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xlview -V&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;from a command line.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>XLCONFIG</title>
+      <link>http://localhost:1313/docs/docs/config/xlconfig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/config/xlconfig/</guid>
+      <description>
+        
+        
+        &lt;p&gt;XLCONFIG is used to define the size
+of shared memory and the number of
+file definitions and program definitions
+that will be kept in shared memory for
+faster startup time.
+Processes that use the same XLCONFIG,
+use the same shared memory and will get file
+definitions and program definitions from the
+shared memory cache.
+The best place to set the XLCONFIG env var is in
+_4CSRVRCONFIG.&lt;/p&gt;
+&lt;p&gt;Here are some options that can be set
+using XLCONFIG:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SysMemory &lt;code&gt;&amp;lt;numkbytes&amp;gt;&lt;/code&gt; [ &lt;code&gt;&amp;lt;num segments&amp;gt;&lt;/code&gt; ] To specify 4 meg of shared memory, use: &lt;code&gt;SysMemory 4096 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;SysAddr &lt;code&gt;&amp;lt;addr&amp;gt;&lt;/code&gt; This tells 4C what address to attach the 4C shared mem segment at. You should not need to change the value in the default 4CConfig file unless you are getting errors running the application that tell you to change this.&lt;/li&gt;
+&lt;li&gt;JISAMAddr &lt;code&gt;&amp;lt;addr&amp;gt;&lt;/code&gt; This works the same as SysAddr, expect it is for the JISAM shared mem segment.&lt;/li&gt;
+&lt;li&gt;Files &lt;code&gt;&amp;lt;nfiles&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;nfiles&amp;gt;&lt;/code&gt; is the number of file definitions that you want to keep in shared memory. It is not necessary to keep all file definitions in shared memory at the same time. 4C will read file definitions into shared memory as needed and swap out the least recently used file def if necessary. An &lt;code&gt;&amp;lt;nfiles&amp;gt;&lt;/code&gt; file of 300 is sufficient for most systems.&lt;/li&gt;
+&lt;li&gt;Programs &lt;code&gt;&amp;lt;nprograms&amp;gt;&lt;/code&gt; This works the same as Files, except for program definitions. An &lt;code&gt;&amp;lt;nprograms&amp;gt;&lt;/code&gt; value of 100 is sufficient for most systems.&lt;/li&gt;
+&lt;li&gt;Users &lt;code&gt;&amp;lt;max4cprocesses&amp;gt;&lt;/code&gt; The maximum number of 4c processes you want to allow to connect. Since each 4c user may be running 2 or more processes this number should be set to about three times the number of people actually connecting. This options should probably be taken out and there should not be a limit on number of proceses.&lt;/li&gt;
+&lt;li&gt;MultiLockOK &lt;code&gt;&amp;lt;TrueOrFalse&amp;gt;&lt;/code&gt; This is a hack for applications that may allow locking the same record more than once during the same update.&lt;/li&gt;
+&lt;li&gt;FCPort &lt;code&gt;&amp;lt;portno&amp;gt;&lt;/code&gt; The portnum that the 4csrvrd process is listening for connection requests on. This is necessary for xlbuild to work from the command line.&lt;/li&gt;
+&lt;li&gt;ErrLogFile &lt;code&gt;&amp;lt;errlogfilename&amp;gt;&lt;/code&gt; The name of a file for logging errors.&lt;/li&gt;
+&lt;li&gt;ErrLog All&lt;/li&gt;
+&lt;li&gt;MaxCoreFileSize &lt;code&gt;&amp;lt;size&amp;gt;&lt;/code&gt; This may be necessary on some systems to allow core files to be created for debugging. You can ignore it for the most part. It&amp;rsquo;s probably better to put the following lines in the run4c.sh script. &lt;code&gt;ulimit -c unlimited # # This line may need to be duplicated in a cron script as well to guarantee # core files dont persist forever # find $HOME_4C/tmp -name core\* -mtime +7 -exec rm -f {} \;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;SysScratch &lt;code&gt;&amp;lt;filename&amp;gt;&lt;/code&gt; [ &lt;code&gt;&amp;lt;filename&amp;gt;&lt;/code&gt; &amp;hellip; ] Specify the filenames of any system scratch files that you want to have pre allocated in shared mem. This is not usually necessary unless there is not enough shared mem available when you try to use them.&lt;/li&gt;
+&lt;li&gt;SvTimeout &lt;code&gt;&amp;lt;nsecs&amp;gt;&lt;/code&gt; [ &lt;code&gt;&amp;lt;program&amp;gt;&lt;/code&gt; ] or Timeout &lt;code&gt;&amp;lt;nsecs&amp;gt;&lt;/code&gt; [ &lt;code&gt;&amp;lt;program&amp;gt;&lt;/code&gt; ] Specify this if you want an idle 4csrvr process to timeout after &lt;code&gt;&amp;lt;nsecs&amp;gt;&lt;/code&gt; and run &lt;code&gt;&amp;lt;program&amp;gt;&lt;/code&gt;. If you don&amp;rsquo;t specify &lt;code&gt;&amp;lt;program&amp;gt;&lt;/code&gt;, then the 4csrvr process will exit.&lt;/li&gt;
+&lt;li&gt;ClTimeout &lt;code&gt;&amp;lt;nsecs&amp;gt;&lt;/code&gt; [ &lt;code&gt;&amp;lt;program&amp;gt;&lt;/code&gt; ] Specify this if you want an idle 4C client process to timeout after &lt;code&gt;&amp;lt;nsecs&amp;gt;&lt;/code&gt; and run &lt;code&gt;&amp;lt;program&amp;gt;&lt;/code&gt;. If you don&amp;rsquo;t specify &lt;code&gt;&amp;lt;program&amp;gt;&lt;/code&gt;, then the 4C client process will exit. On 4csrvr versions earlier than 4.8, ClTimeout only works if there is no SvTimout or Timout specified.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Currently, neither SvTimeout or ClTimeout are triggered when
+waiting on sys.err_msg() or sys.message().
+sys.get_answer() does not have this problem.&lt;/p&gt;
+&lt;p&gt;The SysMemory, Files, and Programs options must be configured
+in a way to make maximum use of shared memory without overflowing it.
+There are several ways to determine if your system is configured
+correctly.
+The easiest is to run the 4C program sys.mem.summary,
+which is part of the 4cSys application.
+Watch out for any kind of fault.
+This may imply one or more of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Not enough shared memory allocated&lt;/li&gt;
+&lt;li&gt;Too many Files specified&lt;/li&gt;
+&lt;li&gt;Too few Files specified&lt;/li&gt;
+&lt;li&gt;Too many Programs specified&lt;/li&gt;
+&lt;li&gt;Too few Programs specified&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You should monitor a newly installed system by running this program
+during peak usage and also when system usage changes.&lt;/p&gt;
+&lt;p&gt;Please see
+&lt;a href=&#34;http://localhost:1313/docs/docs/config/sysmem/&#34;&gt;Configuring 4C Shared Memory&lt;/a&gt;
+for some hints on best practices for configuring 4c shared memory&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

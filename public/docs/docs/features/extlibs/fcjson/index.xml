@@ -1,0 +1,516 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C FCJSon External Library</title>
+    <link>http://localhost:1313/docs/docs/features/extlibs/fcjson/</link>
+    <description>Recent content in 4C FCJSon External Library on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/docs/docs/features/extlibs/fcjson/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C FCJSon External Library - Examples</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/fcjson/examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/fcjson/examples/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/&#34;&gt;FCJSon Home&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example 1 - fccom.demo.2 A simple program that uses the google translate api to make a web service request to translate a short piece of text. It has an example of both use cases for FCJSon, creating JSon content and consuming JSon content. The JSon content created is a sent as the body of the FCCom::HttpRequest to google and the JSon content consumed is received in the body of the reply from google. In order to run it without error, you will need to supply your own google cloud services api key. If you do have a google api key, you can set it in the InitPCL of this program rather than enter it every time you run the program. Even without an api key, you should run this application because you will still get a response from google with json content in the reply.&lt;/li&gt;
+&lt;li&gt;Example 2 - fcjson.demo.1 This program uses the google maps api to send an FCCom GET HttpRequest to get the elevation in meters of up to 10 different pts on the earth. The response is a JSon file that we parse and extract the information from. If you do not have a google cloud apikey, this program will still run, except there will be limits on how many requests you can make in short time periods. If you do have a google api key, you can set it in the InitPCL of this program rather than enter it every time you run the program.&lt;/li&gt;
+&lt;li&gt;Example 3 - fcjson.demo.2 This program uses info from 2 4c bootstrap files, sys.program and sys.dpy_field, to create a JSon file with arrays, nested objects, integers, strings and booleans. It demonstrates most of the concepts needed to create JSon content. It also uses the file that it built to demonstrate more ways to consume json data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It should be super easy to follow the logic of the demo programs.
+For formatting some of the replies, you may find it helpful to have
+xmllint installed as well as jsonlint (install python-demjson).&lt;/p&gt;
+&lt;p&gt;All of the above examples are in the 4c demo application.&lt;/p&gt;
+&lt;p&gt;If you need to download the most recent 4c demo programs here&amp;rsquo;s the link:
+&lt;a href=&#34;https://4csoftware.com/downloads/misc/demo.tar.gz&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;4C Demo Application Back to Top&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Functions</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/&#34;&gt;FCJSon Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;FCJSon Function List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;[A]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;[C]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;[D]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;[F]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;[G]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;[H]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;[O]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;[P]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;[R]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;[S]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addarrayobject/&#34;&gt;AddArrayObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addarray/&#34;&gt;AddArray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addboolobject/&#34;&gt;AddBoolObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addbool/&#34;&gt;AddBool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/adddoubleobject/&#34;&gt;AddDoubleObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/adddouble/&#34;&gt;AddDouble&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addintobject/&#34;&gt;AddIntObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addint/&#34;&gt;AddInt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addnullobject/&#34;&gt;AddNullObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addnull/&#34;&gt;AddNull&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addobject/&#34;&gt;AddObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addstringobject/&#34;&gt;AddStringObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/addstring/&#34;&gt;AddString&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddarrayobject/&#34;&gt;ArrayAddArrayObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddarray/&#34;&gt;ArrayAddArray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddboolobject/&#34;&gt;ArrayAddBoolObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddbool/&#34;&gt;ArrayAddBool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayadddoubleobject/&#34;&gt;ArrayAddDoubleObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayadddouble/&#34;&gt;ArrayAddDouble&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddintobject/&#34;&gt;ArrayAddIntObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddint/&#34;&gt;ArrayAddInt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddnullobject/&#34;&gt;ArrayAddNullObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddnull/&#34;&gt;ArrayAddNull&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddobject/&#34;&gt;ArrayAddObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddstringobject/&#34;&gt;ArrayAddStringObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayaddstring/&#34;&gt;ArrayAddString&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetarray/&#34;&gt;ArrayGetArray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetbool/&#34;&gt;ArrayGetBool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetdouble/&#34;&gt;ArrayGetDouble&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetint/&#34;&gt;ArrayGetInt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetobject/&#34;&gt;ArrayGetObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetstringlen/&#34;&gt;ArrayGetStringLen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetstringpart/&#34;&gt;ArrayGetStringPart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetstring/&#34;&gt;ArrayGetString&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygettype/&#34;&gt;ArrayGetType&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayhaskey/&#34;&gt;ArrayHasKey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputarrayobjec/&#34;&gt;ArrayPutArrayObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputarray/&#34;&gt;ArrayPutArray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputboolobject/&#34;&gt;ArrayPutBoolObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputbool/&#34;&gt;ArrayPutBool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputdoubleobject/&#34;&gt;ArrayAddDoubleObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputdouble/&#34;&gt;ArrayPutDouble&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputintobject/&#34;&gt;ArrayPutIntObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputint/&#34;&gt;ArrayPutInt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputnullobject/&#34;&gt;ArrayPutNullObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputnull/&#34;&gt;ArrayPutNull&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputobject/&#34;&gt;ArrayPutObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputstringobject/&#34;&gt;ArrayPutStringObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputstring/&#34;&gt;ArrayPutString&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/closekeylist/&#34;&gt;CloseKeyList&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/converttostring/&#34;&gt;ConvertToString&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/count/&#34;&gt;Count&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/createarray/&#34;&gt;CreateArray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/createbool/&#34;&gt;CreateBool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/createdouble/&#34;&gt;CreateDouble&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/createint/&#34;&gt;CreateInt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/createnull/&#34;&gt;CreateNull&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/createobject/&#34;&gt;CreateObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/createstringfromfile/&#34;&gt;CreateStringFromFile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/createstring/&#34;&gt;CreateString&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/deleteobject/&#34;&gt;DeleteObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/freeall/&#34;&gt;FreeAll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/free/&#34;&gt;Free&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getarraylen/&#34;&gt;GetArrayLen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getarray/&#34;&gt;GetArray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getbool/&#34;&gt;GetBool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getcount/&#34;&gt;GetCount&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getdouble/&#34;&gt;GetDouble&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getint/&#34;&gt;GetInt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getkey/&#34;&gt;GetKey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getobject/&#34;&gt;GetObject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getstringlen/&#34;&gt;GetStringLen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getstringpart/&#34;&gt;GetStringPart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getstring/&#34;&gt;GetString&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/gettype/&#34;&gt;GetType&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/haskey/&#34;&gt;HasKey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/openkeylist/&#34;&gt;OpenKeyList&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/parsefile/&#34;&gt;ParseFile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/parsestring/&#34;&gt;ParseString&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/release/&#34;&gt;Release&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/save/&#34;&gt;Save&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/savetofile/&#34;&gt;SaveToFile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Creates a new object, adds an existing json array&lt;/p&gt;
+&lt;p&gt;adds an array object using a &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt; to an FCJSon object&lt;/p&gt;
+&lt;p&gt;creates a new json object, adds a boolean value&lt;/p&gt;
+&lt;p&gt;adds a boolean &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pair to a json object.&lt;/p&gt;
+&lt;p&gt;creates a new json object, adds a double value&lt;/p&gt;
+&lt;p&gt;adds a double &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pair to a json object.&lt;/p&gt;
+&lt;p&gt;creates a new json object, adds an integer value&lt;/p&gt;
+&lt;p&gt;adds an integer/int64 &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pair to a json object.&lt;/p&gt;
+&lt;p&gt;creates a new json object, adds a null value&lt;/p&gt;
+&lt;p&gt;adds a null &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pair to a json object.&lt;/p&gt;
+&lt;p&gt;adds an object &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pair to a json object.&lt;/p&gt;
+&lt;p&gt;creates a new json object, adds an alpha value&lt;/p&gt;
+&lt;p&gt;adds an alpha &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pair to a json object.&lt;/p&gt;
+&lt;p&gt;Creates a new object, adds an existing array&lt;/p&gt;
+&lt;p&gt;adds an array object to the end of&lt;/p&gt;
+&lt;p&gt;creates a new JSon object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs,&lt;/p&gt;
+&lt;p&gt;adds a simple boolean value to the end of an array&lt;/p&gt;
+&lt;p&gt;creates a new JSon object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs,&lt;/p&gt;
+&lt;p&gt;adds a simple double value to the end of an array&lt;/p&gt;
+&lt;p&gt;creates a new JSon object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs,&lt;/p&gt;
+&lt;p&gt;adds a simple integer value to the end of an array&lt;/p&gt;
+&lt;p&gt;creates a new JSon object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs,&lt;/p&gt;
+&lt;p&gt;adds a null value to the end of an array&lt;/p&gt;
+&lt;p&gt;adds an fcjson object to the end of an array.&lt;/p&gt;
+&lt;p&gt;creates a new JSon object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs,&lt;/p&gt;
+&lt;p&gt;adds a simple alpha value to the end of an array&lt;/p&gt;
+&lt;p&gt;returns the jsonident of an array embedded in an&lt;/p&gt;
+&lt;p&gt;gets a boolean value from an array object.&lt;/p&gt;
+&lt;p&gt;gets a double value from an array object.&lt;/p&gt;
+&lt;p&gt;gets an integer value from an array object.&lt;/p&gt;
+&lt;p&gt;gets a json object from an array object.&lt;/p&gt;
+&lt;p&gt;returns the length of an alpha value from an array object.&lt;/p&gt;
+&lt;p&gt;gets a partial alpha value from an array object.&lt;/p&gt;
+&lt;p&gt;gets an alpha value from an array object.&lt;/p&gt;
+&lt;p&gt;returns the datatype of a json object in an array&lt;/p&gt;
+&lt;p&gt;returns an integer indicating whether an FCJSon object&lt;/p&gt;
+&lt;p&gt;Creates a new object, adds an existing array&lt;/p&gt;
+&lt;p&gt;puts an array object at a specified&lt;/p&gt;
+&lt;p&gt;creates a new JSon object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs,&lt;/p&gt;
+&lt;p&gt;puts a simple boolean value at a specific&lt;/p&gt;
+&lt;p&gt;creates a new JSon object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs,&lt;/p&gt;
+&lt;p&gt;puts a simple double value at a specific&lt;/p&gt;
+&lt;p&gt;creates a new JSon object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs,&lt;/p&gt;
+&lt;p&gt;puts a simple integer value at a specific&lt;/p&gt;
+&lt;p&gt;creates a new JSon object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs,&lt;/p&gt;
+&lt;p&gt;puts a null value at a specific&lt;/p&gt;
+&lt;p&gt;puts an fcjson object at a specific index in&lt;/p&gt;
+&lt;p&gt;creates a new JSon object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs,&lt;/p&gt;
+&lt;p&gt;puts a simple alpha value at a specific&lt;/p&gt;
+&lt;p&gt;closes th KeyList for one json object and&lt;/p&gt;
+&lt;p&gt;converts a FCJSon object to a 4C alpha variable&lt;/p&gt;
+&lt;p&gt;returns the total number of currently in use FCJSon objects&lt;/p&gt;
+&lt;p&gt;creates a new FCJSon array object that will&lt;/p&gt;
+&lt;p&gt;creates a new json boolean object initialized to&lt;/p&gt;
+&lt;p&gt;creates a new initialized json double object&lt;/p&gt;
+&lt;p&gt;creates a new initialized json integer object&lt;/p&gt;
+&lt;p&gt;creates a new initialized json double object&lt;/p&gt;
+&lt;p&gt;creates a new FCJSon object that&lt;/p&gt;
+&lt;p&gt;creates a string JSon object with the&lt;/p&gt;
+&lt;p&gt;creates a new initialized json string object&lt;/p&gt;
+&lt;p&gt;deletes an object by key from it&amp;rsquo;s parent.&lt;/p&gt;
+&lt;p&gt;frees all currently allocated FCJSon objects.&lt;/p&gt;
+&lt;p&gt;frees the resources associated with one json object&lt;/p&gt;
+&lt;p&gt;returns the number of items in an array object&lt;/p&gt;
+&lt;p&gt;returns the jsonident of an array object&lt;/p&gt;
+&lt;p&gt;gets a boolean value from a JSon object.&lt;/p&gt;
+&lt;p&gt;returns the number of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs in&lt;/p&gt;
+&lt;p&gt;gets a double value from an object.&lt;/p&gt;
+&lt;p&gt;gets an integer value from an object.&lt;/p&gt;
+&lt;p&gt;returns the key from the current KeyList at idx.&lt;/p&gt;
+&lt;p&gt;gets a json object from a json object&lt;/p&gt;
+&lt;p&gt;gets the length of an alpha value in a JSon object.&lt;/p&gt;
+&lt;p&gt;gets a partial alpha value from an object.&lt;/p&gt;
+&lt;p&gt;gets an alpha value from an object.&lt;/p&gt;
+&lt;p&gt;returns the datatype of a json object&lt;/p&gt;
+&lt;p&gt;returns an integer indicating whether an FCJSon object&lt;/p&gt;
+&lt;p&gt;creates a list of keys from an FCJSon object&lt;/p&gt;
+&lt;p&gt;parses a JSon file and returns an integer id&lt;/p&gt;
+&lt;p&gt;parses a 4C alpha in JSon format and returns&lt;/p&gt;
+&lt;p&gt;decrements the reference&lt;/p&gt;
+&lt;p&gt;on a FCJSon object and&lt;/p&gt;
+&lt;p&gt;saves a FCJSon object to a 4C alpha variable&lt;/p&gt;
+&lt;p&gt;saves a FCJSon object to a file on the&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C FCJSon External Library - Most Recent Changes</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/fcjson/fcjsonchanges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/fcjson/fcjsonchanges/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/&#34;&gt;FCJSon Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;20 October 2021&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;20-october-2021&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#20-october-2021&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Versions 6.7.3-01 and later&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The FCJSon functions used to set or get integer values allow using either 32 bit integer or 64 bit int64 values as the value to set or get. Previously all values set and returned were 32 integer values only. The functions affected are &lt;a href=&#34;https://www.4csoftware.com/docs/Features/ExtLibs/FCJSon/addint.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AddInt&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; , &lt;a href=&#34;https://www.4csoftware.com/docs/Features/ExtLibs/FCJSon/addintobject.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AddIntObject&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; , &lt;a href=&#34;https://www.4csoftware.com/docs/Features/ExtLibs/FCJSon/arrayaddint.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ArrayAddInt&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; , &lt;a href=&#34;https://www.4csoftware.com/docs/Features/ExtLibs/FCJSon/arrayaddintobject.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ArrayAddIntObject&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; , &lt;a href=&#34;https://www.4csoftware.com/docs/Features/ExtLibs/FCJSon/arraygetint.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ArrayGetInt&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; , &lt;a href=&#34;https://www.4csoftware.com/docs/Features/ExtLibs/FCJSon/arrayputint.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ArrayPutInt&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; , &lt;a href=&#34;https://www.4csoftware.com/docs/Features/ExtLibs/FCJSon/arrayputintobject.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ArrayPutIntObject&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; , &lt;a href=&#34;https://www.4csoftware.com/docs/Features/ExtLibs/FCJSon/createint.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CreateInt&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; , &lt;a href=&#34;https://www.4csoftware.com/docs/Features/ExtLibs/FCJSon/getint.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GetInt&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;18 October 2021&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;18-october-2021&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#18-october-2021&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Versions 6.7.3-01 and later and version 649-06 and later&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The FCJSon functions that create double objects or add double values or double objexts to a JSon objext or to a JSon array all have an optional final argument that allows you to override the default value displayed when the writing the object to either a file or a 4c variable. For 4csrvr version 6.7.3-01 and later specifyin you will not need to specify both values. Specifying only the the alpha value that you want displayed will be sufficient. However, specifying both will still be acceptable. The functions affected are &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/adddouble/&#34;&gt;AddDouble()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/adddoubleobject/&#34;&gt;AddDoubleObject()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayadddouble/&#34;&gt;ArrayAddDouble()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayadddoubleobject/&#34;&gt;ArrayAddDoubleObject()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputdouble/&#34;&gt;ArrayPutDouble()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arrayputdoubleobject/&#34;&gt;ArrayPutDoubleObject()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/createdouble/&#34;&gt;CreateDouble()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;07 December 2020&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;07-december-2020&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#07-december-2020&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The FCJSon library has 4 new functions &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getstringlen/&#34;&gt;GetStringLen()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getstringpart/&#34;&gt;GetStringpart()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetstringlen/&#34;&gt;ArrayGetStringLen()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetstringpart/&#34;&gt;ArrayGetStringPart()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Arrays with 0 elements are returned correctly rather than returning error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;05 February 2018&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;05-february-2018&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#05-february-2018&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.8.8-01 and later&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FCJSon::Save() and FCJSon::SaveAll() both take an extra integer flag parameter. Specify 1 in order to prevent the json output from escaping forward slash characters. The escape is required by the specification, but google doesn&amp;rsquo;t like it. This also requires FCJSon being compiled with version 13 of libjson-c. If you&amp;rsquo;re installed version does not support this, then you will need to use something similar to &lt;code&gt;jsoncontent = sys.rep_string(RS_ALL,jsoncontent,&amp;quot;\&amp;quot;,&amp;quot;&amp;quot;);&lt;/code&gt; to remove the backslash escape characters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;11 January 2018&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;11-january-2018&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#11-january-2018&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.8.7-15 and later&lt;/p&gt;
+&lt;h2&gt;09 January 2018&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;09-january-2018&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#09-january-2018&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;calls to get a Double will return 0.0 if when the double is null and will convert an int to a Double if the object is an integer object.&lt;/p&gt;
+&lt;p&gt;Initial Release and Documentation&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C FCJSon External Library - Credits and Acknowledgements</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/fcjson/fcjsoncredits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/fcjson/fcjsoncredits/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/&#34;&gt;FCJSon Home&lt;/a&gt;
+The 4C FCJSon External Library uses the json-c library from
+&lt;a href=&#34;https://github.com/json-c/json-c/wiki&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JSon C Wiki&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;json-c Authors&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;json-c-authors&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#json-c-authors&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Michael Clark &amp;lt;michael@metaparadigm.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Jehiah Czebotar &amp;lt;jehiah@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Eric Haszlakiewicz &amp;lt;hawicz+json-c@gmail.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C. Watford (christopher.watford@gmail.com)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;json-c License&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;json-c-license&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#json-c-license&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;json-c is released under the terms of the MIT License.&lt;/p&gt;
+&lt;h2&gt;json-c Copyright&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;json-c-copyright&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#json-c-copyright&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Copyright (c) 2009-2012 Eric Haszlakiewicz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Permission is hereby granted, free of charge, to any person obtaining a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;copy of this software and associated documentation files (the &amp;#34;Software&amp;#34;),
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;to deal in the Software without restriction, including without limitation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;the rights to use, copy, modify, merge, publish, distribute, sublicense,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;and/or sell copies of the Software, and to permit persons to whom the
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Software is furnished to do so, subject to the following conditions:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The above copyright notice and this permission notice shall be included
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;in all copies or substantial portions of the Software.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;THE SOFTWARE IS PROVIDED &amp;#34;AS IS&amp;#34;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SOFTWARE.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;----------------------------------------------------------------&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The documentation of this library API may be helpful in understanding
+how FCJSon works.
+The docs are at:
+&lt;a href=&#34;https://json-c.github.io/json-c/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;json-c API Documentation&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C FCJSon External Library - Overview</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/fcjson/fcjsonov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/fcjson/fcjsonov/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/&#34;&gt;FCJSon Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;15 January 2018&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;15-january-2018&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#15-january-2018&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The FCJSon 4C external library is meant to allow applications to
+easily create and consume JSon content.
+The two main use cases for FCJSon are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create JSon content to store or send to some application api.&lt;/li&gt;
+&lt;li&gt;Parse JSon content that has been received from some other application or possibly read from a data base.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In order to effectively use the FCJSon library,
+you need to be familiar with the structure of a JSon object and the
+different data types that a json object can hold.
+The main JSon data structure is a JSon object and this structure can hold
+0 or more member items.
+A member item is always a &amp;ldquo;&lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt; : &lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt;&amp;rdquo; pair.
+JSon object keys are enclosed in either single or double quotes.
+JSon object keys are case sensitive, so &amp;ldquo;Key1&amp;rdquo; and &amp;ldquo;key1&amp;rdquo; are not
+interchangeable.
+The data type of the &lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; can be any of the following&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Object - Another JSon object with it&amp;rsquo;s own set of &amp;ldquo;&lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt; : &lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt;&amp;rdquo; pairs. Items in a JSon object are separated by commas and the object itself is enclosed by curly braces. White space is not important but helps for readability. JSon objects look similar to the following. &lt;code&gt;{ &amp;quot;key1&amp;quot; : &lt;/code&gt;&lt;value1&gt;&lt;code&gt;, &amp;quot;key2&amp;quot; : &lt;/code&gt;&lt;value2&gt;&lt;code&gt;, ... &amp;quot;keyN&amp;quot; : &lt;/code&gt;&lt;valueN&gt;&lt;code&gt; }&lt;/code&gt; Items in a json object can be different data types.&lt;/li&gt;
+&lt;li&gt;Array - Items in an array can hold data of the same types that a JSon object can. Array items do not have keys. They are referenced by index starting at 0. Items in an array can be null.. Arrays are enclosed by square brackets and items are separated by commas. A JSon array may look similar to the following &lt;code&gt;[1, { &amp;quot;key1&amp;quot; : &lt;/code&gt;&lt;somevalue&gt;&lt;code&gt;, &amp;quot;key2&amp;quot; : &lt;/code&gt;&lt;anotherval&gt;&lt;code&gt; }, null, null, &amp;quot;hello&amp;quot;, 2.2]&lt;/code&gt; Notice that items in an array do not each need to be the same data type.&lt;/li&gt;
+&lt;li&gt;null - A null object. Mostly used in arrays with empty slots, but it is perfectly legal for a member item of a json object to have a null value.&lt;/li&gt;
+&lt;li&gt;String - an alpha value surrounded by either single or double quotes.&lt;/li&gt;
+&lt;li&gt;Boolean - Either true or false. Case does not appear to be significant. When dealing with boolean values, the FCJSon library uses 0 for false and 1 for true.&lt;/li&gt;
+&lt;li&gt;Integer - Numeric value without decimal. A leading minus sign is allowed but a leading plus sign is not.&lt;/li&gt;
+&lt;li&gt;Double - A numeric value with a decimal place and possible leading minus sign.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;FCJSon uses an integer id to reference the objects in the JSon data structure.
+Most FCJSon functions expect an integer id as the first argument
+to the function.
+Every id that is returned by FCJSon must later be freed by the calling
+application using either FCJSon::Free() or FCJSon::FreeAll().
+It is not possible to get an object that is deeper than 1 level from the
+object that it is being extracted from nor is it possible to put an object
+at a level deeper than 1 into an object.
+In order to do so, you have to first get the parent object id,
+possibly by making
+multiple calls into FCJSon to either get to the next level or to create the
+next level.
+Hopefully, the examples given later will make this clear.&lt;/p&gt;
+&lt;p&gt;For an application that is extracting data from a JSon object the normal
+flow of control will be as follows&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Call FCJSon::ParseString() or FCJSon::ParseFile() to get the root object id of the entire structure.&lt;/li&gt;
+&lt;li&gt;Loop one or more times doing the following Call one of the FCJSon::Get&amp;hellip; functions to extract data or info about an item in the JSon object or to get an id of an embedded object. Any id returned by one of the FCJSon::Get routines can be used to continue going deeper into the structure. Process the data or item that was extracted.&lt;/li&gt;
+&lt;li&gt;Free any unfreed ids by repeatedly calling FCJSon::Free() or simply calling FCJSon::FreeAll() once.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For an application that is creating a JSon object to either store or
+send to another application the normal flow of control will be as follows&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create the root level object using FCJSon::CreateObject()&lt;/li&gt;
+&lt;li&gt;Loop one or more times doing the following Add items to the object using one of the FCJSon:Add functions Create additional objects to embed in the current one&lt;/li&gt;
+&lt;li&gt;Save the JSon object to a 4C variable or to a file using either FCJSon::Save() or FCJSon::SaveToFile().&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When using the the FCJSon library you should be aware of the following&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There are 2 Get functions for each data type. One is for getting data from an array and one is for getting data from an object.&lt;/li&gt;
+&lt;li&gt;Each get function has an optional &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt; argument. The &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt; argument needs to be used when the ident refers to an object or sub object that has the form &lt;code&gt;{ &amp;quot;key1&amp;quot; : &lt;/code&gt;&lt;value1&gt;&lt;code&gt;, &amp;quot;key2&amp;quot; : &lt;/code&gt;&lt;value2&gt;&lt;code&gt;, ... &amp;quot;keyN&amp;quot; : &lt;/code&gt;&lt;valueN&gt;&lt;code&gt; }&lt;/code&gt; If the ident refers to an object or sub object that only has the form &lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt;, the &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt; argument is not used. The way you end up with an object that has the simple form of &lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; only is by making a call similar to: &lt;code&gt;ident1 = FCJSon::GetObject(ident0,&amp;quot;key1&amp;quot;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;When adding items to an array, the Add routines always add an item to the end of the array, increasing it&amp;rsquo;s length by one. The Put functions put the object at the specified idx, replacing anything that was there, extending the array if necessary and setting any skipped slots to null.&lt;/li&gt;
+&lt;li&gt;There usually is more than one way to accomplish the same thing and some of the functions in this library may initially appear to be redundant but there usually is a use case where one of the alternate methods is preferred. One example that comes to mind is adding an integer with a key to another object. Here are 2 ways that that can be done. Assume that the object we are adding to has &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs and is identified by jsonident0. &lt;code&gt;jsonident1 = FCJSon::CreateInt(&lt;/code&gt;&lt;ival&gt;&lt;code&gt;); FCJSon::AddObject(jsonident0,&lt;/code&gt;&lt;key1&gt;&lt;code&gt;,jsonident1);&lt;/code&gt; FCJSon::AddInt(jsonident0,&lt;code&gt;&amp;lt;key1&amp;gt;&lt;/code&gt;,&lt;code&gt;&amp;lt;ival&amp;gt;&lt;/code&gt;); Both of the above accomplish the same thing and the only difference is that in the first case you still have an ident for the integer object and can use it elsewhere. You cannot use it to modify either the key or the value of the integer that was added. However, if instead of using a simple integer object, we were adding a complex object of &lt;code&gt;&amp;lt;key&amp;gt;&lt;/code&gt;:&lt;code&gt;&amp;lt;value&amp;gt;&lt;/code&gt; pairs or an array object and we retained a reference to the object added, any changes made to the retained object ident affects the object that was added. It should be noted that the following is different than either of the 2 above and produces different json content. &lt;code&gt;FCJSon::AddIntObject(jsonident0,&lt;/code&gt;&lt;objkey&gt;&lt;code&gt;,&lt;/code&gt;&lt;intkey&gt;&lt;code&gt;,&lt;/code&gt;&lt;ival&gt;&lt;code&gt;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;You cannot delete items from an array, only replace them with null. So, there is no current way to shorten the length of an array. You can only make it longer by adding to the end or putting objects at indexes &amp;gt;= the current length&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The FCJSon external library can set the following error codes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0 - FCJSON_OK - No Error, function executed without error&lt;/li&gt;
+&lt;li&gt;1 - FCJSON_ERR_PARSE - The text or file being parsed is not formatted correctly&lt;/li&gt;
+&lt;li&gt;2 - FCJSON_ERR_NOJSONOBJECT - An invalid ident was passed to an FCJSon function&lt;/li&gt;
+&lt;li&gt;3 - FCJSON_ERR_NOTFOUND - Warning only, object was not found&lt;/li&gt;
+&lt;li&gt;4 - FCJSON_ERR_NOTARRAY - JSon object should be an array but is not&lt;/li&gt;
+&lt;li&gt;5 - FCJSON_ERR_INVALIDIDX - An array index is invalid&lt;/li&gt;
+&lt;li&gt;6 - FCJSON_ERR_INVALIDTYPE - A JSon object is not the correct type for the function&lt;/li&gt;
+&lt;li&gt;7 - FCJSON_ERR_OPENFILE - Error opening file&lt;/li&gt;
+&lt;li&gt;8 - FCJSON_ERR_READFILE - Error reading file&lt;/li&gt;
+&lt;li&gt;9 - FCJSON_ERR_NULLJSONOBJECT - Object is null&lt;/li&gt;
+&lt;li&gt;9997 - FCJSON_ERR_JSONLIB - Internal libharu api error&lt;/li&gt;
+&lt;li&gt;9998 - FCJSON_ERR_NOTIMPLEMENTED - Function not implemented&lt;/li&gt;
+&lt;li&gt;9999 - FCJSON_ERR_UNKNOWN - Unknown error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Use sys.get_extfnopt(&lt;code&gt;&amp;lt;libname&amp;gt;&lt;/code&gt;,&amp;ldquo;LastError&amp;rdquo;) to get the error code set
+after making a call into the library that returns an error or warning.&lt;/p&gt;
+&lt;p&gt;Use sys.get_extfnopt(&lt;code&gt;&amp;lt;libname&amp;gt;&lt;/code&gt;,&amp;ldquo;LastMessage&amp;rdquo;) to get the error message set
+after making a call into the library that returns an error or warning.&lt;/p&gt;
+&lt;p&gt;Check sys_ret when a function returns an ambiguous value that could mean
+an error or could be a valid value.
+If the the function is returning an error, then sys_ret will be less than
+0.
+If the function is returning a valid value with no warning
+then sys_ret will equal 0.
+if the function is returning a valid value and there is a warning,
+sys_ret will be &amp;gt; 0.
+&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/fcjsoncredits/&#34;&gt;Credits and Acknowledgements&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

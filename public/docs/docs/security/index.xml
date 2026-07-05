@@ -1,0 +1,71 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C Security - Index</title>
+    <link>http://localhost:1313/docs/docs/security/</link>
+    <description>Recent content in 4C Security - Index on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/docs/docs/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C Data Encryption - Index</title>
+      <link>http://localhost:1313/docs/docs/security/dataencryption/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/security/dataencryption/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/security/dataencryption/changes/&#34;&gt;Most Recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/security/dataencryption/ov/&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Network Security - Index</title>
+      <link>http://localhost:1313/docs/docs/security/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/security/network/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/security/network/changes/&#34;&gt;Most Recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/security/network/ov/&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/security/network/config/&#34;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/security/network/misc/&#34;&gt;Miscellaneous&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/security/network/install/&#34;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/security/network/trouble/&#34;&gt;Troubleshooting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/security/network/details/&#34;&gt;Details&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/security/network/credits/&#34;&gt;Acknowledgments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 22 December 2006&lt;/p&gt;
+&lt;p&gt;Updated 19 December 2006&lt;/p&gt;
+&lt;p&gt;4C Network Security Configuration&lt;/p&gt;
+&lt;p&gt;Updated 22 December 2006&lt;/p&gt;
+&lt;p&gt;4C Network Security Miscellaneous Notes and Issues&lt;/p&gt;
+&lt;p&gt;Updated 19 December 2006&lt;/p&gt;
+&lt;p&gt;4C Network Security Installation&lt;/p&gt;
+&lt;p&gt;Updated 19 December 2006&lt;/p&gt;
+&lt;p&gt;4C Network Security Troubleshooting&lt;/p&gt;
+&lt;p&gt;Updated 19 December 2006&lt;/p&gt;
+&lt;p&gt;Updated 19 December 2006&lt;/p&gt;
+&lt;p&gt;Updated 19 December 2006&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

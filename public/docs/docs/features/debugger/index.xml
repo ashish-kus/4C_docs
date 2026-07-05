@@ -1,0 +1,177 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C Debugger</title>
+    <link>http://localhost:1313/docs/docs/features/debugger/</link>
+    <description>Recent content in 4C Debugger on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/docs/docs/features/debugger/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C Debugger Change Log</title>
+      <link>http://localhost:1313/docs/docs/features/debugger/changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/debugger/changes/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;17 October 2004&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;17-october-2004&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#17-october-2004&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Debugger - Intro</title>
+      <link>http://localhost:1313/docs/docs/features/debugger/dbgintro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/debugger/dbgintro/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The 4C debugger allows you to debug any and all
+4C programs that you are running or will be running.
+It is not necessary to do anything special to enable
+debugging.
+When you need it, just start it up.
+Some of the things the debugger allows you to do are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;View a list of currently running programs.&lt;/li&gt;
+&lt;li&gt;Set break points&lt;/li&gt;
+&lt;li&gt;Set watch points&lt;/li&gt;
+&lt;li&gt;View and modify file vars&lt;/li&gt;
+&lt;li&gt;Kill running 4C programs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;4C Debugger - Running&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---running&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---running&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to start the debugger, bring up the 4C session control dialog
+and and click on &lt;code&gt;&amp;lt;Debug&amp;gt;&lt;/code&gt;.
+You will be at the &amp;ldquo;Trace/Vars&amp;rdquo; tab of the debugger.
+Here you see a list of currently running 4C programs.
+Programs are listed from most recently used through least recently
+used.
+From the options and util menu you are able
+to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;See more details about the state of a single 4C program.&lt;/li&gt;
+&lt;li&gt;View and modify file vars.&lt;/li&gt;
+&lt;li&gt;View the source for PCLs in one 4C program.&lt;/li&gt;
+&lt;li&gt;Kill one or more running 4C programs.&lt;/li&gt;
+&lt;li&gt;Go to one of the other debugger tabs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When the 4c debugger is running,
+your 4C program will be waiting for control.
+You can return control to your program by selecting continue
+from one of the menus or by pressing &lt;code&gt;&amp;lt;accept&amp;gt;&lt;/code&gt;.
+A shortcut key is defined for continue in all of the 4C debugger
+programs, so a quicker way to continue executing your program is
+to just press &amp;lsquo;c&amp;rsquo;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;4C Debugger - Break Points&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---break-points&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---break-points&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A break point is a condition that you specify that causes 4C
+to interrupt a running 4C program.
+4C break points fall into the following categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Program - Program breakpoints are triggered either when a specific program starts or when a specific program ends.&lt;/li&gt;
+&lt;li&gt;PCL - PCL breakpoints can be set for PCL start, PCL end, or for any line number in any PCL.&lt;/li&gt;
+&lt;li&gt;SysPCL - SysPCL breakpoints can be set for the start or end of a system pcl call.&lt;/li&gt;
+&lt;li&gt;Variable - A variable breakpoint can be set to trigger when a particular file variable changes value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Whenever the 4C debugger interrupts your program,
+it always displays the debugger tabs and either
+the &amp;ldquo;Trace/Vars&amp;rdquo; tab or the &amp;ldquo;CurPCL&amp;rdquo; tab will be active.
+If a PCL is running, then the &amp;ldquo;CurPCL&amp;rdquo; tab will be active.
+Otherwise the &amp;ldquo;Trace/Vars&amp;rdquo; tab will be active.&lt;/p&gt;
+&lt;p&gt;The 4C debugger always displays the reason for the interrupt at
+the bottom of the debugger programs.&lt;/p&gt;
+&lt;p&gt;There are several ways to add or delete break points.&lt;/p&gt;
+&lt;p&gt;The first method is to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select the &amp;ldquo;BreakPts&amp;rdquo; tab.&lt;/li&gt;
+&lt;li&gt;Delete existing break points by selecting the break points to delete and pressing &lt;code&gt;&amp;lt;Delete&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Pressing &lt;code&gt;&amp;lt;Add&amp;gt;&lt;/code&gt; will guide you through the steps of adding a new break point.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another way to add/delete PCL line break
+points for any of the currently running programs is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select the &amp;ldquo;Trace/Vars&amp;rdquo; tab.&lt;/li&gt;
+&lt;li&gt;Select the program.&lt;/li&gt;
+&lt;li&gt;Select PCLs from the util menu.&lt;/li&gt;
+&lt;li&gt;Double click one of the displayed PCLs&lt;/li&gt;
+&lt;li&gt;Double click any of the displayed lines to toggle a break on that line. You will see a &amp;lsquo;B&amp;rsquo; in the left col if a break point exists for that line.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This same method of toggling PCL line break points
+can be used in the &amp;ldquo;CurPCL&amp;rdquo; tab.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;4C Debugger - Trace/Vars&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---tracevars&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---tracevars&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &amp;ldquo;Trace/Vars&amp;rdquo; tab displays a list of currently running
+programs.
+From here you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;View detailed stated information about a program. Just select detail from the Options menu, or press &lt;code&gt;&amp;lt;user1&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;View and modify file vars. Select Files from the Options menu or press &lt;code&gt;&amp;lt;user2&amp;gt;&lt;/code&gt;. Next select the file you want to view file vars for and select Det from the options menu, press &lt;code&gt;&amp;lt;user1&amp;gt;&lt;/code&gt;, or double click the file. You will see the current value of all file vars. You can modify these simply by selecting and pressing &lt;code&gt;&amp;lt;modify&amp;gt;&lt;/code&gt;. After making a change to a file var, the debugger will display the formatted file var and you need to press &lt;code&gt;&amp;lt;return&amp;gt;&lt;/code&gt; to accept the change, or you can type in another value or you can cancel the change by pressing &lt;code&gt;&amp;lt;cancel&amp;gt;&lt;/code&gt;. From the same file var program, you can add a watch point on any file var by double clicking it.&lt;/li&gt;
+&lt;li&gt;Kill a running program. Select one or more programs and then select &amp;ldquo;kill&amp;rdquo; from the Util menu.&lt;/li&gt;
+&lt;li&gt;View PCLs and set/unset PCL line break points.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From any of the &amp;ldquo;Trace/Vars&amp;rdquo; programs, you can continue
+running your 4C programs by pressing &amp;lsquo;c&amp;rsquo;.
+You can return to the previous debugger program
+by pressing &lt;code&gt;&amp;lt;cancel&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;accept&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;4C Debugger - Current PCL&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---current-pcl&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---current-pcl&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &amp;ldquo;CurPCL&amp;rdquo; tab can be displayed only if the current program
+is executing a PCL.
+If it is then the source for that PCL is displayed.
+The current line is always marked with a &amp;ldquo;==&amp;gt;&amp;rdquo;.
+Any lines that have break points are marked with a &amp;ldquo;B&amp;rdquo;.
+Inside the &amp;ldquo;CurPCL&amp;rdquo; tab, you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Toggle PCL line break pts by double clicking the line.&lt;/li&gt;
+&lt;li&gt;Step to the next executable line in the CurPCL by selecting &amp;ldquo;Step&amp;rdquo; from the Util menu. This will step over calls to other PCLs. &amp;ldquo;s&amp;rdquo; is a shortcut key for StepOver, and since it is used so often, &lt;code&gt;&amp;lt;space&amp;gt;&lt;/code&gt; is also a shortcut key for StepOver.&lt;/li&gt;
+&lt;li&gt;Step into a called PCL by selecting StepI from the Util menu. &amp;ldquo;i&amp;rdquo; is a shortcut key for StepInto. If the next executable line is not a PCL call, then StepInto works the same as Step.&lt;/li&gt;
+&lt;li&gt;Continue until the PCL returns by selecting StepRet from the Util menu. &amp;ldquo;r&amp;rdquo; is a shortcut key for StepRet.&lt;/li&gt;
+&lt;li&gt;Continue until the PCL ends by selecting StepEnd from the Util menu. &amp;ldquo;e&amp;rdquo; is a shortcut key for StepEnd.&lt;/li&gt;
+&lt;li&gt;Continue until return to calling PCL. &amp;ldquo;R&amp;rdquo; is the shortcut key for StepUp.&lt;/li&gt;
+&lt;li&gt;Continue your 4C program by pressing &amp;lsquo;c&amp;rsquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;4C Debugger - Watch Points&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---watch-points&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---watch-points&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A watch point is just a specific file variable that displays
+in the &amp;ldquo;Watches&amp;rdquo; tab of the debugger.
+Watchpoints also display in the &amp;ldquo;CurPCL&amp;rdquo; tab along with any
+local PCL vars.&lt;/p&gt;
+&lt;p&gt;Using watch points makes it easy to check or modify the
+current value of a file var.&lt;/p&gt;
+&lt;p&gt;Just press &lt;code&gt;&amp;lt;modify&amp;gt;&lt;/code&gt; in order to change the value
+of any file var being &amp;ldquo;Watched&amp;rdquo;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;4C Debugger - Args&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---args&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---args&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &amp;ldquo;Args&amp;rdquo; tab of the debugger lets you see the
+arguments passed in and the return value of either
+an application PCL or a system PCL.
+The return value is displayed only when the break point
+is at PCL End or SysPCL end.&lt;/p&gt;
+&lt;p&gt;Pressing &lt;code&gt;&amp;lt;return&amp;gt;&lt;/code&gt; or &amp;ldquo;c&amp;rdquo; from the &amp;ldquo;Args&amp;rdquo; tab
+will continue executing your program.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;4C Debugger - Misc Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---misc-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---misc-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;You cannot connect the debugger to another users 4C session.&lt;/li&gt;
+&lt;li&gt;Currently, break points and watch points are only saved during the current 4C session.&lt;/li&gt;
+&lt;li&gt;Stepping through code that looks at $wexit_code can be unpredictable since the dbg programs themselves may change $wexit_code.&lt;/li&gt;
+&lt;li&gt;It is possible to confuse 4C by alt-tabbing between the 4C debugger programs and your application programs.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,569 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C Misc Docs</title>
+    <link>http://localhost:1313/docs/docs/misc/</link>
+    <description>Recent content in 4C Misc Docs on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/docs/docs/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C Client/Server Using Colors</title>
+      <link>http://localhost:1313/docs/docs/misc/colors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/misc/colors/</guid>
+      <description>
+        
+        
+        &lt;p&gt;You can specify foreground and background colors for
+most 4C controls.
+You can specify defaults for each item in the s_dftype file
+and the s_prtype file.
+These defaults can be overriden by the client by using an appropriate
+environment variable.
+The environment variable name is _4C_TYPE_FG or _4C_TYPE_BG.
+Examples are:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;_4C_SCROLLIST_FG 0:0:0:9 (ColorWindowText)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;_4C_SCROLLIST_BG 0:0:0:6 (ColorWindow)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;_4C_INPDATA_FG 0:0:0 (Black)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;_4C_INPDATA_BG 255:255:255 (White)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The values that can be specified are RGB values with about
+20 special system colors.
+The system colors are specified as 0:0:0:SysColorVal.
+When possible, you should use the system colors as opposed to
+hardcoded colors.
+System colors change as the user changes the display appearance.&lt;/p&gt;
+&lt;p&gt;The color name that you can specify or search on is only a comment
+meant to help you remember what the RGB value means.&lt;/p&gt;
+&lt;p&gt;The default values can be overridden for individual fields in the
+display field details and for individual scrolling programs in the
+sl_ovly details.&lt;/p&gt;
+&lt;p&gt;The following restrictions currently apply to using colors.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The only program type that can have FG and BG set are scrolling programs. This may change if WRITTEN demand is high.&lt;/li&gt;
+&lt;li&gt;You cannot change the colors of CmdBtns.&lt;/li&gt;
+&lt;li&gt;When applied to RadioGrps and ChkBoxes, setting the colors does not affect the tiny square or circle used for the checkmark or bulletmark. This may be fixed later. Currently, I don&amp;rsquo;t know how but could probably find out how. These two tiny windows always appear in ColorWindow and ColorWindowText colors.&lt;/li&gt;
+&lt;li&gt;On systems supporting 256 or less colors, hardcoded colors may not appear exactly as specified. The system will use a close enough color. This could also be fixed if WRITTEN demand is high.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Function Key Usage on Microsoft Windows</title>
+      <link>http://localhost:1313/docs/docs/misc/fkeys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/misc/fkeys/</guid>
+      <description>
+        
+        
+        &lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;FKey Name&lt;/th&gt;
+					&lt;th&gt;Default Keyboard Key&lt;/th&gt;
+					&lt;th&gt;Default Processing&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;enter&lt;/td&gt;
+					&lt;td&gt;Enter/Return/CariageReturn&lt;/td&gt;
+					&lt;td&gt;End input on current field and goto next input field. On scrolling list screens may also be used instead of to display some detail screen.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;accept&lt;/td&gt;
+					&lt;td&gt;F4&lt;/td&gt;
+					&lt;td&gt;Accept current input and end the current field processing loop. If entered on the first input field of a 4C screen this will exit that program with a code of 0&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;cancel&lt;/td&gt;
+					&lt;td&gt;F8/Esc&lt;/td&gt;
+					&lt;td&gt;End of input - do not accept changes. When entered on the first input field of a screen or when a scrolling screen is in &amp;ldquo;Lookup&amp;rdquo; mode this will cause the program to exit with a -1 code.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;add&lt;/td&gt;
+					&lt;td&gt;F5&lt;/td&gt;
+					&lt;td&gt;Toggle sys.mode between &amp;ldquo;Add&amp;rdquo; and &amp;ldquo;Lookup&amp;rdquo;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;insert&lt;/td&gt;
+					&lt;td&gt;Insert&lt;/td&gt;
+					&lt;td&gt;Almost same as &amp;ldquo;add&amp;rdquo;. For scrolling screens this will cause a line to be inserted above the current line instead of below.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;modify&lt;/td&gt;
+					&lt;td&gt;F6&lt;/td&gt;
+					&lt;td&gt;Toggle sys.mode between &amp;ldquo;Modify&amp;rdquo; and &amp;ldquo;Lookup&amp;rdquo;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;delete&lt;/td&gt;
+					&lt;td&gt;F7&lt;/td&gt;
+					&lt;td&gt;Toggle sys.mode between &amp;ldquo;Delete&amp;rdquo; and &amp;ldquo;Lookup&amp;rdquo;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;tab&lt;/td&gt;
+					&lt;td&gt;Tab&lt;/td&gt;
+					&lt;td&gt;Skip over input fields until next tabstop&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;backtab&lt;/td&gt;
+					&lt;td&gt;Shift+Tab&lt;/td&gt;
+					&lt;td&gt;Backtab to a previous input field&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;help&lt;/td&gt;
+					&lt;td&gt;F1&lt;/td&gt;
+					&lt;td&gt;Display simple help message or go to detailed help&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;search&lt;/td&gt;
+					&lt;td&gt;F3&lt;/td&gt;
+					&lt;td&gt;When an input field has a search associated with it, this will popupup the search screen.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;browseforward&lt;/td&gt;
+					&lt;td&gt;Ctrl+DownArrow&lt;/td&gt;
+					&lt;td&gt;Some input fields will allow browsing between possible values for that field.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;browsebackward&lt;/td&gt;
+					&lt;td&gt;Ctrl+UpArrow&lt;/td&gt;
+					&lt;td&gt;Browse backward&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;print&lt;/td&gt;
+					&lt;td&gt;Ctrl+P&lt;/td&gt;
+					&lt;td&gt;Allows user to print the current screen. This normally will print the bitmap image of the screen but in some cases may print a report or form instead.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;user1&lt;/td&gt;
+					&lt;td&gt;F9&lt;/td&gt;
+					&lt;td&gt;Typically used to display another screen that shows more detail or allows more processsing associated with the current screen&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;user2&lt;/td&gt;
+					&lt;td&gt;F10&lt;/td&gt;
+					&lt;td&gt;None&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;selectall&lt;/td&gt;
+					&lt;td&gt;Ctrl+A&lt;/td&gt;
+					&lt;td&gt;Select all scrolling records&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;find&lt;/td&gt;
+					&lt;td&gt;Ctrl+F&lt;/td&gt;
+					&lt;td&gt;Pop up a find window for scrolling programs&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;findnext&lt;/td&gt;
+					&lt;td&gt;Ctrl+N&lt;/td&gt;
+					&lt;td&gt;Find next instance of last searched for string in a scrolling screen&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;findprev&lt;/td&gt;
+					&lt;td&gt;None&lt;/td&gt;
+					&lt;td&gt;Find prev instance of last searched for string in a scrolling screen&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;cut&lt;/td&gt;
+					&lt;td&gt;Ctrl+X&lt;/td&gt;
+					&lt;td&gt;Delete rcds from a scrolling prog and save to clipboard&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;copy&lt;/td&gt;
+					&lt;td&gt;Ctrl+C&lt;/td&gt;
+					&lt;td&gt;Copy bitmap and selected scrolling records to clipboard&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;paste&lt;/td&gt;
+					&lt;td&gt;Ctrl+V&lt;/td&gt;
+					&lt;td&gt;When enabled by the application, this will allow pasting of the clipboard into the current scrolling screen. This is not used often in end user applications but is quite useful during development.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;usercalc&lt;/td&gt;
+					&lt;td&gt;Ctrl+=&lt;/td&gt;
+					&lt;td&gt;When the current input field is a numeric or date field, this will popup a screen to allow simple calculations on the field. If user accepts the calculation the data is shared back into the numeric or date field.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;info&lt;/td&gt;
+					&lt;td&gt;Ctrl+G&lt;/td&gt;
+					&lt;td&gt;Display info window for current program&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;inputinfo&lt;/td&gt;
+					&lt;td&gt;Ctrl+Shift+G&lt;/td&gt;
+					&lt;td&gt;Flash the current input field. This can be helpful on very crowded screens&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;windowleft&lt;/td&gt;
+					&lt;td&gt;Ctrl+Shift+LeftArrow&lt;/td&gt;
+					&lt;td&gt;Move the current window slightly to the left&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;windowright&lt;/td&gt;
+					&lt;td&gt;Ctrl+Shift+RightArrow&lt;/td&gt;
+					&lt;td&gt;Move the current window slightly to the right&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;windowup&lt;/td&gt;
+					&lt;td&gt;Ctrl+Shift+UpArrow&lt;/td&gt;
+					&lt;td&gt;Move the current window slightly upward&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;windowdown&lt;/td&gt;
+					&lt;td&gt;Ctrl+Shift+DownArrow&lt;/td&gt;
+					&lt;td&gt;Move the current window slightly downward&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Client/Server Positioning</title>
+      <link>http://localhost:1313/docs/docs/misc/pos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/misc/pos/</guid>
+      <description>
+        
+        
+        &lt;p&gt;In positioning fields on layouts,
+4C needs to take into account that on a windowing system
+not all fields of the same character width/height
+will have the same pixel width/height.
+This is due to a number of factors, the most obvious
+being that different fields may have different fonts
+and some fields have extra pixels used for highlighting.
+With this in mind, 4C still trys to position fields
+using their specified rows and cols.
+This is necessary so that the thousands of applications
+already installed will be able to run with minimal changes.
+The way that 4C goes about this is by maintaining an array
+of column widths and row heights for every program.
+These arrays are built by calculating the
+number of pixels needed by any single field and then
+dividing these across the columns/rows needed by the field.
+An example using widths should help make this clear.
+Assume a program is using columns 10 through 50
+and has fields positioned as follows:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Field Row Col CharWidth PixelWidth
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;----------- --- --- --------- ----------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cust Code: 2 10 10 65
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cust Addr: 3 10 10 65
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cm_code 2 21 7 62
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cm_addr1 3 21 30 246
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cm_notes 5 10 40 326&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;After calculating the first field,
+the col width array will look like this:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0 0 0 0 0 0 0 0 0 7 7 7 7 7 6 6 6 6 6&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This will remain unchanged after calculating the second field.
+After calculating the 3rd field,
+the array will look like this:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0 0 0 0 0 0 0 0 0 7 7 7 7 7 6 6 6 6 6 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;9 9 9 9 9 9 8&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;After calculating the 4th field,
+the array will look like this:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0 0 0 0 0 0 0 0 0 7 7 7 7 7 6 6 6 6 6 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;9 9 9 9 9 9 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;And Finally, after the 5th field, it will look like this:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0 0 0 0 0 0 0 0 0 9 9 9 9 9 9 8 8 8 8 8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;9 9 9 9 9 9 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This is done for every field displayed on the screen.
+Embedded cols that have zero pixels needed are set
+to 6 so spaces do take up space.&lt;/p&gt;
+&lt;p&gt;Now, when 4c tries to position any single field,
+it needs to take several things into account.
+First, how many pixels does the field need.
+Next, how many pixels are available between the
+start col and end col for that field.
+Next, what is the start pixel for that column.
+Last, if the number of pixels available is greater
+than the number needed, how should this affect the
+positioning of the field.&lt;/p&gt;
+&lt;p&gt;Continuing with the above example we have for field1:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Needs 65 pixels&lt;/li&gt;
+&lt;li&gt;There are 86 pixels available in the 10 columns used by this field.&lt;/li&gt;
+&lt;li&gt;The starting pixel for this field is 0.&lt;/li&gt;
+&lt;li&gt;Since the number of pixels available is 24 greater than the number needed, this field can be positioned anywhere between 0 and 24. In reality, though, 4C considers only 0, 12, and 24 depending on whether it thinks it should left align it, center align it or right align it. How it chooses is based on the settings in the s_dftype file for HAlign. This alignment should not be mistaken for justification. A field can be left justified and still be right aligned.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;NOTE:&lt;/p&gt;
+&lt;p&gt;It is possible to have fields on the screen that skew
+the col width array so much that fields that were meant
+to be evenly spaced space in odd ways.
+For this reason, a flag has been added to the
+sys.dpy_field file so that you can specify positioning
+a field based on fixed width columns.
+When this flag is set, the field is positioned using the
+average pixel width for the program, rather than
+the width array discussed above.
+In the above example, this would not matter, since
+the colwidth array is pretty even with widths of only 9 or 8.
+I would expect this flag to be set only in rare occasions.
+This should be used with care and only if the above discussion
+is fully understood.&lt;/p&gt;
+&lt;p&gt;For the most part, row positioning works the same with some
+minor exceptions.
+The row height used for empty rows is 10,
+except for scrolling programs which set it to 0.
+For this reason, positioning non multi fields at row
+100 has the affect of positioning directly below the
+scrolling area.
+I don&amp;rsquo;t think that programs should be written to depend on this
+though.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Timeouts</title>
+      <link>http://localhost:1313/docs/docs/misc/timeouts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/misc/timeouts/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Timeout &lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt; is equivalent to SvTimeout &lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Only 4csrvr versions 4.4.8 and higher will recognize SvTimeout and ClTimeout in XLCONFIG.&lt;/p&gt;
+&lt;p&gt;Client timeouts require both the 4csrvr and 4cclient to be version 4.4.8 or higher.&lt;/p&gt;
+&lt;p&gt;It is not a good idea to specify a session timeout program for either client or server timeouts in XLCONFIG because not all applications will be using the same program path. It is better for your application to set up session timeouts that need to run a program when the timeout is triggered.&lt;/p&gt;
+&lt;p&gt;When a session timeout is caught and runs a 4C program, the 4C program should disable session timeouts in the InitPCL and re enable them in the ExitPCL.&lt;/p&gt;
+&lt;p&gt;If your application is using both server and client session timeouts and running programs when they are triggered, it is necessary for the server timeout to be less than the client timeout in order to guarantee that it will be triggered. This is because once a client timeout is triggered that runs a program, the server will not be idle and the input wait will start over the next time the server is waiting on input.&lt;/p&gt;
+&lt;p&gt;Program timeout values should be less than or equal to the session timeout values or they will never get triggered.&lt;/p&gt;
+&lt;p&gt;If your application uses alarms, it is necessary for the alarm to be no greater than any current timeout value or it will never get triggered.&lt;/p&gt;
+&lt;p&gt;If you use client session timeouts to exit a client session you really should enable ContinueWork in _4CSRVRCONFIG.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;see-also&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#see-also&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;sys.settimeout()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/setalarm/&#34;&gt;&lt;code&gt;sys.set_alarm()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/gettimeoutp/&#34;&gt;&lt;code&gt;sys.get_timeoutp()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/gettimeoutv/&#34;&gt;&lt;code&gt;sys.get_timeoutv()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/setalarm/&#34;&gt;&lt;code&gt;sys.set_alarm()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/lockclientws/&#34;&gt;&lt;code&gt;sys.lock_clientws()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/exitclient/&#34;&gt;&lt;code&gt;sys.exit_client()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/exit4c/&#34;&gt;&lt;code&gt;sys.exit_4c()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;see-also-1&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#see-also-1&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/settimeout/&#34;&gt;sys.set_timeout()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/settimeout/&#34;&gt;sys.settimeout()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/setalarm/&#34;&gt;sys.set_alarm()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/gettimeoutp/&#34;&gt;sys.get_timeoutp()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/gettimeoutv/&#34;&gt;sys.get_timeoutv()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/lockclientws/&#34;&gt;sys.lock_clientws()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/exitclient/&#34;&gt;sys.exit_client()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.4csoftware.com/docs/SysPCLs/exit_4c.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sys.exit_4c()&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;idle regardless of whether&lt;/p&gt;
+&lt;p&gt;continuously refreshes itself thus preventing&lt;/p&gt;
+&lt;p&gt;machine has been idle&lt;/p&gt;
+&lt;p&gt;sit idle, but continue working&lt;/p&gt;
+&lt;p&gt;Allow graceful exit of an idle&lt;/p&gt;
+&lt;p&gt;so that resources are freed Lock&lt;/p&gt;
+&lt;p&gt;by adding an entry&lt;/p&gt;
+&lt;p&gt;specified, the 4c server&lt;/p&gt;
+&lt;p&gt;from the user for more&lt;/p&gt;
+&lt;p&gt;two hours. If &lt;code&gt;&amp;lt;prname&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;specified, then &lt;code&gt;&amp;lt;prname&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;has been waiting for user input for more&lt;/p&gt;
+&lt;p&gt;two hours. The easiest way&lt;/p&gt;
+&lt;p&gt;define a client session&lt;/p&gt;
+&lt;p&gt;by adding an entry&lt;/p&gt;
+&lt;p&gt;For the above, if no &lt;code&gt;&amp;lt;prname&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;specified, the 4c client session&lt;/p&gt;
+&lt;p&gt;exit if there has been no mouse&lt;/p&gt;
+&lt;p&gt;keyboard input on the client machine for at least two hours. The&lt;/p&gt;
+&lt;p&gt;may continue running if&lt;/p&gt;
+&lt;p&gt;is still doing useful work. If &lt;code&gt;&amp;lt;prname&amp;gt;&lt;/code&gt; is specified, then &lt;code&gt;&amp;lt;prname&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;run when the 4c client session has been idle for at least two hours. The only way&lt;/p&gt;
+&lt;p&gt;demo.main.s, lockscreen.s, lockscreen.warn, lockscreen.1,&lt;/p&gt;
+&lt;p&gt;getpwd.1 work together to implement a server session&lt;/p&gt;
+&lt;p&gt;that hides the current&lt;/p&gt;
+&lt;p&gt;requires a password to unlock the session. The demo programs demo.main.s&lt;/p&gt;
+&lt;p&gt;lockws.1 work together to implement a client session&lt;/p&gt;
+&lt;p&gt;that locks the client workstation when the&lt;/p&gt;
+&lt;p&gt;is exceeded. Modify the config&lt;/p&gt;
+&lt;p&gt;by running demo.config.fm and then run run demo.main.s to&lt;/p&gt;
+&lt;p&gt;how the above examples work. Timeout&lt;/p&gt;
+&lt;p&gt;SvTimeout and ClTimeout&lt;/p&gt;
+&lt;p&gt;XLCONFIG. Client timeouts&lt;/p&gt;
+&lt;p&gt;both the 4csrvr and&lt;/p&gt;
+&lt;p&gt;to specify a session timeout&lt;/p&gt;
+&lt;p&gt;session timeouts that&lt;/p&gt;
+&lt;p&gt;to run a program when the timeout is&lt;/p&gt;
+&lt;p&gt;When a session timeout is&lt;/p&gt;
+&lt;p&gt;a 4C program, the 4C program&lt;/p&gt;
+&lt;p&gt;session timeouts in the&lt;/p&gt;
+&lt;p&gt;both server and client session timeouts and running programs when&lt;/p&gt;
+&lt;p&gt;for the server timeout to&lt;/p&gt;
+&lt;p&gt;the client timeout in&lt;/p&gt;
+&lt;p&gt;be triggered. This is&lt;/p&gt;
+&lt;p&gt;a client timeout is triggered that&lt;/p&gt;
+&lt;p&gt;a program, the server will not be idle and the input&lt;/p&gt;
+&lt;p&gt;time the server is waiting on input. Program timeout&lt;/p&gt;
+&lt;p&gt;to the session timeout values or&lt;/p&gt;
+&lt;p&gt;triggered. If your application uses&lt;/p&gt;
+&lt;p&gt;it is necessary for the&lt;/p&gt;
+&lt;p&gt;than any current timeout&lt;/p&gt;
+&lt;p&gt;client session timeouts to exit a client session you&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

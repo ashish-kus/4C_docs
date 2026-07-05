@@ -1,0 +1,223 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C External Libraries</title>
+    <link>http://localhost:1313/docs/docs/features/extlibs/</link>
+    <description>Recent content in 4C External Libraries on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/docs/docs/features/extlibs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C External Libraries - Most Recent Changes</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/extlibchanges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/extlibchanges/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;09 May 2024&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;09-may-2024&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#09-may-2024&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Some previously undocumented functions havce been added to the FCCom documentation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;20 October 2021&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;20-october-2021&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#20-october-2021&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Versions 6.7.3-01 and later&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The FCJSon library allows using either integer or int64 values when setting or getting Int values. Previously all values set and returned were 32 integer values only.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;18 October 2021&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;18-october-2021&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#18-october-2021&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Versions 6.7.3-01 and later and version 6.4.9-06 and later&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There have been some changes in the FCJSon library due to the way the library outputs double precision numbers to a field or to file. The change allows you to specify an optional display value that will be output instead of relying on the default formatting that the library uses.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;07 December 2020&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;07-december-2020&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#07-december-2020&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The FCJSon library has 4 new functions &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getstringlen/&#34;&gt;GetStringLen()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/getstringpart/&#34;&gt;GetStringPart()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetstringlen/&#34;&gt;ArrayGetStringLen()&lt;/a&gt; , &lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/arraygetstringpart/&#34;&gt;ArrayGetStringPart()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Arrays with 0 elements are returned correctly rather than returning error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;28 July 2020&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;28-july-2020&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#28-july-2020&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The FCPdf library allows specifying an encoding, mostly to allow UTF8 strings, in the font selecting functions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;15 January 2018&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;15-january-2018&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#15-january-2018&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Initial Release and Documentation&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C FCCom External Library</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/fccom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/fccom/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fccom/&#34;&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fccom/fccomchanges/&#34;&gt;Most recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fccom/fccomov/&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fccom/functions/&#34;&gt;FCCom Function Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fccom/examples/&#34;&gt;Examples&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C FCJSon External Library</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/fcjson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/fcjson/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/&#34;&gt;FCJSon Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/fcjsonchanges/&#34;&gt;Most recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/fcjsonov/&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/functions/&#34;&gt;FCJSon Function Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/examples/&#34;&gt;Examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/fcjsoncredits/&#34;&gt;Credits and Acknowledgements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 20 October 2021&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+&lt;p&gt;Updated 07 December 2020&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C FCPdf External Library</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/fcpdf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/fcpdf/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcpdf/&#34;&gt;FCPdf Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcpdf/fcpdfchanges/&#34;&gt;Most recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcpdf/fcpdfov/&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcpdf/functions/&#34;&gt;FCPdf Function Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcpdf/examples/&#34;&gt;Examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcpdf/fcpdfcredits/&#34;&gt;Credits and Acknowledgements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 05 September 2025&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+&lt;p&gt;Updated 28 July 2020&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C External Libraries Overview</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/extlibov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/extlibov/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;
+4C allows an application to define external libraries with functions that
+are callable from a 4C PCL.
+Any application directory can define it&amp;rsquo;s own set of libraries and functions
+and can call functions within any library that is in the same XLPROG path.
+More than one application can define the same library but library names
+should reflect the application that they are defined in.&lt;/p&gt;
+&lt;p&gt;The system files that are used for defining an external library to an
+application are sys.usrfn_hdr and sys.usrfn_det.
+Each application directory should have it&amp;rsquo;s own copy of these files.&lt;/p&gt;
+&lt;p&gt;You can get to the External Library definition program from the main
+development menu for any application by following:&lt;/p&gt;
+&lt;p&gt;Main Menu/Configuration/External Libs &amp;amp; Functions&lt;/p&gt;
+&lt;p&gt;When calling a function with an External Library the syntax is:&lt;/p&gt;
+&lt;p&gt;retval = &lt;code&gt;&amp;lt;LibName&amp;gt;&lt;/code&gt;::&lt;code&gt;&amp;lt;FunctionName&amp;gt;&lt;/code&gt;(args);&lt;/p&gt;
+&lt;p&gt;In addition to the &lt;code&gt;&amp;lt;retval&amp;gt;&lt;/code&gt; returned, which can be any 4C data type,
+the function also sets the local system variable, sys_ret, to an integer value.
+All external libraries should follow the convention that a positive return
+value means there was at least one warning, 0 means success, and a negative
+return value implies error.&lt;/p&gt;
+&lt;p&gt;Since there are valid return vals that may imply error,
+i.e. FCJSon::GetInteger()
+may return a value of -1 because there was an error or because the integer
+value requested really is -1,
+the application should always check sys_ret, and possibly call either or
+both of sys.get_extfnopt(&lt;code&gt;&amp;lt;libname&amp;gt;&lt;/code&gt;,&amp;ldquo;LastError&amp;rdquo;) or
+sys.get_extfnopt(&lt;code&gt;&amp;lt;libname&amp;gt;&lt;/code&gt;,&amp;ldquo;LastMessage&amp;rdquo;) anytime there is an ambiguous return
+value that might indicate error.&lt;/p&gt;
+&lt;p&gt;The default MessageLevel for a 4C External Library when a 4C program
+starts is &amp;ldquo;1&amp;rdquo;.
+This means that error messages from the library are automatically displayed
+to the user, but informational messages are not.
+The application does have control over this using some system PCLs listed below.&lt;/p&gt;
+&lt;p&gt;The following system pcls are useful for setting options and getting
+information from and about an 4C External Library.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/getextfnopt/&#34;&gt;sys.get_extfnopt()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/setextfnopt/&#34;&gt;sys.set_extfnopt()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are several external libraries that are part of the 4cSys application
+that are available to all other applications.
+They are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fccom/&#34;&gt;FCCom&lt;/a&gt; - Network/Communications library that allows functionality similar to curl. Most useful for allowing a 4C program to act as a Restful Web Services Client.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/&#34;&gt;FCJSon&lt;/a&gt; - Library for parsing and creating JSon objects.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcpdf/&#34;&gt;FCPdf&lt;/a&gt; - Library for creating PDFs.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C System External Libraries</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/sysextlibs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/sysextlibs/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;
+There are several external libraries that are part of the 4cSys application
+that are available to all other applications.
+They are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fccom/&#34;&gt;FCCom&lt;/a&gt; - Network/Communications library that allows functionality similar to curl. Most useful for allowing a 4C program to act as a Restful Web Services Client.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcjson/&#34;&gt;FCJSon&lt;/a&gt; - Library for parsing and creating JSon objects.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/fcpdf/&#34;&gt;FCPdf&lt;/a&gt; - Library for creating PDFs.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,90 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C UTF8</title>
+    <link>http://localhost:1313/docs/docs/features/utf8/</link>
+    <description>Recent content in 4C UTF8 on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/docs/docs/features/utf8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C UTF8 - Most Recent Changes</title>
+      <link>http://localhost:1313/docs/docs/features/utf8/utf8changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/utf8/utf8changes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/utf8/&#34;&gt;UTF8 Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;15 July 2020&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;15-july-2020&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#15-july-2020&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Initial Release and Documentation&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C UTF8 Overview</title>
+      <link>http://localhost:1313/docs/docs/features/utf8/utf8ov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/utf8/utf8ov/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/utf8/&#34;&gt;UTF8 Home&lt;/a&gt;
+With version 6.4 and later 4C is moving a little more into the modern world by allowing UTF8
+data in 4C fields.
+This not meant to be a tutorial on UTF8 or Unicode.
+It is just an introduction on how to use UTF8 encoding with 4C.&lt;/p&gt;
+&lt;h4&gt;Some of the reasons this is necessary follow&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;some-of-the-reasons-this-is-necessary-follow&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#some-of-the-reasons-this-is-necessary-follow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Almost all data that is sent across the internet is UTF8 encoded and it is impossible for 4C programs to ignore this. This includes data returned by Web Service APIs as well as data embedded in html pages.&lt;/li&gt;
+&lt;li&gt;If your application sends and receives text messages, responses will certainly include emojis that you may need to display. Using the 4C utf8 datatype allows displaying emojis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Requirements&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;requirements&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#requirements&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;In order to use UTF8 encoding in 4C data, you must use version 4csrvr 6.4.3 or later.&lt;/li&gt;
+&lt;li&gt;In order to display UTF8, the 4cclient must also be version 6.4.3 or later. If you use an earlier client and there are no multibyte characters, the data will display correctly but any multibyte data will not. No earlier 4cclient will be able to enter multibyte characters in a UTF8 field.&lt;/li&gt;
+&lt;li&gt;Any 4C fields that are going to allow UTF8 encoding must use a datatype with the 4C Type set to utf8. In the 4CSys application there is a utf8 datatype and it is also defined in the skeleten application file skel.df. Your application will also need to have a similar datatype defined.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Misc notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;misc-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#misc-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Any 100% 7bit ascii data is also valid UTF8 data so it is possible to change the data type of 100% 7bit ascii data to a UTF8 datatype without any issues.&lt;/li&gt;
+&lt;li&gt;If you have extended ansi characters in any alpha data you should remove them before changing the datatype of the field to a UTF8 datatype.&lt;/li&gt;
+&lt;li&gt;The 4C utf8 datatype works almost anywhere you can use the 4C alpha datatype. This includes, but is not limited to As a screen display field or label. As an argument to sys.message(), sys.msg(), or sys.err_msg() With ProgressBar windows With sys.get_answer() As Tab Labels As a Panel title&lt;/li&gt;
+&lt;li&gt;It is not advisable to use UTF8 data as a primary or secondary key with JIsam files.&lt;/li&gt;
+&lt;li&gt;Most SysPCLs that work with 7bit ascii strings will also work with UTF8 strings. There may be some exceptions though. If you find any, please let me know so that I can document them.&lt;/li&gt;
+&lt;li&gt;You can concatenate UTF8 strings with 7bit ascii strings and the results will be a UTF8 string.&lt;/li&gt;
+&lt;li&gt;The length of a UTF8 filevar with multibyte characters is the number of bytes in the filevar, not the number of unique UTF8 characters. If you want the count of UTF8 characters, use &lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/utf8count/&#34;&gt;sys.utf8_count()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Examples&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;examples&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#examples&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;The best example program in the 4c Demo application is demo.translate.1. There you can see UTF8 being used in dropdown lists and in long text fields. You will need to use your own google API key to actually do the translations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;SysPCLs&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;syspcls&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#syspcls&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;The following SysPCLs are useful when working with UTF8 data&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cptoutf8/&#34;&gt;sys.cp_toutf8()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/utf8charat/&#34;&gt;sys.utf8_charat()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/utf8count/&#34;&gt;sys.utf8_count()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/utf8fix/&#34;&gt;sys.utf8_fix()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/utf8join/&#34;&gt;sys.utf8_join()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/utf8split/&#34;&gt;sys.utf8_split()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/utf8tocp/&#34;&gt;sys.utf8_tocp()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/utf8verify/&#34;&gt;sys.utf8_verify()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

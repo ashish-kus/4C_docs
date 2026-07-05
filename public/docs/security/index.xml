@@ -1,0 +1,15 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C Security - Index</title><link>https://127.0.0.1:8080/docs/security/</link><description>Recent content in 4C Security - Index on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://127.0.0.1:8080/docs/security/index.xml" rel="self" type="application/rss+xml"/><item><title>4C Data Encryption - Index</title><link>https://127.0.0.1:8080/docs/security/dataencryption/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/security/dataencryption/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/security/dataencryption/changes/"&gt;Most Recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/security/dataencryption/ov/"&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>4C Network Security - Index</title><link>https://127.0.0.1:8080/docs/security/network/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/security/network/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/security/network/changes/"&gt;Most Recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/security/network/ov/"&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/security/network/config/"&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/security/network/misc/"&gt;Miscellaneous&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/security/network/install/"&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/security/network/trouble/"&gt;Troubleshooting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/security/network/details/"&gt;Details&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/security/network/credits/"&gt;Acknowledgments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

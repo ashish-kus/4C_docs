@@ -1,0 +1,126 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C FCCom External Library</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/</link><description>Recent content in 4C FCCom External Library on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://127.0.0.1:8080/docs/features/extlibs/fccom/index.xml" rel="self" type="application/rss+xml"/><item><title>4C FCCom External Library - Examples</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/examples/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/examples/</guid><description>
+&lt;p&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example 1 - Very simple example of fetching a single page from a normal web server. No authentication is required, SSL is not used and no content is required in the &amp;ldquo;GET&amp;rdquo; request. The most recent version of the 4c demo application duplicates this code almost verbatim. The program is fccom.demo.1. If you need to download the most recent 4c demo programs here&amp;rsquo;s the link: &lt;a href="https://4csoftware.com/downloads/misc/demo.tar.gz"target="_blank" rel="noopener"&gt;4C Demo Application&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt; &lt;code&gt;/* * Allocate the connection, and specify the Server as 4csoftware.com * This will use the default http port 80. * reply content is set into the 4C var replycontent. * StatusMessage and StatusCode are displayed to the user and are saved in * the 4C variables statuscode and statusmsg. * Any error message is automatically displayed to the user. */ if ((connident = FCCom::Alloc(&amp;quot;Server&amp;quot;,&amp;quot;4csoftware.com&amp;quot;)) &amp;lt; 0) return -1; rc = FCCom::HttpRequest(connident,&amp;quot;GET&amp;quot;,&amp;quot;/index.html&amp;quot;,&amp;quot;reply-content&amp;quot;,replycontent); sys.message(SM_INFO|SM_PIPEDELIM,&amp;quot;Status&amp;quot;,FCCom::GetOption(connident,&amp;quot;Status&amp;quot;),&amp;quot;StatusMessage&amp;quot;,FCCom::GetOption(connident,&amp;quot;StatusMessage&amp;quot;)); statuscode = atoi(FCCom::GetOption(connident,&amp;quot;Status&amp;quot;)); statusmsg = FCCom::GetOption(connident,&amp;quot;StatusMessage&amp;quot;); FCCom::Free(connident);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Example 2 - Another simple program that uses the google translate api to make a web service request to translate a short piece of text is fccom.demo.2. This program is included in the 4C demo application. It validates itself to google using an API Key specified in the query args of the FCCom::Httprequest using &amp;ldquo;POST&amp;rdquo;. In order to run it without error, you will need to supply your own google cloud services api key. If you do have a google api key, you can set it in the InitPCL of this program rather than enter it every time you run the program. Even without an api key, you should run this application because you will still get a response from google with json content in the reply.&lt;/li&gt;
+&lt;li&gt;Example 3 - Another example of using a &amp;ldquo;POST&amp;rdquo; HttpRequest is in the demo program fccom.demo.3. This program will send a text message using the twilio api. You will need a twilio account with an account sid, authorization token, and phone number to run this program. Twilio will use basic authorization using the acct sid as the username and the authorization token as the password. The body of the request is in application/x-www-form-urlencoded format and specifies the from phone number, the to phone number, and the text message to send. The reply from Twilio is in XML format. You can modify the InitPCL of this program to initialize the necessary variables with your own Twilio account info and avoid having to enter this info every time you run the program.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It should be super easy to follow the logic of the demo programs.
+For formatting some of the replies, you may find it helpful to have
+xmllint installed as well as jsonlint (install python-demjson).&lt;/p&gt;
+&lt;p&gt;Setting up a Twilio account and google cloud account is also easy and cheap.
+Google will give you $300 credit for one year and Twilio
+is about $1.00/month for a phone# and 1/2 cent per text message
+sent or received.&lt;/p&gt;</description></item><item><title>Functions</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;Alloc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/close/"&gt;Close&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/connect/"&gt;Connect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/count/"&gt;Count&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/disconnect/"&gt;Disconnect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/freeall/"&gt;FreeAll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/free/"&gt;Free&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/getoption/"&gt;GetOption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/getresponseheader/"&gt;GetResponseHeader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/open/"&gt;Open&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/parseresponsefile/"&gt;ParseResponseFile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setglobalheader/"&gt;SetGlobalHeader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setoption/"&gt;SetOption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setreqheader/"&gt;SetReqHeader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/urldecode/"&gt;URLDecode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/urlencode/"&gt;URLEncode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>4C FCCom External Library - Most Recent Changes</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/fccomchanges/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/fccomchanges/</guid><description>
+&lt;p&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;11 July 2022&lt;span class="hx:absolute hx:-mt-20" id="11-july-2022"&gt;&lt;/span&gt;
+&lt;a href="#11-july-2022" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 6.7.5-01 and later&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There are two new functios, GetResponseHeader() and ParseResponseFile()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;13 October 2020&lt;span class="hx:absolute hx:-mt-20" id="13-october-2020"&gt;&lt;/span&gt;
+&lt;a href="#13-october-2020" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 6.4.7-04 and later&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can specify an empty password for a connection that uses Basic Authentication and requires a username but no password.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;04 February 2018&lt;span class="hx:absolute hx:-mt-20" id="04-february-2018"&gt;&lt;/span&gt;
+&lt;a href="#04-february-2018" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.8.8-01 and later&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The maximum content length when content is specified in a separate file no longer has a maximum size. The server you are sending to, though, may still have a maximum content length.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;15 January 2018&lt;span class="hx:absolute hx:-mt-20" id="15-january-2018"&gt;&lt;/span&gt;
+&lt;a href="#15-january-2018" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;Additional Notes&lt;span class="hx:absolute hx:-mt-20" id="additional-notes"&gt;&lt;/span&gt;
+&lt;a href="#additional-notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Initial Release and Documentation&lt;/p&gt;</description></item><item><title>4C FCCom External Library - Overview</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/fccomov/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/fccomov/</guid><description>
+&lt;p&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;15 January 2018&lt;span class="hx:absolute hx:-mt-20" id="15-january-2018"&gt;&lt;/span&gt;
+&lt;a href="#15-january-2018" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The FCCom 4C external library is meant to allow applications to use the
+HTTP protocol to access web resources from within a 4C program without
+needing to use external shellscripts and other utilities.
+In order to use this library you should be famiiar with the HTTP protocol.&lt;/p&gt;
+&lt;p&gt;The general flow of control when using this library is as follows&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Allocate a connection&lt;/li&gt;
+&lt;li&gt;Set global connection options and global headers&lt;/li&gt;
+&lt;li&gt;Connect&lt;/li&gt;
+&lt;li&gt;Loop 1 or more times doing the following Set single request options and headers Create the content needed by the request if any. Send an HTTP request specifying the content and content-type if any. Process the request response.&lt;/li&gt;
+&lt;li&gt;Close the connection&lt;/li&gt;
+&lt;li&gt;Free all resources for the connection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Be aware of the following&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can have as many active connections as you need.&lt;/li&gt;
+&lt;li&gt;Each connection has it&amp;rsquo;s own unique identifier within 1 single 4csrvr process&lt;/li&gt;
+&lt;li&gt;You need to use the connection id as the first argument to most FCCom function calls.&lt;/li&gt;
+&lt;li&gt;Every connection that the application allocates must be explicitly freed by the application.&lt;/li&gt;
+&lt;li&gt;Most options and option values are not case sensitive so specifying &amp;ldquo;ssl&amp;rdquo;,&amp;ldquo;true&amp;rdquo; is equivalent to &amp;ldquo;SSL&amp;rdquo;,&amp;ldquo;True&amp;rdquo;. The only exception is the &lt;code&gt;&amp;lt;optvalue&amp;gt;&lt;/code&gt; for &amp;ldquo;UserName&amp;rdquo; and for &amp;ldquo;Password&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also be aware of the following http server issues.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Different http servers have different ways of expecting an application to authenticate itself. The only authentication built in to FCCom is basic authentication. In order to use Basic Authentication just make sure that you have set both the UserName and the Password options for the connection. Password can be set to an empty string, &amp;quot;&amp;quot; or &amp;lsquo;&amp;rsquo;, to indicate no password should be passed.&lt;/li&gt;
+&lt;li&gt;Different http servers have different ways that they expect to receive request content. Sometimes in the query args themselves and sometimes in a request body.&lt;/li&gt;
+&lt;li&gt;Some servers expect a trailin &amp;lsquo;/&amp;rsquo; as part of the resource, others don&amp;rsquo;t&lt;/li&gt;
+&lt;li&gt;In order to POST form data you must set the Content-Type to &amp;ldquo;application/x-www-form-urlencoded&amp;rdquo; and then set the content to something similar to &amp;ldquo;Field1=value1&amp;amp;Field2=value2&amp;amp;Field3=value3&amp;rdquo; Note that there is no leading &amp;lsquo;?&amp;rsquo; as there would be in a GET request You can set the Content-Type by calling FCCom::SetReqHeader(ident,&amp;ldquo;Content-Type&amp;rdquo;,&amp;hellip;) or by specifying &amp;ldquo;request-content-type,&amp;hellip; in the FCCom:HttpRequest() call.&lt;/li&gt;
+&lt;li&gt;In order to use the FCCom library to communicate with an http server, you need to know what the server expects from the caller and how the server will respond.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The possible error codes set by any function in the FCCom library are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0 - FCCOM_OK - No error, function executed correctly.&lt;/li&gt;
+&lt;li&gt;1 - FCCOM_ERR_NOCONN - The &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; passed to the function was invalid.&lt;/li&gt;
+&lt;li&gt;2 - FCCOM_ERR_NOSERVER - No server name or ip address has been set for the connection.&lt;/li&gt;
+&lt;li&gt;3 - FCCOM_ERR_CONNECT - There was an error connecting to the server.&lt;/li&gt;
+&lt;li&gt;4 - FCCOM_ERR_INVALIDOPT - An invalid option was specified.&lt;/li&gt;
+&lt;li&gt;5 - FCCOM_ERR_GET - Unknown error on http request.&lt;/li&gt;
+&lt;li&gt;6 - FCCOM_ERR_FILEOPEN - File open error.&lt;/li&gt;
+&lt;li&gt;7 - FCCOM_ERR_GETRESPLINE - The response from the server is incomplete or invalid.&lt;/li&gt;
+&lt;li&gt;8 - FCCOM_ERR_NOCHUNKSIZE - The response from the server is invalid.&lt;/li&gt;
+&lt;li&gt;9 - FCCOM_ERR_CONNREAD - The content returned by the server is invalid or incomplete.&lt;/li&gt;
+&lt;li&gt;10 - FCCOM_ERR_WRITEFILE - Error writing to file.&lt;/li&gt;
+&lt;li&gt;12 - FCCOM_ERR_SOCRECV - There was a read error on the connection.&lt;/li&gt;
+&lt;li&gt;13 - FCCOM_ERR_INVALIDREQUEST - The http request is invalid.&lt;/li&gt;
+&lt;li&gt;14 - FCCOM_ERR_SOCSEND - There was a write error on the connection.&lt;/li&gt;
+&lt;li&gt;15 - FCCOM_ERR_SOCCLSTART - There was an error connecting to the server.&lt;/li&gt;
+&lt;li&gt;16 - FCCOM_ERR_MISSINGARG - The function call did nooot supply enough args.&lt;/li&gt;
+&lt;li&gt;17 - FCCOM_ERR_TRUNCATED - The result is truncated. Informational only. Partial data still available to application. Truncation results when the http request specifies a variable to return the content to and the the content size is greater than the size of the var.&lt;/li&gt;
+&lt;li&gt;18 - FCCOM_ERR_FILESTAT - A file that is supposed to hold the content for the request does not exist.&lt;/li&gt;
+&lt;li&gt;19 - FCCOM_ERR_INVALIDARG - An arg to the function is invalid.&lt;/li&gt;
+&lt;li&gt;1001 - FCCOM_ERR_SSLCONNECT - There was an error creating an SSL Connection to the server.&lt;/li&gt;
+&lt;li&gt;1002 - FCCOM_ERR_SSLREAD - There was an error reading from the SSL connection to the server.&lt;/li&gt;
+&lt;li&gt;1003 - FCCOM_ERR_SSLWRITE - There was an error writing to the SSL connection to the server.&lt;/li&gt;
+&lt;li&gt;2001 - FCCOM_ERR_HTTPSTATUS - The status code returned by the server was either less than 100 or greater than 599.&lt;/li&gt;
+&lt;li&gt;2002 - FCCOM_ERR_HTTPQUERYSIZE - Either the request content or the request query is too large. The maximum size of the request content is currently 32K and the maximum size of the request query including all headers and cookies is 64K. Most servers will have a limit lower than this.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Use sys.get_extfnopt(&lt;code&gt;&amp;lt;libname&amp;gt;&lt;/code&gt;,&amp;ldquo;LastError&amp;rdquo;) to get the error code set
+after making a call into the library that returns an error or warning.&lt;/p&gt;
+&lt;p&gt;Use sys.get_extfnopt(&lt;code&gt;&amp;lt;libname&amp;gt;&lt;/code&gt;,&amp;ldquo;LastMessage&amp;rdquo;) to get the error message set
+after making a call into the library that returns an error or warning.&lt;/p&gt;
+&lt;p&gt;Check sys_ret when a function returns an ambiguous value that could mean
+an error or could be a valid value.
+If the the function is returning an error, then sys_ret will be less than
+0.
+If the function is returning a valid value without any warning,
+then sys_ret will equal 0.
+if the function is returning a valid value and there is a warning,
+then sys_ret will be &amp;gt; 0.&lt;/p&gt;</description></item></channel></rss>

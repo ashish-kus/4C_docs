@@ -1,0 +1,201 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C Data Encryption - Index</title><link>https://127.0.0.1:8080/docs/security/dataencryption/</link><description>Recent content in 4C Data Encryption - Index on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://127.0.0.1:8080/docs/security/dataencryption/index.xml" rel="self" type="application/rss+xml"/><item><title>4C DataEncryption Change Log</title><link>https://127.0.0.1:8080/docs/security/dataencryption/changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/security/dataencryption/changes/</guid><description>
+&lt;h2&gt;19 November 2013&lt;span class="hx:absolute hx:-mt-20" id="19-november-2013"&gt;&lt;/span&gt;
+&lt;a href="#19-november-2013" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Initial Documentation&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>4C Cryptography - Overview</title><link>https://127.0.0.1:8080/docs/security/dataencryption/ov/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/security/dataencryption/ov/</guid><description>
+&lt;p&gt;A number of features involving cryptography are available in version 5.2 of 4csrvr.
+These features include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Automatic symetric encrytion of data in JISAM and JISAM64 files&lt;/li&gt;
+&lt;li&gt;Encoding/Decoding data.&lt;/li&gt;
+&lt;li&gt;Public Key Cryptography&lt;/li&gt;
+&lt;li&gt;Digital Signatures&lt;/li&gt;
+&lt;li&gt;Message Digests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All 4C features involving cryptographic features of any kind use the opensll library.
+To effectively use any of these features a basic understanding of openssl is helpful.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;4C Symetric Key Data Encryption&lt;span class="hx:absolute hx:-mt-20" id="4c-symetric-key-data-encryption"&gt;&lt;/span&gt;
+&lt;a href="#4c-symetric-key-data-encryption" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C can automatically encrypt/decrypt data in JISAM and JISAM64 files.
+Automatic data encryption of other types of files and of database tables is not supported.
+If you need data encryption within a database, use the database to do this.
+If you need to encrypt a text or binary file or an alpha field, there are system PCLs
+that will allow your programs to do this.&lt;/p&gt;
+&lt;p&gt;Symetric key encryption means using the same key for encrypting data and for decrypting it.
+So, before you can use data encryption in 4C, you must define at least one key and make
+4C aware of the key.&lt;/p&gt;
+&lt;p&gt;4C Encryption keys are stored in one single text file and you make 4C aware of this
+file by an entry in the SecurityConfig file that looks like:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;KeyListFile `&amp;lt;KeyFileName&amp;gt;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;KeyListFile `&amp;lt;FullPathToKeyFile&amp;gt;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you do not specify a full path to the KeyListFile, then 4C will look only
+in the HOME_4C/security directory for the file.
+If you leave the file in the HOME_4C/security directory, it should be readonly by root only.&lt;/p&gt;
+&lt;p&gt;The KeyListFile will have one or more entries to define the symetric keys.
+Each key has some or all of the following attributes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name - A short name for the key. This name is used when encrypting data. It should contain only upper/lower case letters, digits, and the underscore or dash characters. It can be no longer than 20 charatcers.&lt;/li&gt;
+&lt;li&gt;A 4C cipher definition. The cipher definition defines the algorithm, key length, and mode used for encryption. 4C cipher definitions are described here &lt;a href="https://127.0.0.1:8080/docs/security/network/ov/"&gt;4C Network Security Overview&lt;/a&gt; under the &amp;ldquo;4C Encryption&amp;rdquo; header. Any cipher definition that you can specify in the SecurityConfig file for encrypting data going across the network, can be specifed in the KeyListFile also. A simple cipher definition might look like: &lt;code&gt;Cipher=AES,Mode=cbc,Len=128&lt;/code&gt; or &lt;code&gt;Cipher=AES,Mode=Default,Len=128&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;KeyValue - This is a Base64 representation of the real symetric key. This is what needs to be protected.&lt;/li&gt;
+&lt;li&gt;Encrypted - This can be either True or False and specifies whether the key itself is encrypted with an RSA public key. If you encrypt the symetric key with with an RSA public key, then the RSA private key must be available when 4csrvrd reads the KeyListFile.&lt;/li&gt;
+&lt;li&gt;Sha1 - This is a sha1 message digest of the key entry and is meant to detect errors in the integrity of the key entry.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You normally will use the 4cgenkey utility to create keys and then add them to the KeyListFile
+Enter&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4cgenkey --help&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;to see how tyo use 4cgenkey.
+A simple command to add an AES 128 bit key using CBC mode to a file named MyKeyList using &amp;ldquo;TestKey1&amp;rdquo;
+as the key name is&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4cgenkey -n TestKey1 -c aes -l 128 -m cbc &amp;gt;&amp;gt;MyKeyList&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;You can have as many keys in the KeyListFile as you need.&lt;/p&gt;
+&lt;p&gt;4C will only read the KeyListFile when it first starts or after 4csrvrd has been called with the
+&amp;ldquo;-R&amp;rdquo; option.&lt;/p&gt;
+&lt;p&gt;Once you have defined some keys, you can specify which data files should be encrypted and
+how they should be encrypted.
+You can do this by&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the file definition screen, specify either Full or Field for Encryption.&lt;/li&gt;
+&lt;li&gt;Call up the Encryption Specs screen from the context menu and specify the key name to use when encrypting data. Add a rcd or modify the rcd for the current file definition. This will add a rcd to sys.fh_cipher. The reason for keeping this outside of sys.file_hdr is so that file definitions can still be imported and exported between different systems that are using different keys for encryption.&lt;/li&gt;
+&lt;li&gt;If Field level encryption is specified, then go to the field details screen and select the fields that you want to encrypt by setting &amp;ldquo;Encrypt&amp;rdquo; under the options tab to &amp;ldquo;y&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;If Full file encryption was specified, then there is nothing else to specify.&lt;/li&gt;
+&lt;li&gt;Compile the file definition.&lt;/li&gt;
+&lt;li&gt;Data will be encrypted now everytime that data is written to the file using 4C or a 4C utility program. If you to encrypt all data immediately, you can do this from the command line using xlcopy. None of the JISAM utilities know anything about 4C encryption so using these utilities does not change the encryption status of any rcds.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some things to keep in mind&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you lose the Key definition, all data that has been encrypted with that key is lost. Even if you you only encrypted some data fields, all data fields past the first encrypted one in a rcd will be lost.&lt;/li&gt;
+&lt;li&gt;Protect your keys.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t lose your keys.&lt;/li&gt;
+&lt;li&gt;You can change the key used for encryption at any time and as long as the original key is kept in the KeyListFile, then you can have some data encrypted with one key and some data encrypted with another.&lt;/li&gt;
+&lt;li&gt;You can also change whether a file uses full file encryption or field encryption or no encryption at any time. Encryption Key info and level are stored with each rcd that is encrypted. So, you can have some rcds encrypted fully, some where only some fields are encrypted, and some with no encryption at all.&lt;/li&gt;
+&lt;li&gt;Moving a data file that uses encryption between systems will only work if both systems have exact same key definitions defined in the KeyListFile.&lt;/li&gt;
+&lt;li&gt;Using field level encryption with many data fields is probably slower than using Full encryption.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;4C Cryptographic Signatures&lt;span class="hx:absolute hx:-mt-20" id="4c-cryptographic-signatures"&gt;&lt;/span&gt;
+&lt;a href="#4c-cryptographic-signatures" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C will allow an application to use public key cryptography for signing and for verifying
+signatures.
+In order to sign a piece of text, you must use the private key from the key pair.
+In order to verify that a signature is valid for a piece of text you can use either the
+private key or the public key of the key pair.
+The following system PCLs can be used with digital signatures.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/pkeyopen/"&gt;sys.pkey_open&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/pkeyclose/"&gt;sys.pkey_close&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/pkeysign/"&gt;sys.pkey_sign&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/pkeyverify/"&gt;sys.pkey_verify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The only type of public keys that 4C can use with digital signatures are RSA and DSA keys.&lt;/p&gt;
+&lt;p&gt;The demo programs, demo.pkey.1, demo.pkey.2, demo.serial.cr, and demo.serial.chk show
+ways that these system PCLs can be used.&lt;/p&gt;
+&lt;p&gt;You can also use public key cryptography to encrypt or decrypt very small amounts of text.
+This could be used to send a symetric key securely to a remote system.
+There are 2 additional public key cryptography PCLs that can be used for this.
+They are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/pkeyencrypt/"&gt;sys.pkey_encrypt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/pkeydecrypt/"&gt;sys.pkey_decrypt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;sys.pkey_encrypt and sys.pkey_decrypt require a 5.2.8 or later 4csrvr.
+sys.pkey_encrypt and sys.pkey_decrypt only work with RSA keys.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Encoding/Decoding&lt;span class="hx:absolute hx:-mt-20" id="encodingdecoding"&gt;&lt;/span&gt;
+&lt;a href="#encodingdecoding" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Encoding is the process of transforming some data into another form where it can be
+used by another process or system.
+Encoding is not the same as encryption.
+There is no key involved.
+The only thing necessary to decode encoded data is to know the encoding algorithm.
+Encoding is especially important when it is necessary to send binary data across a medium
+that can&amp;rsquo;t handle binary data.
+The types of encoding that 4C currently supports are.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Base64 - This is by far the most useful and should be the preferred encoding method for large amounds of data. The characters that will appear in the encoded data are &amp;ldquo;0-9&amp;rdquo;, &amp;ldquo;a-z&amp;rdquo;, &amp;ldquo;A-Z&amp;rdquo;, &amp;ldquo;+/&amp;rdquo; The &amp;ldquo;=&amp;rdquo; is used to pad the end of the encoded data if necessary. Base16 - The characters that will appear in the encoded data are &amp;ldquo;0-9&amp;rdquo; and &amp;ldquo;a-f&amp;rdquo;. Usable but requires more space than Base64. None - Some of the System PCLs allow you to specify ENCODE_NONE. This is just what it sounds like, and does not encode the data at all.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of the data encryption and decryption PCLs support encoding/decoding the data as well as
+decoding/decrypting it.
+In addition, 4C allows you to use the following system PCLs to encode/decode a single 4C alpha
+field or a file.
+The file can be any type of file.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/encodefile/"&gt;sys.encode_file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/decodefile/"&gt;sys.decode_file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/encodetext/"&gt;sys.encode_text&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/decodetext/"&gt;sys.decode_text&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

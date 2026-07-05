@@ -1,0 +1,1476 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C External Databases</title><link>https://127.0.0.1:8080/docs/features/database/</link><description>Recent content in 4C External Databases on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://127.0.0.1:8080/docs/features/database/index.xml" rel="self" type="application/rss+xml"/><item><title>4C External Database Change Log</title><link>https://127.0.0.1:8080/docs/features/database/changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/database/changes/</guid><description>
+&lt;h2&gt;15 November 2016&lt;span class="hx:absolute hx:-mt-20" id="15-november-2016"&gt;&lt;/span&gt;
+&lt;a href="#15-november-2016" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.8 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There are 2 flags that can be specified in the external types configuration that help control how long a database connection is kept. The flags are FreeOnCommit - If set to &amp;lsquo;y&amp;rsquo;, then after every commit the connection is freed and can be used by other 4C or non 4C database users. It makes sense to use this if your system limits the # allowed connections and you are using connectin pooling software. Setting this is better than using the FC_PSQLFREEONCOMMIT env variable to control PostgreSQL connection life. FreeOnIdle - If set to &amp;lsquo;y&amp;rsquo;, then anytime 4C is waiting for user input and the connection is not in the middle of a transaction, the connection will be freed for other uses. This option currently only works with MySQL/MariaDB/ODBC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;10 September 2012&lt;span class="hx:absolute hx:-mt-20" id="10-september-2012"&gt;&lt;/span&gt;
+&lt;a href="#10-september-2012" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.0.9-03 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The following env variables are available to help PostgreSQL use connection pooling software such as PGbouncer. If the environment variable FC_PSQLFREEONCOMMIT is set to &amp;ldquo;True&amp;rdquo;, then the 4cpsql8.so library will free the PostgreSQL connection after every commit and reconnect as needed. This makes it possible to use PostgreSQL connection pooling software such as PGbouncer. It will work whether connection pooling software is used or not, but without connection pooling software, will likely slow down the application drastically. The best place to set the FC_PSQLFREEONCOMMIT env var is in the 4CConfig file. Later this option will be added to the External File Types Configuration screen. If the environment variable FC_PSQLMODIFYFIRST is set to &amp;ldquo;True&amp;rdquo;, then sys.read_file() calls that specify F_ADD|F_MODIFY will try to access the row for update before trying to insert a new row. This should result in no real difference in the functioning of the application. In the future, this will probably become the default. If the database engine is version 8 or higher (as specified in sys.ext_type), 4C will use the &amp;ldquo;WITH HOLD&amp;rdquo; option with cursors. This allows 4C transactions to commit with cursors open and generally shortens some transactions. &amp;ldquo;WITH HOLD&amp;rdquo; will not be used when FC_PSQLFREEONCOMMIT is &amp;ldquo;True&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;06 August 2012&lt;span class="hx:absolute hx:-mt-20" id="06-august-2012"&gt;&lt;/span&gt;
+&lt;a href="#06-august-2012" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.2.3-03 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There are more options that you can specify in defining 4C files and fields when using external database files. They are: For each file, you can specify &amp;ldquo;Ignore Non 4C Cols&amp;rdquo;. This means that 4C will never look at or update a column in the database unless the 4C file definition includes that column. Thus it is safe to add columns to a database without affecting 4C programs that access that table. It also means you can have columns in a database such as blobs and images that 4C doesn&amp;rsquo;t know what to do with anyway. However, if you use 4C to create the table, it always uses only the 4C fields for defining columns. For each 4C field, you can specify that 4C should use the DB definition of precision if it is different than the 4C one. For each 4C field, you can specify that 4C should use the DB definition of scale if it is different than the 4C one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;16 September 2010&lt;span class="hx:absolute hx:-mt-20" id="16-september-2010"&gt;&lt;/span&gt;
+&lt;a href="#16-september-2010" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.8.0 and higher&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Better support for mysql text types&lt;/li&gt;
+&lt;li&gt;4c precision can be less than sql precision on varchar and long varchar cols&lt;/li&gt;
+&lt;li&gt;Any of server/dbname/username/usedbname/owner/password can be specified in an env var by using the ${ENVVAR} notation&lt;/li&gt;
+&lt;li&gt;The password can be cleartext or encrypted&lt;/li&gt;
+&lt;li&gt;External databases that need an extra system connection allow for the system connection to be closed after each use. This frees up resources for databases with limited number of available connections. The databases affected by this are MySQL5, PostgreSQL8, and Sybase. Use sys.et.fm and the detail program associated with the database to configure closing of the system connection.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;02 January 2009&lt;span class="hx:absolute hx:-mt-20" id="02-january-2009"&gt;&lt;/span&gt;
+&lt;a href="#02-january-2009" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Handling of lost connections is better in 4csrvr/4cextdb versions 4.4.6 and higher. If a connection is lost due to a network failure or a firewall dropping the connection, any current transaction will be aborted and the connection will be closed. The user may see error messages, but the next time they try access the database a new connection will be started again.&lt;/li&gt;
+&lt;li&gt;Version 4.6.2 and higher give the application more control over the persistence of database connections. There are 3 ways the application can close database connections: specify AUTOCLOSE in the external type definition (bootstrap prog sys.et.fm) call &lt;a href="https://127.0.0.1:8080/docs/syspcls/closefile/"&gt;sys.close_file()&lt;/a&gt; specifying F_CLOSECONN on an open file that is using the connection. Call &lt;a href="https://127.0.0.1:8080/docs/syspcls/connclose/"&gt;sys.conn_close()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;16 August 2008&lt;span class="hx:absolute hx:-mt-20" id="16-august-2008"&gt;&lt;/span&gt;
+&lt;a href="#16-august-2008" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;There is a 4C external db library for MySQL. You may need to update your 4C bootstrap files so that MySQL5 is defined in sys.ft.fm and so that the program sys.et.mysql.fm is available. Initially, the 4c mysql library is available for the linux-centos4.4 distributions with 4c server version 4.4. If you need it for a different platform, please let me know. There is some MySQL info in: &lt;a href="https://127.0.0.1:8080/docs/features/database/dbfiles/"&gt;4C External Database Files&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;13 July 2004&lt;span class="hx:absolute hx:-mt-20" id="13-july-2004"&gt;&lt;/span&gt;
+&lt;a href="#13-july-2004" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The lib4cpsql library is now available for version 8 of PostgreSQL. The only functional change is that savepoints are used to prevent the current transaction from being aborted when an insert fails. The previous version of PostgreSQL did not support savepoints and there was a very small chance that if two users were trying to insert the same rcd at the same time one of their transactions would be rolled back.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>4C External Database Files</title><link>https://127.0.0.1:8080/docs/features/database/dbfiles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/database/dbfiles/</guid><description>
+&lt;p&gt;4C Server version 3.0.4 and higher supports better
+access to external databases.
+The current list of supported platforms is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ODBC on WindowsNT and Windows2000&lt;/li&gt;
+&lt;li&gt;Oracle8 on Linux&lt;/li&gt;
+&lt;li&gt;PostgreSQL Version 7/8 on Linux&lt;/li&gt;
+&lt;li&gt;Sybase 11.9.2 on Linux&lt;/li&gt;
+&lt;li&gt;Sybase 12 on HP&lt;/li&gt;
+&lt;li&gt;MySQL version 5 and higher. 4CSoftware recommends MySQL Enterprise Edition.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other platforms will be supported for Oracle,
+PostgreSQL, and Sybase as long as access is provided to a system with
+the correct C compiler and Database libraries.
+I will try to stay current with the latest releases of
+Sybase, Oracle, and PostgreSQL.&lt;/p&gt;
+&lt;p&gt;For the most part, earlier versions of the 4C shared
+libraries should work with later versions of the same database.
+However, you must make sure that the versions of the 4c shared libraries
+are compatible with the 4c server version.
+This means that both Version and Release numbers must be the same.
+You will get an error when you try to connect to the database if 4C
+detects an incompatibility in the versions.
+Other Databases may be supported in the future.&lt;/p&gt;
+&lt;p&gt;With the exception of the 4codbc libraries which are included
+on the NT 4csrvr install, the 4C database libraries are available
+as separate installs.
+The installs are available under the 4C ExtDB Libs link
+on the 4C Software Downloads page.
+They are all tarfiles with a README file describing the install
+procedure.
+You should keep the 4CSrvr and 4CExtDB installs in sync.
+Only use Release 4CExtLib with Release 4CSrvr.
+Only use Beta 4CExtLib with Beta 4CSrvr.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Bootstrap Files&lt;span class="hx:absolute hx:-mt-20" id="bootstrap-files"&gt;&lt;/span&gt;
+&lt;a href="#bootstrap-files" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are two new bootstrap files
+that define the external database to 4C.
+They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sys.file_type - This file lists the types of databases that 4C knows about and should not be modified by the application.&lt;/li&gt;
+&lt;li&gt;sys.ext_type - This file will be treated as a normal data file that can exist anywhere in the XLDATA path. However, you should not use the one in XLSYSTEM for application purposes. It lists the external types that a particular application uses. More than one external type may be used to access the same external database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Bootstrap Programs&lt;span class="hx:absolute hx:-mt-20" id="bootstrap-programs"&gt;&lt;/span&gt;
+&lt;a href="#bootstrap-programs" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are 2 new bootstrap programs that let you view and change the
+information in sys.file_type and sys.ext_type.
+They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sys.ft.fm - View the sys.file_type file.&lt;/li&gt;
+&lt;li&gt;sys.et.fm - View/Modify the applications sys.ext_type file. You can also access the detail program for the selected type.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;System PCLs&lt;span class="hx:absolute hx:-mt-20" id="system-pcls"&gt;&lt;/span&gt;
+&lt;a href="#system-pcls" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are three system PCLs used for managing
+transactions.
+You don&amp;rsquo;t have to use them as 4C will make reasonable
+choices for starting, committing, and rolling back transactions.
+But, in some situations you may prefer controlling the
+transactions yourself.
+The three PCLs are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/begin/"&gt;sys.begin()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/commit/"&gt;sys.commit()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/rollback/"&gt;sys.rollback()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Getting Started&lt;span class="hx:absolute hx:-mt-20" id="getting-started"&gt;&lt;/span&gt;
+&lt;a href="#getting-started" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Before you can use 4C to access data in an external database,
+you must have the dbms installed correctly and have
+at least one database created.
+You will need to know the database name and a username and password.
+Once you know this,
+add a record to the sys.ext_type file using the sys.et.fm program.
+Don&amp;rsquo;t forget to specify the details.
+At the very least you will need to enter some type of database
+identifier, user name, and encoded password.
+The encoded password can be obtained using the encode4c program.&lt;/p&gt;
+&lt;p&gt;To specify that a 4C file is a particular external type set sys.fh_access
+to &amp;ldquo;External&amp;rdquo; and then set sys.fh_exttype to the correct application defined
+external type.
+If you change the external type of a file, the file will need to
+be recompiled.
+If you change the file type of an external type
+you do not need to recompile the affected files but you may
+need to exit and reconnect to a 4csrvr.&lt;/p&gt;
+&lt;p&gt;Object names known to the database may be different than the names
+known to 4C.
+For both file names and field names, 4C changes all &amp;lsquo;.&amp;rsquo; characters
+to &amp;lsquo;_&amp;rsquo;.
+Thus a file named resp.party will be named resp_party and a field
+named rp.code would be named rp_code.&lt;/p&gt;
+&lt;p&gt;4C also maps dimensioned fields to multiple single dimensioned fields.
+So a field defined as rp.date[4] would be defined as 4 separate
+fields in the database.
+The fields would be named rp_date_0, rp_date_1, rp_date_2, and rp_date_3.&lt;/p&gt;
+&lt;p&gt;4C fields that are shared are only defined once in the database.&lt;/p&gt;
+&lt;p&gt;Note: The changes noted above only affect programs outside of 4C.
+You still need to refer to fields and files by the names known
+by 4C, but when you access the database from a different program,
+you need to be aware of these changes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Converting Files&lt;span class="hx:absolute hx:-mt-20" id="converting-files"&gt;&lt;/span&gt;
+&lt;a href="#converting-files" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Before converting files you will need to verify that the
+data in the file is usable by the database.
+The program xlvflds will help you do this.
+Before you run this program you need to understand how 4C
+will create the file definition to the database.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4C Alpha and 4C Choice fields that are key fields, either primary or secondary, will be defined as CHAR fields with a precision equal to the max len of the field. 4C will use the display format of the field to determine its max length. You can override this by specifying an SQL Type of either CHAR or VARCHAR and the appropriate precision in the 4C data dictionary.&lt;/li&gt;
+&lt;li&gt;4C Alpha and 4C Choice fields that are not key fields will be defined as VARCHAR fields with a precision equal to the max len of the field. 4C will use the display format of the field to determine its max length. You can override this by specifying an SQL Type of either CHAR or VARCHAR and the appropriate precision in the 4C data dictionary.&lt;/li&gt;
+&lt;li&gt;4C Integer fields will be defined as 4byte integer fields in the database.&lt;/li&gt;
+&lt;li&gt;4C Float fields will be defined as DECIMAL fields in the database with a precision and scale derived from the display format of the field. You can override this in the 4C data dictionary by specifying SQL type of DECIMAL and appropriate values for precision and scale. Remember that the precision is the total number of digits allowed in the DECIMAL field and the scale is the number of digits to the right of the decimal pt.&lt;/li&gt;
+&lt;li&gt;4C Date fields will be defined as DATE if the database supports that type and as TIMESTAMP if DATE is not supported and TIMESTAMP is. If you specify DateAsInt in the external type definition, then 4C will define the 4C Date field as an integer to the database.&lt;/li&gt;
+&lt;li&gt;4C Time fields will be defined as TIME if the database supports that type and as TIMESTAMP if TIME is not supported and TIMESTAMP is. If you specify TimeAsInt in the external type definition, then 4C will define the 4C Date field as an integer to the database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please note that this is the way 4C will create the database table definition
+if 4C creates it.
+If you create the database definition in another way you will still
+need to have a 4C file definition.
+4C will be able to map field types in the database
+to and from a 4C datatype.
+Some of the allowable mappings are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4C Alpha and 4C Choice fields can be mapped to CHAR or VARCHAR. The precision of the fields needs to compatible.&lt;/li&gt;
+&lt;li&gt;4C Integer fields can be mapped to any size INTEGER, FLOAT, REAL, or DECIMAL fields in the database.&lt;/li&gt;
+&lt;li&gt;4C Float fields can be mapped to DECIMAL, FLOAT, or REAL fields int the database. Precision and scale need to be compatible.&lt;/li&gt;
+&lt;li&gt;4C Date fields can be mapped to TIMESTAMP, DATE, or INTEGER fields in the database.&lt;/li&gt;
+&lt;li&gt;4C Time fields can be mapped to TIMESTAMP, TIME, or INTEGER fields in the database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When you run xlvflds you may see some of the following errors or
+warnings.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The precision of a 4C Alpha field is too small for some of the data in the file. You can fix this by doing one of the following. Truncate the field in question Set appropriate values for SQLtype and Precision in the data dictionary. Modify the display format of the field.&lt;/li&gt;
+&lt;li&gt;A 4C Date field is too small. Change the date to a valid date.&lt;/li&gt;
+&lt;li&gt;A 4C Date field is too big based on the &amp;lsquo;-D&amp;rsquo; option of xlvflds. Change the date to a valid date.&lt;/li&gt;
+&lt;li&gt;A 4C Time field is too small. Change the time to a valid time.&lt;/li&gt;
+&lt;li&gt;A 4C Time field is too big. Change the time to a valid time.&lt;/li&gt;
+&lt;li&gt;A 4C Float field is too big for its precision and scale. You can fix this by doing one of the following. Change the data in the field in question. Set appropriate values for SQLtype, Precision, and Scale in the data dictionary. Change the display format of the field so that the precision and scale 4C calculates will be sufficient for the data.&lt;/li&gt;
+&lt;li&gt;A 4C Float will be rounded when converted. This is a warning only and the rounding that will occur may be acceptable. You can fix this by doing one of the following. Ignore it. Change the data in the field in question. Set appropriate values for SQLtype, Precision, and Scale in the data dictionary. Change the display format of the field so that the precision and scale 4C calculates will be sufficient for the data.&lt;/li&gt;
+&lt;li&gt;Possible garbage in an alpha field. This is a warning only and the data in question may be acceptable. Determine if the data is valid for the field. If it isn&amp;rsquo;t, change it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It is usually preferable to change the SQLType, Precision,
+and Scale of a field than the display format because
+changing the default display format will affect all 4C programs
+that use the default display format.&lt;/p&gt;
+&lt;p&gt;Once you are sure the data in the 4c file is acceptable,
+then you can go about converting it to a database file.&lt;/p&gt;
+&lt;p&gt;There are several methods you can use to convert files
+and the one you use will depend on your own personal
+preferences as well as the quantity of the data you need
+to convert and how often you need to do the conversion.
+Some possible conversion methods are outlined here.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;xlconv -f &lt;code&gt;&amp;lt;fname&amp;gt;&lt;/code&gt; -e &lt;code&gt;&amp;lt;exttype&amp;gt;&lt;/code&gt; &amp;hellip; This can create the table definition as well as copy the data.&lt;/li&gt;
+&lt;li&gt;If you have large amounts of data to convert, it may be faster to use the xloraseq program to generate a text file that can be bulk copied into the database. You will need to know the database command to load this type of file and the format that it expects to see the data in. If you use this method you will need to create the table definition using either xlcr or sys.open_file().&lt;/li&gt;
+&lt;li&gt;Use a 4C program to read the original file and write to the database. If you use this method you will need to create the table definition with sys.open_file().&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once converted, you will need to change the file definition to
+specify External access and the correct external type.
+Recompile the file definition and any programs that use that file.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Transactions and Record Locking&lt;span class="hx:absolute hx:-mt-20" id="transactions-and-record-locking"&gt;&lt;/span&gt;
+&lt;a href="#transactions-and-record-locking" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Another important thing to understand is how 4C will deal with
+transactions and record locking.
+All 4C accesses of a database are part of a transaction.
+These transactions are started either implicitly by 4C
+or explicitly by the application calling
+&lt;a href="https://127.0.0.1:8080/docs/syspcls/begin/"&gt;sys.begin().&lt;/a&gt;
+Implicit transactions are used whenever no application started
+transactions are in effect.
+The boundaries of an implicit transaction depend on the setting
+of CommitType in the external type detail.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If this is set to AUTO, then every single SQL statement is it&amp;rsquo;s own transaction. No record locking is possible using AUTO commit.&lt;/li&gt;
+&lt;li&gt;If this is set to 4C then 4C commits the current transaction and starts a new one whenever there are 0 records locked on that particular connection.&lt;/li&gt;
+&lt;li&gt;If this is set to APP then the application is in charge of beginning and ending all transactions.&lt;/li&gt;
+&lt;li&gt;Each 4C group will have its own database connection. So, there may be multiple implicit transactions running at a time depending on how many different 4C groups are running and accesing the database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Explicit transactions are those started by a call to sys.begin().
+Each explicit transaction must have it&amp;rsquo;s own database connection,
+so if you nest transactions you will have multiple database connections
+active.
+You should try to call sys.commit() or sys.rollback() for each
+call to sys.begin().
+However, if you don&amp;rsquo;t 4C will try to do the right thing.
+If you neglect to commit a transaction that you started with
+sys.begin(), 4C will eventually commit the transaction if the
+program exits with a 0 exitcode, or 4c will rollback the transaction
+if the program exits with a negative exitcode.
+The transaction will also be rolled back if 4C reaches a state earlier
+in the program than when the transaction was started.
+This is possible if the EFldPCL of an input field starts a transaction
+and the user cancels before the application calls sys.commit().&lt;/p&gt;
+&lt;p&gt;Even when T_AUTOCOMMIT is specified with sys.begin(), you still need a matching
+sys.commit().
+In this case, even though each sql statement has already been commited,
+the sys.commit() serves to mark the end of a set of statements that are each
+auto commited.
+Without the sys.commit(), you would probably leak database connections and this
+is very expensive.&lt;/p&gt;
+&lt;p&gt;A 4C transaction may involve multiple files spanning multiple
+databases.
+By allowing multiple connections to the database 4C allows
+you to have multiple concurrent transactions.
+The transactions can be parallel or nested.
+A nested transaction is a transaction started by a program that
+already has running transaction or by a program that has an ancestor
+with a running transaction.
+Parallel transactions are transactions in separate 4C groups
+or in linked 4C programs.&lt;/p&gt;
+&lt;p&gt;A 4C transaction may involve more than 1 database connection.
+Calling sys.commit() will commit the transaction on each connection,
+but it is possible that one connection could die and not commit
+the transaction while the other connections commit it.
+If you need to depend on a transaction that spans multiple
+databases to either fully commit or fully rollback then you need
+to use the database management facilities for this and
+not the 4C transaction management.&lt;/p&gt;
+&lt;p&gt;4C transactions have no effect on non database files such as JISAM
+or CISAM.&lt;/p&gt;
+&lt;p&gt;The underlying database system may choose to rollback a transaction
+due to deadlock conditions or some other database specific issue.
+If a transaction is rolled back any call to access or update
+data in a file involved in that transaction will fail and
+sys.errno will be set to ABORT_ERR.
+If sys.commit() is called, it will also fail and sys.errno will
+be set to ABORT_ERR.
+sys.rollback() will succeed on an aborted transaction.
+Once sys.commit() or sys.rollback() has been called, the application
+will be able to run another transaction.&lt;/p&gt;
+&lt;p&gt;If an explicit transaction is aborted, then all pushed programs
+since the start of the transaction will be killed and will exit
+with a -3 exitcode.
+The program that started the transaction will continue from where
+it left off.&lt;/p&gt;
+&lt;p&gt;If an implicit transaction is aborted 4C does not even know
+which program started it, so it cannot exit pushed programs.
+In this case the current program continues running.&lt;/p&gt;
+&lt;p&gt;4C as a default will try to lock records so that 2 users trying
+to modify the same record at the same time will be prevented from
+doing so.
+It does this by aquiring update locks from the database when
+it first accesses the rcd in modify mode.
+You can tell 4C to not try to aquire locks in this manner and
+just let the database grant the locks as it sees fit by specifying
+no for UseRcdLocks in the external type detail definition.
+You should be careful about using this though since
+it will be more likely that a sys.upd_file() will fail rather
+than the sys.read_file(&amp;hellip;,F_LOCK)&lt;/p&gt;
+&lt;p&gt;This may be acceptable if you are doing all of your own transaction
+management, but if you are letting 4C do it, it will probably
+not be acceptable.&lt;/p&gt;
+&lt;p&gt;Another issue that will affect concurrency is the isolation
+level of your transactions.
+You should use the lowest isolation level that is acceptable
+to your application, especially if you are using 4C transactions
+and 4C rcd locking.
+The sys.et.fm program allows you to specify a default isolation
+level for transactions.
+Use the IsolationLevel field for setting the default isolation
+level rather than one of the InitStrings.
+If you don&amp;rsquo;t specifically set an isolation level,
+then the DBMSs default isolation level will be used.
+You can overide the default isolation level for individual trannsactions
+with one of the flags in sys.begin();&lt;/p&gt;
+&lt;p&gt;See your DBMSs documentation for more info on isolation levels.&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;!--
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sql direct
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;possible problems
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;drop table outside of current process when it has it open
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;updating the current rcd in DRSel
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;F_NODROP
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;stored procedure syntax
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sys.sql_execute
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;OS Specific Issues&lt;span class="hx:absolute hx:-mt-20" id="os-specific-issues"&gt;&lt;/span&gt;
+&lt;a href="#os-specific-issues" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;HP On HP Systems the shared libraries have the extension &amp;ldquo;.sl&amp;rdquo; instead of &amp;ldquo;.so&amp;rdquo; and they need to have read and execute permissions. SHLIB_PATH is used instead of LD_LIBRARY_PATH for searching for non 4C shared libraries.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Database Specific Issues&lt;span class="hx:absolute hx:-mt-20" id="database-specific-issues"&gt;&lt;/span&gt;
+&lt;a href="#database-specific-issues" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Sybase The same environment variables set by the sybase user need to be set by 4c users including the user that starts the 4csrvrd daemon. These may vary between versions and os&amp;rsquo;s but at a minimum include SYBASE and either LD_LIBRARY_PATH or SHLIB_PATH. The easiest way to set these is to source the SYBASE.sh file located in the sybase users home directory. Sybase will always wait for rcd locks. There is currently no way to tell ahead of time if a record is locked without waiting for the lock. 4C will display waiting for lock if it detects it has been waiting 10 seconds or so. One of the following statements can be used as an InitString to set the transaction isolation level for the current connection in Sybase. However, it is better to use the IsolationLevel field in the sys.et.fm program rather than one of the InitStrings. set transaction isolation level read uncommitted set transaction isolation level read committed set transaction isolation level repeatable reads set transaction isolation level serializable reads&lt;/li&gt;
+&lt;li&gt;Oracle The following env vars are needed for all 4c oracle users. ORACLE_SID ORACLE_BASE ORACLE_HOME The above is not necessarily true anymore as long as the service name is set correctly to 4C. However, LD_LIBRARY_PATH will need to be set to $ORACLE_HOME/lib The Oracle service name can be left blank to connect to the default database on the localhost. In order to connect to a different database than the default on localhost a connection string of the form: [[//]host[:port]/][servicename] should be used. The following are all valid oracle connection strings that can be specified in the service name entry of the sys.et.orcl.fm program &lt;code&gt;&amp;lt;empty&amp;gt;&lt;/code&gt; - Connects to default database on localhost xe - Connects to the xe database on localhost //10.0.0.16 - Connects to the default database on 10.0.0.16 using the oracle default port number of 1521 //10.0.0.16:1521/xe - Connects to the xe database on 10.0.0.16 using port 1521 The Oracle default for open cursors is usually too small. This can be changed by setting the open_cursors var in the correct init.ora file to some high number. Setting it to several thousand should not cause any problems. Oracle seems to be able to avoid deadlock situations better than some databases so the likelihood of a transaction being aborted is low. One of the following statements can be used as an InitString to set the transaction isolation level for the current connection in Oracle. However, it is better to use the IsolationLevel field in the sys.et.fm program rather than one of the InitStrings. alter session set isolation_level = read committed alter session set isolation_level = serializable&lt;/li&gt;
+&lt;li&gt;PostgreSQL If you are connecting to a PostgreSQL database that is on a different machine than the 4c server you will need to specify the host and possibly the portnumber as part of the database name. Use one of the following formats: DatabaseName: &lt;code&gt;&amp;lt;dbname&amp;gt;&lt;/code&gt; host=&lt;code&gt;&amp;lt;hostname&amp;gt;&lt;/code&gt; [ port=&lt;code&gt;&amp;lt;portno&amp;gt;&lt;/code&gt; ] DatabaseName: &lt;code&gt;&amp;lt;dbname&amp;gt;&lt;/code&gt; hostaddr=&lt;code&gt;&amp;lt;numericipaddr&amp;gt;&lt;/code&gt; [ port=&lt;code&gt;&amp;lt;portno&amp;gt;&lt;/code&gt; ] &lt;code&gt;&amp;lt;dbname&amp;gt;&lt;/code&gt; must be specified first. The order of the other attr=val pairs is not important. &lt;code&gt;&amp;lt;dbname&amp;gt;&lt;/code&gt; and and all attr=val pairs must be separated by spaces. Specifying port is optional if you are using the default PostgreSQL port. Be very careful using any of the sys.read_file() read relative flags such as F_KEYLT, F_KEYLEQ, F_KEYGT, and F_KEYGEQ with any large file on any key with multiple parts. Any of these may trigger a full table scan with enormous performance degradation. Reading by a key that has only a single part does not have this problem. This is true with primary and secondary keys. This is true at least with PostgreSQL versions up through 8.1.3. Do not use autocommit with PostgreSQL because cursors are not allowed with autocommit and 4C depends on them. PostgreSQL will always wait for rcd locks. There is currently no way to tell ahead of time if a record is locked without waiting for the lock. 4C will display waiting for lock if it detects it has been waiting 10 seconds or so. There is a chance that a transaction will be rolled back when 4c tries to insert a rcd. This is only an issue when using PostgreSQL Version 7 or Earlier and/or 4clibpsql Version 7 or Earlier To understand how this can happen, consider the way that 4C will lock a rcd in insert mode with Postgres. Select the rcd to see if it exists. If it does not exist, insert it with default values. When sys.upd_file() is called, update the rcd that was inserted. If the same rcd has been inserted but not committed by another process, the select will return no rcds and 4C will try to insert the rcd. The insert will wait until the other process commits the insert and then Postgres will abort the transaction because the rcd already exists. The 4C sys.read_file(&amp;hellip;,F_ADD) will fail and set sys.errno to ABORT_ERR. Processing will continue as documented under transactions and record locking. The real problem here is that Postgres will automatically abort the transaction rather than return an error when a process tries to insert a rcd and the rcd alread exists. This behavior is considered &amp;ldquo;Normal&amp;rdquo; by the Postgres people and a &amp;ldquo;Bug&amp;rdquo; by most application developers. Currently there is no 4C work around, so be prepared to deal with aborted transactions. I hope in the future that Postgres will just return an error rather than aborting the transaction. If this issue is important to you, you may consider lobbying the Postgres people. Be prepared for the following canned responses. Lock the table before insert. Only for very short duration transactions should this be used. Use a serial type for the primary key. This is no longer an issue when using Postgres 8.0 or higher along with the correct lib4cpsql (8 or higher). When using serial data type, make sure that that you use the Postgres function nextval to set the value before attempting an insert. Never let 4C modify the serial field. Currently a Postgres serial data type is a 4 byte integer that maps cleanly to a 4c integer. On some systems it may be necessary to set the LD_LIBRARY_PATH environment vartiable. One of the following statements can be used as an InitString to set the transaction isolation level for the current connection in PostgreSQL. However, it is better to use the IsolationLevel field in the sys.et.fm program rather than one of the InitStrings. set session characteristics as transaction isolation level read committed set session characteristics as transaction isolation level serializable The PostgreSQL 4c extdb library uses the PostgreSQL C API library, libpq. Any version of this library should work with any PostgreSQL server version as long as the PostgreSQL server version is at least as high as the PostgreSQL libpq library used with the 4C ext db library. Please don&amp;rsquo;t ask me if the 4C extdb library compiled with PostgreSQL libpq version X can be used with version Y of PostgreSQL server. This is a PostgreSQL issue, not a 4C issue. If the environment variable FC_PSQLFREEONCOMMIT is set to &amp;ldquo;True&amp;rdquo;, then the 4cpsql8.so library will free the PostgreSQL connection after every commit and reconnect as needed. This makes it possible to use PostgreSQL connection pooling software such as PGbouncer. It will work whether connection pooling software is used or not, but without connection pooling software, will likely slow down the application drastically. The best place to set the FC_PSQLFREEONCOMMIT env var is in the 4CConfig file. Later this option will be added to the External File Types Configuration screen. If the environment variable FC_PSQLMODIFYFIRST is set to &amp;ldquo;True&amp;rdquo;, then sys.read_file() calls that specify F_ADD|F_MODIFY will try to access the row for update before trying to insert a new row. This should result in no real difference in the functioning of the application. In the future, this will probably become the default. If the database engine is version 8 or higher (as specified in sys.ext_type), 4C will use the &amp;ldquo;WITH HOLD&amp;rdquo; option with cursors. This allows 4C transactions to commit with cursors open and generally shortens some transactions. &amp;ldquo;WITH HOLD&amp;rdquo; will not be used when FC_PSQLFREEONCOMMIT is &amp;ldquo;True&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;MySQL The connection string used to define your MySQL connection to 4C looks something like: &lt;code&gt;DBName=&lt;/code&gt;&lt;dbname&gt;&lt;code&gt;,Host=&lt;/code&gt;&lt;hostname&gt;&lt;code&gt;[,Port=&lt;/code&gt;&lt;portno&gt;&lt;code&gt;][,Socket=&lt;/code&gt;&lt;socketname&gt;&lt;code&gt;]&lt;/code&gt; Normally you won&amp;rsquo;t need to specify &lt;code&gt;&amp;lt;socketname&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;portno&amp;gt;&lt;/code&gt;. If the server you are connecting to runs on the same machine as the the 4csrvr, use localhost for &lt;code&gt;&amp;lt;hostname&amp;gt;&lt;/code&gt;. MySQL allows different storage engines and not all of them support transactions. If you expect sys.rollback() to work on your MySQL files they must use a storage engine that supports transactions. The default storage engine for all &amp;ldquo;create table&amp;rdquo; statements can be specified in the my.cnf config file using something like: default-storage-engine=InnoDB As an alternative, each individual create table stmt can specify the storage engine. If 4C creates a table, it uses the default-storage-engine. show create table &lt;code&gt;&amp;lt;tablename&amp;gt;&lt;/code&gt; will show the storage engine used by &lt;code&gt;&amp;lt;tablename&amp;gt;&lt;/code&gt;. On some systems it may be necessary to set the LD_LIBRARY_PATH environment vartiable. For locking timeouts to act reasonably, you should override the default innodb lockwait timeout of 50 seconds by setting it in the MySQL Config file. i.e. &lt;code&gt;innodb_lock_wait_timeout=&lt;/code&gt;&lt;n&gt;`` Where &lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt; is the number of seconds to wait for a lock before the stmt fails. The MySQL 4c extdb library uses the MySQL C API library. Any version of this library should work with any MySQL server version. Please don&amp;rsquo;t ask me if extdb library compiled with MySQL C API version X can be used with version Y of MySQL server. This is a MySQL issue, not a 4C issue.&lt;/li&gt;
+&lt;li&gt;MSSQLServer using NT and ODBC When MSSQLServer is installed, you must specify that the databases created will be case sensitive. One of the following statements can be used as an InitString to set the transaction isolation level for the current connection in MSSQLServer. However, it is better to use the IsolationLevel field in the sys.et.fm program rather than one of the InitStrings. SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED SET TRANSACTION ISOLATION LEVEL READ COMMITTED SET TRANSACTION ISOLATION LEVEL REPEATABLE READ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE If you want MSSQLServer to be able to wait for rcd locks and set the SetWait string to SET LOCK_TIMEOUT -1 and the SetNoWait string to SET_LOCK_TIMEOUT 0 Unfortunately, MS still didn&amp;rsquo;t do it right, so don&amp;rsquo;t use these. MS will rollback a transaction when the timeout fails even though the documentation says it only cancels the single stmt that failed. Not only do they roll the transaction back, but they do not give any error code indicating that they did this. You are better off always waiting for a lock. At least this way the rollback can be detected.&lt;/li&gt;
+&lt;li&gt;ODBC The following are allowable Database types: IFX-SE - Informix Standard Engine IFX-OL - Informix Online SQLAnywhere Oracle MSSQLServer Postgres PostgreSQL Sybase MySQL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Miscellaneous&lt;span class="hx:absolute hx:-mt-20" id="miscellaneous"&gt;&lt;/span&gt;
+&lt;a href="#miscellaneous" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;You can specify owner.table either with sys.set_extfname() or in the external file name of the file definition. However, since 4C maps all periods in file names and field names to underscores you need to use an asterisk. So instead of owner.table you need to use owner&lt;em&gt;table. On systems that allow db.owner.table you would use db&lt;/em&gt;owner*table.&lt;/li&gt;
+&lt;li&gt;4C acts as a client accessing an external database. So, many 4csrvrs could be updating the same database. Applications will not be able to assume all users are on the same machine. Applications that make this assumption will not work correctly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Miscellaneous&lt;span class="hx:absolute hx:-mt-20" id="miscellaneous-1"&gt;&lt;/span&gt;
+&lt;a href="#miscellaneous-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t use external database files as as 4c temp files. Instead, define a file that uses the same file detail and use that.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Troubleshooting&lt;span class="hx:absolute hx:-mt-20" id="troubleshooting"&gt;&lt;/span&gt;
+&lt;a href="#troubleshooting" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;On some systems it may be necessary to set the LD_LIBRARY_PATH or
+SHLIB_PATH to include the directories where the database stores
+it&amp;rsquo;s run time libraries.
+It is not necessary to include the HOME_4C/lib directory in this
+path since 4C knows where to look for it&amp;rsquo;s own runtime libraries.&lt;/p&gt;
+&lt;p&gt;You can save the SQL statements that 4C sends to the DBMS
+by specifying an SQLFileName and SQLDebugLevel in the external
+type detail definition.
+Use 1 for the SQLDebugLevel.
+Be careful though, this file will not usually
+be removed or truncated and will eventually get quite large
+and slow down your system.
+Make sure SQLDebugLevel is set to 0 for normal use.&lt;/p&gt;
+&lt;p&gt;If you need very verbose debugging info you can set the SQLDebugLevel
+to 9 and use the dbg library instead of the rel lib.
+Any time you are using the dbg library, lots of stuff will be written
+to the file specified by DbgFileName.
+This file also will get large and not be removed or truncated.
+Make sure you always use the rel lib during normal use.
+You can switch between the rel and dbg libraries by
+setting the correct symbolic link.&lt;/p&gt;</description></item><item><title>Overview of 4C External Database Files</title><link>https://127.0.0.1:8080/docs/features/database/dbov/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/database/dbov/</guid><description>
+&lt;p&gt;There were two main design issues involved in
+allowing 4C to use external database
+files, whether Sybase, Oracle, Postgres or
+some other database.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure that the application runs without change. This criteria seems to have been met fairly well.&lt;/li&gt;
+&lt;li&gt;Give the application programmer the power to take advantage of some of the features of the DBMS that aren&amp;rsquo;t available using 4C with either JISAM or CISAM. With regards to transaction management, the programmer has a lot of control here. Better access to stored procedures and submitting sql requests from within 4C is still needed. As more 4C applications start using external databases, it is expected that more DBMS features will need to be accessed from within 4C programs.&lt;/li&gt;
+&lt;li&gt;Efficiency The best 4C has accomplished so far in this area is in the management of prepared statements. The main problem with efficiency is that 4C applications have been writted to process single rcds at a time. This means that many calls will be made to the DBMS. Applications that update many rcds in the database without any user interaction will probably benefit from rewriting parts of the application to use stored procedures.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Mapping 4C File Definitions&lt;span class="hx:absolute hx:-mt-20" id="mapping-4c-file-definitions"&gt;&lt;/span&gt;
+&lt;a href="#mapping-4c-file-definitions" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;4C maps a single 4C file definition to a single table in the database.&lt;/li&gt;
+&lt;li&gt;4C creates a unique index on the key specified as the 4C primary key.&lt;/li&gt;
+&lt;li&gt;4C creates secondary indexes on all 4C secondary keys.&lt;/li&gt;
+&lt;li&gt;4C maps 4C datatypes to appropriate database datatypes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Transactions&lt;span class="hx:absolute hx:-mt-20" id="transactions"&gt;&lt;/span&gt;
+&lt;a href="#transactions" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C has two different ways of handling transactions.
+The first is when the application has not specifically
+called sys.begin().
+In this case 4C commits the transaction every time the
+number of rcds locked goes to zero.
+The number of rcd locks is a 4C notion completely
+separate from the DBMS idea of rcd locks.
+In this context, it is simply a count of the number
+of file accesses that specify F_ACC,F_MODIFY,or
+F_DELETE.
+4C begins a transaction after every commit.
+The isolation level of transactions started this way
+will be the same as the default isolation level specified
+in the external type definition.&lt;/p&gt;
+&lt;p&gt;You are free to change this default way of handling
+transactions by modifying the application and
+explicitly calling sys.begin(), sys.commit(), and
+sys.rollback().
+When running transactions this way you can specify the
+isolation level of individual transactions or use the default
+specified in the external type definition.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Database Connections&lt;span class="hx:absolute hx:-mt-20" id="database-connections"&gt;&lt;/span&gt;
+&lt;a href="#database-connections" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;4C will use at least one connection for each 4C user accessing the external database.&lt;/li&gt;
+&lt;li&gt;In the cases where one user has multiple transactions running at the same time, then 4C will use multiple connections for that user, one for each active transaction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Transparent SQL&lt;span class="hx:absolute hx:-mt-20" id="transparent-sql"&gt;&lt;/span&gt;
+&lt;a href="#transparent-sql" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The main interaction of 4C with the external database
+is in the mapping of the sys.read_file(), sys.upd_file(0,
+and sys.run_driver() statements.
+4C maps all file accesses to SQL requests without
+the application needing any changes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each 4C sys.read_file() statement gets mapped into a single sql select stmt using a single table.&lt;/li&gt;
+&lt;li&gt;Each 4C sys.upd_file() statement gets mapped into a single update/delete sql stmt.&lt;/li&gt;
+&lt;li&gt;Each 4C sys.run_driver() opens a cursor on a single table.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When the external database allows it, 4C prepares the sql statements
+and submits them to the DBMS in prepared form.
+4C keeps the prepared statements as long as possible.
+Different 4C programs using the same database connection
+will use the same prepared statements.
+Different users will not share the same prepared statements.&lt;/p&gt;</description></item><item><title>4C SQL</title><link>https://127.0.0.1:8080/docs/features/database/sql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/database/sql/</guid><description>
+&lt;p&gt;You can now embed SQL statements in regular 4C programs.
+The statements allowed are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;select&lt;/li&gt;
+&lt;li&gt;update&lt;/li&gt;
+&lt;li&gt;insert&lt;/li&gt;
+&lt;li&gt;delete&lt;/li&gt;
+&lt;li&gt;call&lt;/li&gt;
+&lt;li&gt;SQL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In order for 4C to know what connection you want to use,
+it checks the value of the XLEXTTYPE env var.
+The XLEXTTYPE env var must be set to a valid external type which corresponds
+to a record in the sys.ext_type file.&lt;/p&gt;
+&lt;p&gt;4C parses all SQL statements at compile time and saves them in a way
+that they can be passed to any of the supported databases at run time.
+The database will parse the statement at run time also.
+4C does not keep the sql statements in a prepared state after
+they have been processed.
+It may do so in the future if it seems necessary.
+If you find, that you are running the same sql statement, possibly
+with different input parameters, thousands of times, then you
+might benefit from this functionality.&lt;/p&gt;
+&lt;p&gt;4C SQL statements are always executed as part of the current
+transaction.&lt;/p&gt;
+&lt;p&gt;4C SQL Statements can be intermixed with other PCL
+statements and system PCL calls including sys.read_file() and
+sys.upd_file() calls.&lt;/p&gt;
+&lt;p&gt;SQL keywords can be written in either upper or lowercase letters
+but not mixed case.
+Either select or SELECT is recognized, but Select is not.
+All sql statements in 4C must end with a semicolon.&lt;/p&gt;
+&lt;p&gt;There are several new fields in the local system file that
+allow you to check sql returns and messages.
+They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sql_ret - After any sql statement, this will always be set to one of SQL_SUCCESS, SQL_ERROR, or SQL_NODATA. Of the three possibilities, only SQL_ERROR is less than 0.&lt;/li&gt;
+&lt;li&gt;sql_errno - If sql_ret is SQL_ERROR, then sql_errno will be set to one of the following: SQL_ERRCONN - could not connect to the database SQL_ERRDUP - tried to insert duplicate row SQL_ERRTABLE - table not found or accessible SQL_ERRCOLUMN - column does not exist in table SQL_ERRTIMEOUT - query timed out SQL_ERRUNSUPPORTED - unsupported statement SQL_ERRINUSE - the stmt is already in use. This is only possible if you recursively call the same pcl from within a FOREACH loop. SQL_ERRUNKNOWN - error unknown SQL_ERRDEADLOCK - transaction deadlocked SQL_ERRABORT - transaction aborted&lt;/li&gt;
+&lt;li&gt;sql_nrows - After an update, delete, or insert statement, this is always set to the number of rows affected. After a call statement, even if rows are updated, it is undefined, and should not be used. During the processing of a FOREACH loop, it will be set to the current row number and at the end of the FOREACH loop, it will be set to the total number of rows processed.&lt;/li&gt;
+&lt;li&gt;sql_dberrno - If sql_ret indicates an error, then this is set to the underlying dbms&amp;rsquo;s native error code.&lt;/li&gt;
+&lt;li&gt;sql_dbmsg - The dbms&amp;rsquo;s message associated with the sql_dberrno&lt;/li&gt;
+&lt;li&gt;sql_state - Not used yet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When using 4C transactions any of the sql_ fields in may be reset if 4C does a commit on the
+transaction.
+The reason is that the last stmt was the commit issued 4C and the sql_ fields will reflect
+the result of the commit.
+A 4C transaction is only committed when there are no &amp;ldquo;rcd locks&amp;rdquo; still active in the transaction.
+If you need to be able to check any of the sql_ fields after an sql stmt then you should wrap the
+stmt or set of stmts in a T_APPCOMMIT transaction or make sure that the current transaction
+will not be committed by 4C after it completes.
+Using SQL statements that are autocommitted will also avoid 4c committing the transaction and
+the sql_ fields from $syslocalf will have the result from the last SQL stmt run.&lt;/p&gt;
+&lt;p&gt;A more detailed description of each type of SQL statement follows
+along with some examples.
+Please note that this is not meant to be a tutorial on sql and
+is only meant to point out how to use sql statements in 4C.
+If you would like my preference for an SQL book,
+it is:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SQL:1999
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Understanding Relational Language Components
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Jim Melton and Alan R. Simon
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Published by Morgan Kaufman
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ISBN - 1-55860-456-1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;select&lt;span class="hx:absolute hx:-mt-20" id="select"&gt;&lt;/span&gt;
+&lt;a href="#select" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;select - This is the standard SQL select statement.&lt;/p&gt;
+&lt;p&gt;In order to read all columns from a single table you might use a
+statement like:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;select * from cust_mstr where cm_code = &amp;#39;KJE001&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The above statement is about the same as if you had done the following:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cm_code = &amp;#39;KJE001&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sys.read_file(cust_mstr,F_LOOKUP);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Assuming that the 4c var cm_code has been set by the application
+you could also use:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;select * from cust_mstr where cm_code = :cm_code;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The above examples fetch all columns from a single tuple.
+The columns fetched end up in the 4C vars for the 4C file
+cust_mstr.
+If you choose, can can fetch only some of the columns
+as in the following:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;select cm_code, cm_name from cust_mstr where cm_code = :cm_code;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In this case only the cm_code and cm_name 4c vars are modified
+by the select statement.&lt;/p&gt;
+&lt;p&gt;You may prefer to have the columns fetched into different 4C vars
+than those that correspond to the 4c file.
+If so, then you must provide an into clause with the select:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;select cm_code, cm_name from cust_mstr into :cmcode1, :cmname1 where
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cm_code = :cm_code;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;or alternately&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;select cm_code, cm_name from cust_mstr where cm_code = :cm_code
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;into :cmcode1, :cmname1;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;After any select statement you can check the value of sql_ret.
+It will be one of SQL_SUCCESS, SQL_NODATA, or SQL_ERROR.&lt;/p&gt;
+&lt;p&gt;So far we have looked at select statements that return a single tuple.
+In fact, if you use a select statement like those above that return
+more than one tuple, you will only get the first tuple.&lt;/p&gt;
+&lt;p&gt;The SQL way of processing multiple tuples returned in a select
+statement is to use cursors.
+Cursors are ugly and awkward to use, so 4C currently deviates
+from standard SQL and provides a FOREACH statement.
+Assuming you want to use an SQL select to iterate through
+all the cust_mstr tuples with the same city, you would do the following:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cmcity = sys.get_answer(&amp;#34;Which City?&amp;#34;,&amp;#34;&amp;#34;,30,GA_INPNORMAL);
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;FOREACH (select * from cust_mstr where cm_city = :cmcity;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/*
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;* Do other 4C processing here
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;*/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Withing the FOREACH statement, the system variable sql_nrows
+will have the current row number being processed.
+Afterward, it will have the total number of rows processed.
+Note that the semicolon is still necessary at the end of the sql
+statement.&lt;/p&gt;
+&lt;p&gt;If it is necessary,
+I will implement the cursor statements that are standard SQL.&lt;/p&gt;
+&lt;p&gt;Some other select statements that are possible include:&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;select count(*) from cust_mstr into :count;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Note that the into clause was necessary here since 4C has
+no way of knowing where to put the returned column.&lt;/p&gt;
+&lt;p&gt;The standard ways of joining tables are supported.
+You can look this stuff up in your sql reference books.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;update&lt;span class="hx:absolute hx:-mt-20" id="update"&gt;&lt;/span&gt;
+&lt;a href="#update" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;update - This is the standard SQL update statement.&lt;/p&gt;
+&lt;p&gt;The following would be acceptable update statements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cm_code = &amp;lsquo;KJE001&amp;rsquo; curpayment = 500; update cust_mstr set cm_amount = cm_amount - :curpayment where cm_code = :cm_code;&lt;/li&gt;
+&lt;li&gt;update cust_mstr set cm_amount = 0;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;delete&lt;span class="hx:absolute hx:-mt-20" id="delete"&gt;&lt;/span&gt;
+&lt;a href="#delete" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;delete - This is the standard SQL delete statement.
+The following would be acceptable delete statements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;delete from cust_mstr where cm_code = &amp;lsquo;KJE001&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;insert&lt;span class="hx:absolute hx:-mt-20" id="insert"&gt;&lt;/span&gt;
+&lt;a href="#insert" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;insert - This is the standard SQL insert statement.
+The following would be acceptable insert statements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;insert into cust_mstr values (:cm_code,:cm_name,&amp;hellip;,:cm_comment[2]);&lt;/li&gt;
+&lt;li&gt;insert into cust_mstr select * from ocust_mstr; This would only be valid if cust_mstr and ocust_mstr had the same columns.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;call&lt;span class="hx:absolute hx:-mt-20" id="call"&gt;&lt;/span&gt;
+&lt;a href="#call" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;call - Call a stored procedure or function&lt;/p&gt;
+&lt;p&gt;Some examples of calling a stored procedure follow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;call :seq = nextval(&amp;ldquo;serial1_s_serial_seq&amp;rdquo;);&lt;/li&gt;
+&lt;li&gt;call cminc();&lt;/li&gt;
+&lt;li&gt;:rc = call cminc(&amp;lsquo;1&amp;rsquo;);&lt;/li&gt;
+&lt;li&gt;call cmsel(:cmcode1,:cmcode2) into :cm_code, :cm_name; call cmminmax(:rc[0] OUT, :rc[1] OUT); Note that parameters passed to a stored procedure or function default to input parameters. You can explicitly specify a parameter as input, output, or input and output by adding IN, OUT, or INOUT after the parameter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Currently, stored procedures that return reference cursors
+or multiple result sets are not suported.
+Stored procedures that return result sets must have an into clause
+and can be used as part of a FOREACH loop.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;SQL&lt;span class="hx:absolute hx:-mt-20" id="sql"&gt;&lt;/span&gt;
+&lt;a href="#sql" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SQL - Use this for non standard sql statements for your database.&lt;/p&gt;
+&lt;p&gt;Some pssibilities might be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sql &amp;ldquo;select nextval(&amp;lsquo;serial1_s_serial_seq&amp;rsquo;::text)&amp;rdquo; into :textseq; That could be used by a PostgreSQL connection to get the next serial value into an alpha var.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For the most part, if you stick to using standard SQL, you will not
+need to use the SQL statement.&lt;/p&gt;
+&lt;p&gt;Please note that in any sql stmt, there is a very big difference
+between a parameter and a column.
+The statement,&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt; 10
+&lt;/span&gt;&lt;span class="lnt"&gt; 11
+&lt;/span&gt;&lt;span class="lnt"&gt; 12
+&lt;/span&gt;&lt;span class="lnt"&gt; 13
+&lt;/span&gt;&lt;span class="lnt"&gt; 14
+&lt;/span&gt;&lt;span class="lnt"&gt; 15
+&lt;/span&gt;&lt;span class="lnt"&gt; 16
+&lt;/span&gt;&lt;span class="lnt"&gt; 17
+&lt;/span&gt;&lt;span class="lnt"&gt; 18
+&lt;/span&gt;&lt;span class="lnt"&gt; 19
+&lt;/span&gt;&lt;span class="lnt"&gt; 20
+&lt;/span&gt;&lt;span class="lnt"&gt; 21
+&lt;/span&gt;&lt;span class="lnt"&gt; 22
+&lt;/span&gt;&lt;span class="lnt"&gt; 23
+&lt;/span&gt;&lt;span class="lnt"&gt; 24
+&lt;/span&gt;&lt;span class="lnt"&gt; 25
+&lt;/span&gt;&lt;span class="lnt"&gt; 26
+&lt;/span&gt;&lt;span class="lnt"&gt; 27
+&lt;/span&gt;&lt;span class="lnt"&gt; 28
+&lt;/span&gt;&lt;span class="lnt"&gt; 29
+&lt;/span&gt;&lt;span class="lnt"&gt; 30
+&lt;/span&gt;&lt;span class="lnt"&gt; 31
+&lt;/span&gt;&lt;span class="lnt"&gt; 32
+&lt;/span&gt;&lt;span class="lnt"&gt; 33
+&lt;/span&gt;&lt;span class="lnt"&gt; 34
+&lt;/span&gt;&lt;span class="lnt"&gt; 35
+&lt;/span&gt;&lt;span class="lnt"&gt; 36
+&lt;/span&gt;&lt;span class="lnt"&gt; 37
+&lt;/span&gt;&lt;span class="lnt"&gt; 38
+&lt;/span&gt;&lt;span class="lnt"&gt; 39
+&lt;/span&gt;&lt;span class="lnt"&gt; 40
+&lt;/span&gt;&lt;span class="lnt"&gt; 41
+&lt;/span&gt;&lt;span class="lnt"&gt; 42
+&lt;/span&gt;&lt;span class="lnt"&gt; 43
+&lt;/span&gt;&lt;span class="lnt"&gt; 44
+&lt;/span&gt;&lt;span class="lnt"&gt; 45
+&lt;/span&gt;&lt;span class="lnt"&gt; 46
+&lt;/span&gt;&lt;span class="lnt"&gt; 47
+&lt;/span&gt;&lt;span class="lnt"&gt; 48
+&lt;/span&gt;&lt;span class="lnt"&gt; 49
+&lt;/span&gt;&lt;span class="lnt"&gt; 50
+&lt;/span&gt;&lt;span class="lnt"&gt; 51
+&lt;/span&gt;&lt;span class="lnt"&gt; 52
+&lt;/span&gt;&lt;span class="lnt"&gt; 53
+&lt;/span&gt;&lt;span class="lnt"&gt; 54
+&lt;/span&gt;&lt;span class="lnt"&gt; 55
+&lt;/span&gt;&lt;span class="lnt"&gt; 56
+&lt;/span&gt;&lt;span class="lnt"&gt; 57
+&lt;/span&gt;&lt;span class="lnt"&gt; 58
+&lt;/span&gt;&lt;span class="lnt"&gt; 59
+&lt;/span&gt;&lt;span class="lnt"&gt; 60
+&lt;/span&gt;&lt;span class="lnt"&gt; 61
+&lt;/span&gt;&lt;span class="lnt"&gt; 62
+&lt;/span&gt;&lt;span class="lnt"&gt; 63
+&lt;/span&gt;&lt;span class="lnt"&gt; 64
+&lt;/span&gt;&lt;span class="lnt"&gt; 65
+&lt;/span&gt;&lt;span class="lnt"&gt; 66
+&lt;/span&gt;&lt;span class="lnt"&gt; 67
+&lt;/span&gt;&lt;span class="lnt"&gt; 68
+&lt;/span&gt;&lt;span class="lnt"&gt; 69
+&lt;/span&gt;&lt;span class="lnt"&gt; 70
+&lt;/span&gt;&lt;span class="lnt"&gt; 71
+&lt;/span&gt;&lt;span class="lnt"&gt; 72
+&lt;/span&gt;&lt;span class="lnt"&gt; 73
+&lt;/span&gt;&lt;span class="lnt"&gt; 74
+&lt;/span&gt;&lt;span class="lnt"&gt; 75
+&lt;/span&gt;&lt;span class="lnt"&gt; 76
+&lt;/span&gt;&lt;span class="lnt"&gt; 77
+&lt;/span&gt;&lt;span class="lnt"&gt; 78
+&lt;/span&gt;&lt;span class="lnt"&gt; 79
+&lt;/span&gt;&lt;span class="lnt"&gt; 80
+&lt;/span&gt;&lt;span class="lnt"&gt; 81
+&lt;/span&gt;&lt;span class="lnt"&gt; 82
+&lt;/span&gt;&lt;span class="lnt"&gt; 83
+&lt;/span&gt;&lt;span class="lnt"&gt; 84
+&lt;/span&gt;&lt;span class="lnt"&gt; 85
+&lt;/span&gt;&lt;span class="lnt"&gt; 86
+&lt;/span&gt;&lt;span class="lnt"&gt; 87
+&lt;/span&gt;&lt;span class="lnt"&gt; 88
+&lt;/span&gt;&lt;span class="lnt"&gt; 89
+&lt;/span&gt;&lt;span class="lnt"&gt; 90
+&lt;/span&gt;&lt;span class="lnt"&gt; 91
+&lt;/span&gt;&lt;span class="lnt"&gt; 92
+&lt;/span&gt;&lt;span class="lnt"&gt; 93
+&lt;/span&gt;&lt;span class="lnt"&gt; 94
+&lt;/span&gt;&lt;span class="lnt"&gt; 95
+&lt;/span&gt;&lt;span class="lnt"&gt; 96
+&lt;/span&gt;&lt;span class="lnt"&gt; 97
+&lt;/span&gt;&lt;span class="lnt"&gt; 98
+&lt;/span&gt;&lt;span class="lnt"&gt; 99
+&lt;/span&gt;&lt;span class="lnt"&gt;100
+&lt;/span&gt;&lt;span class="lnt"&gt;101
+&lt;/span&gt;&lt;span class="lnt"&gt;102
+&lt;/span&gt;&lt;span class="lnt"&gt;103
+&lt;/span&gt;&lt;span class="lnt"&gt;104
+&lt;/span&gt;&lt;span class="lnt"&gt;105
+&lt;/span&gt;&lt;span class="lnt"&gt;106
+&lt;/span&gt;&lt;span class="lnt"&gt;107
+&lt;/span&gt;&lt;span class="lnt"&gt;108
+&lt;/span&gt;&lt;span class="lnt"&gt;109
+&lt;/span&gt;&lt;span class="lnt"&gt;110
+&lt;/span&gt;&lt;span class="lnt"&gt;111
+&lt;/span&gt;&lt;span class="lnt"&gt;112
+&lt;/span&gt;&lt;span class="lnt"&gt;113
+&lt;/span&gt;&lt;span class="lnt"&gt;114
+&lt;/span&gt;&lt;span class="lnt"&gt;115
+&lt;/span&gt;&lt;span class="lnt"&gt;116
+&lt;/span&gt;&lt;span class="lnt"&gt;117
+&lt;/span&gt;&lt;span class="lnt"&gt;118
+&lt;/span&gt;&lt;span class="lnt"&gt;119
+&lt;/span&gt;&lt;span class="lnt"&gt;120
+&lt;/span&gt;&lt;span class="lnt"&gt;121
+&lt;/span&gt;&lt;span class="lnt"&gt;122
+&lt;/span&gt;&lt;span class="lnt"&gt;123
+&lt;/span&gt;&lt;span class="lnt"&gt;124
+&lt;/span&gt;&lt;span class="lnt"&gt;125
+&lt;/span&gt;&lt;span class="lnt"&gt;126
+&lt;/span&gt;&lt;span class="lnt"&gt;127
+&lt;/span&gt;&lt;span class="lnt"&gt;128
+&lt;/span&gt;&lt;span class="lnt"&gt;129
+&lt;/span&gt;&lt;span class="lnt"&gt;130
+&lt;/span&gt;&lt;span class="lnt"&gt;131
+&lt;/span&gt;&lt;span class="lnt"&gt;132
+&lt;/span&gt;&lt;span class="lnt"&gt;133
+&lt;/span&gt;&lt;span class="lnt"&gt;134
+&lt;/span&gt;&lt;span class="lnt"&gt;135
+&lt;/span&gt;&lt;span class="lnt"&gt;136
+&lt;/span&gt;&lt;span class="lnt"&gt;137
+&lt;/span&gt;&lt;span class="lnt"&gt;138
+&lt;/span&gt;&lt;span class="lnt"&gt;139
+&lt;/span&gt;&lt;span class="lnt"&gt;140
+&lt;/span&gt;&lt;span class="lnt"&gt;141
+&lt;/span&gt;&lt;span class="lnt"&gt;142
+&lt;/span&gt;&lt;span class="lnt"&gt;143
+&lt;/span&gt;&lt;span class="lnt"&gt;144
+&lt;/span&gt;&lt;span class="lnt"&gt;145
+&lt;/span&gt;&lt;span class="lnt"&gt;146
+&lt;/span&gt;&lt;span class="lnt"&gt;147
+&lt;/span&gt;&lt;span class="lnt"&gt;148
+&lt;/span&gt;&lt;span class="lnt"&gt;149
+&lt;/span&gt;&lt;span class="lnt"&gt;150
+&lt;/span&gt;&lt;span class="lnt"&gt;151
+&lt;/span&gt;&lt;span class="lnt"&gt;152
+&lt;/span&gt;&lt;span class="lnt"&gt;153
+&lt;/span&gt;&lt;span class="lnt"&gt;154
+&lt;/span&gt;&lt;span class="lnt"&gt;155
+&lt;/span&gt;&lt;span class="lnt"&gt;156
+&lt;/span&gt;&lt;span class="lnt"&gt;157
+&lt;/span&gt;&lt;span class="lnt"&gt;158
+&lt;/span&gt;&lt;span class="lnt"&gt;159
+&lt;/span&gt;&lt;span class="lnt"&gt;160
+&lt;/span&gt;&lt;span class="lnt"&gt;161
+&lt;/span&gt;&lt;span class="lnt"&gt;162
+&lt;/span&gt;&lt;span class="lnt"&gt;163
+&lt;/span&gt;&lt;span class="lnt"&gt;164
+&lt;/span&gt;&lt;span class="lnt"&gt;165
+&lt;/span&gt;&lt;span class="lnt"&gt;166
+&lt;/span&gt;&lt;span class="lnt"&gt;167
+&lt;/span&gt;&lt;span class="lnt"&gt;168
+&lt;/span&gt;&lt;span class="lnt"&gt;169
+&lt;/span&gt;&lt;span class="lnt"&gt;170
+&lt;/span&gt;&lt;span class="lnt"&gt;171
+&lt;/span&gt;&lt;span class="lnt"&gt;172
+&lt;/span&gt;&lt;span class="lnt"&gt;173
+&lt;/span&gt;&lt;span class="lnt"&gt;174
+&lt;/span&gt;&lt;span class="lnt"&gt;175
+&lt;/span&gt;&lt;span class="lnt"&gt;176
+&lt;/span&gt;&lt;span class="lnt"&gt;177
+&lt;/span&gt;&lt;span class="lnt"&gt;178
+&lt;/span&gt;&lt;span class="lnt"&gt;179
+&lt;/span&gt;&lt;span class="lnt"&gt;180
+&lt;/span&gt;&lt;span class="lnt"&gt;181
+&lt;/span&gt;&lt;span class="lnt"&gt;182
+&lt;/span&gt;&lt;span class="lnt"&gt;183
+&lt;/span&gt;&lt;span class="lnt"&gt;184
+&lt;/span&gt;&lt;span class="lnt"&gt;185
+&lt;/span&gt;&lt;span class="lnt"&gt;186
+&lt;/span&gt;&lt;span class="lnt"&gt;187
+&lt;/span&gt;&lt;span class="lnt"&gt;188
+&lt;/span&gt;&lt;span class="lnt"&gt;189
+&lt;/span&gt;&lt;span class="lnt"&gt;190
+&lt;/span&gt;&lt;span class="lnt"&gt;191
+&lt;/span&gt;&lt;span class="lnt"&gt;192
+&lt;/span&gt;&lt;span class="lnt"&gt;193
+&lt;/span&gt;&lt;span class="lnt"&gt;194
+&lt;/span&gt;&lt;span class="lnt"&gt;195
+&lt;/span&gt;&lt;span class="lnt"&gt;196
+&lt;/span&gt;&lt;span class="lnt"&gt;197
+&lt;/span&gt;&lt;span class="lnt"&gt;198
+&lt;/span&gt;&lt;span class="lnt"&gt;199
+&lt;/span&gt;&lt;span class="lnt"&gt;200
+&lt;/span&gt;&lt;span class="lnt"&gt;201
+&lt;/span&gt;&lt;span class="lnt"&gt;202
+&lt;/span&gt;&lt;span class="lnt"&gt;203
+&lt;/span&gt;&lt;span class="lnt"&gt;204
+&lt;/span&gt;&lt;span class="lnt"&gt;205
+&lt;/span&gt;&lt;span class="lnt"&gt;206
+&lt;/span&gt;&lt;span class="lnt"&gt;207
+&lt;/span&gt;&lt;span class="lnt"&gt;208
+&lt;/span&gt;&lt;span class="lnt"&gt;209
+&lt;/span&gt;&lt;span class="lnt"&gt;210
+&lt;/span&gt;&lt;span class="lnt"&gt;211
+&lt;/span&gt;&lt;span class="lnt"&gt;212
+&lt;/span&gt;&lt;span class="lnt"&gt;213
+&lt;/span&gt;&lt;span class="lnt"&gt;214
+&lt;/span&gt;&lt;span class="lnt"&gt;215
+&lt;/span&gt;&lt;span class="lnt"&gt;216
+&lt;/span&gt;&lt;span class="lnt"&gt;217
+&lt;/span&gt;&lt;span class="lnt"&gt;218
+&lt;/span&gt;&lt;span class="lnt"&gt;219
+&lt;/span&gt;&lt;span class="lnt"&gt;220
+&lt;/span&gt;&lt;span class="lnt"&gt;221
+&lt;/span&gt;&lt;span class="lnt"&gt;222
+&lt;/span&gt;&lt;span class="lnt"&gt;223
+&lt;/span&gt;&lt;span class="lnt"&gt;224
+&lt;/span&gt;&lt;span class="lnt"&gt;225
+&lt;/span&gt;&lt;span class="lnt"&gt;226
+&lt;/span&gt;&lt;span class="lnt"&gt;227
+&lt;/span&gt;&lt;span class="lnt"&gt;228
+&lt;/span&gt;&lt;span class="lnt"&gt;229
+&lt;/span&gt;&lt;span class="lnt"&gt;230
+&lt;/span&gt;&lt;span class="lnt"&gt;231
+&lt;/span&gt;&lt;span class="lnt"&gt;232
+&lt;/span&gt;&lt;span class="lnt"&gt;233
+&lt;/span&gt;&lt;span class="lnt"&gt;234
+&lt;/span&gt;&lt;span class="lnt"&gt;235
+&lt;/span&gt;&lt;span class="lnt"&gt;236
+&lt;/span&gt;&lt;span class="lnt"&gt;237
+&lt;/span&gt;&lt;span class="lnt"&gt;238
+&lt;/span&gt;&lt;span class="lnt"&gt;239
+&lt;/span&gt;&lt;span class="lnt"&gt;240
+&lt;/span&gt;&lt;span class="lnt"&gt;241
+&lt;/span&gt;&lt;span class="lnt"&gt;242
+&lt;/span&gt;&lt;span class="lnt"&gt;243
+&lt;/span&gt;&lt;span class="lnt"&gt;244
+&lt;/span&gt;&lt;span class="lnt"&gt;245
+&lt;/span&gt;&lt;span class="lnt"&gt;246
+&lt;/span&gt;&lt;span class="lnt"&gt;247
+&lt;/span&gt;&lt;span class="lnt"&gt;248
+&lt;/span&gt;&lt;span class="lnt"&gt;249
+&lt;/span&gt;&lt;span class="lnt"&gt;250
+&lt;/span&gt;&lt;span class="lnt"&gt;251
+&lt;/span&gt;&lt;span class="lnt"&gt;252
+&lt;/span&gt;&lt;span class="lnt"&gt;253
+&lt;/span&gt;&lt;span class="lnt"&gt;254
+&lt;/span&gt;&lt;span class="lnt"&gt;255
+&lt;/span&gt;&lt;span class="lnt"&gt;256
+&lt;/span&gt;&lt;span class="lnt"&gt;257
+&lt;/span&gt;&lt;span class="lnt"&gt;258
+&lt;/span&gt;&lt;span class="lnt"&gt;259
+&lt;/span&gt;&lt;span class="lnt"&gt;260
+&lt;/span&gt;&lt;span class="lnt"&gt;261
+&lt;/span&gt;&lt;span class="lnt"&gt;262
+&lt;/span&gt;&lt;span class="lnt"&gt;263
+&lt;/span&gt;&lt;span class="lnt"&gt;264
+&lt;/span&gt;&lt;span class="lnt"&gt;265
+&lt;/span&gt;&lt;span class="lnt"&gt;266
+&lt;/span&gt;&lt;span class="lnt"&gt;267
+&lt;/span&gt;&lt;span class="lnt"&gt;268
+&lt;/span&gt;&lt;span class="lnt"&gt;269
+&lt;/span&gt;&lt;span class="lnt"&gt;270
+&lt;/span&gt;&lt;span class="lnt"&gt;271
+&lt;/span&gt;&lt;span class="lnt"&gt;272
+&lt;/span&gt;&lt;span class="lnt"&gt;273
+&lt;/span&gt;&lt;span class="lnt"&gt;274
+&lt;/span&gt;&lt;span class="lnt"&gt;275
+&lt;/span&gt;&lt;span class="lnt"&gt;276
+&lt;/span&gt;&lt;span class="lnt"&gt;277
+&lt;/span&gt;&lt;span class="lnt"&gt;278
+&lt;/span&gt;&lt;span class="lnt"&gt;279
+&lt;/span&gt;&lt;span class="lnt"&gt;280
+&lt;/span&gt;&lt;span class="lnt"&gt;281
+&lt;/span&gt;&lt;span class="lnt"&gt;282
+&lt;/span&gt;&lt;span class="lnt"&gt;283
+&lt;/span&gt;&lt;span class="lnt"&gt;284
+&lt;/span&gt;&lt;span class="lnt"&gt;285
+&lt;/span&gt;&lt;span class="lnt"&gt;286
+&lt;/span&gt;&lt;span class="lnt"&gt;287
+&lt;/span&gt;&lt;span class="lnt"&gt;288
+&lt;/span&gt;&lt;span class="lnt"&gt;289
+&lt;/span&gt;&lt;span class="lnt"&gt;290
+&lt;/span&gt;&lt;span class="lnt"&gt;291
+&lt;/span&gt;&lt;span class="lnt"&gt;292
+&lt;/span&gt;&lt;span class="lnt"&gt;293
+&lt;/span&gt;&lt;span class="lnt"&gt;294
+&lt;/span&gt;&lt;span class="lnt"&gt;295
+&lt;/span&gt;&lt;span class="lnt"&gt;296
+&lt;/span&gt;&lt;span class="lnt"&gt;297
+&lt;/span&gt;&lt;span class="lnt"&gt;298
+&lt;/span&gt;&lt;span class="lnt"&gt;299
+&lt;/span&gt;&lt;span class="lnt"&gt;300
+&lt;/span&gt;&lt;span class="lnt"&gt;301
+&lt;/span&gt;&lt;span class="lnt"&gt;302
+&lt;/span&gt;&lt;span class="lnt"&gt;303
+&lt;/span&gt;&lt;span class="lnt"&gt;304
+&lt;/span&gt;&lt;span class="lnt"&gt;305
+&lt;/span&gt;&lt;span class="lnt"&gt;306
+&lt;/span&gt;&lt;span class="lnt"&gt;307
+&lt;/span&gt;&lt;span class="lnt"&gt;308
+&lt;/span&gt;&lt;span class="lnt"&gt;309
+&lt;/span&gt;&lt;span class="lnt"&gt;310
+&lt;/span&gt;&lt;span class="lnt"&gt;311
+&lt;/span&gt;&lt;span class="lnt"&gt;312
+&lt;/span&gt;&lt;span class="lnt"&gt;313
+&lt;/span&gt;&lt;span class="lnt"&gt;314
+&lt;/span&gt;&lt;span class="lnt"&gt;315
+&lt;/span&gt;&lt;span class="lnt"&gt;316
+&lt;/span&gt;&lt;span class="lnt"&gt;317
+&lt;/span&gt;&lt;span class="lnt"&gt;318
+&lt;/span&gt;&lt;span class="lnt"&gt;319
+&lt;/span&gt;&lt;span class="lnt"&gt;320
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;update cust_mstr set cm_amount = cm_amount;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;is very different from
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;update cust_mstr set cm_amount = :cm_amount;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;The first accomplishes nothing, while the second takes the current
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;value of the 4C file var cm_amount and stores it the cm_amount
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;column of each tuple in the cust_mstr table.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;4C SQL Grammar
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Here is the complete grammar that 4C recognizes:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sql_list : sql &amp;#39;&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sql : manipulative_statement
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;manipulative_statement
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: delete_statement_searched
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| insert_statement
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| select_statement
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| spcall
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| native_sql_statement
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| update_statement_searched
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;delete_statement_searched
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: _DELETE _FROM table opt_where_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;insert_statement: _INSERT _INTO table paren_column_ref_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;values_or_query_spec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _INSERT _INTO table values_or_query_spec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;native_sql_statement
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: _SQL opt_spresulteq _STRING opt_into_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _SQL opt_spresulteq _DQSTRING opt_into_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _SQL opt_spresulteq _NAME opt_into_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;select_statement: query_spec opt_order_by_clause opt_into_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;spcall :
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;_CALL opt_spresulteq _NAME &amp;#39;(&amp;#39; opt_spparamlist &amp;#39;)&amp;#39; opt_into_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;update_statement_searched
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: _UPDATE table _SET assignment_commalist opt_where_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;values_list : &amp;#39;(&amp;#39; insert_atom_commalist &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;values_comma_list
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: values_list
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| values_comma_list &amp;#39;,&amp;#39; values_list
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;values_or_query_spec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: _VALUES values_comma_list
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| query_spec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;query_spec : _SELECT opt_all_distinct selection opt_into_clause table_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| query_spec _UNION opt_all_distinct query_spec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| query_spec _EXCEPT opt_all_distinct query_spec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| query_spec _INTERSECT opt_all_distinct query_spec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| &amp;#39;(&amp;#39; query_spec &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;selection : scalar_exp_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| &amp;#39;*&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;from_clause : _FROM table_ref_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;where_clause : _WHERE search_condition
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;subquery : &amp;#39;(&amp;#39; query_spec &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;derived_table : table_subquery
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;table_exp : from_clause opt_where_clause opt_group_by_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_having_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;table_ref : table
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| table opt_as range_variable
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| joined_table
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;table_subquery : subquery
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;table_primary : table
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;table : _NAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _NAME &amp;#39;.&amp;#39; _NAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| derived_table opt_as correlation_name opt_derived_column_list
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tabledotstar : table _DOTSTAR
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;joined_table : cross_join
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| qualified_join
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| natural_join
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| union_join
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cross_join : table_ref _CROSSJOIN table_primary
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;qualified_join : table_ref opt_join_type _JOIN
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;table_ref join_specification
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;natural_join : table_ref _NATURAL opt_join_type _JOIN table_primary
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;union_join : table_ref _UNIONJOIN table_primary
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;join_type : _INNER
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| outer_join_type opt_outer
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;outer_join_type : _LEFT
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _RIGHT
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _FULL
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;join_specification
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: join_condition
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| named_columns_join
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;join_condition : _ON search_condition
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;named_columns_join
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: _USING &amp;#39;(&amp;#39; join_column_list &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;join_column_list: column_ref_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;assignment : column_ref &amp;#39;=&amp;#39; scalar_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| column_ref &amp;#39;=&amp;#39; _NULLX
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;search_condition: search_condition _OR search_condition
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| search_condition _AND search_condition
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _NOT search_condition
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| &amp;#39;(&amp;#39; search_condition &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| predicate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;predicate : comparison_predicate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| between_predicate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| like_predicate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| test_for_null
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| in_predicate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| all_or_any_predicate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| existence_test
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;comparison_op : &amp;#39;=&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _COMPARISON
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;comparison_predicate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: scalar_exp comparison_op scalar_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| scalar_exp comparison_op subquery
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;between_predicate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: scalar_exp _NOT _BETWEEN scalar_exp _AND scalar_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| scalar_exp _BETWEEN scalar_exp _AND scalar_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;like_predicate : scalar_exp _NOT _LIKE atom opt_escape
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| scalar_exp _LIKE atom opt_escape
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;test_for_null : column_ref _IS _NOT _NULLX
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| column_ref _IS _NULLX
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;in_predicate : scalar_exp _NOT _IN subquery
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| scalar_exp _IN subquery
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| scalar_exp _NOT _IN &amp;#39;(&amp;#39; atom_commalist &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| scalar_exp _IN &amp;#39;(&amp;#39; atom_commalist &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;all_or_any_predicate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: scalar_exp comparison_op any_all_some subquery
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;any_all_some : _ANY
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _ALL
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _SOME
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;existence_test : _EXISTS subquery
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scalar_exp : scalar_exp &amp;#39;+&amp;#39; scalar_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| scalar_exp &amp;#39;-&amp;#39; scalar_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| scalar_exp &amp;#39;*&amp;#39; scalar_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| scalar_exp &amp;#39;/&amp;#39; scalar_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| &amp;#39;+&amp;#39; scalar_exp %prec _UMINUS
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| &amp;#39;-&amp;#39; scalar_exp %prec _UMINUS
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| atom
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| column_ref
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| function_ref
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| ext_function_ref
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| tabledotstar
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| &amp;#39;(&amp;#39; scalar_exp &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;function_ref : _AMMSC &amp;#39;(&amp;#39; &amp;#39;*&amp;#39; &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _AMMSC &amp;#39;(&amp;#39; _DISTINCT column_ref &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _AMMSC &amp;#39;(&amp;#39; _ALL scalar_exp &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _AMMSC &amp;#39;(&amp;#39; scalar_exp &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ext_function_ref:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;_NAME &amp;#39;(&amp;#39; opt_spparamlist &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;atom : parameter_ref
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| literal
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;column_ref : column_ref &amp;#39;[&amp;#39; _INTNUM &amp;#39;]&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _NAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _NAME &amp;#39;.&amp;#39; _NAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _NAME &amp;#39;.&amp;#39; _NAME &amp;#39;.&amp;#39; _NAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;correlation_name: _NAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;derived_column_list
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: column_ref_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;insert_atom : atom
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _NULLX
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;into_clause : _INTO target_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;literal : _STRING
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _INTNUM
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _APPROXNUM
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ordering_spec : _INTNUM opt_asc_desc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| column_ref opt_asc_desc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;parameter : _PARAMETER
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;parameter_ref : parameter_ref &amp;#39;[&amp;#39; _INTNUM &amp;#39;]&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| parameter
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;range_variable : _NAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;spparam : atom opt_inout
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;target : parameter_ref
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;assignment_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: assignment
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| assignment_commalist &amp;#39;,&amp;#39; assignment
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;atom_commalist : atom
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| atom_commalist &amp;#39;,&amp;#39; atom
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;column_ref_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: column_ref
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| column_ref_commalist &amp;#39;,&amp;#39; column_ref
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;insert_atom_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: insert_atom
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| insert_atom_commalist &amp;#39;,&amp;#39; insert_atom
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ordering_spec_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: ordering_spec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| ordering_spec_commalist &amp;#39;,&amp;#39; ordering_spec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;paren_column_ref_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: &amp;#39;(&amp;#39; column_ref_commalist &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scalar_exp_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: scalar_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| scalar_exp_commalist &amp;#39;,&amp;#39; scalar_exp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;spparam_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: spparam
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| spparam_commalist &amp;#39;,&amp;#39; spparam
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;table_ref_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: table_ref
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| table_ref_commalist &amp;#39;,&amp;#39; table_ref
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;target_commalist: target
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| target_commalist &amp;#39;,&amp;#39; target
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_all_distinct: /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _ALL
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _DISTINCT
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_as : /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _AS
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_asc_desc : /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _ASC
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _DESC
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_derived_column_list
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| &amp;#39;(&amp;#39; derived_column_list &amp;#39;)&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_escape : /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _ESCAPE atom
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_group_by_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _GROUP _BY column_ref_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_having_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _HAVING search_condition
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_inout : /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _IN
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _OUT
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _INOUT
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_into_clause : /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| into_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_join_type : /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| join_type
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_order_by_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _ORDER _BY ordering_spec_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_outer : /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| _OUTER
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_spresulteq : /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| parameter_ref &amp;#39;=&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_spparamlist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| spparam_commalist
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;opt_where_clause: /* Empty */
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| where_clause
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Back to Top&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

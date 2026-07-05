@@ -1,0 +1,201 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C FCPdf External Library</title><link>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/</link><description>Recent content in 4C FCPdf External Library on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/index.xml" rel="self" type="application/rss+xml"/><item><title>4C FCPdf External Library - Examples</title><link>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/examples/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/examples/</guid><description>
+&lt;p&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/"&gt;FCPdf Home&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example 1 - fcpdf.demo.1 This should be a simple program to follow. It allows you to select a font, a fontsize, x and y positions in points and some text to write. Clicking a button then will create one pdf file with one page and one line of text. Clicking another button will show the newly created PDF file in a client pdf viewer program.&lt;/li&gt;
+&lt;li&gt;Example 2 - fcpdf.demo.2 This program shows a few more things that you can do, including setting stroke colors, drawing lines, and measuring text width. The program creates a pdf file of a red grid of a user chosen size. Row and column numbers or markers are printed in the outside grid boxes. You can actually create a form that works for measuring positions on another pre printed form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of the above examples are in the 4c demo application.&lt;/p&gt;
+&lt;p&gt;If you need to download the most recent 4c demo programs here&amp;rsquo;s the link:
+&lt;a href="https://4csoftware.com/downloads/misc/demo.tar.gz"target="_blank" rel="noopener"&gt;4C Demo Application Back to Top&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Functions</title><link>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/"&gt;FCPdf Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/"&gt;FCPdf Function List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/"&gt;[D]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/"&gt;[P]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/"&gt;[T]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docalloc/"&gt;DocAlloc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/doccount/"&gt;DocCount&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docfreeall/"&gt;DocFreeAll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docfree/"&gt;DocFree&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docgetfontface/"&gt;DocGetFontFace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docgetfontsize/"&gt;DocGetFontSize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docgetheight/"&gt;DocGetHeight&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docgetlinewidth/"&gt;DocGetLineWidth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docgetpapersize/"&gt;DocGetPaperSize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docgetwidth/"&gt;DocGetWidth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docloadttfont/"&gt;DocLoadTTFont&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docloadtype1font/"&gt;DocLoadType1Font&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docnew/"&gt;DocNew&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsaveas/"&gt;DocSaveAs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsetfontface/"&gt;DocSetFontFace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsetfont/"&gt;DocSetFont&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsetfontsize/"&gt;DocSetFontSize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsetheight/"&gt;DocSetHeight&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsetlinewidth/"&gt;DocSetLineWidth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsetoption/"&gt;DocSetOption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsetpapersize/"&gt;DocSetPaperSize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsetwidth/"&gt;DocSetWidth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/drawbegin/"&gt;DrawBegin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/drawend/"&gt;DrawEnd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pageadd/"&gt;PageAdd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagecount/"&gt;PageCount&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagegetfontface/"&gt;PageGetFontFace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagegetfontsize/"&gt;PageGetFontSize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagegetheight/"&gt;PageGetHeight&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagegetlinewidth/"&gt;PageGetLineWidth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagegetpapersize/"&gt;PageGetPaperSize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagegetwidth/"&gt;PageGetWidth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagesetfontface/"&gt;PageSetFontFace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagesetfont/"&gt;PageSetFont&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagesetfontsize/"&gt;PageSetFontSize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagesetheight/"&gt;PageSetHeight&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagesetlinewidth/"&gt;PageSetLineWidth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagesetpapersize/"&gt;PageSetPaperSize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagesetwidth/"&gt;PageSetWidth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/textbegin/"&gt;TextBegin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/textend/"&gt;TextEnd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/textgetwidth/"&gt;TextGetWidth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/textrect/"&gt;TextRect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/textsetcharspacing/"&gt;TextSetCharSpacing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/textsetrenderingmode/"&gt;TextSetRenderingMode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/textsetwordspacing/"&gt;TextSetWordSpacing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/textwrite/"&gt;TextWrite&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>4C FCPdf External Library - Most Recent Changes</title><link>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/fcpdfchanges/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/fcpdfchanges/</guid><description>
+&lt;p&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/"&gt;FCPdf Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;05 September 2025&lt;span class="hx:absolute hx:-mt-20" id="05-september-2025"&gt;&lt;/span&gt;
+&lt;a href="#05-september-2025" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;There is a new funtion that makes it easier to split a long text into multiple lines and format it as a block of text within a specified rectangle. The function is &lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/textrect/"&gt;TextRect&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;28 July 2020&lt;span class="hx:absolute hx:-mt-20" id="28-july-2020"&gt;&lt;/span&gt;
+&lt;a href="#28-july-2020" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The following 4 functions now have an optional final argument that allows specifying and encoding for the font being selected. This is most useful when using a UTF-8 font. &lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsetfontface/"&gt;DocSetFontFace&lt;/a&gt; &lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/docsetfont/"&gt;DocSetFont&lt;/a&gt; &lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagesetfontface/"&gt;PageSetFontFace&lt;/a&gt; &lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/functions/pagesetfont/"&gt;PageSetFont&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;05 February 2018&lt;span class="hx:absolute hx:-mt-20" id="05-february-2018"&gt;&lt;/span&gt;
+&lt;a href="#05-february-2018" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;True Type and Type 1 fonts are supported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;15 January 2018&lt;span class="hx:absolute hx:-mt-20" id="15-january-2018"&gt;&lt;/span&gt;
+&lt;a href="#15-january-2018" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Initial Release and Documentation&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>4C FCPdf External Library - Credits and Acknowledgements</title><link>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/fcpdfcredits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/fcpdfcredits/</guid><description>
+&lt;p&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/"&gt;FCPdf Home&lt;/a&gt;
+The 4C FCPdf External Library uses the libHaru library from
+&lt;a href="https://libharu.org"target="_blank" rel="noopener"&gt;libHaru home&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;libHaru License&lt;span class="hx:absolute hx:-mt-20" id="libharu-license"&gt;&lt;/span&gt;
+&lt;a href="#libharu-license" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Copyright (C) 1999-2006 Takeshi Kanno
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Copyright (C) 2007-2009 Antony Dovgal
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;This software is provided &amp;#39;as-is&amp;#39;, without any express or implied warranty.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;In no event will the authors be held liable for any damages arising from the
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;use of this software.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Permission is granted to anyone to use this software for any purpose,including
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;commercial applications, and to alter it and redistribute it freely, subject
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;to the following restrictions:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1. The origin of this software must not be misrepresented; you must not claim
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;that you wrote the original software. If you use this software in a
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;product, an acknowledgment in the product documentation would be
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;appreciated but is not required.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2. Altered source versions must be plainly marked as such, and must not be
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;misrepresented as being the original software.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3. This notice may not be removed or altered from any source distribution.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;libHaru Copyright&lt;span class="hx:absolute hx:-mt-20" id="libharu-copyright"&gt;&lt;/span&gt;
+&lt;a href="#libharu-copyright" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Copyright 2000-2006 (c) Takeshi Kanno^
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Copyright 2007-2009 (c) Antony Dovgal et al.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The documentation of the libHaru API may be helpful in understanding
+how FCPdf works.
+The docs are at:
+&lt;a href="https://github.com/libharu/libharu/wiki"target="_blank" rel="noopener"&gt;libHaru API Documentation&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>4C FCPdf External Library - Overview</title><link>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/fcpdfov/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fcpdf/fcpdfov/</guid><description>
+&lt;p&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/"&gt;FCPdf Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;15 January 2018&lt;span class="hx:absolute hx:-mt-20" id="15-january-2018"&gt;&lt;/span&gt;
+&lt;a href="#15-january-2018" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The FCPdf 4C external library is meant to allow applications to
+easily create PDF files.
+This library gives you 100% complete control over creating PDF documents.
+It does not have the ability to take an existing PDF document and extract
+data from it.
+Some of what the FCPdf external library allows an application to do are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create new PDF documents and add or insert pages anywhere in the document.&lt;/li&gt;
+&lt;li&gt;Assign document level attributes to the document including but not limited to document passwords, print scaling preferences, default fonts, default font sizes.&lt;/li&gt;
+&lt;li&gt;For any page in the document you can also set page specific preferences.&lt;/li&gt;
+&lt;li&gt;Write text in any supported font at any size at any location on a page in any direction.&lt;/li&gt;
+&lt;li&gt;Draw shapes anywhere on a page&lt;/li&gt;
+&lt;li&gt;Use colors for text and shapes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Something to keep in mind when creating PDF documents follow&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The user of the document has control over how it is printed in the end. You scan specify certain scaling options so that a form prints exactly as defined but the user or even the printer driver can override this and scale the document best for a particular printer. This is extremely important when creating a form that needs to print on a pre printed form.&lt;/li&gt;
+&lt;li&gt;All locations are in points with location 0, 0 at the lower left corner of the page.&lt;/li&gt;
+&lt;li&gt;Even though letter size pages will be 8.5 x 11 inches (612 x 792 points), all printers will have some unprintable margin area and this area is not the same on all printers. At a minimum, avoid printing within .25 inches (18 points) of any paper edge.&lt;/li&gt;
+&lt;li&gt;At any one time the page of a document may be in one of several different graphics modes. Not all library calls are valid in all graphics modes. The different graphics modes that a page may be in are PageDescriptionMode PathObjectMode TextObjectMode ClippingPathMode ShadingMode InlineImageMode ExternalObjectMode Currently there is no way to check what the current graphics mode is. You just kind of have to know which calls change it and what it has changed to. When an FCPdf function requires a specific graphics mode or if it changes the graphics mode it is documented in the long description section for that function. For the most part all you really need to know about the graphics mode is Each page maintains it&amp;rsquo;s own graphics mode. Adding or Inserting a page initializes the graphics mode for that page to PageDescriptionMode. FCPdf::TextBegin(), if successful, changes the graphics mode to TextObjectMode FCPdf::TextEnd(), if successful, changes the graphics mode to PageDescriptionMode FCPdf::DrawBegin(), if successful, changes the graphics mode to PathObjectMode FCPdf::DrawEnd, if successful, changes the graphics mode to PageDescription mode. Writing text requires the graphics mode to be TextObjectMode Drawing shapes and lines requires the graphics mode to be PathObjectMode When a document is first created, FCPdf sets the following defaults for the document. Any of them can be overridden by the application. The defaults are Fontface - &amp;ldquo;Courier&amp;rdquo; Fontsize - 9pts Pagesize - &amp;ldquo;Letter&amp;rdquo; Orientation - &amp;ldquo;Portrait&amp;rdquo; Linewidth - 1pt Though not set specifically by FCPdf, the following attributes appear to be the defaults used by libharu for the document TextRenderingMode - &amp;ldquo;Fill&amp;rdquo; StrokeColor - Black StrokeColor is the color to use for drawing lines, shapes, and for drawing the the outsize edge of text. The outside edge of text is only drawn if the TextRendering mode is one of &amp;ldquo;Stroke&amp;rdquo;, &amp;ldquo;FillStroke&amp;rdquo;, &amp;ldquo;StrokeClipping&amp;rdquo;, or &amp;ldquo;FillStrokeClipping&amp;rdquo; FillColor - Black Fill color is used for filling in shapes and the inside region of text. The inside region of text is only filled if TextRenderingMode is one of &amp;ldquo;Fill&amp;rdquo;, &amp;ldquo;FillStroke&amp;rdquo;, &amp;ldquo;FillClipping&amp;rdquo;, or &amp;ldquo;FillStrokeClipping&amp;rdquo; The inside area of shapes are filled when FCPdf::DrawEnd() is called with &lt;code&gt;&amp;lt;fillflag&amp;gt;&lt;/code&gt; == 1. WordSpacing - 0 CharSpacing - 0 When adding or inserting pages default attributes are set for that page. If an equivalent document attribute has been set by the application, that value is used. Otherwise the FCPdf default or the libharu default attribute is used. No attributes are carried forward from any previous page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcpdf/fcpdfcredits/"&gt;Credits and Acknowledgements&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated 15 January 2018&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

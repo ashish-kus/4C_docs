@@ -1,0 +1,334 @@
+# ----------------------------------------------------------------------------
+# CORE SITE SETTINGS
+# ----------------------------------------------------------------------------
+baseURL: "https://127.0.0.1:8080" # <-- change to your real production URL
+title: "4C Language Docs" # <-- your site / language name
+local: "en-us"
+
+# Theme is imported as a Hugo Module (matches your go.mod setup)
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+enableRobotsTXT: true # generate robots.txt (needed if you use noindex rules)
+enableEmoji: true # allow :emoji: shorthand in Markdown
+# WARNING: Enable only if you really want else it will caus eperformance issue.
+enableGitInfo: false
+# enableGitInfo: true
+disableKinds:
+  - taxonomy
+  - term
+# If you DO want tag archive pages later, delete the block above.
+
+# ----------------------------------------------------------------------------
+# OUTPUT FORMATS
+# ----------------------------------------------------------------------------
+# html      -> normal pages
+# rss       -> feeds for sections (useful if you add a changelog/blog)
+#              AI tools. Cheap to generate, great for a language docs site.
+# markdown  -> raw .md output per page; REQUIRED if you enable the page
+#              context menu ("Copy page as Markdown") below.
+# llms      -> llms.txt at site root: structured outline of all docs for
+outputs:
+  home: [html, llms]
+  page: [html, markdown]
+  section: [html, rss, markdown]
+
+# ----------------------------------------------------------------------------
+# MARKDOWN / CODE RENDERING
+# ----------------------------------------------------------------------------
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false # use CSS classes (theme-aware, dark-mode safe)
+    codeFences: true
+    guessSyntax: false # (guessing is slow across 720 pages and often wrong)
+    lineNos: true
+    lineNumbersInTable: true
+    tabWidth: 4
+
+# ----------------------------------------------------------------------------
+# TOP NAVBAR MENU
+# ----------------------------------------------------------------------------
+menu:
+  main:
+    - name: Documentation
+      pageRef: /docs
+      weight: 1
+
+    # --- Uncomment if/when you add these sections ---
+    # - name: Blog
+    #   pageRef: /blog
+    #   weight: 2
+    # - name: Changelog
+    #   pageRef: /changelog
+    #   weight: 3
+    - name: About
+      pageRef: /about
+      weight: 4
+
+    # Search bar in the navbar — your must-have feature. Keep this.
+    - name: Search
+      weight: 5
+      params:
+        type: search
+
+    # Icon-only GitHub link (remove if the language repo is private)
+    - name: GitHub
+      weight: 6
+      url: "https://github.com/ashish-kus/4c_docs_Better"
+      params:
+        icon: github
+
+    # Explicit theme toggle in the navbar (a toggle also exists via
+    # params.theme.displayToggle below — you don't need both)
+    - name: Theme Toggle
+      weight: 7
+      params:
+        type: theme-toggle
+        label: false
+
+    # Language switcher — only if you add translations later
+    # - name: Language Switcher
+    #   weight: 8
+    #   params:
+    #     type: language-switch
+    #     label: true
+
+  # --- Extra links pinned at the bottom of the LEFT sidebar ---
+  # The main sidebar tree itself is auto-generated from content/docs/
+  # structure; these are just appended extras.
+  # sidebar:
+  #   - name: More
+  #     params:
+  #       type: separator
+  #     weight: 1
+  #   - name: "Language Spec (PDF)"
+  #     url: "/spec.pdf"
+  #     weight: 2
+  #   - name: "Hugo Docs ↗"
+  #     url: "https://gohugo.io/documentation/"
+  #     weight: 3
+
+# ----------------------------------------------------------------------------
+# THEME PARAMETERS (the bulk of Hextra configuration)
+# ----------------------------------------------------------------------------
+params:
+  # --------------------------------------------------------------------------
+  # NAVBAR APPEARANCE
+  # --------------------------------------------------------------------------
+  navbar:
+    displayTitle: true # show site title text next to the logo
+    displayLogo: true
+    logo:
+      path: images/logo.svg # file lives in static/images/
+      dark: images/logo-dark.svg # optional dark-mode variant
+      link: / # where clicking the logo goes
+      # width: 40                     # px; uncomment to force dimensions
+      # height: 20
+    width: wide # navbar width: full | wide | normal
+
+  # --------------------------------------------------------------------------
+  # SEARCH  ***YOUR TOP-PRIORITY FEATURE — do not disable***
+  # --------------------------------------------------------------------------
+  search:
+    enable: true
+    type: flexsearch # client-side full-text search, no server needed
+    flexsearch:
+      # What gets indexed per page:
+      #   content  -> FULL page text (best recall; what you want)
+      #   summary  -> only page summaries (smaller index, weaker search)
+      #   heading  -> only h1/h2 headings
+      #   title    -> only titles
+      # For a language reference where users search for function names,
+      # keywords, error messages, etc., use `content`.
+      index: content
+
+      # How words are tokenized for matching:
+      #   strict   -> whole words only ("printf" won't match "print")
+      #   forward  -> prefix matching ("prin" matches "printf")  <-- best
+      #               tradeoff for code identifiers, keeps index reasonable
+      #   reverse  -> prefix + suffix matching (bigger index)
+      #   full     -> every substring ("int" matches "printf");
+      #               MAXIMUM recall but the index gets large — with 720
+      #               pages of full content this can noticeably slow the
+      #               browser. Try `forward` first; switch to `full` only
+      #               if users complain they can't find mid-word matches.
+      tokenize: forward
+  # To EXCLUDE a page from the search index, put this in its front matter:
+  #   excludeSearch: true
+
+  # --------------------------------------------------------------------------
+  # THEME / DARK MODE
+  # --------------------------------------------------------------------------
+  theme:
+    default: system # light | dark | system
+    displayToggle: true # show the sun/moon toggle button
+
+  # --------------------------------------------------------------------------
+  # PAGE LAYOUT & BEHAVIOUR
+  # --------------------------------------------------------------------------
+  page:
+    # Overall layout shell width: full (100%) | wide (90rem) | normal (1280px)
+    # `wide` is comfortable for code-heavy docs with a sidebar + TOC.
+    width: wide
+    displayPagination: true
+
+    # "Copy page as Markdown / open in ChatGPT"-style dropdown on each page.
+    # Handy for a programming language (users paste docs into AI tools).
+    # Requires the `markdown` output format enabled above.
+    contextMenu:
+      enable: true
+      # Custom links; placeholders: {url} {title} {markdown_url}
+      links:
+        - name: Open in ChatGPT
+          icon: chatgpt
+          url: "https://chatgpt.com/?hints=search&q=Explain+this+doc%3A+{url}"
+  toc:
+    displayTags: true # show page tags above the TOC (needs taxonomies)
+  # Per-page: disable TOC with `toc: false` in front matter.
+
+  # Nice for docs maintained in a repo your team can access.
+  # If the language/repo is proprietary+private, leave disabled.
+  editURL:
+    enable: false
+    # enable: true
+    # base: "https://github.com/your-org/docs-repo/edit/main"
+
+  # --------------------------------------------------------------------------
+  # LAST-MODIFIED METADATA
+  # --------------------------------------------------------------------------
+  # Requires enableGitInfo: true at the top (adds build time — see note there).
+  displayUpdatedDate: false
+  # displayUpdatedDate: true
+  # dateFormat: "January 2, 2006"     # Go time layout format
+  # displayUpdatedAuthor: false       # show git author of last change
+
+  # --------------------------------------------------------------------------
+  # EXTERNAL LINK DECORATION
+  # --------------------------------------------------------------------------
+  # Adds a small arrow icon after external links in Markdown.
+  # Helps readers know they're leaving your docs. Cheap, harmless.
+  externalLinkDecoration: true
+
+  # --------------------------------------------------------------------------
+  # IMAGE ZOOM (click Markdown images to enlarge)
+  # --------------------------------------------------------------------------
+  # Useful if your docs include architecture diagrams / screenshots.
+  imageZoom:
+    enable: false
+    # enable: true
+    # Self-host the zoom script (for intranet deployments):
+    # js: "js/vendor/medium-zoom.min.js"
+    # base: "https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist"
+  # Per-page opt-out: `imageZoom: false` in front matter.
+
+  # --------------------------------------------------------------------------
+  # MATH RENDERING (KaTeX / MathJax)
+  # --------------------------------------------------------------------------
+  # Enable if your language docs include formal semantics, complexity
+  # analysis, or other math notation.
+  # math:
+  #   engine: katex           # katex | mathjax
+  #   katex:
+  #     # Self-hosted assets for offline/intranet use:
+  #     # css: "css/vendor/katex.min.css"
+  #     # assets:
+  #     #   - "fonts/KaTeX_Main-Regular.woff2"
+  #     #   - "fonts/KaTeX_Math-Italic.woff2"
+
+  # --------------------------------------------------------------------------
+  # DIAGRAMS (Mermaid) — flowcharts, state machines, AST diagrams...
+  # --------------------------------------------------------------------------
+  # Works out of the box with ```mermaid code fences; config only needed
+  # to self-host or pin the script:
+  # mermaid:
+  #   js: "js/vendor/mermaid.min.js"
+  #   base: "https://mirror.example.com/mermaid/dist"
+
+  # --------------------------------------------------------------------------
+  # TERMINAL RECORDINGS (asciinema) — great for showing compiler/REPL usage
+  # --------------------------------------------------------------------------
+  # asciinema:
+  #   js: "js/vendor/asciinema-player.min.js"
+  #   css: "css/vendor/asciinema-player.css"
+
+  # --------------------------------------------------------------------------
+  # SITE-WIDE ANNOUNCEMENT BANNER
+  # --------------------------------------------------------------------------
+  # Change `key` each time you post a new message (it tracks dismissal).
+  banner:
+    key: "release-v2-0"
+    message: |
+      🎉 Version 2.0 of the language is out! Soon will be adding ChatGPT like chatting option.
+
+  # --------------------------------------------------------------------------
+  # BLOG SETTINGS (only relevant if you add a /blog or /changelog section)
+  # --------------------------------------------------------------------------
+  # blog:
+  #   list:
+  #     displayTags: true
+  #   article:
+  #     displayPagination: true
+
+  # --------------------------------------------------------------------------
+  # FOOTER
+  # --------------------------------------------------------------------------
+  footer:
+    enable: true
+    displayCopyright: true # text comes from i18n/en.yaml -> `copyright:`
+    displayPoweredBy: true # hide "Powered by Hextra" for a corporate site
+    width: wide # full | wide | normal
+
+
+  # --------------------------------------------------------------------------
+  # ANALYTICS (production builds only — Hextra skips these in dev)
+  # --------------------------------------------------------------------------
+  # Pick ONE (or none). For proprietary/internal docs, a self-hosted option
+  # like Umami or Matomo avoids sending data to third parties.
+  #
+  # analytics:
+  #   umami:
+  #     serverURL: "https://stats.example.com"
+  #     websiteID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  #
+  #   matomo:
+  #     serverURL: "https://matomo.example.com"
+  #     websiteID: "1"
+  #
+  #   goatCounter:
+  #     code: "yourcode"
+  #     # allowLocal: true    # only for testing analytics locally
+
+# ----------------------------------------------------------------------------
+# GOOGLE ANALYTICS (lives under `services`, not `params`)
+# ----------------------------------------------------------------------------
+# services:
+#   googleAnalytics:
+#     ID: G-XXXXXXXXXX
+
+# ============================================================================
+# NOT IN THIS FILE, BUT PART OF CONFIGURATION — quick reference:
+#
+# 1. FOOTER COPYRIGHT TEXT  ->  i18n/en.yaml
+#      copyright: "© 2026 4C Software. All rights reserved."
+#
+# 2. FAVICON  ->  put favicon.svg (and optional favicon-dark.svg) in static/
+#
+# 3. CONTENT WIDTH override  ->  assets/css/custom.css
+#      :root { --hextra-max-content-width: 80rem; }
+#
+# 4. PER-PAGE front matter overrides (in each .md file):
+#      toc: false               # hide table of contents
+#      excludeSearch: true      # keep page out of the search index
+#      sidebar: { exclude: true }  # hide page from left sidebar
+#      sidebar: { hide: true }     # hide the whole sidebar ON this page
+#      contextMenu: false       # hide copy-as-markdown menu
+#      params: { noindex: true }   # block Google from indexing this page
+#      llms: false              # exclude from llms.txt
+#
+# 5. SIDEBAR STRUCTURE is your content/docs/ folder structure — organize
+#    directories with _index.md files; there is no sidebar config here.
+# ============================================================================

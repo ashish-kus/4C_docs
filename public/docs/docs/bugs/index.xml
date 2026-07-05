@@ -1,0 +1,260 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4CSoftware Known and Fixed Bugs/Issues</title>
+    <link>http://localhost:1313/docs/docs/bugs/</link>
+    <description>Recent content in 4CSoftware Known and Fixed Bugs/Issues on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/docs/docs/bugs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C Bug Fix Downloads</title>
+      <link>http://localhost:1313/docs/docs/bugs/fixbug-dl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/bugs/fixbug-dl/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Current Release - Version 4.2&lt;/p&gt;
+&lt;p&gt;If you have version 4.2.5 or earlier, you need to replace the
+installed xlconv with one of the following.
+If the version of xlconv that you need is not listed
+contact kenglish.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.4csoftware.com/downloads/rel-4.2/linux-4.2.5-xlconv&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Linux 4.2.5 xlconv&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Updated: 29 March 2006&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.4csoftware.com/downloads/rel-4.2/ntx86-4.2.5-xlconv.exe&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NTX86 4.2.5 xlconv&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;/svg&gt;&lt;/a&gt; - Updated: 29 March 2006&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Bug Fix Log</title>
+      <link>http://localhost:1313/docs/docs/bugs/fixbugs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/bugs/fixbugs/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;26 June 2009&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;26-june-2009&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#26-june-2009&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;A bug involving linked programs that could cause an infinite loop has been fixed on the 4csrvr. Fixed in 4C Server version 4.6.5-1.&lt;/li&gt;
+&lt;li&gt;A bug that sometimes prevented focus from being set correctly when clicking on an input field has been fixed in the 4cclient. Fixed in 4C Client version 4.6.5-1.&lt;/li&gt;
+&lt;li&gt;The ScrollList sizing bug involving non scrolldet fields with side labels has been fixed. Fixed in 4C Client version 4.6.5-1.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;25 May 2009&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;25-may-2009&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#25-may-2009&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;wpcled will handle large PCLs correctly. Fixed in 4C Client version 4.6.4-2.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;15 October 2008&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;15-october-2008&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#15-october-2008&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The memory leak in 4CServer versions 4.4.0 thru 4.4.8 caused by many calls to sys.msg() or sys.message() is fixed. Fixed in 4C Server Versions 4.4.9-1 and higher.&lt;/li&gt;
+&lt;li&gt;Using the Start Field PCL to set values into an inplist or sellist display field will work correctly. Fixed in 4C Client Versions 4.4.9-2 and higher.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;05 March 2008&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;05-march-2008&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#05-march-2008&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;sys.dr_position() will work in drivers that are restarted after catching an alarm in the EndPage PCL. Fixed in 4C Client Versions 4.4.7 and higher.&lt;/li&gt;
+&lt;li&gt;The strmin(), strmax(), min(), and max(() SysPCLs will work reliably. Fixed in 4C Server Versions 4.4.7 and higher.&lt;/li&gt;
+&lt;li&gt;The min() and max() SysPCLs will work with any type of numeric argument. Previously only float was allowed. Fixed in 4C Server Versions 4.4.7 and higher.&lt;/li&gt;
+&lt;li&gt;Report programs that send output to a file are guaranteed that the output file has been written and closed by the ExitPCL of the program that started the report. Fixed in 4C Server Versions 4.4.7 and higher.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;02 January 2008&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;02-january-2008&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#02-january-2008&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Literals passed to PCLs as NoChange or ValueOut parameters will no longer cause the literal to be viewed as trashed by other users of the same program. If the parameter is NoChange, 4C will simply ignore that flag. If the parameter is ValueOut, then a warning message will be displayed and the flag will be ignored. Fixed in 4C Server Version 4.4.6-3 and higher&lt;/li&gt;
+&lt;li&gt;X&amp;rsquo;ing out of a layout from a display field that calls another screen program from the SFldPCL will no longer cause the client to crash. Fixed in 4C Server Version 4.4.6-0 and higher.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;21 November 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;21-november-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#21-november-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;4csrvrd will no longer create a .4C directory or any session directories. Fixed in Server version 4.4.6 and higher. If you ran any earlier 4.4 4cserver, you should check the home dir of root and make sure that you remove the .4C directory.&lt;/li&gt;
+&lt;li&gt;The 4csrvr will correctly handle the ContinueWork option when it is not set and when it is set to False. Fixed in Server version 4.4.6 and higher.&lt;/li&gt;
+&lt;li&gt;Scrolling lists that define single selection in the program definition will work correctly in layouts that don&amp;rsquo;t specify single or multiple selection. Fixed in client version 4.4.6 and higher.&lt;/li&gt;
+&lt;li&gt;The 4cclient will handle all fonts correctly in right justified fields. Fixed in client version 4.4.6 and higher.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;30 July 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;30-july-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#30-july-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The non interactive client program, 4ccl, will synchronize exit with the server correctly. This fixes the problem of 4ccl hanging for up to 2 minutes when closing the connection to the server. Fixed in client/server version 4.4.5 and higher.&lt;/li&gt;
+&lt;li&gt;The windows client and windows server will handle filenames with a share correctly. Previously, there were problems with any filename similar to: &lt;code&gt;//server/dir/filename.txt&lt;/code&gt; This sometimes prevented the 4.4.4 client from starting up correctly when using folder redirection. Fixed in client/server version 4.4.5 and higher.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;27 June 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;27-june-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#27-june-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The 4c windows client problem of not being able to print the current window using Ctrl+P has been fixed. The error message: &lt;code&gt;Cannot StretchBlt() for bitmap print, LastError: 87&lt;/code&gt; should be history now. This is fixed in the 4.2.9 version of the windows 4c client and also in 4.4.4 and higher versions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;21 March 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;21-march-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#21-march-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;sys.set_dflabel() will work with chkbox and rblist display fields. Requires Client Version 4.4.4 or higher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;19 March 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;19-march-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#19-march-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;A client crash problem due to improper thread synchronization when using 4C DataEncryption has been fixed. 4C Clients 4.2 (4.2.8 and higher) and 4C Clients 4.4 (4.4.3 and higher) have the fix. This problem only affected client pcs running with hyperthreading or dual core enabled.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;12 December 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;12-december-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#12-december-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;You can use scrollhdr fields in Panel Lists with client versions 4.2.8 and higher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;28 May 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;28-may-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#28-may-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;4C Will no longer allow a variable to have the same name as any asfile name in the same program. This will generate a compile error. Note: Actually, so older programs that depended on this continue to work without change, this is allowed with alpha vars but will warn when the program is compiled.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;29 March 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;29-march-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#29-march-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;xlconv will work correctly when specifying a new access type. Download the fixed xlconv from: &lt;a href=&#34;http://localhost:1313/docs/docs/bugs/fixbug-dl/&#34;&gt;Fixed Bugs Downloads&lt;/a&gt; Fixed in the 4C Server executables version 4.2.6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;28 February 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;28-february-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#28-february-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The source code control bootstrap programs will not allow reedit of an installed program/file/layout on the same mod. Fixed in the 4C Server bootstraps version 4.2.5&lt;/li&gt;
+&lt;li&gt;sys.message() and sys.err_msg() can be used between calls to sys.app_msgstart() and sys.app_msgend(). Fixed in the 4C Server executables version 4.2.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;17 January 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;17-january-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#17-january-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The bootstrap programs sys.df.fm.pnl and sys.df.fm.scr will default the sys.df_labeltype to &amp;ldquo;Side&amp;rdquo; if there is a sys.df_dpylabel and sys.df_labeltype is not set.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;08 January 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;08-january-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#08-january-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;List Panels will correctly show the input screen in Modify and Add mode, even after functions keys are pressed. Fixed in the 4C Client version 4.2.4&lt;/li&gt;
+&lt;li&gt;sys.dr_include() will not leave garbage in null fields. Fixed in the 4C Server version 4.2.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;01 November 2005&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;01-november-2005&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#01-november-2005&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;A ListView problem that sometimes caused the ListView to continually redisplay has been fixed. This was caused when the appearance of the vertical scrollbar forced the appearance of the horizontal scrollbar and this in turn resulted in the ListView being able to fully show less items. The server was not notified of the change and it would get confused trying to display a page. Fixed in the 4C Client version 4.2.3&lt;/li&gt;
+&lt;li&gt;A scrolling program using List that allows the list to scroll horizontally will no longer hide all or part of the last displayed line with the horizontal scrollbar. Fixed in the 4C Client version 4.2.3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;03 May 2004&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;03-may-2004&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#03-may-2004&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Problem - inplist and sellist don&amp;rsquo;t show their data when the list is dropped down and the list displays scrollbars on Win98 clients (version 3.6 and higher). There is no problem on NT/2000/XP clients. Reported: 1 May 2004 Fixed: 3 May 2004 Solution - The Win98 client will not display scrollbars, so the data will display. The user can still scroll past the bottom of the displayed list by using the arrow keys. Fixed in client version 3.6.9, 3.82&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Client/Server Reported Bugs</title>
+      <link>http://localhost:1313/docs/docs/bugs/rptbugs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/bugs/rptbugs/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;26 June 2009&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;26-june-2009&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#26-june-2009&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;There are cases when using sys.link_prog() that the 4csrvr ends up in an infinite loop. It doesn&amp;rsquo;t happen always but the scenario that makes it happen is as follows: Program A pushes Program B. Program B pushes Program C1. Program C1 links to program C2. While still in the InitPCL, C2 links back to C1. This linking back can be explicit by the program, or it can be caused by a mouse click or even a delayed client message. C1 exits and at this point some 4C internal lists are messed up. Control returns to C2 While still in the InitPCL, C2 pushes D and 4C gets caught in an infinite loop. Reported: 23 June 2009 Fixed: 26 June 2009 - 4C Server version 4.6.5-1 and higher&lt;/li&gt;
+&lt;li&gt;When an input field is clicked on, but input is not allowed, the next time the field is clicked on it cannot accept the input focus even if input should be allowed. This is easy to see simply by clicking on a field that will accept input during Modify but not during Lookup. Click on the field in Lookup, switch to Modify, click on the field again. Reported: 19 March 2009 Fixed: 26 June 2009 - 4C Client version 4.6.5-1 and higher&lt;/li&gt;
+&lt;li&gt;Sizing of a ScrollList program does not work correctly when there are non scrolldet display fields that use side labels mixed with non scrolldet fields without labels. This mostly show up when some of these display fields are positioned below the list and others are positioned to the side. Reported: 12 January 2009 Fixed: 26 June 2009 - 4C Client version 4.6.5-1 and higher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;25 May 2009&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;25-may-2009&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#25-may-2009&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The wpcled client program does not work correctly when the total number of characters in the PCL is &amp;gt; 32767. Reported: 19 May 2009 Fixed: 25 May 2009 - 4C Client version 4.6.4-2 and higher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;15 October 2008&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;15-october-2008&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#15-october-2008&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;There is a memory leak when sys.msg() or sys.message() is called in some circumstances. This is a timing issue that is hard to describe in detail, but if you notice the memory usage of your 4C Server processes increasing, especially when a long running report that issues lots of sys.msg() or sys.message() calls, then you are probably affected. Using xlview from the command line or running the SystemInfo/UserInfo from 4C will show memory usage. Any 4csrvr process using more than 1meg of memory should be looked at to determine if this really is normal or not. Reported: 01 September 2008 Fixed: 15 September 2008 - 4C Server version 4.4.9-1 and higher Versions affected: 4srvr 4.4.0 thru 4.4.8&lt;/li&gt;
+&lt;li&gt;Trying to set the values in an inplist or sellist dpy field that is not a choice data type does not work in the StartField PCL. Reported: 01 October 2008 Fixed: 15 October 2008 - 4C Client version 4.4.9-2 and higher Versions affected: 4srvr 4.4.7 and higher when connected to a 4.4.7 thru 4.4.9-1 client. Workarounds: Avoid using the StartField PCL for setting the values in the list. Most times you should use the Open PCL for this.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;05 March 2008&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;05-march-2008&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#05-march-2008&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;If a program calls sys.dr_restart(DR_CLEAR) after catching an alarm in an EndPage PCL, the sys.dr_position() calls in the next DrInit PCL do not always work. ListView programs are not affected by this. Reported: 14 February 2008 This will work correctly in 4C Client releases 4.4.7 and later. Workarounds: Use a ListView instead of a List Add a SortEOF PCL for the driver in question and search for the record you want highlighted using code similar too: &lt;code&gt;for (i = 1; i &amp;lt;= sys.dr_count(); i++) { if (sys.dr_readsel(i,DR_ABSOLUTE) &amp;lt; 0) break; if (MyTest==True) { sys.dr_setsel(i,DR_SELON,DR_ABSOLUTE); break; } }&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;When sending a report to a file it is not guaranteed that all the data will be in the file by the time the report finishes. This means that programs that manipulate the report file can not be sure the data is finished being output when they try to manipulated the file. The reason for this is that there are two processes involved, 4csrvr and 4cprt. 4CSrvr may be done sending data to 4cprt, but since 4csrvr does not wait for an acknowledment from 4cprt that the data has actually been written to the file, race conditions do exist. Reported: 14 February 2008 This will work correctly in 4C Server releases 4.4.7 and later. Workarounds: Put a sleep(n) command in the program that manipulates the report output. There are still timing issues here, but with a large enough n, you can be pretty sure that the report file has been closed by 4cprt. Before manipulating the file, run a dummy report that sends output to /dev/null. The dummy report does not have to have any fields and can just exit the program in the open pcl. This is guaranteed to work because 4csrvr will wait for an acknowledgement from 4cprt when it tries to open the new output device. In some cases you can accomplish the same thing by using a pipe for the output device instead of a file that the program then manipulates.&lt;/li&gt;
+&lt;li&gt;None of the following system PCLs work correctly and should be avoided. min(), max(), strmin(), strmax() Reported: 25 January 2008 These will work in 4C Server releases 4.4.7 and later. Workaround: Write your own Global PCLs.&lt;/li&gt;
+&lt;li&gt;Neither of the System PCLs max() and min() accept any argument types other than float. Reported: 25 January 2008 These will work as documented in 4C Server releases 4.4.7 and later. Workaround: Write your own Global PCLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;07 December 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;07-december-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#07-december-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Passing a literal (float,int,alpha) as a NoChg or ValueOut parameter to a PCL causes other users of the same program to see the literal as trashed until the first users program returns from the PCL. This bugs has been around since the very early character versions of 4C. Reported: 07 December 2007 This is fixed in server release 4.4.6-3 and later. Workaround: There&amp;rsquo;s really hardly any reason to use NoChange or ValueOut parameters to PCLs and certainly not with literals. So unless you really need the value to be passed back out, don&amp;rsquo;t set either the NoChange or ValueOut flag.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;30 November 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;30-november-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#30-november-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;If a user X&amp;rsquo;s out of a program on a field that has a start field pcl that calls another screen program, the client will crash. This is an obscure bug that has been around since layouts were first used. It actually can happen in at least one other situations as well. If a scrolling program calls a display program from the end page pcl, X&amp;rsquo;ing out of the scrolling program after returning from the called program could also cause the client to crash. Reported: 30 November 2007 This will be fixed in server releases later than 4.4.6-0. Workaround: If you have a program like this, modify it so that it catches the &lt;code&gt;&amp;lt;exitlayout&amp;gt;&lt;/code&gt; key and then calls: &lt;code&gt;sys.exit_layout(); sys.exit_prog(-1);&lt;/code&gt; There will be no problems leaving this code in even when the problem has been fixed.&lt;/li&gt;
+&lt;li&gt;The bootstrap program, log.purge.run, may need to be modified if you are using it to purge logging data. See: &lt;a href=&#34;http://localhost:1313/docs/docs/features/logging/changes/&#34;&gt;Logging Changes&lt;/a&gt; for details on how to fix it. Reported: 27 November 2007 This will be fixed in server releases later than 4.4.6-1.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;21 November 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;21-november-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#21-november-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The 4csrvrd process creates a .4C directory and 4C session directories beneath it. The session directories do not get removed. Reported: 29 October 2007 Fixed: 21 November 2007 - Server version 4.4.6 and higher&lt;/li&gt;
+&lt;li&gt;Scrolling lists that specify single selection in the program definition but don&amp;rsquo;t have single selection specified in the layout definition do not work correctly. Reported: 29 October 2007 Fixed: 21 November 2007 - Client version 4.4.6 and higher&lt;/li&gt;
+&lt;li&gt;Version 4.4.5 of 4csrvr does not correctly handle the ContinueWork option when it is not set or when it is set to False. It always acts as if it is set to True. This bug exists in versions 4.4.1 thru 4.4.5 of the 4csrvr. Reported: 29 October 2007 Fixed: 21 November 2007 - Server version 4.4.6 and higher&lt;/li&gt;
+&lt;li&gt;Some right justified display fields do not display. This depends on the font being used. Courier New on Windows Vista and Courier New Bold on Windows XP both have this problem. This bug was introduced when fixing a different font alignment problem. It only exists in 4C Client versions 4.4.0 thru 4.4.5. Reported: 24 October 2007 Fixed: 21 November 2007 - Client version 4.4.6 and higher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;30 July 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;30-july-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#30-july-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Version 4.4.4 windows client fails to start when any of CSIDL_APPDATA, CSIDL_COMMON_APPDATA, or CSIDL_PERSONAL are redirected to a folder on a server share. This is caused by 4C not correctly handling pathnames similar to: &lt;code&gt;//server/dir&lt;/code&gt; Reported: 24 July 2007 Fixed: 30 July 2007 - Client version 4.4.5 and higher&lt;/li&gt;
+&lt;li&gt;The non interactive client program, 4ccl, hangs for 2 minutes after the the 4csrvr connection ends when connecting to a version 4.4 4csrvr. Reported: 27 July 2007 Fixed: 30 July 2007 - Client/Server versions 4.4.5 and higher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;21 March 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;21-march-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#21-march-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;sys.set_dflabel() does not work with chkbox or rblist display fields. Reported: 21 march 2007 Fixed: 21 March 2007 - Client versions 4.4.4 and higher Workarounds: None&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;08 January 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;08-january-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#08-january-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;4.4 and 4.2 Clients crash at unpredictable points when connecting to a 4.2 server with Hyperthreaded or dual core processors. Reported: January 2007 Fixed: 19 March 2007 &lt;code&gt;- 4.2 Client versions 4.2.8 and higher - 4.4 Client versions 4.4.3 and higher&lt;/code&gt; Workarounds: Disable Hyperthreading/DualCore - Not very elegant Turn off DataEncryption 4C - could be dangerous Best option is upgrade client&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;11 December 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;11-december-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#11-december-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Panel programs using Lists that have scrollhdr fields do not calculate list size correctly. This results in a list with unpredictable size, often much larger than the screen. Reported: 11 December 2006 Fixed: 12 December 2006 - Client versions 4.2.8 and higher Workaround: don&amp;rsquo;t use scrollhdr fields in Panel Lists.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;02 June 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;02-june-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#02-june-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Some client PCs get thefollowing message when trying to print a bitmap of the current 4C program: &lt;code&gt;Cannot StretchBlt() for bitmap print, LastError:87&lt;/code&gt; Other client pcs running same version of 4cclient and printing to same printer do not seem to be affected Reported: 02 June 2006 Fixed: Not Yet Workarounds: None known Unable to duplicate this problem yet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;29 March 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;29-march-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#29-march-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;xlconv specifying a new access type does not work and will recreate the original file deleting all data. Reported: 29 March 2006 Fixed: 29 March 2006 - Server version 4.2.6 and higher. Workaround: Download updated xlconv from: &lt;a href=&#34;http://localhost:1313/docs/docs/bugs/fixbug-dl/&#34;&gt;Fixed Bugs Downloads&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;28 February 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;28-february-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#28-february-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Calling sys.message() or sys.err_msg() between calls to sys.app_msgstart() and sys.app_msgend() results in the rest of the calls to sys.app_msgsend() to fail. This does not affect the running of normal 4C applications, only those that written special client.srvr programs using sys.app_msgstart(), sys.app_msgsend(), and sys.app_msgend(). Reported: 28 February 2006 Fixed: 28 February 2006 - Server version 4.2.5 and higher.&lt;/li&gt;
+&lt;li&gt;The source code control bootstrap programs allow you to reedit an installed program/file/layout on the same mod, but when the mod is installed, the reedited program/file/layout is not installed correctly. Workaround: don&amp;rsquo;t reedit an installed program/file/layout on the same mod. Reported: 28 February 2006 Fixed: February January 2006 - Server version 4.2.5 and higher. The source code control programs will not allow reedit of an installed program/file/layout on the same mod.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;17 January 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;17-january-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#17-january-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The bootstrap display fields programs, sys.df.fm.pnl and sys.df.fm.scr, blank out sys.df_dpylabel when no label type is set. This is annoying because older programs could have been created with sys.df_dpylabel being set before there was a sys.df_labeltype. This is a problem with the bootstraps released with server version 4.2.0 through 4.2.4. Workaround: Make sure you specify &amp;ldquo;Side&amp;rdquo; label when modifying any display fields that have sys.df_dpylabel set, but no sys.df_labeltype. You can also modify the seqefld() PCL of sys.df.fm.pnl and sys.df.fm.scr Add the following to the end of the PCL: &lt;code&gt;if ((sys.mode==&amp;quot;Lookup&amp;quot;)||(sys.mode==&amp;quot;Modify&amp;quot;)) { if ((sys.df_labeltype==&amp;quot;&amp;quot;)&amp;amp;&amp;amp;(sys.df_dpylabel!=&amp;quot;&amp;quot;)) sys.df_labeltype = &amp;quot;Side&amp;quot;; }&lt;/code&gt; Reported: 17 January 2006 Fixed: 17 January 2006 - Server version 4.2.5 and higher.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;04 January 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;04-january-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#04-january-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;A List panel does not show the list input screen in Add or Modify mode after a function key is pressed. This is a problem with the 4C client for Windows versions 4.0.0 through 4.2.3. Earlier clients are unaffected because they can&amp;rsquo;t run panel programs. Workaround: None Reported: 04 January 2006 Fixed: 08 January 2006 - client version 4.2.4 and higher&lt;/li&gt;
+&lt;li&gt;When using sys.dr_include(), the included var may have garbage in it if it has a 4c null value when added to the driver temp file. This is a problem with the 4csrvr process versions 4.2.0 - 4.2.3. Workaround: Make sure that the &amp;ldquo;Very First&amp;rdquo; var referenced by a sys.dr_include() statement always has a value when sys.dr_add() is called. If necessary, call sys.dr_include() with a dummy var that is always set as the &amp;ldquo;Very First&amp;rdquo; sys.dr_include() call. Reported: 04 January 2006 Fixed: 08 January 2006 - Server version 4.2.4 and higher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;01 November 2005&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;01-november-2005&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#01-november-2005&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;02 April 2003&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;02-april-2003&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#02-april-2003&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;There is no way to disable implicit linking or execing of 4C programs within a TabFolder. It probably is too complicated to try to implement this kind of control because: The app probably doesn&amp;rsquo;t want to disable all links The link could occur from another program than the one that decides the link should not happen. (i.e. either other tabs or pushed progs) This problem can easily be worked around by better application design. Some ideas: Don&amp;rsquo;t share data between programs that may corrupt each others data. NN Use rcd locks to block others from interfering&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;14 September 99&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;14-september-99&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#14-september-99&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;For applications that need system files, you must export the system files and import them every time you install the 4C Server. You MUST not have the debug file definitions in your application directory though.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;14 Oct 97&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;14-oct-97&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#14-oct-97&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;When a 4C utility run from a command line connects to the 4C server, you will need to supply a login name and passwd. If you do not have a passwd, you must type ^D at the passwd prompt.&lt;/li&gt;
+&lt;li&gt;All Paths and Env Vars need to use the Unix File Separator &amp;lsquo;/&amp;rsquo; even on NT Machines. This is especially important for XLTMP.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;27 May 97&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;27-may-97&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#27-may-97&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;You cannot change the font of a layout while running.&lt;/li&gt;
+&lt;li&gt;The NT Server version of 4C Must be loaded on the C: drive Fixed: 10/1/97&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;20 May 97&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;20-may-97&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#20-may-97&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;When running xled from the 4cclient, the cmd is limited to 120 characters. Since the connect string and the path must be passed in the cmd, a verl long path name will cause xled to fail. You can mostly avoid this by specifying the program directory as the FIRST data directory in your XLDATA var. Fixed: 10/1/97&lt;/li&gt;
+&lt;li&gt;In order for scimport to work, there MUST be an FCServer entry in the XLCONFIG file that specifies the local machine and it MUST have Local=Yes specified.&lt;/li&gt;
+&lt;li&gt;scimport, if run from the command line, looks at the XLPROG, XLDATA, and XLEXP vars in the local environment and does not specify an application to the server.&lt;/li&gt;
+&lt;li&gt;It is possible that the 4CSRVRCONFIG file may still be overwritten. Make sure you save yours.&lt;/li&gt;
+&lt;li&gt;The Debugger may act wierd when stepping thru sys.link_progs if the linked to prog links back to the link from prog without exiting.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

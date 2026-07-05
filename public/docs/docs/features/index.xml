@@ -1,0 +1,1436 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C Major Features</title>
+    <link>http://localhost:1313/docs/docs/features/</link>
+    <description>Recent content in 4C Major Features on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/docs/docs/features/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C Debugger</title>
+      <link>http://localhost:1313/docs/docs/features/debugger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/debugger/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/debugger/changes/&#34;&gt;Most Recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/debugger/dbgintro/&#34;&gt;4C Debugger Overview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Dynamic Positioning</title>
+      <link>http://localhost:1313/docs/docs/features/dynamicpositioning/ov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/dynamicpositioning/ov/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Since version 5.0.4-01, it has been possible to dynamically position a layout
+on the screen at run time.
+Version 5.2.9-01 adds the capability to dynamically position the sys.get_answer()
+dialog as well as the sys.message() message box.
+The position of a layout can only be set before it is initially displayed on the
+screen.
+Dynamic positioning is specified by using two strings.
+One defines the horizontal position and one defines the vertical position of the
+layout to be displayed.&lt;/p&gt;
+&lt;p&gt;You can define the the position of the layout in relation to any of the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Screen, WorkArea - Both of these refer to the entire usable portion of the screen.&lt;/li&gt;
+&lt;li&gt;Layout - The current active layout&lt;/li&gt;
+&lt;li&gt;Program, Prog - The current program in the current active layout&lt;/li&gt;
+&lt;li&gt;Focus - This is the control that currently has the focus. It may be a TreeView, a list, an input field, or a cmd btn.&lt;/li&gt;
+&lt;li&gt;DField - This is the current input field.&lt;/li&gt;
+&lt;li&gt;Panel - Current panel that the focus control is in.&lt;/li&gt;
+&lt;li&gt;DrList - The list or listview control of the current program.&lt;/li&gt;
+&lt;li&gt;DrLine - The current line in the list&lt;/li&gt;
+&lt;li&gt;TreeView - The treeview control.&lt;/li&gt;
+&lt;li&gt;TVItem - The current item in the treeview control.&lt;/li&gt;
+&lt;li&gt;DField by name - A display field in the current program referenced by name. It does not need to have the focus.&lt;/li&gt;
+&lt;li&gt;Panel by name - A panel in the current program referenced by name. It does not need to contain the control that currently has focus.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are several places that you can set the dynamic positioning of a layout.
+In order of precedence from highest to lowest they are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As the last two arguments of any sys.run_layout() call&lt;/li&gt;
+&lt;li&gt;As the last two arguments of any sys.push_prog(), sys.link_prog(), sys.exec_prog(), sys.link_group(), sys.get_answer(), or sys.message() call.&lt;/li&gt;
+&lt;li&gt;By setting the local system variables sys.xpos_str and sys.ypos_str.&lt;/li&gt;
+&lt;li&gt;By setting the dynamic position fields in a layout definition.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The strings are specified using the follwing style&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;XPos%`&amp;lt;n&amp;gt;`=`&amp;lt;type&amp;gt;`%`&amp;lt;n&amp;gt;`[`&amp;lt;ofst&amp;gt;`]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;and
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ypos%`&amp;lt;n&amp;gt;`=`&amp;lt;type&amp;gt;`%`&amp;lt;n&amp;gt;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Where &lt;code&gt;&amp;lt;type&amp;gt;&lt;/code&gt; is any of the previously mentioned types and &lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt; is an integer between
+0 and 100 inclusive.
+The optional &lt;code&gt;&amp;lt;ofst&amp;gt;&lt;/code&gt; is signed integer.&lt;/p&gt;
+&lt;p&gt;Some examples should make this clear&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;XPos%50=Layout%50 - Centers the new layout horizontally on the current layout&lt;/li&gt;
+&lt;li&gt;YPos%0=DField%100+10 - This positions the layout vertically 10pixels below the bottom of the current display field.&lt;/li&gt;
+&lt;li&gt;XPos%0=sys.pr_name%100 - If there is a display field in the current program names sys.pr_name, then the left side of the layout will be positioned at the far right of the sys.pr_name display field.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Misc notes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When using dynamic positioning, it is not necessary to set both the XPos and YPos position. When one is not set, it will use the a lower precedence setting, if one exist, or the default from the layout definition.&lt;/li&gt;
+&lt;li&gt;It is not necessary to clear sys.xpos_str and sys.ypos_str if you use them. They will be cleared automaticlly.&lt;/li&gt;
+&lt;li&gt;You shouldn&amp;rsquo;t normally need to use the sys.xpos_str and sys.ypos_str except in fairly rare circumstances. The 4cSys program sys.runprog1 is an example that does use them so that it can isolate the setting of the dynamice positions to one place instead of having them in each of the different PCLs that call sys.link_prog(), sys.push_prog(), etc.&lt;/li&gt;
+&lt;li&gt;If there is an error in the dynamic position string, the string is ignored and the layout is positioned where it would be if no dynamic positioning were used.&lt;/li&gt;
+&lt;li&gt;if the dynamic positioning strings position the layout partially or fully off the screen, the 4C client will adjust the positioning so the layout is fully visible.&lt;/li&gt;
+&lt;li&gt;When used with sys.exec_prog(), the current layout may not be the layout that the program calling sys.exec_prog() is in. This is especially true if the window the calling program is in closes due the the execing program being closed. If this is an issue, then you can first use sys.get_clrect() to determine the position of the current layout and then position the new layout based on those coordinates. See the sys.pr.srch program for an example of this.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Examples in 4cSys&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The calc,sl, slh.fm.sl1, and sys.fh.maint.sl1 layouts all define a dynamic position in the layout definition.&lt;/li&gt;
+&lt;li&gt;The sys.pr.srch program passes positioning strings when it execs the sys.pr.srchd program. This makes the detailed program always be positioned as close to the position of the sys.pr.srch program.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C External Databases</title>
+      <link>http://localhost:1313/docs/docs/features/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/database/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/database/changes/&#34;&gt;Most Recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/database/dbov/&#34;&gt;Overview of External Database Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/database/dbfiles/&#34;&gt;Details of External Database Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/database/sql/&#34;&gt;4C SQL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 15 November 2016&lt;/p&gt;
+&lt;p&gt;Updated 13 July 2004&lt;/p&gt;
+&lt;p&gt;Updated 15 November 2016&lt;/p&gt;
+&lt;p&gt;Updated 13 July 2004&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C External Libraries</title>
+      <link>http://localhost:1313/docs/docs/features/extlibs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/extlibs/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/extlibchanges/&#34;&gt;Most recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/extlibov/&#34;&gt;External Libs Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/extlibs/sysextlibs/&#34;&gt;4C System External Libraries&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 09 May 2024&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+&lt;p&gt;Updated 15 January 2018&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Logging</title>
+      <link>http://localhost:1313/docs/docs/features/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/logging/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/&#34;&gt;4C Docs | 4C Logging Home 4C Logging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/logging/&#34;&gt;4C Logging Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/logging/changes/&#34;&gt;Most Recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/logging/logintro/&#34;&gt;4C File Logging Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/logging/prlogov/&#34;&gt;4C Program Logging Overview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 26 August 2020&lt;/p&gt;
+&lt;p&gt;Updated 02 January 2008&lt;/p&gt;
+&lt;p&gt;Updated 02 January 2008&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Panels</title>
+      <link>http://localhost:1313/docs/docs/features/panels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/panels/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/panels/changes/&#34;&gt;Most Recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/panels/panels/&#34;&gt;4C Panels Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/panels/optpanels/&#34;&gt;4C Option Panels&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/panels/optpusage/&#34;&gt;Typical Option Panel Usage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/panels/issues/&#34;&gt;Issues/Bugs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/panels/panelsp/&#34;&gt;4C Panel Screen Painter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 01 August 2012&lt;/p&gt;
+&lt;p&gt;Updated 02 April 2020&lt;/p&gt;
+&lt;p&gt;Updated 04 August 2016&lt;/p&gt;
+&lt;p&gt;Updated 12 February 2016&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C PDFReport</title>
+      <link>http://localhost:1313/docs/docs/features/pdfreports/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/pdfreports/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/&#34;&gt;PDFReport Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-changes/&#34;&gt;Most recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-ov/&#34;&gt;4C PDFReport Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-start/&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-examples/&#34;&gt;Some example PDFReport progams&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-issues/&#34;&gt;Issues/Bugs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 04 March 2025&lt;/p&gt;
+&lt;p&gt;Updated 04 March 2025&lt;/p&gt;
+&lt;p&gt;Updated 04 March 2025&lt;/p&gt;
+&lt;p&gt;Updated 04 March 2025&lt;/p&gt;
+&lt;p&gt;Updated 04 March 2025&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C UTF8</title>
+      <link>http://localhost:1313/docs/docs/features/utf8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/utf8/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/utf8/&#34;&gt;UTF8 Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/utf8/utf8changes/&#34;&gt;Most recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/utf8/utf8ov/&#34;&gt;4C UTF8 Overview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 15 July 2020&lt;/p&gt;
+&lt;p&gt;Updated 15 July 2020&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Version Control</title>
+      <link>http://localhost:1313/docs/docs/features/versioncontrol/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/versioncontrol/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/versioncontrol/changes/&#34;&gt;Most Recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/versioncontrol/vc/&#34;&gt;4C Version Control&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/versioncontrol/rmodimport/&#34;&gt;4C Remote Mod Imports&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 28 February 2006&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4CUpdate Home</title>
+      <link>http://localhost:1313/docs/docs/features/4cupdate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/4cupdate/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/4cupdate/changes/&#34;&gt;Most Recent Changes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/4cupdate/4cupdate/&#34;&gt;4CUpdate Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/4cupdate/msiinstall/&#34;&gt;MSI Install&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/4cupdate/olduninstall/&#34;&gt;Uninstalling Old 4C Clients and 4C Servers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Updated 10 July 2017&lt;/p&gt;
+&lt;p&gt;Updated 14 September 2010&lt;/p&gt;
+&lt;p&gt;Updated 15 September 2010&lt;/p&gt;
+&lt;p&gt;Updated 14 September 2010&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Functions</title>
+      <link>http://localhost:1313/docs/docs/features/web4c/functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/web4c/functions/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/req4cindex/&#34;&gt;req4c Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;[C]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;[D]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;[F]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;[G]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;[L]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;[O]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;[R]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;[U]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;[V]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/closesession/&#34;&gt;req4c_close_session&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/createsession/&#34;&gt;req4c_create_session&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/deletesession/&#34;&gt;req4c_delete_session&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchallerrors/&#34;&gt;req4c_fetch_all_errors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchallmsgs/&#34;&gt;req4c_fetch_all_msgs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchassoccur/&#34;&gt;req4c_fetch_assoc_cur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchassocfirst/&#34;&gt;req4c_fetch_assoc_first&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchassoclast/&#34;&gt;req4c_fetch_assoc_last&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchassocnext/&#34;&gt;req4c_fetch_assoc_next&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchassocprev/&#34;&gt;req4c_fetch_assoc_prev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchcur/&#34;&gt;req4c_fetch_cur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchfirst/&#34;&gt;req4c_fetch_first&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchlast/&#34;&gt;req4c_fetch_last&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchnexterror/&#34;&gt;req4c_fetch_next_error&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchnextmsg/&#34;&gt;req4c_fetch_next_msg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchnext/&#34;&gt;req4c_fetch_next&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/fetchprev/&#34;&gt;req4c_fetch_prev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getapprc/&#34;&gt;req4c_get_apprc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/geterrormsg/&#34;&gt;req4c_get_error_msg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/geterrornum/&#34;&gt;req4c_get_error_num&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getfirstprog/&#34;&gt;req4c_get_first_prog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getfirsttype/&#34;&gt;req4c_get_first_type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getlastprog/&#34;&gt;req4c_get_last_prog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getlasttype/&#34;&gt;req4c_get_last_type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getnextprog/&#34;&gt;req4c_get_next_prog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getnexttype/&#34;&gt;req4c_get_next_type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getnumerrors/&#34;&gt;req4c_get_num_errors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getnummsgs/&#34;&gt;req4c_get_num_msgs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getnumresults/&#34;&gt;req4c_get_num_results&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getprevprog/&#34;&gt;req4c_get_prev_prog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getprevtype/&#34;&gt;req4c_get_prev_type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getprog/&#34;&gt;req4c_get_prog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/getsessionid/&#34;&gt;req4c_get_sessionid&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/gettype/&#34;&gt;req4c_get_type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/log/&#34;&gt;req4c_log&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/opensession/&#34;&gt;req4c_open_session&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/run/&#34;&gt;req4c_run&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/usesession/&#34;&gt;req4c_use_session&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/verifysession/&#34;&gt;req4c_verify_session&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;closes the current req4c session if there is one.&lt;/p&gt;
+&lt;p&gt;creates a new req4c session&lt;/p&gt;
+&lt;p&gt;deletes a req4c session&lt;/p&gt;
+&lt;p&gt;returns an array containing&lt;/p&gt;
+&lt;p&gt;returns an array containing&lt;/p&gt;
+&lt;p&gt;returns the current ResultRow from &lt;code&gt;&amp;lt;resultset&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;returns the first ResultRow in &lt;code&gt;&amp;lt;resultset&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;returns the last ResultRow in &lt;code&gt;&amp;lt;resultset&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;returns the next ResultRow in &lt;code&gt;&amp;lt;resultset&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;returns the prev ResultRow in &lt;code&gt;&amp;lt;resultset&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;returns the current ResultRow as a numerically indexed array.&lt;/p&gt;
+&lt;p&gt;returns the first ResultRow from &lt;code&gt;&amp;lt;resultset&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;returns the last ResultRow from &lt;code&gt;&amp;lt;resultset&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;returns the next error msg from the&lt;/p&gt;
+&lt;p&gt;returns the next info msg from the&lt;/p&gt;
+&lt;p&gt;returns the next ResultRow as a numerically indexed array.&lt;/p&gt;
+&lt;p&gt;returns the previous ResultRow&lt;/p&gt;
+&lt;p&gt;returns the exit code of the 4C program that created &lt;code&gt;&amp;lt;resultset&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;returns the error msg set&lt;/p&gt;
+&lt;p&gt;returns the error number set&lt;/p&gt;
+&lt;p&gt;returns the 4C program name that generated the&lt;/p&gt;
+&lt;p&gt;returns the 4C type that generated the&lt;/p&gt;
+&lt;p&gt;returns the 4C program name that generated the&lt;/p&gt;
+&lt;p&gt;returns the 4C type that generated the&lt;/p&gt;
+&lt;p&gt;returns the 4C program name that generated the&lt;/p&gt;
+&lt;p&gt;returns the 4C type that generated the&lt;/p&gt;
+&lt;p&gt;returns the number of errors in the current&lt;/p&gt;
+&lt;p&gt;returns the number of info msgs in the current&lt;/p&gt;
+&lt;p&gt;returns the the number of ResultRows in &lt;code&gt;&amp;lt;resultset&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;returns the 4C program name that generated the&lt;/p&gt;
+&lt;p&gt;returns the 4C type that generated the&lt;/p&gt;
+&lt;p&gt;returns the 4C program name that generated the&lt;/p&gt;
+&lt;p&gt;returns the sessionid string of the session.&lt;/p&gt;
+&lt;p&gt;returns the 4C type that generated the&lt;/p&gt;
+&lt;p&gt;writes a string to the req4c&lt;/p&gt;
+&lt;p&gt;opens a req4c session&lt;/p&gt;
+&lt;p&gt;runs a 4C program and returns a req4c ResultSet.&lt;/p&gt;
+&lt;p&gt;sets the requested session as the current session.&lt;/p&gt;
+&lt;p&gt;verifies that a session is valid and can be used.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Making Charts in 4C</title>
+      <link>http://localhost:1313/docs/docs/features/chart4c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/chart4c/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;17 April 98&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;17-april-98&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#17-april-98&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C now allows the application to display charts on
+the client machine.
+The program that displays the chart is called chart4c
+and is included with the Win95 4C client.
+The way this works is for the server to build
+a template file on the client and then tell the
+client to run the chart4c program.
+One method of doing this is demontrated in the
+tmp.chart.demo program in the 4c bootstrap directory.&lt;/p&gt;
+&lt;p&gt;The format of the chart file on the client is as follows.
+Each line consists of a type followed by
+one or more data fields.
+The type must start as the first character of the line and data fields
+must be separated from the type and each other by tabs.
+Lines that start with a &amp;lsquo;#&amp;rsquo; are comments and ignored.
+Unrecognized types are also ignored.&lt;/p&gt;
+&lt;p&gt;The types currently recognized are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Chart This must be the first line in the file and is used to indicate global options for the chart.&lt;/li&gt;
+&lt;li&gt;Data This is used to specify the data that that goes into the chart.&lt;/li&gt;
+&lt;li&gt;XData This is used to specify the x-data that that goes into the chart. This is only applicable to scatter charts. When used there should be as many x-data elements as data elements.&lt;/li&gt;
+&lt;li&gt;Legend This is used to specify legends.&lt;/li&gt;
+&lt;li&gt;SeriesLegend Specifies series legends&lt;/li&gt;
+&lt;li&gt;Option Miscelaneous options.&lt;/li&gt;
+&lt;li&gt;Font Create a new font to be used in subsequent SetFont lines.&lt;/li&gt;
+&lt;li&gt;SetFont Use the current font for specific items.&lt;/li&gt;
+&lt;li&gt;Exec Execute a command.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Chart line has one data field with it that is composed of a series
+of options separated by commas.
+Some of the options have values which are set by using an &amp;lsquo;=&amp;rsquo;
+between the option and the value.
+Unrecognized options are ignored.
+The current options allowed are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Type=&lt;code&gt;&amp;lt;type&amp;gt;&lt;/code&gt; where &lt;code&gt;&amp;lt;type&amp;gt;&lt;/code&gt; is one of Bar,Line,Pie or Scatter. New types may be added later if necessary. For possible new types, please see the ChartFX online documentation. Look under DLL Help/Function Reference/chart_Create/ChartTypesTable.&lt;/li&gt;
+&lt;li&gt;Title=&lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Series=&lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt; This specifies the number of series in the chart and should match up with the data specified.&lt;/li&gt;
+&lt;li&gt;Values=&lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt; This is the number of values specified for each series.&lt;/li&gt;
+&lt;li&gt;Width=&lt;code&gt;&amp;lt;width&amp;gt;&lt;/code&gt; The width of the chart in pixels.&lt;/li&gt;
+&lt;li&gt;%Width=&amp;lt;%width&amp;gt; The percent width that should be used for the chart. 100 will use full width of screen. If you specify this you should also specify Height or %Height.&lt;/li&gt;
+&lt;li&gt;Height=&lt;code&gt;&amp;lt;height&amp;gt;&lt;/code&gt; The height of the chart in pixels.&lt;/li&gt;
+&lt;li&gt;%Height=&amp;lt;%height&amp;gt; The percent height that should be used for the chart. 100 will use full height of screen. If you specify this you should also specify Width or %Width.&lt;/li&gt;
+&lt;li&gt;Legend OBSOLETE. If specified, then this series may have a legend. This should now be specified in an Option line.&lt;/li&gt;
+&lt;li&gt;SeriesLegend OBSOLETE. If specified then this chart may have a series legend. This should now be specified in an Option line.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Data line has two data fields.
+The first data field specifies the series that the data belongs
+to and the second data field specifies the values.
+Values are separated by commas.
+More than one data line can specify the same series as long
+as they are contiguous.
+Thus,&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Data 01 1.5,2.0,3.5,4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;is eqivalent to
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Data 01 1.5,2.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Data 01 3.5,4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The XData line is specified the same as the Data line.
+It is applicable only to scatter charts.&lt;/p&gt;
+&lt;p&gt;The Legend line has one data field that consists of the
+legends separated by commas.&lt;/p&gt;
+&lt;p&gt;The SeriesLegend line has two data fields.
+The first data field specifies the series that the legend
+belongs to and the second is the legend for that series.&lt;/p&gt;
+&lt;p&gt;The Option line can contain multiple options separated
+by commas.
+Multiple option lines are also OK.
+Options that can be specified are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Min=&lt;code&gt;&amp;lt;min&amp;gt;&lt;/code&gt; Min value instead of 0.&lt;/li&gt;
+&lt;li&gt;XMin=&lt;code&gt;&amp;lt;xmax&amp;gt;&lt;/code&gt; Min value along x-axis instead of 0.&lt;/li&gt;
+&lt;li&gt;Max=&lt;code&gt;&amp;lt;max&amp;gt;&lt;/code&gt; Maximum value used on the y-axis.&lt;/li&gt;
+&lt;li&gt;XMax=&lt;code&gt;&amp;lt;xmax&amp;gt;&lt;/code&gt; Maximum value used along the x-axis.&lt;/li&gt;
+&lt;li&gt;Gap=&lt;code&gt;&amp;lt;gap&amp;gt;&lt;/code&gt; Gap between labels on the y-axis.&lt;/li&gt;
+&lt;li&gt;XGap=&lt;code&gt;&amp;lt;xgap&amp;gt;&lt;/code&gt; Gap between labels on the x-axis.&lt;/li&gt;
+&lt;li&gt;Scale=&lt;code&gt;&amp;lt;scale&amp;gt;&lt;/code&gt; Scaling factor along the y-axis. Useful if using very large numbers.&lt;/li&gt;
+&lt;li&gt;XScale=&lt;code&gt;&amp;lt;xscale&amp;gt;&lt;/code&gt; Scaling factor along the x-axis.&lt;/li&gt;
+&lt;li&gt;TopTitle=&lt;code&gt;&amp;lt;ttitle&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;BottomTitle=&lt;code&gt;&amp;lt;btitle&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;LeftTitle=&lt;code&gt;&amp;lt;ltitle&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;RightTitle=&lt;code&gt;&amp;lt;rtitle&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Legend This will display the legend window.&lt;/li&gt;
+&lt;li&gt;SeriesLegend This will display the series legend window.&lt;/li&gt;
+&lt;li&gt;ShowPoints This will show the points in the chart. Not applicable to all chart types.&lt;/li&gt;
+&lt;li&gt;ShowValues This will show the values of the points on the chart. Not applicable to all chart types.&lt;/li&gt;
+&lt;li&gt;ShowLines This will draw lines between the points on the chart. Not applicable to all chart types.&lt;/li&gt;
+&lt;li&gt;NoDisplay Chart will not be displayed on screen. Useful if all you want to do is create and save a bitmap file.&lt;/li&gt;
+&lt;li&gt;WriteBmp=&lt;code&gt;&amp;lt;filename&amp;gt;&lt;/code&gt; This will cause the chart to be written as a bitmap file to &lt;code&gt;&amp;lt;filename&amp;gt;&lt;/code&gt;. To convert a bitmap file to another type of image file, you will need a separate utility. The bmp file is created exactly when this option is encountered. So, options specified farther on will not show up in the bmp file.&lt;/li&gt;
+&lt;li&gt;Depth=&lt;code&gt;&amp;lt;depth&amp;gt;&lt;/code&gt; This reduces or increases the 3d effect. This can be set to any integer value from 0 to 1000. Values higher than 120 will normally not be used. The default is around 40, so to decrease the 3d effect, set depth to 20, to increase it, set it to 60.&lt;/li&gt;
+&lt;li&gt;Grid=&lt;code&gt;&amp;lt;grid&amp;gt;&lt;/code&gt; This is used to turn on the Vertical or Horizontal grid lines. The value of &lt;code&gt;&amp;lt;grid&amp;gt;&lt;/code&gt; can be Vert, Horz, Both, or None. Only the last Grid=&lt;code&gt;&amp;lt;grid&amp;gt;&lt;/code&gt; option has any affect on the initial chart.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Font line has one data field with it that is composed of a series
+of characteristics separated by commas.
+The font lines specifies the font to be used in all subsequent
+SetFont calls until a new Font line is encountered.
+The characteristics that you can specify are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Facename=&lt;code&gt;&amp;lt;facename&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Pointsize=&lt;code&gt;&amp;lt;ptsize&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Bold&lt;/li&gt;
+&lt;li&gt;Dim&lt;/li&gt;
+&lt;li&gt;Italic&lt;/li&gt;
+&lt;li&gt;Underline or UL&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The SetFont line has one data field composed of the elements
+you want to use the current font for.
+The elements that you can set the font for are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;TopTitle&lt;/li&gt;
+&lt;li&gt;BottomTitle&lt;/li&gt;
+&lt;li&gt;LeftTitle&lt;/li&gt;
+&lt;li&gt;RightTitle&lt;/li&gt;
+&lt;li&gt;YLegend&lt;/li&gt;
+&lt;li&gt;XLegend&lt;/li&gt;
+&lt;li&gt;Legend&lt;/li&gt;
+&lt;li&gt;Constants&lt;/li&gt;
+&lt;li&gt;Values&lt;/li&gt;
+&lt;li&gt;Points&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Exec line has one data field which is the command that you
+want to execute.
+Separate arguments to the command by spaces.
+This is especially useful for converting a bmp file to
+a different type.&lt;/p&gt;
+&lt;p&gt;Several simple chart templates are in the chartdata&lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt;.txt files.
+Experiment with chart4c using these files.
+Just call up chart4c passing it the name of a file.
+Modify the fields in the file to see what effect they
+have.&lt;/p&gt;
+&lt;p&gt;You should especially note the way legends and series legend
+work when the legend name is long and when the Legend or SeriesLegend
+is specified and is not specified in the Chart line.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Req4c Change Log</title>
+      <link>http://localhost:1313/docs/docs/features/web4c/req4cchanges/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/web4c/req4cchanges/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;22 March 2010&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;22-march-2010&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#22-march-2010&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;You can pass arguments with req4c_run() to the 4C program as separate arguments. They do not need to be concatenated onto the program name string anymore. Concatenating them onto the program name will still work.&lt;/li&gt;
+&lt;li&gt;If there is a req4c_session then the req4c sessionid and timestamp are passed to 4C programs using sys.web_sid and sys.web_ts system variables.&lt;/li&gt;
+&lt;li&gt;If there is a PHP session active, then the 4C program can access sys.web_phpsid.&lt;/li&gt;
+&lt;li&gt;If you use req4c sessions, then any values you set in $_REQ4C_SESSION will always be available to you script. The variables are always updated when a session is opened. Multiple sessions can be in use and use different variables and/or different values for the same variables and they will always be up to date.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>&#39;Cut/Copy/Paste&#39;</title>
+      <link>http://localhost:1313/docs/docs/features/cutpaste/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/cutpaste/</guid>
+      <description>
+        
+        
+        &lt;p&gt;As of version 3.5.4, 4C supports Cut/Copy/Paste operations
+between 4C applications and non 4C applications.
+Cut and Copy from a 4C application are similar and are discussed first.
+Pasting into a 4C application is a little more complicated and will
+be discussed later in this document.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;&amp;lsquo;Cut/Copy&amp;rsquo;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;cutcopy&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#cutcopy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;If you have a 3.5.4 client installed, then Cut and Copy
+are enabled.
+You do not need to make any changes to your application
+for bitmaps, defalt text, and default DIF formats
+to be copied to the client clipboard.
+Once in the clipboard, other applications can access that data.
+You can change what gets copied to the clipboard if you have
+4C server version 3.5.4 or higher installed.
+You do this by defining PCLs to be called when either the &amp;lsquo;cut&amp;rsquo;
+or the &amp;lsquo;copy&amp;rsquo; key is pressed, just as you would for any other
+function key.&lt;/p&gt;
+&lt;p&gt;Here is how 4C handles the copy key if the application does not
+catch it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Empty the contents of the clipboard.&lt;/li&gt;
+&lt;li&gt;For any type program, copy the current layout to the clipboard in bitmap format.&lt;/li&gt;
+&lt;li&gt;If the current program is a scrolling program, then copy the selected items to the clipboard in text format. Only the scrolldet fields are copied and spaces are preserved in the text.&lt;/li&gt;
+&lt;li&gt;If the current program is a scrolling program, then copy the selected items to the clipboard in DIF format. Only the scrolldet fields are copied.&lt;/li&gt;
+&lt;li&gt;If the current program is a scrolling program and the 4C Server is version 3.5.4 or greater, then the 4C Server sends 4C Format data to be copied to the clipboard as well. The 4C Format data will be all fields in the driver file for each selected item.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, as a default, when the 4C Client copies data to the clipboard,
+it may appear there in only bitmap format, in bitmap format,
+text format, and DIF format, or in bitmap format, text format,
+DIF format and 4C format.
+Only 4C applications will be able to make use of the 4C format
+but word processors can easily use the text and bitmap formats
+as well&lt;/p&gt;
+&lt;p&gt;The application cannot override copying the bitmap to the clipboard,
+but it can change the text that gets copied,
+it can change the 4C format data that gets copied,
+and it may also copy data in DIF format which can be used
+by spreadsheets.
+In order to do so, it catches the copy key and then
+sends the data by using the following SysPCLs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbcinit/&#34;&gt;sys.cbc_init&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbcend/&#34;&gt;sys.cbc_end&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbcopen/&#34;&gt;sys.cbc_open&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbcclose/&#34;&gt;sys.cbc_close&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbcsenddata/&#34;&gt;sys.cbc_senddata&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbcsendtext/&#34;&gt;sys.cbc_sendtext&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The general idea is to call sys.cbc_init() once,
+then send all the data for each of the formats that
+you want sent to the clipboard
+and finish it by calling sys.cbc_end() once.
+For each type of data that you want to send,
+you must call sys.cbc_open() once
+and then send the data
+and then call sys.cbc_close() once.
+The data is sent by making multiple calls to
+sys.cbc_senddata() or sys.cbc_sendtext().&lt;/p&gt;
+&lt;p&gt;It is not necessary, to send all data formats.
+If you catch the &lt;code&gt;&amp;lt;copy&amp;gt;&lt;/code&gt; key in a scrolling program
+and you want to send the default text, but different
+4C format data, then only send the 4C format data.
+The clipboard will still have the bitmap format and the
+text format when a user tries to paste data.&lt;/p&gt;
+&lt;p&gt;The only trick to sending data is letting 4C know
+what data you want to send.
+This is done by specifying an &lt;code&gt;&amp;lt;asfile&amp;gt;&lt;/code&gt; in the sys.cbc_open(),
+sys.cbc_senddata(), and sys.cbc_close() calls.
+You make sure that the file buffers have the correct data
+before calling sys.cbc_senddata() and 4C will format it correctly.&lt;/p&gt;
+&lt;p&gt;Cut is implemented similarly.
+The only difference is that if you are running 4CSrvr version 3.5.4
+or higher and you do not process the &lt;code&gt;&amp;lt;cut&amp;gt;&lt;/code&gt; key,
+then in addition to copying the selection to the clipboard,
+4C will treat the &lt;code&gt;&amp;lt;cut&amp;gt;&lt;/code&gt; like an unhandled &lt;code&gt;&amp;lt;delete&amp;gt;&lt;/code&gt;.
+This default behaviour only affects scrolling programs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;&amp;lsquo;Paste&amp;rsquo;&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;paste&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#paste&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Pasting data into a 4C application requires both 4CClient and 4CServer
+to be version 3.5.4 or higher.
+Pasting data is only allowed in 4C programs where it has been
+specifically enabled.
+There are two ways to enable pasting into a 4C application.&lt;/p&gt;
+&lt;p&gt;The first way is to catch the &lt;code&gt;&amp;lt;paste&amp;gt;&lt;/code&gt; key and have the
+application do all the processing with a little help from the sys.cbp_
+SysPCLs.
+This can be used for any type program but is harder to implement
+than the second way.
+The sys.prog.mstr program and the sys.ph.maint program
+both catch the &lt;code&gt;&amp;lt;paste&amp;gt;&lt;/code&gt; key and then do their own processing of it.&lt;/p&gt;
+&lt;p&gt;The other way is to just check the &amp;ldquo;Paste OK&amp;rdquo; box in the default
+driver options screen or call sys.set_droption(DR_PASTEOK) in the DrInit PCL.
+This method can only be used in scrolling screens.
+When a scrolling program enables pasting this way and the client
+pastes data,
+4C will automate the processing by going through
+a series of state changes, each of which allows the
+application to call a PCL or to allow default processing.
+The sys.df.maint1 program handles the &lt;code&gt;&amp;lt;paste&amp;gt;&lt;/code&gt; key using this method.&lt;/p&gt;
+&lt;p&gt;The 3 New Program States used for pasting are
+PasteInit, PasteSelect, and PasteEnd.
+You can specify PCLs to call in these states
+in program characteristics by selecting
+ProgPaste from the context menu.
+Here is what happens and what you are allowed to do in each of the
+paste states.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PasteInit - If there is no PCL defined for this state, then 4C checks to make sure the paste type is the same as the program driver file. If it is not, then no paste is allowed. Next, it displays a dialog box that allows the user to choose whether or not to proceed with the paste as well as to modify some options. If you define a PCL for this state, you should check the type of the paste by calling &lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgettype/&#34;&gt;sys.cbp_gettype()&lt;/a&gt; and if you can not handle it you should be sure to call &lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpexit/&#34;&gt;sys.cbp_exit()&lt;/a&gt; If you call sys.cbp_exit() the next state processed will be PasteEnd. For sequenced driver files, 4C will resequence the records if necessary before entering the PasteSelect state.&lt;/li&gt;
+&lt;li&gt;PasteSelect - This state is entered for each item being pasted. If the application does not define a PasteSelect PCL, then it will add a record to the driver file using data from the paste but it may change the key to match the non changing part of the driver file&amp;rsquo;s key. If the application defines a PCL for the PasteSelect state, then it will need to make the necessary updates to the driver file and will need to call sys.dr_add() for each record it adds. It will use calls to &lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgetdata/&#34;&gt;sys.cbp_getdata()&lt;/a&gt; or &lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgettext/&#34;&gt;sys.cbp_gettext()&lt;/a&gt; to get data for each individual paste item.&lt;/li&gt;
+&lt;li&gt;PasteEnd - This signals that pasting is done. If necessary, 4C will resequence sequenced driver files here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At the end of the paste operation, 4C will
+redisplay the current page on the screen and
+eventually reach the EndPage state again.&lt;/p&gt;
+&lt;p&gt;The best example of implementing paste in this way is sys.df.maint1.
+Look at the code and try different pastes.
+See what happens when you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Paste a program into display fields after it has been copied to the clipboard from the sys.prog.mstr program.&lt;/li&gt;
+&lt;li&gt;Paste display fields copied from a different 4C program, even a different 4C program on a different server.&lt;/li&gt;
+&lt;li&gt;Paste sys.file_det items after copying them to the clipboard from the sys.fd.maint program.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following SysPCLs are meant for use by an application processing a
+paste.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgetcount/&#34;&gt;sys.cbp_getcount&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgettype/&#34;&gt;sys.cbp_gettype&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgetnflds/&#34;&gt;sys.cbp_getnflds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgetipaddr/&#34;&gt;sys.cbp_getipaddr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgetappname/&#34;&gt;sys.cbp_getappname&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgetport/&#34;&gt;sys.cbp_getport&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgetdata/&#34;&gt;sys.cbp_getdata&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpgettext/&#34;&gt;sys.cbp_gettext&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/cbpexit/&#34;&gt;sys.cbp_exit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Misc Issues&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;misc-issues&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#misc-issues&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The default DIF copy is only available with 4c client versions 4.2.2 and higher.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>req4c Concepts</title>
+      <link>http://localhost:1313/docs/docs/features/web4c/req4cdet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/web4c/req4cdet/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/req4cindex/&#34;&gt;req4c Docs&lt;/a&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;req4c Function List&lt;/a&gt;
+In order to make best use of the req4c PHP interface, it is important
+to have a good understanding of the main concepts.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;req4c Sessions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;req4c-sessions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#req4c-sessions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A req4c session is a way that state can be maintained between
+PHP req4c requests.
+From the PHP perspective a req4c session is a resource that is identified
+by a 24 byte cryptographically random base 64 string.
+The PHP application is free to save this string in any manner it sees fit.
+There is no secret information in this string.
+It can be saved in a cookie unencrypted.
+The req4c extension does not automatically save session ids.
+However, if you call
+&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/opensession/&#34;&gt;req4c_open_session()&lt;/a&gt;
+without passing in a sessionid, req4c will look for a &amp;lsquo;req4c_sessionid&amp;rsquo;
+cookie and use that when opening the session.&lt;/p&gt;
+&lt;p&gt;req4c does not automatically save any cookies.
+There are good reasons for this including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The PHP program may have already output data by the time it creates a req4c session. If so, then it is too late to save a cookie.&lt;/li&gt;
+&lt;li&gt;The PHP application may be using multiple req4c sessions. In that case the PHP application needs to choose different names for different session ids if it wishes to save them as cookies.&lt;/li&gt;
+&lt;li&gt;I think the application should be in charge of what cookies are saved.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s a real simple task for the PHP program to set a cookie and name it as any way it chooses.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;req4c sessions allow the PHP program to set session wide variables that
+are guranteed to be set any time the session that set the vars is open.
+These variables are never sent to the client browser.
+They are stored with session information in memory by the 4creqd process
+and sent automatically to the PHP program when a session is opened.
+The PHP program can set session vars usin the $_REQ4C_SESSION super global
+array. For example:
+$_REQ4C_SESSION[&amp;lsquo;username&amp;rsquo;] = &amp;lsquo;kjenglish&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;From the 4creqd perspective, a session is this same session id along
+with other information stored only in memory by the 4creqd process.
+The other information includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Two configurable fingerprints used to prevent the session id from being used by any client other than the one who created it. One of these fingerprints is used when SSL is not used and both are used when SSL is used.&lt;/li&gt;
+&lt;li&gt;Session variables set by the PHP program.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When a session is first created, it is associated with a single
+4C server and 4C application.
+A single req4c session cannot be used to access different 4C servers or even
+different 4C applications on the same server.
+If your application needs to access multiple 4C servers, then it needs to
+use multiple req4c sessions.&lt;/p&gt;
+&lt;p&gt;4creqd has configuration options that allow you to specify the maximum
+length of time that a session can exist before being destroyed and the
+maximum time a session can remain idle before being destroyed.&lt;/p&gt;
+&lt;p&gt;When a session is in use,
+and a 4C program is run, 4creqd always sends the session id and the
+create time of the session to the 4csrvr process.
+The 4csrvr process can access these two values using the system variables
+sys.web_sid and sys.web_sts.
+The 4csrvr process, can then maintain state in whatever way is most suitable
+to the application.
+One real important thing to keep in mind about maintaining state is that
+there is no guarantee that 2 different calls, even if made by the same
+PHP script, to run 4C programs will be processed by the same 4csrvr process.
+This means you cannot use the FC_SESSION directory to store anything
+you expect to access in more then one req4c requests.&lt;/p&gt;
+&lt;p&gt;It is not necessary to use req4c sessions.
+req4c will not automatically use sessions.
+If you want to use sessions, you must explicitly create and open them.
+They are there as a tool to help the application maintain state when needed.
+It is assumed that most applications will need to maintain some state,
+so hopefully req4c sessions will be useful.&lt;/p&gt;
+&lt;p&gt;If you prefer to use PHP sessions req4c will send the PHP sessionid to the
+4csrvr when running a 4C program and you can access this value using the
+system variable sys.web_phpsid.&lt;/p&gt;
+&lt;p&gt;You may even find it useful to combine req4c sessions with PHP sessions.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;req4c ResultSets&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;req4c-resultsets&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#req4c-resultsets&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A req4c ResultSet is everything sent from the 4csrvr process to the PHP
+program, except error messages and info messages.
+This includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data sent as part of a Web enabled report&lt;/li&gt;
+&lt;li&gt;Data sent as part of a sys.send_result() system PCL call,&lt;/li&gt;
+&lt;li&gt;The program name and result type of each row in the ResultSet&lt;/li&gt;
+&lt;li&gt;The number of results in the ResultSet&lt;/li&gt;
+&lt;li&gt;The exit code of the 4C program.&lt;/li&gt;
+&lt;li&gt;Information on every ResultRow in the ResultSet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Though,
+Error messages and Information messages may be generated by a 4C program
+and accessed by a PHP program, they are not part of the req4c ResultSet.&lt;/p&gt;
+&lt;p&gt;A req4c ResultSet, though similar to an SQL ResultSet,
+has some significant differences.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The ResultRows in a req4c ResultSet are not necessarily homogenous. One ResultRow may have 3 columns of data and the next may have only one. This is because different sub reports, by definition, are sending different types of data. There are req4c functions for determining what 4C program and what 4C report/type generated any particular ResultRow in the req4c ResultSet.&lt;/li&gt;
+&lt;li&gt;When 4C data is updated, there is no way to know number of &amp;ldquo;rows&amp;rdquo; updated, unless the application explicitly sends this as a ResultRow using sys.send_result(), as the exit code of the 4C program, or as an informational message using sys.message().&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From the PHP perspective,
+a req4c ResultSet is a resource returned by the req4c_run() function call
+that persists until the PHP script ends or the resource is unset.
+It is possible for a PHP script to save multiple ResultSets in different
+variables.&lt;/p&gt;
+&lt;p&gt;Once a req4c ResultSet is returned to the PHP program,
+it can be queried in many ways.
+No req4c function call that queries a req4c ResultSet require any
+network access.
+It is all internal to the PHP engine.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;req4c ResultRows&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;req4c-resultrows&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#req4c-resultrows&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A req4c ResultRow is a single row of data generated by a 4C program.
+You must have a ResultSet resource in order to access any of the ResultRows.
+From a PHP perspective a ResultRow is always an array of strings.
+Depending on how you fetch the ResultRow, the array may be indexed numerically
+or keyed by the ResultRow column names.
+There are req4c functions for getting the 4C program name that generated
+a ResultRow and for getting the type of the ResultRow.
+The type of the ResultRow will either be the report name that generated
+the row, or the type passed to sys.send_result().
+There may be places in the documentation where a ResultRow is referred to
+simply as a result and sometimes simply as a row.
+Both are the same as ResultRow.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;req4c Information and Error Messages&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;req4c-information-and-error-messages&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#req4c-information-and-error-messages&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;req4c maintains a list of error messages and info messages.
+These messages can be accessed by the PHP program.
+Information and/or Error messages may be generated by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A 4C program started by the req4c_run() function. These messages are generated when the 4C program calls sys.msg(), sys.err_msg() or sys.message(). Info messages generated by sys.msg() or sys.message(SM_INFO|SM_NOWAIT,&amp;hellip;) are not guaranteed to be sent to the client. Only the the last info message generated this way when 4csrvr flushes it&amp;rsquo;s network send buffer is sent. The only way to guarantee that an info message is sent is to use sys.message(SM_INFO|SM_WAIT,&amp;hellip;). The SM_WAIT, will be ignored, but the message will be sent.&lt;/li&gt;
+&lt;li&gt;The 4creqd process. These are generated when a req4c function makes a call that requires a round trip request to 4creqd. Informational messages are usually only sent when running a debug version of 4creqd. Error messages are sent if the request cannot be handled and are meant to help the application understand why.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition to the above, the lib4cphp library will set a
+single error_num and a single error_msg separate from the error message list
+when the req4c function call fails.
+This message is always cleared at the start of any req4c function,
+except req4c_get_error_msg() and req4c_get_error_num().&lt;/p&gt;
+&lt;p&gt;There are req4c functions for&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Getting the number of error messages&lt;/li&gt;
+&lt;li&gt;Getting the number of informational messages&lt;/li&gt;
+&lt;li&gt;Getting an error message from the error message list&lt;/li&gt;
+&lt;li&gt;Getting an informational message from the info message list&lt;/li&gt;
+&lt;li&gt;Getting the error message of the last req4c function call.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Any req4c function that may generate error messages always clears the
+current message list first.
+If you need to process error/info messages, you need to either save
+them in a PHP variable for processing or make sure you do the processing
+before you call a req4c function that clears the list.&lt;/p&gt;
+&lt;p&gt;See the Comments section for each individual function to see if it clears
+the current message list or not.&lt;/p&gt;
+&lt;p&gt;Most req4c functions also clear the last error info which
+is stored in $_REQ4C[&amp;rsquo;errno&amp;rsquo;] and $_REQ4C[&amp;rsquo;errmsg&amp;rsquo;].
+The only ones that currently don&amp;rsquo;t are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;req4c_get_apprc()&lt;/li&gt;
+&lt;li&gt;req4c_get_num_errors()&lt;/li&gt;
+&lt;li&gt;req4c_get_num_msgs()&lt;/li&gt;
+&lt;li&gt;req4c_get_num_results()&lt;/li&gt;
+&lt;li&gt;req4c_get_error_num()&lt;/li&gt;
+&lt;li&gt;req4c_get_error_msg()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;req4c Function Call Processing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;req4c-function-call-processing&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#req4c-function-call-processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to have a responsive application it is important to know where
+network requests occur.
+Most req4c functions involve no network requests of any kind.
+There are some that involve round trip requests to the 4creqd process only.
+When the 4creqd process is on the same machine as the Web Server, these
+round trip requests can be extremely fast if the 4creqd server is configured
+to use domain sockets.&lt;/p&gt;
+&lt;p&gt;There is one req4c function,
+&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/run/&#34;&gt;req4c_run()&lt;/a&gt;
+, that requires a round trip request between the PHP request and the 4creqd
+process as well as a round trip between the 4creqd process and a 4csrvr process.
+So rather than make one req4c_run() call to get a list and then make another
+req4c_run() call for every item in the list, it is better to design a program
+that can return all the needed information in one req4c_run() request.
+Of course, you need to be careful and make sure you are not returning
+10s of thousands of rows at a time also.&lt;/p&gt;
+&lt;p&gt;The documentation for each of the
+&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;req4c PHP functions&lt;/a&gt;
+includes types of network requests used in the Comments section.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Process Timing&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;process-timing&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#process-timing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Every request that communicates with the 4creqd process must first be
+authenticated.
+When the 4creqd process is running on the same machine as the Web Server,
+then this authentication will normally use the credentials of the
+connection to authenticate the process.
+This requires one round trip network request before the request is sent.
+The request itself, then requires another round trip network request.
+When domain sockets are in use,
+these types of round trip network requests are quite fast.
+This authentication is done only once per PHP request cycle.
+If one PHP request cycle makes multiple calls to req4c, the
+authentication is still only done on the first req4c request.
+A PHP request cycle is the running of one script from start to finish.
+A guess you would call this a PHP program instance also.&lt;/p&gt;
+&lt;p&gt;When a request requires communicating with a 4csrvr process,
+the 4creqd process first determines if it has a connection available
+with the proper authentication and then uses that connection for the request.
+If necessary, 4creqd will initiate another connection to a new 4csrvr process.
+This initiation is very slow and for this reason, 4creqd maintains a pool
+of threads with existing connections so that the initiation process does
+not need to occur frequently.
+There are configuration options that allow you to specify how large the
+thread pool should be and how many connections to maintain.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Superglobals&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;superglobals&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#superglobals&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;req4c defines two superglobal (also called autoglobal) arrays, $_REQ4C
+and $_REQ4C_SESSION.
+$_REQ4C always contains at least the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$_REQ4C[&amp;rsquo;errno&amp;rsquo;] - An integer error_num from the last req4c function call.&lt;/li&gt;
+&lt;li&gt;$_REQ4C[&amp;rsquo;errmsg&amp;rsquo;] - The error_msg string from the last req4c function call.&lt;/li&gt;
+&lt;li&gt;$_REQ4C[&amp;lsquo;sessionid&amp;rsquo;] - The sessionid string of the current req4c session if there is one or the empty string if there is not.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Your PHP programs can query these values, but should not modify them.&lt;/p&gt;
+&lt;p&gt;$_REQ4C_SESSION is empty unless there is a req4c session open.
+If there is a req4c session open, then this array has all the variables
+that any PHP program has set into it.
+All your program needs to do to store variables is something like:
+$_REQ4C_SESSION[&amp;lsquo;phone&amp;rsquo;] = &amp;lsquo;�&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;The values you set in this array are stored in memory by 4creqd
+and sent to req4c everytime a session is opened.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>&#39;Linking Data&#39;</title>
+      <link>http://localhost:1313/docs/docs/features/ldata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/ldata/</guid>
+      <description>
+        
+        
+        &lt;p&gt;There is a new feature in 4C that allows linking of data
+between 4C applications on different servers and
+between 4C applications and external applications that
+have a DDE interface.
+I call this feauture LData (linking data).&lt;/p&gt;
+&lt;p&gt;In order to start using ldata,
+you need to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;create the s_ldatah file in your application directory.&lt;/li&gt;
+&lt;li&gt;On a windows NT server you MUST set the startup option of the 4CServerD service to allow it to interact with the desktop.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Currently, there are 3 ways to link data.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Between 4C applications on different servers using 4C shared memory. This type is called 4cShare. It makes use of a process called 4cshare on both Unix and NT servers.&lt;/li&gt;
+&lt;li&gt;Between a 4C application on any type of server and a WindowsNT application with a DDE interface. This is called 4cDDE and it makes use of a process called 4cdde on an NT Server machine. There will need to be a 4CServer installed on the WindowsNT machine, but the 4C application does not need to run on the NT Server.&lt;/li&gt;
+&lt;li&gt;The 3rd scenario is similar to the second. This is a linking of data between the 4C application on any server and a Windows95 application on the client machine. The Windows95 client will have to have a DDE interface. The Windows95 client will only need to have the client installed in order for this work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;An LData item has two parts.
+One is a definition in the s_ldatah file.
+The other is the runtime open with the
+&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/openldata/&#34;&gt;sys.open_ldata()&lt;/a&gt;
+system pcl.
+For every rcd in s_ldatah you may have multiple
+sys.open_ldata() calls.
+Every sys.open_ldata() call refers to a single
+LData item.
+This will be a single data field in the 4C application
+and may be a single cell in a spredsheet.
+The fields defined in the s_ldatah file and how
+to use them follows.
+You will need to use xlfile to access this file for
+now.
+As soon as the final definition is done,
+the bootstraps will have some new programs
+for defining your LData.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sldh_key, alpha(20) - This can be anything that makes sense for your application.&lt;/li&gt;
+&lt;li&gt;sldh_type - Must be either DDE or 4CSHARE.&lt;/li&gt;
+&lt;li&gt;sldh_server - This identifies the server machine that will be used to run either 4cdde or 4cshare. This may be a machine name known to your system or an ip address in nnn.nnn.nnn.nnn format. If sldh_server is set to &amp;ldquo;%client&amp;rdquo;, then a connection is made through the Win95 4C Client to the external application.&lt;/li&gt;
+&lt;li&gt;sldh_portno - Port number to use for connection. Usually 1412.&lt;/li&gt;
+&lt;li&gt;sldh_usr - Usrname on remote machine to connect as.&lt;/li&gt;
+&lt;li&gt;sldh_pwd - Password on remote machine.&lt;/li&gt;
+&lt;li&gt;sldh_shfile - File name on remote machine for a 4cShare connection. This field may be overridden at runtime by specifying &amp;ldquo;File=&lt;code&gt;&amp;lt;file&amp;gt;&lt;/code&gt;&amp;rdquo; in the sys.open_ldata() call. Unused for a DDE connection.&lt;/li&gt;
+&lt;li&gt;sldh_shvar - Field name in shfile to for 4cShare. This field may be overridden at runtime by specifying &amp;ldquo;Field=&lt;code&gt;&amp;lt;field&amp;gt;&lt;/code&gt;&amp;rdquo; in the sys.open_ldata() call. Unused for a DDE Connection.&lt;/li&gt;
+&lt;li&gt;sldh_ddeapp - The application name for the DDE connection. This may be something like &amp;ldquo;Excel&amp;rdquo;. This field may be overridden at runtime by specifying &amp;ldquo;App=&lt;code&gt;&amp;lt;app&amp;gt;&lt;/code&gt;&amp;rdquo; in the sys.open_ldata() call. Unused for 4cShare.&lt;/li&gt;
+&lt;li&gt;sldh_ddetopic - The topic to be used in a DDE connection. This field may be overridden at runtime by specifying &amp;ldquo;Topic=&lt;code&gt;&amp;lt;topic&amp;gt;&lt;/code&gt;&amp;rdquo; in the sys.open_ldata() call. Unused for 4cShare.&lt;/li&gt;
+&lt;li&gt;sldh_ddeitem - The item to create a DDE link with. This may be something like &amp;ldquo;R1C1&amp;rdquo;. This field may be overridden at runtime by specifying &amp;ldquo;Item=&lt;code&gt;&amp;lt;item&amp;gt;&lt;/code&gt;&amp;rdquo; in the sys.open_ldata() call. Unused for 4cShare.&lt;/li&gt;
+&lt;li&gt;sldh_ddecmd - The cmd that will start the application that can provide this data at runtime if it is not already running. If this field is not specified, then 4C will not start the application. This field may be overridden at runtime by specifying &amp;ldquo;Cmd=&lt;code&gt;&amp;lt;cmd&amp;gt;&lt;/code&gt;&amp;rdquo; in the sys.open_ldata() call. Unused for 4cShare.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you have defined an LData, you can use the
+links with 3 new system PCL&amp;rsquo;s.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/openldata/&#34;&gt;sys.open_ldata()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/getldata/&#34;&gt;sys.get_ldata()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/setldata/&#34;&gt;sys.set_ldata()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/closeldata/&#34;&gt;sys.close_ldata()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>req4c docs</title>
+      <link>http://localhost:1313/docs/docs/features/web4c/req4cindex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/web4c/req4cindex/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/req4cchanges/&#34;&gt;Most Recent Changes&lt;/a&gt; - Updated 22 March 2010&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/req4cov/&#34;&gt;req4c overview&lt;/a&gt; - Updated 13 March 2010&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/req4cdet/&#34;&gt;req4c Details&lt;/a&gt; - Updated 22 March 2010&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;req4c Function List&lt;/a&gt; - Updated 22 March 2010&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Overview of req4c</title>
+      <link>http://localhost:1313/docs/docs/features/web4c/req4cov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/web4c/req4cov/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/req4cindex/&#34;&gt;req4c Docs&lt;/a&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;req4c Function List&lt;/a&gt;
+The main requirements of the req4c PHP extension were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow the PHP program to call 4C Update programs and get a return value.&lt;/li&gt;
+&lt;li&gt;Allow the PHP program to call 4C Report programs and get results from the 4C report program.&lt;/li&gt;
+&lt;li&gt;Allow the PHP program to get info messages and error messages generated by the 4C program.&lt;/li&gt;
+&lt;li&gt;Allow the PHP program full control over formatting the data.&lt;/li&gt;
+&lt;li&gt;Allow low to high level security.&lt;/li&gt;
+&lt;li&gt;Minimize network traffic.&lt;/li&gt;
+&lt;li&gt;Allow the main 4C application accessed through the normal 4C Client/Server interface to work without interference.&lt;/li&gt;
+&lt;li&gt;Make the req4c extension as PHP like as possible so that it would feel natural to the PHP programmer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are three parts to the req4c PHP extension.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The req4c extension itself. This is a standard PHP extension written in C and linked with the lib4cphp.so library. The req4c extension provides all the funtions that a PHP program needs to interact with 4C programs.&lt;/li&gt;
+&lt;li&gt;A new server daemon, 4creqd, that runs in the background and receives requests from the PHP program and forwards them to a 4csrvr. 4creqd then waits for the results from the 4csrvr and returns them to the PHP program. Though it is not necessary, the 4creqd daemon will typically run on the same machine as the Web Server.&lt;/li&gt;
+&lt;li&gt;The 4csrvr program. This is the normal 4csrvr process with a few modifications to allow it to interact with the 4creqd daemon. Only version 4.8.0 and higher of 4csrvr can interact with the 4creqd process.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Program Classes in 4C</title>
+      <link>http://localhost:1313/docs/docs/features/programclasses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/programclasses/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;31 May 2000&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;31-may-2000&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#31-may-2000&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C allows you to specify a class with each program.
+The class of a program restricts the PCLs that that
+program may run and helps define the way the program
+displays data in a client program
+The classes allowed are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;None - 4c will try to figure this one out and will choose ScreenProg, Report or Update based on what it can determine about the program.&lt;/li&gt;
+&lt;li&gt;ScreenProg - A program that displays something on the client display and needs input from the client. 4C will chooses either the DataEntry class or the ScrollList class for a ScreenProg depending on whether it is a scrolling program or not.&lt;/li&gt;
+&lt;li&gt;DataEntry - This for non scrolling interactive programs. If you specify ScreenProg for a program class and it is non scrolling, it defaults to DataEntry.&lt;/li&gt;
+&lt;li&gt;ScrollList - This for scrolling interactive programs. If you specify ScreenProg for a program that is scrolling, then it defaults to ScrollList.&lt;/li&gt;
+&lt;li&gt;ListView - Currently this is unimplemented and defaults to ScrollList instead. It will be implemented in the future.&lt;/li&gt;
+&lt;li&gt;TreeView - allows you to define a TreeView style program. A TreeView program does not need to have any display fields. If it does, the only display field class used is title. All other display fields for a TreeView program are ignored. A TreeView program will only execute the PCLs for the Init, Open, Focus, TVSelect, TVAction, End and Exit states. The OpenPCL should be used to build the TreeView with calls to &lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/tvadd/&#34;&gt;sys.tv_add().&lt;/a&gt; The TVSelectPCL is used to do something when the user selects an item. The TVActionPCL is used to do something when the user double clicks an item. The application will use the &lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/tvgetsel/&#34;&gt;sys.tv_getsel()&lt;/a&gt; PCL to get info about the item selected or double clicked. Almost always, when an item is double clicked, both the TVSelectPCL and the TVActionPCL are executed. There is no way to determine that it was a double click that caused the item to be selected in the first place. See the system program sys.menu.tv for an example of how to define a TreeView program.&lt;/li&gt;
+&lt;li&gt;Report - Basic report program. Should be extended in the future.&lt;/li&gt;
+&lt;li&gt;Update - An update program will only execute the PCLs for the Init, Focus, End and Exit states. Update programs will not display anything on the client display.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Overview of Web4C</title>
+      <link>http://localhost:1313/docs/docs/features/web4c/web4cov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/web4c/web4cov/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/req4cindex/&#34;&gt;req4c Docs&lt;/a&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/functions/&#34;&gt;req4c Function List&lt;/a&gt;
+Up until now the only way to access 4C data from a Web program
+was to store the data in a database that had a Web interface.
+Though there is nothing wrong with this approach,
+it does add an extra layer of complexity to the application.
+You either have to replicate the data to the database or use the
+database as your main 4C database.
+You also lose the ability to filter the data using 4C.
+There has been increasing interest in accessing 4C data without
+going through this middle layer.
+Some of the ideas that have come up are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A cgi interface to 4C usable by any Web scripting language.&lt;/li&gt;
+&lt;li&gt;A PHP extension for running 4C programs and processing results.&lt;/li&gt;
+&lt;li&gt;A Java class for running 4C programs and processing results.&lt;/li&gt;
+&lt;li&gt;A CSharp class for running 4C programs and processing results.&lt;/li&gt;
+&lt;li&gt;Modifications to 4C that would allow it to format and output html reports.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a first pass at allowing Web access to 4C, we have implemented a PHP
+extension called req4c.
+One or more of the other options may be implemented in the future,
+depending on interest,
+but for now req4c will be the main way to interact with 4C programs through
+the Web.
+req4c is documented here:
+&lt;a href=&#34;http://localhost:1313/docs/docs/features/web4c/req4cindex/&#34;&gt;req4c Documentaion&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Using Images in Screen Programs</title>
+      <link>http://localhost:1313/docs/docs/features/simages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/simages/</guid>
+      <description>
+        
+        
+        &lt;p&gt;There are several ways that you can use images in
+4C screen programs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use a screen field type of label or cmdbtn and specify the image info data in the display fields. The image type must be either Bitmap or Icon and you must specify the image size in pixels. The path should be relative to the FC_IMAGE directory on the server. If the image does not exist on the client or the copy on the server is more recent than the copy on the client, then the image will be copied to the client before it is used. The image will be stored permanently on the client machine. This type of image is most useful when you want to use a bitmap for a button rather than text. You can change the image of the label or cmdbtn with: &lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/setdfimage/&#34;&gt;sys.set_dfimage()&lt;/a&gt; The label or cmdbtn size will not change even if the new image is larger than the original image. If you use sys.set_dfimage() to set many images, your client image directory will get cluttered. In this case one of the other methods that allows you to specify how to manage the persistence of the image on the client will work better. The demo program, demo.image.1 has several images, both labels and cmdbtns, defined in this way.&lt;/li&gt;
+&lt;li&gt;Use a screen field type of image and specify the image info data. Image formats supported are Bitmap, Icon, GIF, and JPEG. The 4C client will figure out the image type when it displays the image. The image data that you can specify for an image screen field type is: Image Path - This can be a relative path from the FC_IMAGE directory on the server, an absolute path on the server, or a url. Persistence - This specifies how the image persists on the client. This can be either Permanent, Session, or Instance. Background RGB - The RGB for the background of the image window when the image window is larger than the image. MinWidth, MinHeight, PrefWidth, PrefHeight - These are the dimensions to be used for the image window and can be specified in Pixels, Points, Inches, or Millimeters. FitImageToWindow - If checked, then the image will stretch or shrink to fit the available space. Scale Image - If FitImageToWindow is checked and Scale Image is checked, then the image will resize proportionately to best fit the display area. ImageXPos, IMageYPos - If FitImageToWindow is not checked, then this means where the image is positioned in the image window when the window is larger than the image. The values can range from 0 - 100 with 0 meaning either top or left, 50 meaning center and 100 meaning either right or bottom. ImageXPos and IMageYpos are also used when the image is scaled proportioanately. In this case using ImageXPos=50 and ImageYPos=50 probably work best. WindowXPos, WindowYPos - If FitImageToWindow is not checked, then this means where the image window is positioned over the image when the image is larger than the image window. The values can range from 0 - 100 with 0 meaning either top or left, 50 meaning center and 100 meaning either right or bottom. You can change the path of the image with: &lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/setdfimage/&#34;&gt;sys.set_dfimage()&lt;/a&gt; demo.image.2 and demo.image.3 show some of the ways you can use the image screen display field type. You can easily see the difference when FitImageToWindow is checked and when it is not. You can also see how using a url for the path works. Before you can use the image screen field type in your application you need to make sure you have defined the image screen field type in the sdft.fm program. You can easily copy and paste it from the 4cSys application. In order to use image screen field types, both 4csrvr and 4cclient need minimum version 4.4.4.&lt;/li&gt;
+&lt;li&gt;Specify a background image for a panel. Image formats supported are: Icon, Bitmap, GIF, and JPEG. The image data you can specify for panel background images is: Image Path - This can be a relative path from the FC_IMAGE directory on the server, an absolute path on the server, or a url. Persistence - This specifies how the image persists on the client. This can be either Permanent, Session, or Instance. FitImageToWindow - If checked, then the image will stretch or shrink to fit the panel window. Scale Image - If FitImageToWindow is checked and Scale Image is checked, then the image will resize proportionately to best fit the display area. TileImage - If checked, then the image will be tiled across the panel window. ImageXPos, IMageYPos - If neither FitImageToWindow nor TileImage is checked, then this means where the image is positioned in the panel window when the panel window is larger than the image. The values can range from 0 - 100 with 0 meaning either top or left, 50 meaning center and 100 meaning either right or bottom. ImageXPos and IMageYpos are also used when the image is scaled proportioanately. In this case using ImageXPos=50 and ImageYPos=50 probably work best. WindowXPos, WindowYPos - If neither FitImageToWindow nor TileImage is checked, then this means where the panel window is positioned over the image when the image is larger than the panel window. The values can range from 0 - 100 with 0 meaning either top or left, 50 meaning center and 100 meaning either right or bottom. You can specify panel background image info using either the panel definition development program or the panel screen painter. You can change the background image of the panel using: &lt;a href=&#34;http://localhost:1313/docs/docs/syspcls/setpnlimage/&#34;&gt;sys.set_pnlimage()&lt;/a&gt; demo.image.5 and demo.tile.1 show some of the ways you can use background images in panels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Misc Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;misc-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#misc-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Images that are used as part of the GUI interface of a 4C program should be stored on the server in a directory relative to the FC_IMAGE directory. These images should also be defined as persisting permanently on the client.&lt;/li&gt;
+&lt;li&gt;Images that are not part of the GUI interface, but instead are data for the program, should be stored on the server wherever it makes most sense for the application.&lt;/li&gt;
+&lt;li&gt;When using images that are not stored relative to the FC_IMAGE directory on the client, you need to use a full path to image on the server when using it.&lt;/li&gt;
+&lt;li&gt;Images that represent sensitive data should never persist permanently on the client. Use either Session or Instance persistence.&lt;/li&gt;
+&lt;li&gt;Images that are data for the application but are not sensitive data can persist permanently or temporarily. Choose what&amp;rsquo;s best for your application.&lt;/li&gt;
+&lt;li&gt;Use Unix style paths for specifying the image path.&lt;/li&gt;
+&lt;li&gt;Images that are stored permanently on the client machine are stored in a subdirectory of FC_COMAPPDATA/images. Each server that you connect to will have it&amp;rsquo;s own subdirectorr for storing permanent images.&lt;/li&gt;
+&lt;li&gt;Images that are stored only for the duration of the client session or only for a single instance are stored in a subdirectory of FC_APPDATA unique per client session. This session directory and all files in it is removed when the 4c client session ends.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Bugs and Misc Issues&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;bugs-and-misc-issues&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#bugs-and-misc-issues&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Only the following panel types can have a background image: ListView HRowCol VRowCol Form Grid Single Overlay HSplitPane VSplitPane&lt;/li&gt;
+&lt;li&gt;Currently, image info for image screen field types cannot be specified using the Panel Screen Painter. You must use the display fields development program.&lt;/li&gt;
+&lt;li&gt;The 4C Panel Screen painter does not currently display images. For display fields they display as a label or cmdbtn. For panel background images they are ignored.&lt;/li&gt;
+&lt;li&gt;Tiff images are not supported.&lt;/li&gt;
+&lt;li&gt;Layouts now allow background images and use most of the same options that you can specify for panel background images.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Screen Layouts</title>
+      <link>http://localhost:1313/docs/docs/features/slo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/slo/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Inherent to the 4C client/server model is the idea of screen
+layouts.
+Thus, in order to best utilize the 4C client/server model
+you need to understand 4C screen layouts and to change your
+4C programs to use them.&lt;/p&gt;
+&lt;p&gt;A 4C screen layout is a set of 4C Screen Programs or 4C sub layouts
+arranged within one client main window.
+The 4C programs will work as they do now, it is just
+the way they are layed out on the screen that is affected.
+No matter what the row/col positions are for 4C programs or
+fields, each program is considered to have its own rectangle
+that can be positioned within or around other 4c Screen Programs.
+A sub layout is just a screen layout that is part of another
+screen layout as well.
+A 4C screen program can be part of more than one screen layout
+and it may have a default layout associated with it.
+4C screen layouts are compiled and fetched much the same way that
+programs and files are.
+On the server, 4C layouts are fetched into shared memory.
+The server sends a minimal amount of info to the client so it can construct
+its own shared memory data structures and non shared data structures.
+The client only needs to get layout info from the server
+if it does not already have the info in shared mem, or if it is
+out of date.
+The client maintains a permanent copy of screen layout
+info in the clseqf.sxl file which is normally kept in
+the HOME_4C/etc directory.
+A 4C screen layout or sub layout is arranged based on the type
+that you give it.
+Currently allowed layout types are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;VRowCol Programs or sub layouts are arranged vertically, one on top of the other, much in the way a hdr and detail would be arranged. If there is not enough space to arrange them vertically, they will overlap. All programs or sub layouts in a VRowCol are stretched to the same width.&lt;/li&gt;
+&lt;li&gt;HRowCol Programs or sub layouts are arranged horizontally, one next to the other. If there is not enough space to arrange them without overlap, they will overlap. All programs or sub layouts in a HRowCol are stretched to the same height.&lt;/li&gt;
+&lt;li&gt;Cascade Programs or sub layouts are cascaded. Currently, 4C decides the spacing used for cascading.&lt;/li&gt;
+&lt;li&gt;TabFolder Programs or sub layouts are arranged to overlay each other completely and tab buttons appear at the top for selecting the current program or sub layout. Tab Folders work best with programs that are linked or execed instead of pushed.&lt;/li&gt;
+&lt;li&gt;Single There is only one program or one sub layout. These work well for programs that need to pop up and disappear when complete.&lt;/li&gt;
+&lt;li&gt;Overlay The overlay is the most flexible type of screen layout. Programs and sub layouts overlay each other in a way specified in the sl_ovly definition. They may completely or partially overlay each other at relative x and y positions.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here, I try to describe the changes needed to make your screen programs
+run well under the 4C client/server model.&lt;/p&gt;
+&lt;p&gt;The first thing you will need to to is to make sure that the
+following files exist in your program directory.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sl_hdr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sl_ovly
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s_dftype (sdftype.xl)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s_prtype (sprtype.xl)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s_acthdr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s_actdet
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s_actitem
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s_menubar
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s_mbitem
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s_menuhdr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s_menuitem&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;For now, you should copy them from the 4C system directory.
+If you have already defined menus and action areas for Motif,
+then you can rename the following files to s_ instead of m_.&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;m_acthdr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;m_actdet
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;m_actitem
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;m_menubar
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;m_mbitem
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;m_menuhdr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;m_menuitem&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The Motif files m_def, m_class, and m_dfresource will not be used.&lt;/p&gt;
+&lt;p&gt;This will allow you to use some pre defined screen layouts, menubars,
+and action areas in your programs and layouts.&lt;/p&gt;
+&lt;p&gt;As a default,
+all screen programs will run without change using the
+Default or ScrollDefault screen layout.
+This will not be adequate in most cases.
+A program that is to be part of a screen layout MUST have
+a program class of ScreenProg.
+Use the Program Development programs to set this.
+Once this is set,
+you can use this program in your layout definitions.
+However, you may first want to make changes to the display fields.
+There is a new field that can be set for display fields
+that will change the default way that 4C displays them
+on the client.
+Currently, this field can be set to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;dodata Display Only Data. Displays as a text field but will not allow input. Left Justified.&lt;/li&gt;
+&lt;li&gt;ftr Unimplemented so far.&lt;/li&gt;
+&lt;li&gt;hdr Unimplemented so far.&lt;/li&gt;
+&lt;li&gt;inpdata Input Data. Text Field that allows input. Left Justified.&lt;/li&gt;
+&lt;li&gt;label Label Field. No 3D look. Right Justified.&lt;/li&gt;
+&lt;li&gt;scrolldet Part of the detail of a scrolling program. Displays as part of an item of a List. Left Justified.&lt;/li&gt;
+&lt;li&gt;scrollhdr Part of the hdr of a scrolling program. Displays as part of the label above the scrolling area. Left Justified.&lt;/li&gt;
+&lt;li&gt;sellist This displays as a pulldown menu of choices. Currently should only be used with fields that have a choice format. Later, it or another type will allow you to use this on non choice fields. Center justified.&lt;/li&gt;
+&lt;li&gt;title Displays as part of the title in the title area of the main window. The title can change based on which is the current program.&lt;/li&gt;
+&lt;li&gt;trim Label not associated with any other field. Center justified. The only difference between this and label is the justification.&lt;/li&gt;
+&lt;li&gt;ignore This field will be ignored when displayed in a Screen Layout.&lt;/li&gt;
+&lt;li&gt;inplist This works the same as a sellist, except that you may type in the selection field.&lt;/li&gt;
+&lt;li&gt;rblist This gives you a set of radio buttons to choose from. For a choice, field, each of the choices is one radio button. For non choice fields, your program can use sys.dflist_clear() and sys.dflist_add() to set the choices. You will want to set the max items and dpylabel field in the display fields program when using radio buttons.&lt;/li&gt;
+&lt;li&gt;lrblist Same as rblist, except the text appears on the left.&lt;/li&gt;
+&lt;li&gt;chkbox This makes the field a check box control. Instead of using a field literal, you should specify the dpylabel for chkbox fields.&lt;/li&gt;
+&lt;li&gt;lchkbox Same as chkbox, except the dpylabel appears on the left.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There may be others added and if you copy this file from
+the system directory to your own program directory
+you may add others.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Defining your own 4C Screen Layouts&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;defining-your-own-4c-screen-layouts&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#defining-your-own-4c-screen-layouts&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to define your own screen layouts,
+run the slh.fm program.
+This program is listed on both the source code control menu and on
+the system menu.
+You can use up to 20 chars in the layout name.
+I haven&amp;rsquo;t come to any conclusions on naming conventions yet,
+but I have tried using the main program name with an sln extension,
+like slh.fm.sl1, slh.fm.sl2 etc.
+Most of the fields on the main screen are self explanatory.
+If you have not defined any of your own menubars or action areas,
+you may want to use Default for the menubar and user2B for the
+bottom action area.
+You should leave the initial font blank for now.
+You may be able to define and use your own fonts in the future
+but for now leave this blank.
+Once you have a rcd in the sl_hdr rcd, you can add the
+details for the layout.
+The user1 key will run the slov.fm program.
+The label field is used for tabfolders.
+For sub layouts, you must specify the sub layout name.
+For non sub layouts, you must specify a program
+and optionally an asprog name.
+There is no reason to specify frame=&amp;lsquo;y&amp;rsquo;.
+The Max width and Height fields are for Overlay type layouts.
+Specifying &amp;lsquo;y&amp;rsquo; to either will maximize the program or sub layout to
+the full size of the containing layout.
+The RPos x and y is also used for Overlay type layouts.
+You can specify a number from 0 to 100 that specifies the
+relative position within the containing layout.
+50, 50 will center the program or sub layout.
+0,0 will place it at the top left corner and 100, 100 at the bottom
+right corner.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

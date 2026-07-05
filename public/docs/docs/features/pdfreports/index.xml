@@ -1,0 +1,168 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C PDFReport</title>
+    <link>http://localhost:1313/docs/docs/features/pdfreports/</link>
+    <description>Recent content in 4C PDFReport on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/docs/docs/features/pdfreports/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C PDFReport - Most Recent Changes</title>
+      <link>http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-changes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/&#34;&gt;PDFReport Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;04 March 2025&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;04-march-2025&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#04-march-2025&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Initial Release and Documentation&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C PDFReport - Example Programs</title>
+      <link>http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-examples/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/&#34;&gt;PDFReport Home&lt;/a&gt;
+The simplest example PDFReport program is one that displays on a single page without using
+any dynamic positioning of fields.
+All fields are part of a single main PDFReport and the report is run from the
+InitPCL by calling the sys.run_rpt() System PCL.&lt;/p&gt;
+&lt;p&gt;The pdfr.demo.1 program in the Demo application is an example of a simple PDFReport program.
+It displays the fields from a single rcd in the language_info file.
+It is started by a Panel program, pdfr.lang.sel, that allows you to select 1 rcd
+and then by clicking the CreateAndViewPDF cmdbtn it will call the pdfr.demo.1 program
+passing in lang_name and the value of 2 flags, one that you can set to show the row/column grid
+as part of the PDF and other to call up a program to display info about the PDFReport before
+displaying the PDF document.
+The PDFReport displays a hdr and 4 vertically aligned data fields.
+The data fields each display with a side label and in a different row.&lt;/p&gt;
+&lt;p&gt;Here are some important things to notice about the PDFReport that you can see by browsing
+the Program Characteristics, Display Fields and PCLs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Program class is &amp;ldquo;PDFReport&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;The Program Characteristics set the following PDF document defaults PaperSize - &amp;ldquo;Letter&amp;rdquo; Orientation - &amp;ldquo;Portrait&amp;rdquo; Top, Bottom, Left and Right margins - all set to 36.00 pts (1/2 inch) LineWidth - .75 pts ULHeight - .75 pts AllowProntScaling - &amp;lsquo;y&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;The only PCL is the InitPCL.&lt;/li&gt;
+&lt;li&gt;There are 5 display fields hdr - The hdr field uses the pdft_dftype &amp;ldquo;text4&amp;rdquo; and overrides the Halign, BG RGB and Border RGB defaults. It specifies 0 as the top row and 7.5 as the left column to use for the top left of the rectangle that it will display in. It specifies a height of 3.0 rows (36 pts) and a width of 30.0 columns (360 pts) Since it has BG and Border colors specified you can see the rectangle used by the dfield and how VAlign and HAlign work. lang_name lang_abbr lang_ttsabbr Each of these 3 dfields all use the pdft_dftype &amp;ldquo;text1&amp;rdquo; and keep the default sys.pdf_dftype values. They all have a side label that uses the defaults from the pdft_dftype &amp;ldquo;def-sidelabel&amp;rdquo; None of these 3 dfields specify a width or a height to be used in calculating the &amp;ldquo;rectangle&amp;rdquo; needed for displaying so the rectangle is calculated based on the font, fontptsz, linewidth and text being displayed. lang_nativename - This dfield uses the pdft_dftype of utf8-text1 and overrides the ptsz, FG and Border colors. Notice that some of the languages need a utf8 font to display the native name correctly. This may not be the best utf8 font to use because wome native names don&amp;rsquo;t display correctly. Howver, most of them do display correctly. The native names for Burmese, Korean, Khmer and probably a few others display boxes instead of the real characters.&lt;/li&gt;
+&lt;li&gt;InitPCL - The InitPCL runs the only report that the program defines, &amp;ldquo;main&amp;rdquo;, with the stmt sys.run_rpt(&amp;ldquo;main&amp;rdquo;); Once the the &amp;ldquo;main&amp;rdquo; report finishes it checks whether the flags for showing the grid and displaying info about the PDF document and optionally calls sys.pdf_drawgrid() and/or sys.pdfinfo_view(). Next it calls sys.pdf_view() which copies the PDF document to the client and starts up a viewer. When pdfr.demo.1 exits at the end of the InitPCL there no longer is a PDFReport document on the server that can be accessed by the application.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some other points worth mentioning about pdfr.demo.1 are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;If the program did not exit the program in the InitPCL and if the program had defined a default report the default report would have run automatically after the OpenPCL.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All display fields are positioned at absolute row and column positions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It&amp;rsquo;s worth playing around with this simple PDFReport program and getting an idea of how the different pdf options affect the display.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Also, run the &amp;ldquo;Test PDF&amp;rdquo; option from the Display Fields context menu. This should give an idea of the ways a display field is positioned in it&amp;rsquo;s &amp;ldquo;rectangle&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There is a lot more that can be done with a PDFReport than just the single page absolute positioning of pdfr.demo.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C PDFReports - Issues/Bugs</title>
+      <link>http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-issues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-issues/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;xlexport and xlimport do not read/update sys.pdf_font or sys.pdf_dftype. It is up to the application to make sure any needed sys.pdf_font or sys.pdf_dftype entries exist on the systems that PDFReport programs are imported to. This is true for copy and paste of 4C programs also.&lt;/li&gt;
+&lt;li&gt;Currently the only type of image supported in PDFReports is jpeg. The fullpath of the image must end in one of jpeg, jpg, jpeg2, jpg2, jp2 or jpx with case not significant.&lt;/li&gt;
+&lt;li&gt;It currently is not possible to determine the size of an image so you should always specify the width/height of the image in the row/col width and height of the display field. If necessary, the the image will be shrunk/stretched to fit the specified size.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C PDFReport - Overview</title>
+      <link>http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-ov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-ov/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/&#34;&gt;PDFReport Home&lt;/a&gt;
+4C Server version 7.0 allows an application to define a report that will be saved as a
+PDF document or displayed immediately in a PDF Document Viewer program.
+All 4C programs with a class of PDFReport will generate a PDF document that makes use
+of the programs defined reports and display fields.&lt;/p&gt;
+&lt;p&gt;Some of the key concepts behind a 4C PDFReport are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A 4C PDFReport program is a subclass of a NewReport class program that allows you to create a PDF document based on some common 4C specifications.&lt;/li&gt;
+&lt;li&gt;A 4C PDFReport can combine different reports defined in the same program or across multiple 4C programs. These reports can be run automatically by a PDFReport class program that specifies a &amp;ldquo;Defalt Rpt&amp;rdquo; for that program or by explicitly calling sys.run_rpt(&lt;code&gt;&amp;lt;rptname&amp;gt;&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;A 4C PDFReport in a single 4C program is comprised of display fields and subreports defined in that program.&lt;/li&gt;
+&lt;li&gt;Any subreport for a running PDFReport will automatically run when the first display field for the subreport is encountered while running it&amp;rsquo;s parent report. Any display fields that are not part of the running report or any of it&amp;rsquo;s subreports are ignored.&lt;/li&gt;
+&lt;li&gt;It is not necessary to use subreports as any one report can be run from any PCL in the PDFReport program by calling sys.run_rpt(&lt;code&gt;&amp;lt;rptname&amp;gt;&lt;/code&gt;). This includes both the InitPCL and ExitPCL for the program.&lt;/li&gt;
+&lt;li&gt;Only 1 PDF document is created for each running 4C Group that is running a 4C PDFReport program.&lt;/li&gt;
+&lt;li&gt;The PDF document created is not saved permanently, printed or displayed by a PDF viewer application unless the PDFReport program specifically requests it. There are several global PCLs that can be used to do this. sys.pdf_view() - This global PCL will save the PDF document in the FC_SESSION directory on the server, copy it to the client and start a PDF viewer program to view it. sys.pdf_save(&lt;code&gt;&amp;lt;savetopath&amp;gt;&lt;/code&gt;) - This global PCL will save the PDF document to the fullpath specified in &lt;code&gt;&amp;lt;savetopath&amp;gt;&lt;/code&gt; on the server.&lt;/li&gt;
+&lt;li&gt;A 4C PDFReport document begins when the the PDFReport class program runs and it stays active until the last PDFReport class program in the 4C Group ends.&lt;/li&gt;
+&lt;li&gt;4C PDFReport programs use the same FCCom external library that can be used outside of 4C PDFReport programs as well as inside of PDFReport programs.&lt;/li&gt;
+&lt;li&gt;One big difference in that way 4C PDFReport programs use the library is that rows and columns specified in display field definitions start from 0.0, 0.0 at the upper left of the printable page including margins defined by the program. The FCPdf library functions all use the std PDF origin of bottom left with the y pos increasing as you move up the page.&lt;/li&gt;
+&lt;li&gt;Another difference is that 4C PDFReport rows/columns are defined with a start pt which is a 4C float var specifying the top/left of the row/column.&lt;/li&gt;
+&lt;li&gt;PDFReport rows and columns also have a width/height also specified as a 4C float var with a 1.0 width row being 12pts in height and a 1.0 height column being 12pts in height.&lt;/li&gt;
+&lt;li&gt;When a 0.0 width or height is specified for a row or column then 4C calculates the width/height that is needed to display the text/image and uses that for positioning.&lt;/li&gt;
+&lt;li&gt;Similar to 4C display fields meant to display on a Windows/MacOS PC the PDFReport display fields have a PDF Dfield Type associated with them that is used to determine some defaults such as the font used, the ptsz used, how to position the display field in its &amp;ldquo;rectangle&amp;rdquo;, underline style, if any, and any fg/bg and border colors.&lt;/li&gt;
+&lt;li&gt;You can think of a PDFReport display field as occupying an outer rectangle and an inner rectangle on the page. The outer rectangle encompasses the inner rectangle and adds a border area to it. The border area even when not drawn has a width and a height of whatever the line width for the page is defined as. The default PDFReport line width is initially set at .75 pts but it can be overriden by the 4C program that starts the PDFReport as well as by any page that is added to the PDFReport. The inner rectangle is either the exact size that is specified by width and height of the display field or if not specified it is calculated to be the width/height of the text being displayed. Neither rectangle takes into account any top or side label. Those labels, when used are positioned either above the outer rectangle or to the left of the outer rectangle.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-start/&#34;&gt;Next - Getting Started&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C PDFReport - Getting Started</title>
+      <link>http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-start/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/&#34;&gt;PDFReport Home&lt;/a&gt;
+To get started using the 4C PDFReport class to generate PDF documents it is important
+to get familiar with several concepts and changes to some 4C system files and programs
+as well as some new Global and System PCLs&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Any application that will use the PDFReport class will need to have it&amp;rsquo;s own sys.pdf_font and sys.pdf_dftype data files in the application directory. Default sys.pdf_font and sys.df_dftype data files are included in the skel.df isdump file in HOME_4C/lib. You can also just copy them from either HOME_4C/system or HOME_4C/demo if needed. You can and should modify the data in these files to match your needs. Here is a more detailed defintion of both sys.pdf_font and sys.pdf_dftype sys.pdf_font - This file species which fonts your application can use in PDFReports and the type of the font. font_name - An application defined font name that your application will use font_type - One of &amp;ldquo;Internal&amp;rdquo;, &amp;ldquo;TrueType&amp;rdquo;, &amp;ldquo;Type1&amp;rdquo; or &amp;ldquo;None&amp;rdquo; font_intname - If the font_type is internal, then it is one of the 14 internal name choices allowed. There will be a search option allowed when defining an Internal sys.pdf_font. If the font_type is TrueType you must specify a fullpath to the &amp;ldquo;ttf&amp;rdquo; font file in font_path[0]. If the font_type is Type1 you need to specify the fullpath to the &amp;ldquo;afm&amp;rdquo; font file in font_path[0] and the fullpath to the &amp;ldquo;pfb&amp;rdquo; file in font_path[1]. If the font_type is none then there is no font specified and it can be used in cases where the display field does not use a font such as an image display field. font_path - Used for TrueType and Type1 fonts. font_encoding - Either &amp;ldquo;Standard&amp;rdquo; or &amp;ldquo;UTF8&amp;rdquo; If you download and save TrueType or Type1 fonts you may want to save them in an application specific directory under HOME_4C/fonts. If you do then you can use the env var ${FC_FONTS}/&lt;code&gt;&amp;lt;dir&amp;gt;&lt;/code&gt;/&lt;code&gt;&amp;lt;fontfile&amp;gt;&lt;/code&gt; in the path names. sys.pdf_dftype - This file specifies defaults that the display field will use including font, ptsz, underline style, positioning within the display fields &amp;ldquo;rectangle&amp;rdquo; as well as fg/bg and border colors. pdft_dftype - An application defined name that is used to select the values for some properties of a PDFReport display field pdft_fontname - The Application sys.pdf_font.font_name to use as a default for this pdft_type pdft_fontptsz - The point size to use as a default for display fields using this pdft_type pdft_ulstyle - The underline style to use. This is one of &amp;ldquo;Text&amp;rdquo;, &amp;ldquo;Rect&amp;rdquo; or &amp;ldquo;None&amp;rdquo; Text - means that the text of display field will be underlined but the rest of the area occupied by the display field rectangle will not be underlined. Rect - The text of the display is underlined and the underline extends from the left of the &amp;ldquo;rectangle&amp;rdquo; used by the display all the way to the right of the display field &amp;ldquo;rectangle&amp;rdquo;. The left and right of the display field rectangle are defined as the left and right border area of the display field &amp;ldquo;rectangle&amp;rdquo;. None - No underlining is applied to the display field pdft_halign - How the text of a display field is horizontally aligned in the display field &amp;ldquo;rectangle&amp;rdquo;. This can be one of &amp;ldquo;Left&amp;rdquo;, &amp;ldquo;Right&amp;rdquo; or &amp;ldquo;Center&amp;rdquo; and works similarly to the way s_dftype.sdt_halign works pdft_valign - How the text of a display field is vertically aligned in the display field &amp;ldquo;rectangle&amp;rdquo;. This can be one of &amp;ldquo;Top&amp;rdquo;, &amp;ldquo;Center&amp;rdquo; or &amp;ldquo;Bottom&amp;rdquo; and works similarly to the way s_dftype.sdt_valign works pdft_fgrgb - R:G:B value for text in the display field pdft_bgrgb - R:G:B value for the background of the display field. pdft_borderrgb - R:G:B value for the border of the display field. pdft_desc - A short description of how the pdft_dftype is used or meant to be used.&lt;/li&gt;
+&lt;li&gt;Other 4cSys file and program changes include sys.program - The following fields were added to the sys.program file definition and are available for modification on the Program Characteristics screen for PDFReport class programs. sys.pr_papersize - The paper size to use for the PDFReport. This can be any of the std papersizes all PDF documents support. There is a drop down list that you can select from. Currently this can only be changed in the Program Characteristics and is not a run runtime changeable option. sys.pr_pdftmrgn sys.pr_pdfbmrgn sys.pr_pdflmrgn sys.pr_pdfrmrgn The default top, bottom, left and right margins in pts. sys.pr_pdfscale - A y/n flag to specify if the PDF should request the viewer to not scale the PDF. This may be useful in cases where you are printing on a pre printed form. sys.pr_linewidth - The line width in pts to use in line drawing. This defaults to .75 sys.pr_ulheight - The height in pts to use when drawing underlines. sys.pr_orient - The default orientation to use for the PDF dcoument. It can be either Landscape or Portrait and initially is set to Portrait. Currently, the PDF default values set in the Program Characteristics are not modifiable at run time but the sys.pdf_setoption() System PCL could easily allow some changes if needed. sys.dpy_field - Some of the following fields were added to sys.dpy_field and are modifiable in the Display Fields of a PDFReport class program. Others were already defined in sys.dpy_field but are also used in PDFReport programs. sys.df_pdfdftype - The sys.pdf_dftype.pdft_dftype to default the display field values from. All values defaulted from sys.pdf_dftype can be overriden in the display field options. Changing sys.df_pdfdftype will reset all the values defaulted to values from the newly specified sys.df_pdfdftype. Changing values in the sys.pdf_dftype file do not affect any currently defined display fields in and PDFReport class program. sys.df_fontname - In PDFReport programs this must a font_name defined in sys.pdf_font for the application sys.df_fontptsz - The pt size to use with the font for this display field. sys.df_halign - How to align the display field horizontally within it&amp;rsquo;s rectangle. sys.df_valign - How to align the display field vertically within it&amp;rsquo;s rectangle. sys.df_ulstyle - The style if any to use for underlining the display field. sys.df_fgrgb, sys.df_bgrgb and sys.df_borderrgb - The RGB values to use when displaying the dfld. sys.df_rectleft - This is a 4C float var that specified the leftmost start position to use for positioning the display field on the page. Col 0 is the first column of the printable page and columns are 12pts in width. sys.df_recttop - This is a 4C float var that specified the top most start position to use for positioning the display field on the page. Row 0 is the first row of the printable page and rows are 12pts in height. sys.df_rectwidth - The width to use for the display field rectangle. If not set then 4C will calculate it based on the text to display and the font used. sys.df_rectht - The height to use for the display field rectangle. If not set then 4C will calculate it based on the text to display and the font used. sys.df_lblpdft - The sys.pdf_dftype to use for setting defaults for any top/side label specified for the display field. sys.df_lblfont - The font_name to use for any top/side label. sys.df_lblptsz - The pt size to use for any top/side label sys.df_lblrgb - The FG RGB value to use for any top/side label sys.df_lblhalign - How to align the text of a Top label horizontally above the display field. sys.df_lblvalign - How to align the text of a Side label vertically to the left of the display field. sys.df_lblulflag - A flag to indicate if the Side/Top label should be underlined. From the Display Field screen of a PDFReport you can select a context menu option to &amp;ldquo;Test PDF&amp;rdquo; which will allow you to see how a single report will display on the page. You can change options on the &amp;ldquo;Test PDF&amp;rdquo; screen without modifying the original PDFReport program. sys.pdf_info - This file is used to retrieve information about the current PDFReport running and sometimes to set some options for the PDFReport. It is only ever used in momory and never created on disk.&lt;/li&gt;
+&lt;li&gt;The following Global PCLs can be used in PDFReport programs sys.pdf_drawgrid() - This will draw a grid on the current PDFReport page using the current PDF page settings. The 4cSys program for viewing one report of a PDFReport program allows you to specify whether to draw a grid or not. This should be helpful during development. sys.pdf_save(&lt;code&gt;&amp;lt;savetopath&amp;gt;&lt;/code&gt;) - Save the current PDFReport to the fullpath specified in savetopath. After saving the PDFReport can still be modified and have more pages added to it. sys.pdf_view() - Copy the current PDFReport to the client FC_SESSION directory and open call sys.cl_open() to open it in the client systems PDF viewer program. sys.pdfinfo_view() - Display info about the current PDFReport program. This may be useful in debugging.&lt;/li&gt;
+&lt;li&gt;The following System PCLs can be used in PDFReport programs sys.run_rpt sys.pdf_getinfo sys.pdf_getoption sys.pdf_setoption sys.pdf_drawline sys.pdf_drawrect sys.pdf_drawimage sys.pdf_addpage sys.pdf_setfont sys.pdf_textwrite sys.pdf_setdfrgb&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/docs/features/pdfreports/pdfrpt-examples/&#34;&gt;Next - PDFReport examples&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

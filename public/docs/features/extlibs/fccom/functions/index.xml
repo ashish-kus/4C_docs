@@ -1,0 +1,1122 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – Functions</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/</link><description>Recent content in Functions on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/index.xml" rel="self" type="application/rss+xml"/><item><title>Alloc()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Alloc()&lt;/code&gt; allocates and initializes one connection option&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;connident&amp;gt; = FCCom::Alloc([ &amp;lt;optname&amp;gt;,&amp;lt;optval&amp;gt; ]...);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;alpha &amp;lt;optname&amp;gt;&lt;/code&gt; — name of an option to set on this connection
+The &lt;code&gt;&amp;lt;optname&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;optval&amp;gt;&lt;/code&gt; pairs can be repeated up to 8 times.
+Specifying certain global options when calling FCCom::Alloc() is a
+convenience.
+Any option that can be set here can also be set using FCCom::SetOption()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;integer &amp;lt;connident&amp;gt;&lt;/code&gt; — The id to use when making library calls that need
+to identify this connection.
+This id will be &amp;gt;= 0 unless there is an error in the options passed.
+If there is an error, -1 is returned.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCComm::&lt;code&gt;Alloc()&lt;/code&gt; can be called from anywhere.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Alloc()&lt;/code&gt; allocates the data structures necessary in order to make HTTP requests. It returns an integer that is used as an id for other FCCom library calls. The application must call FCCom::Free(&lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;) or FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcjson/functions/freeall/"&gt;&lt;code&gt;FreeAll()&lt;/code&gt;&lt;/a&gt; when this connection is no longer needed in order to free the resources associated with this connection. Options that can be specified in the FCCom::&lt;code&gt;Alloc()&lt;/code&gt; call are:&lt;/p&gt;
+&lt;p&gt;Server - the dns name or ip address of the server this connection will be connection to&lt;/p&gt;
+&lt;p&gt;Port - The portnumber to use with this connection&lt;/p&gt;
+&lt;p&gt;UserName/UsrName - The username to use if the server requires Basic Authentication&lt;/p&gt;
+&lt;p&gt;Password/Passwd/Pwd - The password to use if the Server requires Basic Authentication.&lt;/p&gt;
+&lt;p&gt;UseSSL/SSL - Specify &amp;ldquo;Yes&amp;rdquo; or &amp;ldquo;True&amp;rdquo; to enable SSL. Any other value means do not use SSL&lt;/p&gt;
+&lt;p&gt;Keep-Alive - If this connection will be used for multiple requests over a short time interval, then setting this option to &amp;ldquo;True&amp;rdquo; may make it more responsive. This is just a hint that the server you are connecting to can decide to use or ignore.&lt;/p&gt;
+&lt;p&gt;Any other option set here is assumed to be a global header and you are responsible for knowing what it does and why you are using it. FCCom can not do any error checking.&lt;/p&gt;
+&lt;p&gt;Global headers are sent with every http request to the server.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Close()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/close/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/close/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Close()&lt;/code&gt; closes a connection to a server.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ret = FCCom::Close(&amp;lt;connident&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;integer &amp;lt;connident&amp;gt;&lt;/code&gt; — The ident returned by an earlier
+call to FCCom:Alloc().&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt; — OK&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-1&lt;/code&gt; — Error - no such connection id.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Close()&lt;/code&gt; can be called anytime after a connection has been allocated.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Close()&lt;/code&gt; closes a connection to a server. Calling FCCom::&lt;code&gt;Close()&lt;/code&gt; is equivalent to calling FCCom:&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/disconnect/"&gt;&lt;code&gt;Disconnect()&lt;/code&gt;&lt;/a&gt;. If the connection is not open, this call has no effect. The &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;, as long as it is valid, can be used to connect to a different server. Closing a connection does not reset any connection options, global headers, or cookies. If you need these reset, you will need to reset them individually or use a different connection.&lt;/p&gt;
+&lt;p&gt;If you are planning on freeing the connection right after close you do not need to call FCCom::&lt;code&gt;Close()&lt;/code&gt; or FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/disconnect/"&gt;&lt;code&gt;Disconnect()&lt;/code&gt;&lt;/a&gt; since FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcjson/functions/free/"&gt;&lt;code&gt;Free()&lt;/code&gt;&lt;/a&gt; will close any open connection first.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Connect()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/connect/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/connect/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Connect()&lt;/code&gt; establishes a connection to the server associated with &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ret = FCCom::Connect(&amp;lt;connident&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;integer &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; - The connection identifier returned by an earlier call to FCComm::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt; — OK&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-1&lt;/code&gt; — Error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom:&lt;code&gt;Connect()&lt;/code&gt; can be called anytime after a connection has been allocated and initialized with the correct connection options.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Connect()&lt;/code&gt; establishes a connection to the server associated with &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;. If no Port number has been explicitly set, then FCCom will default to using port 80 for non SSL connections and port 443 for SSL connections. FCCom::&lt;code&gt;Connect()&lt;/code&gt; is equivalent to FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/open/"&gt;&lt;code&gt;Open()&lt;/code&gt;&lt;/a&gt;. It is not necessary to call FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/open/"&gt;&lt;code&gt;Open()&lt;/code&gt;&lt;/a&gt; or FCCom::&lt;code&gt;Connect()&lt;/code&gt; before issuing an FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/"&gt;&lt;code&gt;HttpRequest()&lt;/code&gt;&lt;/a&gt; because FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/"&gt;&lt;code&gt;HttpRequest()&lt;/code&gt;&lt;/a&gt; will first open the connection if it is not currently open. Calling either FCCom::&lt;code&gt;Connect()&lt;/code&gt; or FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/open/"&gt;&lt;code&gt;Open()&lt;/code&gt;&lt;/a&gt; first may help with debugging.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Count()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/count/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/count/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Count()&lt;/code&gt; returns the total number of currently allocated connections for the 4csrvr process.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;FCCom::Count();&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;None&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;integer&lt;/code&gt; — count of currently allocated connections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Count()&lt;/code&gt; can be called from anywhere.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCComm::&lt;code&gt;Count()&lt;/code&gt; returns the count of currently allocated connections.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Disconnect()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/disconnect/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/disconnect/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Disconnect()&lt;/code&gt; closes a connection to a server.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ret = FCCom::Disconnect(&amp;lt;connident&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;integer &amp;lt;connident&amp;gt;&lt;/code&gt; — The ident returned by an earlier
+call to FCCom:Alloc().&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt; — OK&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-1&lt;/code&gt; — Error - no such connection id.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Disconnect()&lt;/code&gt; can be called anytime after a connection has been allocated.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Disconnect()&lt;/code&gt; closes a connection to a server. Calling FCCom::&lt;code&gt;Disconnect()&lt;/code&gt; is equivalent to calling FCCom:&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/close/"&gt;&lt;code&gt;Close()&lt;/code&gt;&lt;/a&gt;. If the connection is not open, this call has no effect. The &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;, as long as it is valid, can be used to connect to a different server. Closing a connection does not reset any connection options, global headers, or cookies. If you need these reset, you will need to reset them individually or use a different connection. server.&lt;/p&gt;
+&lt;p&gt;If you are planning on freeing the connection right after close you do not need to call FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/close/"&gt;&lt;code&gt;Close()&lt;/code&gt;&lt;/a&gt; or FCCom::&lt;code&gt;Disconnect()&lt;/code&gt; since FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcjson/functions/free/"&gt;&lt;code&gt;Free()&lt;/code&gt;&lt;/a&gt; will close any open connection first.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Free()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/free/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/free/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Free()&lt;/code&gt; frees the resources associated with one connection.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ret = FCCom::Free(&amp;lt;connident&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;integer &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; - A valid connection id returned by an earlier FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt; call.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;0 on success, -1 if &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; is invalid.&lt;/p&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Free()&lt;/code&gt; can be called from anywhere as long as you have a valid &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Free()&lt;/code&gt; frees the resources associated with one connection. Once freed, the &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; cannot be used in calls to the FCCom library. If the connection is still open when FCCom::&lt;code&gt;Free()&lt;/code&gt; is called, it will be closed first.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>FreeAll()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/freeall/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/freeall/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;FreeAll()&lt;/code&gt; frees all currently allocated FCCom connections.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;count = FCCom::FreeAll();&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;None&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;integer &amp;lt;count&amp;gt;&lt;/code&gt; — The actual number of connections freed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;freeall()&lt;/code&gt; can be called from anywhere.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;FreeAll()&lt;/code&gt; frees all currently allocated FCCom connections. This may be easier than calling FCCom::Free(&lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;) on each connection separately but should only be used when you know that no other 4C program being run by the current 4csrvr process is using any FCCom connections. After calling FCCom:&lt;code&gt;FreeAll()&lt;/code&gt; no FCCom function that needs a &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; can be called until a new FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt; call has returned a valid &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>GetOption()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/getoption/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/getoption/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;GetOption()&lt;/code&gt; returns the value associated with a known server option.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;optval&amp;gt; = FCCom::GetOption(&amp;lt;connident&amp;gt;,&amp;lt;optname&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;integer &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; - A connection id returned by an earlier call to FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;alpha &lt;code&gt;&amp;lt;optname&amp;gt;&lt;/code&gt; - A valid option name.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt; — Error, invalid &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; or invalid &lt;code&gt;&amp;lt;optname&amp;gt;&lt;/code&gt;.
+The value for the option as an alpha.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;GetOption()&lt;/code&gt; can be called anytime you have a valid connection id.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;GetOption()&lt;/code&gt; returns the value associated with a known server option. The known server options are:&lt;/p&gt;
+&lt;p&gt;Server - The server name or ip address set by either FCCom:&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt; or FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setoption/"&gt;&lt;code&gt;SetOption()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Port - The Port Number set by either FCCom:&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt; or FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setoption/"&gt;&lt;code&gt;SetOption()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;UserName - The UserName set by either FCCom:&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt; of FCCom:&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setoption/"&gt;&lt;code&gt;SetOption()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Password - The Password set by either FCCom:&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt; of FCCom:&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setoption/"&gt;&lt;code&gt;SetOption()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;UseSSL - &amp;ldquo;True&amp;rdquo; if SSL has been enabled, &amp;ldquo;False&amp;rdquo; otherwise.&lt;/p&gt;
+&lt;p&gt;Keep-Alive - &amp;ldquo;True&amp;rdquo; if the Keep-Alive option has been enabled and the server has not disallowed it. &amp;ldquo;False&amp;rdquo; otherwise.&lt;/p&gt;
+&lt;p&gt;Connected - &amp;ldquo;True&amp;rdquo; if the connection is currently open.&lt;/p&gt;
+&lt;p&gt;StatusMessage - The status message returned by the most recent FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/"&gt;&lt;code&gt;HttpRequest()&lt;/code&gt;&lt;/a&gt; call using the same &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;. Some possible returns are&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;HTTP/1.1 200 OK&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;HTTP/1.1 400 Bad request&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;etc.&lt;/p&gt;
+&lt;p&gt;Status - The code returned by the most recent FCCom::&lt;code&gt;Httprequest()&lt;/code&gt; using the same &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Content-Length - The content length of the response from the most recent FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/"&gt;&lt;code&gt;HttpRequest()&lt;/code&gt;&lt;/a&gt; using the same &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Content-Type - The content type of the response from the most recent FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/"&gt;&lt;code&gt;HttpRequest()&lt;/code&gt;&lt;/a&gt; using the same &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;See Also&lt;/p&gt;
+&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>GetResponseHeader()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/getresponseheader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/getresponseheader/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;GetResponseHeader()&lt;/code&gt; returns the value of a response header&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;FCCom::GetResponseHeader(&amp;lt;connident&amp;gt;,&amp;lt;hdrname&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;integer &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; - A connection id returned by an earlier call to FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;alpha &lt;code&gt;&amp;lt;hdrname&amp;gt;&lt;/code&gt; - A valid hdrname name.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt; — Error, invalid &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; or invalid &lt;code&gt;&amp;lt;optname&amp;gt;&lt;/code&gt;
+The value of the response header as an alpha&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;fnname()&lt;/code&gt; can be called anytime you have a a valid connection id and have made at least one request on the connection.&lt;/p&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;GetResponseHeader()&lt;/code&gt; returns the value of a specific header from the mosty recent request on the connection. This can be useful when a site returns session ids or tokens in a response header that need to be used in future requests on the connection.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;See Also&lt;/p&gt;
+&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>HttpRequest()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;HttpRequest()&lt;/code&gt; sends an http request to a server and gets the response from the server.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ret = FCCom::HttpRequest(&amp;lt;connident&amp;gt;,&amp;lt;reqtype&amp;gt;,&amp;lt;resource&amp;gt; [, &amp;lt;optname&amp;gt;, &amp;lt;optval&amp;gt;]...);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;integer &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; - A connection id returned by an earlier call to FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;alpha &lt;code&gt;&amp;lt;reqtype&amp;gt;&lt;/code&gt; - The request type. Must be a valid HTTP request type such as &amp;ldquo;GET&amp;rdquo;, &amp;ldquo;POST&amp;rdquo;, &amp;ldquo;PUT&amp;rdquo;, etc.&lt;/p&gt;
+&lt;p&gt;alpha &lt;code&gt;&amp;lt;resource&amp;gt;&lt;/code&gt; - The full path on the server to the resource including any queryargs.&lt;/p&gt;
+&lt;p&gt;alpha &lt;code&gt;&amp;lt;optname&amp;gt;&lt;/code&gt; - An option needed by this request.&lt;/p&gt;
+&lt;p&gt;alpha &lt;code&gt;&amp;lt;optval&amp;gt;&lt;/code&gt; - The value to use for the preceding &lt;code&gt;&amp;lt;optname&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt; — Request completed OK.
+Caller needs to check &amp;ldquo;StatusCode&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1&lt;/code&gt; — Request completed, but reply content was truncated in the receiving 4C
+var.
+Posssibly other warning messages in the future.
+So application should call sys.get_extfno[pt(&amp;ldquo;FCCom&amp;rdquo;,&amp;ldquo;LastError&amp;rdquo;) and
+sys.get_extfno[pt(&amp;ldquo;FCCom&amp;rdquo;,&amp;ldquo;LastMessage&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-1&lt;/code&gt; — There was an error.
+Caller should check &amp;ldquo;LastError&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;HttpRequest()&lt;/code&gt; can be called anytime there is a valid &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;HttpRequest()&lt;/code&gt; sends an http request to a server and gets the response from the server. The &lt;code&gt;&amp;lt;optname&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;optval&amp;gt;&lt;/code&gt; pairs that can be passed to this function and are only valid for this single request are:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;request-content&amp;rdquo;, &lt;code&gt;&amp;lt;reqcontentvar&amp;gt;&lt;/code&gt; - The request content is in the 4C var &lt;code&gt;&amp;lt;reqcontentvar&amp;gt;&lt;/code&gt;. The content will be sent as the body of the request.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;request-content-fn&amp;rdquo;, &lt;code&gt;&amp;lt;reqcontentfn&amp;gt;&lt;/code&gt; - &lt;code&gt;&amp;lt;reqcontentfn&amp;gt;&lt;/code&gt; is the full path to a file with the content that should be sent as the body of the request.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;request-content-type&amp;rdquo;, &lt;code&gt;&amp;lt;reqcontenttype&amp;gt;&lt;/code&gt; - &lt;code&gt;&amp;lt;reqcontenttype&amp;gt;&lt;/code&gt; tells the server the content type of the request content. This information is passed as a request header.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;reply-content&amp;rdquo;, &lt;code&gt;&amp;lt;replycontentvar&amp;gt;&lt;/code&gt; - &lt;code&gt;&amp;lt;replycontentvar&amp;gt;&lt;/code&gt; is a 4C alpha variable that will receive as much of the returned content as possible.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;reply-content-fn&amp;rdquo;, &lt;code&gt;&amp;lt;replycontentfn&amp;gt;&lt;/code&gt; - The full path to a file on the 4csrvr which may or may not exist and will be created/truncated and written with the content returned by the reply.&lt;/p&gt;
+&lt;p&gt;Any other &lt;code&gt;&amp;lt;optname&amp;gt;&lt;/code&gt; specified is an error.&lt;/p&gt;
+&lt;p&gt;It is valid to specify both &lt;code&gt;&amp;lt;reply-content&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;reply-content-fn&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If the connection is not currently open, FCCom::&lt;code&gt;HttpRequest()&lt;/code&gt; will first connect to the server before sending the request.&lt;/p&gt;
+&lt;p&gt;If the server responds, the FCCom library will read all response headers and process the ones it needs to including saving cookies that will be sent with the next request that uses the same &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Open()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/open/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/open/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Open()&lt;/code&gt; establishes a connection to the server associated with &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ret = FCCom::Open(&amp;lt;connident&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;integer &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; - The connection identifier returned by an earlier call to FCComm::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt; — OK&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-1&lt;/code&gt; — Error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom:&lt;code&gt;Open()&lt;/code&gt; can be called anytime after a connection has been allocated and initialized with the correct connection options.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;Open()&lt;/code&gt; establishes a connection to the server associated with &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;. If no Port number has been explicitly set, then FCCom will default to using port 80 for non SSL connections and port 443 for SSL connections. FCCom::&lt;code&gt;Open()&lt;/code&gt; is equivalent to FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/connect/"&gt;&lt;code&gt;Connect()&lt;/code&gt;&lt;/a&gt;. It is not necessary to call FCCom::&lt;code&gt;Open()&lt;/code&gt; or FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/connect/"&gt;&lt;code&gt;Connect()&lt;/code&gt;&lt;/a&gt; before issuing an FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/"&gt;&lt;code&gt;HttpRequest()&lt;/code&gt;&lt;/a&gt; because FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/"&gt;&lt;code&gt;HttpRequest()&lt;/code&gt;&lt;/a&gt; will first open the connection if it is not currently open. Calling either FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/connect/"&gt;&lt;code&gt;Connect()&lt;/code&gt;&lt;/a&gt; or FCCom::&lt;code&gt;Open()&lt;/code&gt; first may help with debugging.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>ParseResponseFile()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/parseresponsefile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/parseresponsefile/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;ParseResponseFile()&lt;/code&gt; treats a file as if it is the response to an http request, saving status codes, response headers, and content.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rc = FCCom::fnname(&amp;lt;connident&amp;gt;,&amp;lt;filename&amp;gt;[,&amp;lt;opt1name&amp;gt;,&amp;lt;opt1val&amp;gt;][,&amp;lt;opt2name&amp;gt;,&amp;lt;opt2val&amp;gt;]);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;integer &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; -
+A connection id returned by an earlier call to FCCom::Alloc()
+alpha &lt;code&gt;&amp;lt;filename&amp;gt;&lt;/code&gt; -
+The name of the file to parse&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;alpha &amp;lt;opt1name&amp;gt;&lt;/code&gt; — an optional option name, currently the only supported options are
+&amp;ldquo;reply-content&amp;rdquo; and &amp;ldquo;reply-content-fn&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alpha &amp;lt;opt1val&amp;gt;&lt;/code&gt; — The value for &lt;code&gt;&amp;lt;opt1name&amp;gt;&lt;/code&gt; if &lt;code&gt;&amp;lt;opt1name&amp;gt;&lt;/code&gt; was specified&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alpha &amp;lt;opt2name&amp;gt;&lt;/code&gt; — an optional option name, currently the only supported options are
+&amp;ldquo;reply-content&amp;rdquo; and &amp;ldquo;reply-content-fn&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alpha &amp;lt;opt2val&amp;gt;&lt;/code&gt; — The value for &lt;code&gt;&amp;lt;opt2name&amp;gt;&lt;/code&gt; if &lt;code&gt;&amp;lt;opt2name&amp;gt;&lt;/code&gt; was specified&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt; — File parsed OK&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-1&lt;/code&gt; — Some error, bad ident, file does not exist, other error.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;fnname()&lt;/code&gt; can be called from anywhere.&lt;/p&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fcjson/functions/parsefile/"&gt;&lt;code&gt;ParseFile()&lt;/code&gt;&lt;/a&gt; is a function that can be used as a debugging aid.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;See Also&lt;/p&gt;
+&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>SetGlobalHeader()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setglobalheader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setglobalheader/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;SetGlobalHeader()&lt;/code&gt; sets the value for a global request header.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ret = FCCom::SetGlobalHeader(&amp;lt;connident&amp;gt;,&amp;lt;headername&amp;gt;,&amp;lt;headerval&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;integer &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; - The connection id returned by an earlier call to FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt; — OK&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-1&lt;/code&gt; — Invalid &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;SetGlobalHeader()&lt;/code&gt; can be called anytime that you have a valid connection id to use.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;SetGlobalHeader()&lt;/code&gt; sets the value for a global request header. Setting the value of global header to &amp;quot;&amp;quot; removes it from the list of global headers sent with every request.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>SetOption()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setoption/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setoption/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;SetOption()&lt;/code&gt; sets a connection option or a global header for the connection.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ret = FCCom::SetOption(&amp;lt;connident&amp;gt;,&amp;lt;optname&amp;gt;,&amp;lt;optval&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;integer &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; - An ident returned by an earlier call to FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;alpha &lt;code&gt;&amp;lt;optname&amp;gt;&lt;/code&gt; - Name of the option to set.&lt;/p&gt;
+&lt;p&gt;alpha &lt;code&gt;&amp;lt;optval&amp;gt;&lt;/code&gt; - Value to set the option to.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt; — OK&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-1&lt;/code&gt; — Error - invalid ident.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;SetOption()&lt;/code&gt; can be called anytime you have a valid &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;SetOption()&lt;/code&gt; sets a connection option or a global header for the connection. Options that you can set are:&lt;/p&gt;
+&lt;p&gt;Server - the dns name or ip address of the server this connection will be connection to&lt;/p&gt;
+&lt;p&gt;Port - The portnumber to use with this connection&lt;/p&gt;
+&lt;p&gt;UserName/UsrName - The username to use if the server requires Basic Authentication&lt;/p&gt;
+&lt;p&gt;Password/Passwd/Pwd - The password to use if the Server requires Basic Authentication.&lt;/p&gt;
+&lt;p&gt;UseSSL/SSL - Specify &amp;ldquo;Yes&amp;rdquo; or &amp;ldquo;True&amp;rdquo; to enable SSL. Any other value means do not use SSL&lt;/p&gt;
+&lt;p&gt;Keep-Alive - If this connection will be used for multiple requests over a short time interval, then setting this option to &amp;ldquo;True&amp;rdquo; may make it more responsive. This is just a hint that the server you are connecting to can decide to use or ignore.&lt;/p&gt;
+&lt;p&gt;Any other option set here is assumed to be a global header and you are responsible for knowing what it does and why you are using it. FCCom can not do any error checking.&lt;/p&gt;
+&lt;p&gt;Global headers are sent with every http request to the server.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>SetReqHeader()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setreqheader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/setreqheader/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;SetReqHeader()&lt;/code&gt; sets a headername/headerval combination that will be sent with the next FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/"&gt;&lt;code&gt;HttpRequest()&lt;/code&gt;&lt;/a&gt; call.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ret = FCCom::SetReqHeader(&amp;lt;connident&amp;gt;,&amp;lt;headername&amp;gt;,&amp;lt;headerval&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;integer &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt; - A connection id returned by an earlier call to FCCom:&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/alloc/"&gt;&lt;code&gt;Alloc()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt; — OK&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-1&lt;/code&gt; — Invalid &lt;code&gt;&amp;lt;connident&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;SetReqHeader()&lt;/code&gt; can be called anytime you have a valid connection id.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;SetReqHeader()&lt;/code&gt; sets a headername/headerval combination that will be sent with the next FCCom::&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/httprequest/"&gt;&lt;code&gt;HttpRequest()&lt;/code&gt;&lt;/a&gt; call. If &lt;code&gt;&amp;lt;headerval&amp;gt;&lt;/code&gt; is &amp;quot;&amp;quot; then the single request header is removed from the list of headers that will be sent with the next FCCom::Httprequest.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>URLDecode()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/urldecode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/urldecode/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;URLDecode()&lt;/code&gt; converts a string, replacing the percent encoded characters with normal ascii characters.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;avalret = FCCom::URLDecode(&amp;lt;aval&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;alpha &lt;code&gt;&amp;lt;aval&amp;gt;&lt;/code&gt; - The value to decode.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;alpha &lt;code&gt;&amp;lt;avalret&amp;gt;&lt;/code&gt; - The decoded alpha value.&lt;/p&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;URLDecode()&lt;/code&gt; can be called from anywhere.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;URLDecode()&lt;/code&gt; converts a string, replacing the percent encoded characters with normal ascii characters. Any character with percent encoding, upper or lower case, will be converted back to it&amp;rsquo;s ascii equivalent.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;See Also&lt;/p&gt;
+&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>URLEncode()</title><link>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/urlencode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/urlencode/</guid><description>
+&lt;h2&gt;Purpose&lt;span class="hx:absolute hx:-mt-20" id="purpose"&gt;&lt;/span&gt;
+&lt;a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;URLEncode()&lt;/code&gt; converts an ascii string, replacing special characters with the percent encoding specified by the HTTP specification.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;span class="hx:absolute hx:-mt-20" id="usage"&gt;&lt;/span&gt;
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;avalret = FCCom::URLEncode(&amp;lt;aval&amp;gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Arguments&lt;span class="hx:absolute hx:-mt-20" id="arguments"&gt;&lt;/span&gt;
+&lt;a href="#arguments" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;alpha &lt;code&gt;&amp;lt;aval&amp;gt;&lt;/code&gt; - The value to encode.&lt;/p&gt;
+&lt;h2&gt;Returns&lt;span class="hx:absolute hx:-mt-20" id="returns"&gt;&lt;/span&gt;
+&lt;a href="#returns" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;alpha &lt;code&gt;&amp;lt;avalret&amp;gt;&lt;/code&gt; - The url encoded alpha.&lt;/p&gt;
+&lt;h2&gt;Where Used&lt;span class="hx:absolute hx:-mt-20" id="where-used"&gt;&lt;/span&gt;
+&lt;a href="#where-used" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;URLEncode()&lt;/code&gt; can be called from anywhere.&lt;/p&gt;
+&lt;h2&gt;Example&lt;span class="hx:absolute hx:-mt-20" id="example"&gt;&lt;/span&gt;
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Description&lt;span class="hx:absolute hx:-mt-20" id="description"&gt;&lt;/span&gt;
+&lt;a href="#description" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;FCCom::&lt;code&gt;URLEncode()&lt;/code&gt; converts an ascii string, replacing special characters with the percent encoding specified by the HTTP specification. The characters in &lt;code&gt;&amp;lt;aval&amp;gt;&lt;/code&gt; that do not need to be converted are any alphanumeric character and the characters &amp;lsquo;-&amp;rsquo;, &amp;lsquo;_&amp;rsquo;, &amp;lsquo;.&amp;rsquo;, and &amp;lsquo;~&amp;rsquo;. Any other character gets converted to it&amp;rsquo;s %HEX value using uppercase letters. Some libraries will encode to lowercase %hexvalue and will also encode more characters than that required by the HTTP Specification.&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also"&gt;&lt;/span&gt;
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;See Also&lt;/p&gt;
+&lt;p&gt;FCCom Function List&lt;/p&gt;
+&lt;p&gt;Back to Top&lt;/p&gt;
+&lt;h2&gt;See Also&lt;span class="hx:absolute hx:-mt-20" id="see-also-1"&gt;&lt;/span&gt;
+&lt;a href="#see-also-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
