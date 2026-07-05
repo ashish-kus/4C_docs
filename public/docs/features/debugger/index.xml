@@ -1,7 +1,43 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C Debugger</title><link>https://127.0.0.1:8080/docs/features/debugger/</link><description>Recent content in 4C Debugger on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://127.0.0.1:8080/docs/features/debugger/index.xml" rel="self" type="application/rss+xml"/><item><title>4C Debugger Change Log</title><link>https://127.0.0.1:8080/docs/features/debugger/changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/debugger/changes/</guid><description>
-&lt;h2&gt;17 October 2004&lt;span class="hx:absolute hx:-mt-20" id="17-october-2004"&gt;&lt;/span&gt;
-&lt;a href="#17-october-2004" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>4C Debugger - Intro</title><link>https://127.0.0.1:8080/docs/features/debugger/dbgintro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/debugger/dbgintro/</guid><description>
-&lt;p&gt;The 4C debugger allows you to debug any and all
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C Debugger</title>
+    <link>https://github.com/ashish-kus/4C_docs/docs/features/debugger/</link>
+    <description>Recent content in 4C Debugger on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/debugger/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C Debugger Change Log</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/debugger/changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/debugger/changes/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;17 October 2004&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;17-october-2004&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#17-october-2004&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>4C Debugger - Intro</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/debugger/dbgintro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/debugger/dbgintro/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The 4C debugger allows you to debug any and all
 4C programs that you are running or will be running.
 It is not necessary to do anything special to enable
 debugging.
@@ -15,8 +51,8 @@ Some of the things the debugger allows you to do are:&lt;/p&gt;
 &lt;li&gt;Kill running 4C programs&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Debugger - Running&lt;span class="hx:absolute hx:-mt-20" id="4c-debugger---running"&gt;&lt;/span&gt;
-&lt;a href="#4c-debugger---running" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to start the debugger, bring up the 4C session control dialog
+&lt;h2&gt;4C Debugger - Running&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---running&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---running&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to start the debugger, bring up the 4C session control dialog
 and and click on &lt;code&gt;&amp;lt;Debug&amp;gt;&lt;/code&gt;.
 You will be at the &amp;ldquo;Trace/Vars&amp;rdquo; tab of the debugger.
 Here you see a list of currently running 4C programs.
@@ -39,8 +75,8 @@ A shortcut key is defined for continue in all of the 4C debugger
 programs, so a quicker way to continue executing your program is
 to just press &amp;lsquo;c&amp;rsquo;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Debugger - Break Points&lt;span class="hx:absolute hx:-mt-20" id="4c-debugger---break-points"&gt;&lt;/span&gt;
-&lt;a href="#4c-debugger---break-points" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A break point is a condition that you specify that causes 4C
+&lt;h2&gt;4C Debugger - Break Points&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---break-points&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---break-points&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A break point is a condition that you specify that causes 4C
 to interrupt a running 4C program.
 4C break points fall into the following categories:&lt;/p&gt;
 &lt;ul&gt;
@@ -75,8 +111,8 @@ points for any of the currently running programs is:&lt;/p&gt;
 &lt;p&gt;This same method of toggling PCL line break points
 can be used in the &amp;ldquo;CurPCL&amp;rdquo; tab.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Debugger - Trace/Vars&lt;span class="hx:absolute hx:-mt-20" id="4c-debugger---tracevars"&gt;&lt;/span&gt;
-&lt;a href="#4c-debugger---tracevars" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &amp;ldquo;Trace/Vars&amp;rdquo; tab displays a list of currently running
+&lt;h2&gt;4C Debugger - Trace/Vars&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---tracevars&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---tracevars&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &amp;ldquo;Trace/Vars&amp;rdquo; tab displays a list of currently running
 programs.
 From here you can:&lt;/p&gt;
 &lt;ul&gt;
@@ -90,8 +126,8 @@ running your 4C programs by pressing &amp;lsquo;c&amp;rsquo;.
 You can return to the previous debugger program
 by pressing &lt;code&gt;&amp;lt;cancel&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;accept&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Debugger - Current PCL&lt;span class="hx:absolute hx:-mt-20" id="4c-debugger---current-pcl"&gt;&lt;/span&gt;
-&lt;a href="#4c-debugger---current-pcl" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &amp;ldquo;CurPCL&amp;rdquo; tab can be displayed only if the current program
+&lt;h2&gt;4C Debugger - Current PCL&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---current-pcl&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---current-pcl&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &amp;ldquo;CurPCL&amp;rdquo; tab can be displayed only if the current program
 is executing a PCL.
 If it is then the source for that PCL is displayed.
 The current line is always marked with a &amp;ldquo;==&amp;gt;&amp;rdquo;.
@@ -107,8 +143,8 @@ Inside the &amp;ldquo;CurPCL&amp;rdquo; tab, you can:&lt;/p&gt;
 &lt;li&gt;Continue your 4C program by pressing &amp;lsquo;c&amp;rsquo;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Debugger - Watch Points&lt;span class="hx:absolute hx:-mt-20" id="4c-debugger---watch-points"&gt;&lt;/span&gt;
-&lt;a href="#4c-debugger---watch-points" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A watch point is just a specific file variable that displays
+&lt;h2&gt;4C Debugger - Watch Points&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---watch-points&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---watch-points&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A watch point is just a specific file variable that displays
 in the &amp;ldquo;Watches&amp;rdquo; tab of the debugger.
 Watchpoints also display in the &amp;ldquo;CurPCL&amp;rdquo; tab along with any
 local PCL vars.&lt;/p&gt;
@@ -117,8 +153,8 @@ current value of a file var.&lt;/p&gt;
 &lt;p&gt;Just press &lt;code&gt;&amp;lt;modify&amp;gt;&lt;/code&gt; in order to change the value
 of any file var being &amp;ldquo;Watched&amp;rdquo;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Debugger - Args&lt;span class="hx:absolute hx:-mt-20" id="4c-debugger---args"&gt;&lt;/span&gt;
-&lt;a href="#4c-debugger---args" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &amp;ldquo;Args&amp;rdquo; tab of the debugger lets you see the
+&lt;h2&gt;4C Debugger - Args&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---args&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---args&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &amp;ldquo;Args&amp;rdquo; tab of the debugger lets you see the
 arguments passed in and the return value of either
 an application PCL or a system PCL.
 The return value is displayed only when the break point
@@ -126,10 +162,16 @@ is at PCL End or SysPCL end.&lt;/p&gt;
 &lt;p&gt;Pressing &lt;code&gt;&amp;lt;return&amp;gt;&lt;/code&gt; or &amp;ldquo;c&amp;rdquo; from the &amp;ldquo;Args&amp;rdquo; tab
 will continue executing your program.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Debugger - Misc Notes&lt;span class="hx:absolute hx:-mt-20" id="4c-debugger---misc-notes"&gt;&lt;/span&gt;
-&lt;a href="#4c-debugger---misc-notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;h2&gt;4C Debugger - Misc Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-debugger---misc-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4c-debugger---misc-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;You cannot connect the debugger to another users 4C session.&lt;/li&gt;
 &lt;li&gt;Currently, break points and watch points are only saved during the current 4C session.&lt;/li&gt;
 &lt;li&gt;Stepping through code that looks at $wexit_code can be unpredictable since the dbg programs themselves may change $wexit_code.&lt;/li&gt;
 &lt;li&gt;It is possible to confuse 4C by alt-tabbing between the 4C debugger programs and your application programs.&lt;/li&gt;
-&lt;/ol&gt;</description></item></channel></rss>
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

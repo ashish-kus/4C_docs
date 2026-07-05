@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------
 # CORE SITE SETTINGS
 # ----------------------------------------------------------------------------
-baseURL: "https://github.com/ashish-kus/4C_docs/blob"
+baseURL: "https://github.com/ashish-kus/4C_docs/"
 title: "4C Language Docs" # <-- your site / language name
 local: "en-us"
 
@@ -125,7 +125,7 @@ params:
     logo:
       path: images/logo.svg # file lives in static/images/
       dark: images/logo-dark.svg # optional dark-mode variant
-      link: / # where clicking the logo goes
+      link: /4C_docs/ # where clicking the logo goes
       # width: 40                     # px; uncomment to force dimensions
       # height: 20
     width: wide # navbar width: full | wide | normal

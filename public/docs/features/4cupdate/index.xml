@@ -1,5 +1,29 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4CUpdate Home</title><link>https://127.0.0.1:8080/docs/features/4cupdate/</link><description>Recent content in 4CUpdate Home on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://127.0.0.1:8080/docs/features/4cupdate/index.xml" rel="self" type="application/rss+xml"/><item><title>4CUpdate - Overview</title><link>https://127.0.0.1:8080/docs/features/4cupdate/4cupdate/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/4cupdate/4cupdate/</guid><description>
-&lt;p&gt;4CUpdate is a win32 program that runs as a win32 service.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4CUpdate Home</title>
+    <link>https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/</link>
+    <description>Recent content in 4CUpdate Home on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4CUpdate - Overview</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/4cupdate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/4cupdate/</guid>
+      <description>
+        
+        
+        &lt;p&gt;4CUpdate is a win32 program that runs as a win32 service.
 It allows a single client PC to get 4cclient updates automatically.
 The updates come from a server of your choice.
 It consists of 2 executable files:&lt;/p&gt;
@@ -8,13 +32,13 @@ It consists of 2 executable files:&lt;/p&gt;
 &lt;li&gt;4cupdcnf - the program used to configure 4CUpdate.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4CUpdate - Installation&lt;span class="hx:absolute hx:-mt-20" id="4cupdate---installation"&gt;&lt;/span&gt;
-&lt;a href="#4cupdate---installation" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4CUpdate must be installed from an administrator account.
+&lt;h2&gt;4CUpdate - Installation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4cupdate---installation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4cupdate---installation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4CUpdate must be installed from an administrator account.
 After the first installation, use 4cupdcnf to configure and install
 the 4CUpdate Service.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4CUpdate - Client Configuration&lt;span class="hx:absolute hx:-mt-20" id="4cupdate---client-configuration"&gt;&lt;/span&gt;
-&lt;a href="#4cupdate---client-configuration" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;From the Connection tab specify the following information:&lt;/p&gt;
+&lt;h2&gt;4CUpdate - Client Configuration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4cupdate---client-configuration&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4cupdate---client-configuration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;From the Connection tab specify the following information:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Protocol - One of http, 4cfs, or LocalShare.&lt;/li&gt;
 &lt;li&gt;Server - The server string will be dependant on the protocol used. http - Server is the well known domain name where the client update script is. 4cfs - Server is a standard 4c connection string similar to: Machine=4chelp.com,Port=1412,Type=TCP,App=4cSys LocalShare - Server is not used and should not be specified.&lt;/li&gt;
@@ -49,8 +73,8 @@ those changes by clicking Save Config.&lt;/p&gt;
 &lt;li&gt;View Log - View 4CUpdate log information, including results of last Test.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4CUpdate - Client Issues&lt;span class="hx:absolute hx:-mt-20" id="4cupdate---client-issues"&gt;&lt;/span&gt;
-&lt;a href="#4cupdate---client-issues" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Since the main idea behind running 4CUpdate on a client PC is to avoid
+&lt;h2&gt;4CUpdate - Client Issues&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4cupdate---client-issues&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4cupdate---client-issues&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Since the main idea behind running 4CUpdate on a client PC is to avoid
 needing support staff to walk around to PCs and install 4c clients,
 it is probably best to get the configuration right the first time.
 If not, then support staff will be walking around reconfiguring 4CUpdate.
@@ -66,8 +90,8 @@ So, some of the things you should keep in mind are:&lt;/p&gt;
 &lt;li&gt;Not all client PCs are permanently connected to a network. Some may connect to a pay network and incur extra costs for downloading updates.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4CUpdate - Staging Updates&lt;span class="hx:absolute hx:-mt-20" id="4cupdate---staging-updates"&gt;&lt;/span&gt;
-&lt;a href="#4cupdate---staging-updates" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C client updates are made available to client machines running 4CUpdate
+&lt;h2&gt;4CUpdate - Staging Updates&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4cupdate---staging-updates&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4cupdate---staging-updates&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C client updates are made available to client machines running 4CUpdate
 when the client install files are copied from 4csoftware.com to your
 staging server and you create an appropriate client update script
 file.
@@ -76,108 +100,109 @@ Both must be readable by the downloading program.
 The client update script file is used to specify what client updates
 are staged and who should download them.
 A sample client update script file follows:&lt;/p&gt;
-&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
-&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;span class="lnt"&gt;30
-&lt;/span&gt;&lt;span class="lnt"&gt;31
-&lt;/span&gt;&lt;span class="lnt"&gt;32
-&lt;/span&gt;&lt;span class="lnt"&gt;33
-&lt;/span&gt;&lt;span class="lnt"&gt;34
-&lt;/span&gt;&lt;span class="lnt"&gt;35
-&lt;/span&gt;&lt;span class="lnt"&gt;36
-&lt;/span&gt;&lt;span class="lnt"&gt;37
-&lt;/span&gt;&lt;span class="lnt"&gt;38
-&lt;/span&gt;&lt;span class="lnt"&gt;39
-&lt;/span&gt;&lt;span class="lnt"&gt;40
-&lt;/span&gt;&lt;span class="lnt"&gt;41
-&lt;/span&gt;&lt;span class="lnt"&gt;42
-&lt;/span&gt;&lt;span class="lnt"&gt;43
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 4C Client Update Script
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;MessageDigest Filename=/home/4CUpdate/cl-update.sha1,Type=sha1
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 4C Client Win32
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Update
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Name 4cclient-win32
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Desc &amp;#34;Update 4CClient to Version 5.8.5-06&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;InstallFile /home/4CUpdate/4cclient-win32-5.8.5-06.msi
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SignatureFile /home/4CUpdate/4cclient-win32-5.8.5-06.sig
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Verify VersionLT=5.8.5-06
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;MinOSVersion 6
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# DNA ENCEdit Win32
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Update
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Name dna-encedit-win32
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Desc &amp;#34;Update dna-encedit-win32 to Version 5.8.5-06&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;InstallFile /home/4CUpdate/dna-encedit-win32-5.8.5-06.msi
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SignatureFile /home/4CUpdate/dna-encedit-win32-5.8.5-06.sig
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Verify Installed=True
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Verify VersionLT=5.8.5-06
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 4CUpdate Win32
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Update
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Name 4cupdate-win32
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Desc &amp;#34;Update 4cupdate-win32 to Version 5.8.5-06&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;InstallFile /home/4CUpdate/4cupdate-win32-5.8.5-06.msi
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SignatureFile /home/4CUpdate/4cupdate-win32-5.8.5-06.sig
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Verify VersionLT=5.8.5-06
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# XP Version of 4C Client Win32
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Update
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Name 4cclient-win32-xp
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Desc &amp;#34;Update XP 4CClient to Version 5.8.5-06&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;InstallFile /home/4CUpdate/4cclient-win32-xp-5.8.5-06.msi
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SignatureFile /home/4CUpdate/4cclient-win32-xp-5.8.5-06.sig
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Verify VersionLT=5.8.5-06
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;MaxOSVersion 5&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 4C Client Update Script
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MessageDigest Filename=/home/4CUpdate/cl-update.sha1,Type=sha1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 4C Client Win32
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name 4cclient-win32
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Desc &amp;#34;Update 4CClient to Version 5.8.5-06&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;InstallFile /home/4CUpdate/4cclient-win32-5.8.5-06.msi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SignatureFile /home/4CUpdate/4cclient-win32-5.8.5-06.sig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Verify VersionLT=5.8.5-06
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MinOSVersion 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# DNA ENCEdit Win32
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name dna-encedit-win32
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Desc &amp;#34;Update dna-encedit-win32 to Version 5.8.5-06&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;InstallFile /home/4CUpdate/dna-encedit-win32-5.8.5-06.msi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SignatureFile /home/4CUpdate/dna-encedit-win32-5.8.5-06.sig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Verify Installed=True
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Verify VersionLT=5.8.5-06
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 4CUpdate Win32
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name 4cupdate-win32
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Desc &amp;#34;Update 4cupdate-win32 to Version 5.8.5-06&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;InstallFile /home/4CUpdate/4cupdate-win32-5.8.5-06.msi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SignatureFile /home/4CUpdate/4cupdate-win32-5.8.5-06.sig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Verify VersionLT=5.8.5-06
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# XP Version of 4C Client Win32
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name 4cclient-win32-xp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Desc &amp;#34;Update XP 4CClient to Version 5.8.5-06&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;InstallFile /home/4CUpdate/4cclient-win32-xp-5.8.5-06.msi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SignatureFile /home/4CUpdate/4cclient-win32-xp-5.8.5-06.sig
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Verify VersionLT=5.8.5-06
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MaxOSVersion 5&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
-&lt;button
-class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-title="Copy code"
-aria-label="Copy code"
-data-copied-label="Copied!"
-&gt;
-&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;/button&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Note that the only entries that start at the beginning of a line without
@@ -197,11 +222,23 @@ If the current 4cclient-win32 were already at least 5.8.5-06, the
 &lt;li&gt;One or more Update sections. Each Update section starts on its own line with no leading space. Options that can specified for Update start on lines with a leading space. The options available are: Name &lt;code&gt;&amp;lt;name&amp;gt;&lt;/code&gt; - This must be a valid 4client name Desc &lt;code&gt;&amp;lt;desc&amp;gt;&lt;/code&gt; - This description is shown to a user when prompting to install an update. InstallFile &lt;code&gt;&amp;lt;msifilename&amp;gt;&lt;/code&gt; - The name of the msifile to install. This must be the full path on the server to the msifile This file will need to be downloaded from 4csoftware.com to your staging server. SignatureFile &lt;code&gt;&amp;lt;sigfilename&amp;gt;&lt;/code&gt; The name of the sigfile to compare to the msifile for validity. This must be the full path on the server to the sigfile This file will need to be downloaded from 4csoftware.com to your staging server. ForceReboot &amp;lt;True|False&amp;gt; - Specify &amp;ldquo;ForceReboot True&amp;rdquo; if you want the PC to reboot after the last client install completes. Verify &lt;code&gt;&amp;lt;verifyopts&amp;gt;&lt;/code&gt; - Some possible verify options are: Installed=True Installed=False VersionEQ=&amp;lt;v.r.l-rev&amp;gt; VersionGT=&amp;lt;v.r.l-rev&amp;gt; VersionGEQ=&amp;lt;v.r.l-rev&amp;gt; VersionGT=&amp;lt;v.r.l-rev&amp;gt; NN VersionLEQ=&amp;lt;v.r.l-rev&amp;gt; You can specify multiple verify lines for each update section. When using version numbers, you can specify just the highest numbers needed. For example VersionLT=4.8 means the same as VersionLT=4.8.0-00 Any of the verifyopts can negated by specifying something like &lt;code&gt;Verify !&lt;/code&gt;&lt;verifyopts&gt;`` MACAddress &lt;code&gt;&amp;lt;macaddr1&amp;gt;&lt;/code&gt;,&lt;code&gt;&amp;lt;macaddr2&amp;gt;&lt;/code&gt;,&amp;hellip;,&lt;code&gt;&amp;lt;macaddrN&amp;gt;&lt;/code&gt; OSVersion &lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt; MinOSVersion &lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt; MaxOSVersion &lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4CUpdate - Server Issues&lt;span class="hx:absolute hx:-mt-20" id="4cupdate---server-issues"&gt;&lt;/span&gt;
-&lt;a href="#4cupdate---server-issues" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>4CUpdate - Change Log</title><link>https://127.0.0.1:8080/docs/features/4cupdate/changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/4cupdate/changes/</guid><description>
-&lt;p&gt;&lt;a href="https://127.0.0.1:8080/docs/features/4cupdate/"&gt;4CUpdate Home&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;10 July 2017&lt;span class="hx:absolute hx:-mt-20" id="10-july-2017"&gt;&lt;/span&gt;
-&lt;a href="#10-july-2017" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.8.5-05 and higher&lt;/p&gt;
+&lt;h2&gt;4CUpdate - Server Issues&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4cupdate---server-issues&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4cupdate---server-issues&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>4CUpdate - Change Log</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/changes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/&#34;&gt;4CUpdate Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;10 July 2017&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;10-july-2017&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#10-july-2017&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.8.5-05 and higher&lt;/p&gt;
 &lt;p&gt;The 4CUpdate program will only process the first matching entry in the
 cl-update.txt file for each name.
 This means that you can install one 4cclient-win32 entry for one user and
@@ -218,8 +255,21 @@ a different one for a different user assuming the entries use different filters.
 &lt;li&gt;5 - Windows-2000, Windows-XP, Windows-2003&lt;/li&gt;
 &lt;li&gt;6 - Windows-Vista, Windows-2008, Windows-7, Windows-8, Windows-2012&lt;/li&gt;
 &lt;li&gt;10 - Windows-10, Windows-2016&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>4C - Win32 MSI Installs</title><link>https://127.0.0.1:8080/docs/features/4cupdate/msiinstall/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/4cupdate/msiinstall/</guid><description>
-&lt;p&gt;Starting with version 4.8,
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>4C - Win32 MSI Installs</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/msiinstall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/msiinstall/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Starting with version 4.8,
 all Win32 4C installs are packaged as Miscrosoft Windows Installer Packages.
 There are many advantages to this, including:&lt;/p&gt;
 &lt;ul&gt;
@@ -233,8 +283,21 @@ There are many advantages to this, including:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The old install always added HOME_4C/bin/win and HOME_4C/bin to the PATH env variable. This is no longer done nor is it necessary for any client installs. For a 4cserver-win32 install, if you will be running utility commands from the command line, then you will probably want to add HOME_4C/bin to your path.&lt;/li&gt;
 &lt;li&gt;The old .exe install allowed you to change the install location. The new .msi does not. The reason for this is that it is necessary for all 4cclient/4cserver installations to use the same HOME_4C. If you need to use a different install location than the default, then with no 4c-win32 packages installed, create a system environment variable, HOME_4C, and set it to your preferred install location. It may be necessary to reboot the computer for the env var to be be seen by the installer.&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Uninstalling Old 4C Client and 4C Server</title><link>https://127.0.0.1:8080/docs/features/4cupdate/olduninstall/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/4cupdate/olduninstall/</guid><description>
-&lt;p&gt;Though not absolutely necessary, in the interest of maintaining
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Uninstalling Old 4C Client and 4C Server</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/olduninstall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/4cupdate/olduninstall/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Though not absolutely necessary, in the interest of maintaining
 a cleaner PC, you should uninstall all previous versions of any 4C
 Server or 4C Client before installing any of the newer MSI packages.
 This only needs to be done the first time an install is done of the newer
@@ -258,4 +321,10 @@ and 4C Servers before installing the newer MSI packages are:&lt;/p&gt;
 &lt;li&gt;ControlPanel/Programs will show the older installed packages, even though they have been replaced by a package with a different name.&lt;/li&gt;
 &lt;li&gt;Uninstalling an older package after one of the newer ones has been installed will probably make the newer package unusable unless you repair it.&lt;/li&gt;
 &lt;li&gt;There will be registry keys that are not needed, both in HKLM/Software/4C Software and HKCU/Software/4C Software.&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

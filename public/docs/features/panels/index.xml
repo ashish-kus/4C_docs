@@ -1,43 +1,67 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C Panels</title><link>https://127.0.0.1:8080/docs/features/panels/</link><description>Recent content in 4C Panels on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://127.0.0.1:8080/docs/features/panels/index.xml" rel="self" type="application/rss+xml"/><item><title>4C Panels Change Log</title><link>https://127.0.0.1:8080/docs/features/panels/changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/changes/</guid><description>
-&lt;h2&gt;01 August 2012&lt;span class="hx:absolute hx:-mt-20" id="01-august-2012"&gt;&lt;/span&gt;
-&lt;a href="#01-august-2012" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.2.3 and higher&lt;/p&gt;
-&lt;h2&gt;01 May 2007&lt;span class="hx:absolute hx:-mt-20" id="01-may-2007"&gt;&lt;/span&gt;
-&lt;a href="#01-may-2007" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.4 and higher&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4C Language Docs – 4C Panels</title>
+    <link>https://github.com/ashish-kus/4C_docs/docs/features/panels/</link>
+    <description>Recent content in 4C Panels on 4C Language Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/panels/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>4C Panels Change Log</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/panels/changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/panels/changes/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;01 August 2012&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;01-august-2012&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#01-august-2012&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.2.3 and higher&lt;/p&gt;
+&lt;h2&gt;01 May 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;01-may-2007&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#01-may-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.4 and higher&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The Panel Screen painter will show margins for List and ListView panels.&lt;/li&gt;
 &lt;li&gt;Panels can have a background color.&lt;/li&gt;
-&lt;li&gt;Panels can have a background image. See: &lt;a href="https://127.0.0.1:8080/docs/features/simages/"&gt;Using Screen Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Panels can have a background image. See: &lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/simages/&#34;&gt;Using Screen Images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;You can specify margin widths and heights and spacing in units of Pixels, Points, Inches, Millimeters, or DialogUnits.&lt;/li&gt;
 &lt;li&gt;You can specify a MinWidth, MinHeight, PrefWidth, and PrefHeight for a panel in units of Pixels, Points, Inches, Millimeters, or DialogUnits. This is useful for panels that have no children and are used only for displaying a background image.&lt;/li&gt;
 &lt;li&gt;Non leaf panels do not have to have child panels.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;28 May 2006&lt;span class="hx:absolute hx:-mt-20" id="28-may-2006"&gt;&lt;/span&gt;
-&lt;a href="#28-may-2006" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.0 and higher&lt;/p&gt;
+&lt;h2&gt;28 May 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;28-may-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#28-may-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.0 and higher&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;inplist and sellist sdftypes will use an extra space for displaying the dropdown arrow. This will be most noticeable in Form panels with very narrow dropdown lists. You can override this by specifying the ncols attribute.&lt;/li&gt;
 &lt;li&gt;The wpnlsp program will allow you to Align and Stretch dfields easily. This is most useful in Form panels.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;01 May 2006&lt;span class="hx:absolute hx:-mt-20" id="01-may-2006"&gt;&lt;/span&gt;
-&lt;a href="#01-may-2006" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.0 and higher&lt;/p&gt;
+&lt;h2&gt;01 May 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;01-may-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#01-may-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.0 and higher&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;If you define a &amp;ldquo;fixed&amp;rdquo; font class in your font def file, form children will use this instead of list in the paint mode. It will look for it first under &amp;ldquo;tiny&amp;rdquo;, then &amp;ldquo;small&amp;rdquo;, then &amp;ldquo;default&amp;rdquo;. If not found, then it will still use the &amp;ldquo;list&amp;rdquo; font when drawing on the form.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;09 April 2006&lt;span class="hx:absolute hx:-mt-20" id="09-april-2006"&gt;&lt;/span&gt;
-&lt;a href="#09-april-2006" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.0 and higher&lt;/p&gt;
+&lt;h2&gt;09 April 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;09-april-2006&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#09-april-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.0 and higher&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Specifying a title, frame, and margins for a TabFolder panel will work.&lt;/li&gt;
 &lt;li&gt;You can specify a grabw or grabh value &amp;lt; 0 to prevent the subpanel from ever getting any of the extra available width and height.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;09 October 2005&lt;span class="hx:absolute hx:-mt-20" id="09-october-2005"&gt;&lt;/span&gt;
-&lt;a href="#09-october-2005" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2&gt;09 October 2005&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;09-october-2005&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#09-october-2005&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;The status area of the panel screen painter shows more display field info.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;12 September 2005&lt;span class="hx:absolute hx:-mt-20" id="12-september-2005"&gt;&lt;/span&gt;
-&lt;a href="#12-september-2005" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2&gt;12 September 2005&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;12-september-2005&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#12-september-2005&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;ctrl+shift+arrowkey&amp;gt;&lt;/code&gt; allows you to increase or decrease the ncols or nrows attribute of dfields.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;29 December 2003&lt;span class="hx:absolute hx:-mt-20" id="29-december-2003"&gt;&lt;/span&gt;
-&lt;a href="#29-december-2003" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2&gt;29 December 2003&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;29-december-2003&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#29-december-2003&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;There is a new field in sys.pnl_hdr, sys.pnh_adjspcng, that is used to specify the percent of extra space that should be used for spacing in HRowCol and VRowCol panels.&lt;/li&gt;
 &lt;li&gt;For non-leaf panels, any extra space not explicitly constrained by the panel definition will be given to the children panels.&lt;/li&gt;
 &lt;li&gt;For leaf panels, any extra space adjustment not explicitly set in the panel specification will be given to the right and bottom margins.&lt;/li&gt;
@@ -51,18 +75,44 @@ field when you need the extra height in a VRowCol or
 the extra width in an HRowCol to get used by spacing.&lt;/p&gt;
 &lt;p&gt;This can be set either through the bootstraps,
 or by using the PanelSP.&lt;/p&gt;
-&lt;h2&gt;28 December 2003&lt;span class="hx:absolute hx:-mt-20" id="28-december-2003"&gt;&lt;/span&gt;
-&lt;a href="#28-december-2003" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2&gt;28 December 2003&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;28-december-2003&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#28-december-2003&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;The PanelSP will show a thin line around panels that don&amp;rsquo;t have a frame in the Canvas view for the program. This will make it easier to see where you may want to insert new panels and dfields. There is a menu option, ShowPanels, in the File menu that allows for toggling this feature on a per program basis.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Additional Notes&lt;span class="hx:absolute hx:-mt-20" id="additional-notes"&gt;&lt;/span&gt;
-&lt;a href="#additional-notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;as long as both client&lt;/p&gt;
-&lt;p&gt;at least 5.2.3&lt;/p&gt;</description></item><item><title>Panels - Issues/Bugs</title><link>https://127.0.0.1:8080/docs/features/panels/issues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/issues/</guid><description>
-&lt;ul&gt;
+&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;as long as both client&lt;/p&gt;
+&lt;p&gt;at least 5.2.3&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Panels - Issues/Bugs</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/panels/issues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/panels/issues/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
 &lt;li&gt;When using option panels, if the user navigates from an dfield in an option panel to the main scrolling panel, the timing can be unpredictable and the end field PCL may not always get executed. The best workaround for this is to desing you option panels so that the end field pcl is not the only way that a dfield is verifyied. You can use the VerifyPCL instead and you can also use an &amp;ldquo;Apply&amp;rdquo; cmdbtn that verifies the data as well as applies any changes made in the option panel. When users see the &amp;ldquo;Apply&amp;rdquo; cmdbtn they will know that they need to click it in order for their changes to be applied.&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Option Panels</title><link>https://127.0.0.1:8080/docs/features/panels/optpanels/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/optpanels/</guid><description>
-&lt;h2&gt;Updated - 02 April 2020&lt;span class="hx:absolute hx:-mt-20" id="updated---02-april-2020"&gt;&lt;/span&gt;
-&lt;a href="#updated---02-april-2020" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;An option panel is a panel that can be processed outside of normal
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Option Panels</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/panels/optpanels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/panels/optpanels/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Updated - 02 April 2020&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;updated---02-april-2020&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#updated---02-april-2020&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;An option panel is a panel that can be processed outside of normal
 4C fld loop processing. An option panel can accept input even when input
 would not normally be allowed in the MainFldLp.
 When an option panel has the focus, traversal between fields stays inside
@@ -101,30 +151,31 @@ Some of them are&lt;/p&gt;
 &lt;p&gt;When you use an Initial option panel with a scrolling program,
 you will normally enter the main fld loop
 processing by executing code similar to the following:&lt;/p&gt;
-&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
-&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;if (sys.get_fltype()==FLTYPE_INIT)
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sys.exit_fldloop();
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;else
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sys.dr_restart(`&amp;lt;asfile&amp;gt;`,DR_CLEAR);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if (sys.get_fltype()==FLTYPE_INIT)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sys.exit_fldloop();
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sys.dr_restart(`&amp;lt;asfile&amp;gt;`,DR_CLEAR);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
-&lt;button
-class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-title="Copy code"
-aria-label="Copy code"
-data-copied-label="Copied!"
-&gt;
-&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;/button&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;sys.get_fltype() will only return FLTYPE_INIT if the option panel is the
@@ -138,49 +189,63 @@ then it may be necessary to reset some variables either to their original
 shared in value or some other value.
 The following PCLs may be useful for this:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/restoreshare/"&gt;sys.restore_share()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/flrestore/"&gt;sys.fl_restore()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/flsave/"&gt;sys.fl_save()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/syspcls/getsaveval/"&gt;sys.get_saveval()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/restoreshare/&#34;&gt;sys.restore_share()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/flrestore/&#34;&gt;sys.fl_restore()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/flsave/&#34;&gt;sys.fl_save()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/getsaveval/&#34;&gt;sys.get_saveval()&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Code similar to the following might be useful in the Start/Restart PCL&lt;/p&gt;
-&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
-&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;if (firsttimef!=&amp;#39;y&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sys.restore_share(`&amp;lt;asfile&amp;gt;`);
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;else
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;firsttimef = &amp;#39;n&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if (firsttimef!=&amp;#39;y&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sys.restore_share(`&amp;lt;asfile&amp;gt;`);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;firsttimef = &amp;#39;n&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
-&lt;button
-class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-title="Copy code"
-aria-label="Copy code"
-data-copied-label="Copied!"
-&gt;
-&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;/button&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
+    title=&#34;Copy code&#34;
+    aria-label=&#34;Copy code&#34;
+    data-copied-label=&#34;Copied!&#34;
+  &gt;
+    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;See Also&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/optpusage/"&gt;Typical Option Panel Usage&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Typical Option Panel Usage</title><link>https://127.0.0.1:8080/docs/features/panels/optpusage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/optpusage/</guid><description>
-&lt;h2&gt;Updated - 04 August 2016&lt;span class="hx:absolute hx:-mt-20" id="updated---04-august-2016"&gt;&lt;/span&gt;
-&lt;a href="#updated---04-august-2016" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are different several different scenarios where using optiona panels
+&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/optpusage/&#34;&gt;Typical Option Panel Usage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Typical Option Panel Usage</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/panels/optpusage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/panels/optpusage/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Updated - 04 August 2016&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;updated---04-august-2016&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#updated---04-august-2016&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are different several different scenarios where using optiona panels
 increase the usability of the application.
 Some of them along with best practive guidelines are outlined here.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Search Programs&lt;span class="hx:absolute hx:-mt-20" id="search-programs"&gt;&lt;/span&gt;
-&lt;a href="#search-programs" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A search program that needs to allow the user to specify some search
+&lt;h2&gt;Search Programs&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;search-programs&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#search-programs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A search program that needs to allow the user to specify some search
 parameters before displaying the list of matching items should use an
 initial option panel to input the search parameters.
 Best practices for search programs are&lt;/p&gt;
@@ -197,10 +262,23 @@ Best practices for search programs are&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;See Also&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/optpanels/"&gt;4C Option Panels&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Screen Panels Intro</title><link>https://127.0.0.1:8080/docs/features/panels/panels/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/panels/</guid><description>
-&lt;h2&gt;29 September 2003&lt;span class="hx:absolute hx:-mt-20" id="29-september-2003"&gt;&lt;/span&gt;
-&lt;a href="#29-september-2003" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Starting with version 3.7.4, 4C will allow you to divide
+&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/optpanels/&#34;&gt;4C Option Panels&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Screen Panels Intro</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/panels/panels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/panels/panels/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;29 September 2003&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;29-september-2003&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#29-september-2003&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Starting with version 3.7.4, 4C will allow you to divide
 a screen program into panels.
 Both the server and client need to be at or above this release level.
 There are no known issues of connecting the newer client
@@ -234,8 +312,8 @@ a single 4C program.&lt;/p&gt;
 &lt;li&gt;There is a screen painter that works with panels.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;Panel Types&lt;span class="hx:absolute hx:-mt-20" id="panel-types"&gt;&lt;/span&gt;
-&lt;a href="#panel-types" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The types of panels that 4C allows and how they
+&lt;h2&gt;Panel Types&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;panel-types&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#panel-types&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The types of panels that 4C allows and how they
 layout their children follow:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;HRowCol - This panel arranges it&amp;rsquo;s children in a row from left to right.&lt;/li&gt;
@@ -252,8 +330,8 @@ layout their children follow:&lt;/p&gt;
 &lt;li&gt;Title - This is a special panel type that can only have display field children. Fields in the Title panel show up in the title bar. Whether or not they actually show up depend on how the layout used specifies the title.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;Panel Attributes&lt;span class="hx:absolute hx:-mt-20" id="panel-attributes"&gt;&lt;/span&gt;
-&lt;a href="#panel-attributes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are a lot of different attributes that you can
+&lt;h2&gt;Panel Attributes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;panel-attributes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#panel-attributes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are a lot of different attributes that you can
 specify along with the panel type.
 Not all attributes are used by all panel types.
 Some attributes that you can define are:&lt;/p&gt;
@@ -307,13 +385,13 @@ They are:&lt;/p&gt;
 then that subpanel will not get any of the extra space even if
 the other sibling panels grab less than 100 % total.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Defining Panels&lt;span class="hx:absolute hx:-mt-20" id="defining-panels"&gt;&lt;/span&gt;
-&lt;a href="#defining-panels" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are 2 ways to define panels in 4C.
+&lt;h2&gt;Defining Panels&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;defining-panels&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#defining-panels&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are 2 ways to define panels in 4C.
 The first method is using 4C bootstrap programs.
 The other method is to use the windows panel screen painter
 client program,
-&lt;a href="https://www.4csoftware.com/docs/Features/Clients/wpnlsp.html"target="_blank" rel="noopener"&gt;wpnlsp.&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;a href=&#34;https://www.4csoftware.com/docs/Features/Clients/wpnlsp.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wpnlsp.&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;
 Both methods make use of two new bootstrap files.
 Understanding these files is important in understanding
@@ -355,8 +433,8 @@ them to a panel.
 You can do this as you define the display field, or you
 can do it later using the panel definition screens or with wpnlsp.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Miscellaneous&lt;span class="hx:absolute hx:-mt-20" id="miscellaneous"&gt;&lt;/span&gt;
-&lt;a href="#miscellaneous" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;One additional 4C feature makes using Panels easier.
+&lt;h2&gt;Miscellaneous&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;miscellaneous&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#miscellaneous&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;One additional 4C feature makes using Panels easier.
 Display fields can have either a top label or a side label
 associated with them.
 You can define defaults for these labels in the data dictionary.
@@ -375,8 +453,8 @@ to see what is new.&lt;/p&gt;
 &lt;p&gt;If you have bootstrap file definitions in your application
 directory make sure you update them from the system directory.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Examples&lt;span class="hx:absolute hx:-mt-20" id="examples"&gt;&lt;/span&gt;
-&lt;a href="#examples" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Before writing your own panel programs,
+&lt;h2&gt;Examples&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;examples&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#examples&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Before writing your own panel programs,
 it may be helpful to see a few in action.
 There are a bunch of examples currently in the 4cSys
 application directory.
@@ -396,8 +474,8 @@ Some of the more interesting ones are:&lt;/p&gt;
 &lt;li&gt;sys.pnldf.fm - This program works along with sys.pnldf.sel and allows you to reorder and delete display fields from a panel. Deleting display fields from a panel does not delete the display fields. It allows them to be used by another panel.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;Tutorial&lt;span class="hx:absolute hx:-mt-20" id="tutorial"&gt;&lt;/span&gt;
-&lt;a href="#tutorial" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The following will guide you through writing your first
+&lt;h2&gt;Tutorial&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;tutorial&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#tutorial&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The following will guide you through writing your first
 few panel programs.
 Before you start,
 make sure that you have the current file definitions in the
@@ -465,8 +543,8 @@ then I can consider myself a successful doc writer.
 Congratulations to both of us.
 If not, then please call or email and I will do my best to make it clearer.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Panel Type Specifics&lt;span class="hx:absolute hx:-mt-20" id="panel-type-specifics"&gt;&lt;/span&gt;
-&lt;a href="#panel-type-specifics" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some panel behaviors are related to certain panel types.
+&lt;h2&gt;Panel Type Specifics&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;panel-type-specifics&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#panel-type-specifics&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some panel behaviors are related to certain panel types.
 Some of these are temporary peculiarities that will be fixed in the future.
 Others are that way because they need to be.
 Those behaviors are described here.&lt;/p&gt;
@@ -475,37 +553,50 @@ Those behaviors are described here.&lt;/p&gt;
 &lt;li&gt;VRowCol Any Non leaf VRowCol Panel usually should be set to EqualWidth.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;Unresolved Issues&lt;span class="hx:absolute hx:-mt-20" id="unresolved-issues"&gt;&lt;/span&gt;
-&lt;a href="#unresolved-issues" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2&gt;Unresolved Issues&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;unresolved-issues&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#unresolved-issues&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;So far, panels have been implemented without making any changes to the way that 4C runs display fields. They are always processed in order and fields are only skipped when the application specifically chooses to skip them. When a panel is hidden, either because it is in a panel TabFolder or a panel Overlay, the panel is automatically raised to allow input on the field. It may be desirable to be able specify as part of the panel definition how to traverse fields. This may mean automatically tabbing past hidden panels.&lt;/li&gt;
 &lt;li&gt;Sometimes it may be desirable to have some panels that are not part of the field loop at all. Panels that have cmdbtns, checkboxes, and rblists fall in to this category. This may require allowing fields other than cmdbtns to have a command pcl associated with them.&lt;/li&gt;
 &lt;li&gt;There currently isn&amp;rsquo;t any way to see which columns of a ListView will allow sorting.&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Panel Screen Painter</title><link>https://127.0.0.1:8080/docs/features/panels/panelsp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://127.0.0.1:8080/docs/features/panels/panelsp/</guid><description>
-&lt;h2&gt;29 October 2003&lt;span class="hx:absolute hx:-mt-20" id="29-october-2003"&gt;&lt;/span&gt;
-&lt;a href="#29-october-2003" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The 4C Panel Screen Painter is an interactive
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Panel Screen Painter</title>
+      <link>https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;29 October 2003&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;29-october-2003&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#29-october-2003&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The 4C Panel Screen Painter is an interactive
 WYSIWYG editor.
 It allows you to create 4C Panels in a more
 interactive and intuitive way than using the
 4C bootstrap programs.
 It speeds up the GUI development.
 It consists of a client side program,
-&lt;a href="https://www.4csoftware.com/docs/Features/Clients/wpnlsp.html"target="_blank" rel="noopener"&gt;wpnlsp,&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
+&lt;a href=&#34;https://www.4csoftware.com/docs/Features/Clients/wpnlsp.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wpnlsp,&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+ &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
 &lt;/svg&gt;&lt;/a&gt;
 and
 a server side program, 4cpnlsp.
 In order to be able to use the Panel Screen Painter,
 you need to understand how 4C Panels work.
 The
-&lt;a href="https://127.0.0.1:8080/docs/features/panels/panels/"&gt;4C Panels&lt;/a&gt;
+&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panels/&#34;&gt;4C Panels&lt;/a&gt;
 doc describes 4C Panels in detail.&lt;/p&gt;
 &lt;p&gt;The rest of this document describes the 4C Panel Screen Painter in
 detail.
 It is divided into the following sections:
-&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Overview&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;PanelTV View&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Canvas View&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;DField View&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Selection&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Undo/Redo&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Commands&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Root Panel&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Creating New Panels&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Inserting DFields&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Deleting Panels&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Deleting DFields&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Drag And Drop&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Miscellaneous Dialog Windows&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;DField Properties&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Panel Properties&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Keyboard Shortcuts&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Panel Type Specifics&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Notes&lt;/a&gt;&lt;a href="https://127.0.0.1:8080/docs/features/panels/panelsp/"&gt;Unimplemented Features&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Overview&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;PanelTV View&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Canvas View&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;DField View&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Selection&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Undo/Redo&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Commands&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Root Panel&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Creating New Panels&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Inserting DFields&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Deleting Panels&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Deleting DFields&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Drag And Drop&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Miscellaneous Dialog Windows&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;DField Properties&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Panel Properties&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Keyboard Shortcuts&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Panel Type Specifics&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Notes&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/panels/panelsp/&#34;&gt;Unimplemented Features&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Startup&lt;span class="hx:absolute hx:-mt-20" id="startup"&gt;&lt;/span&gt;
-&lt;a href="#startup" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can start wpnlsp either from inside of 4C where
+&lt;h2&gt;Startup&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;startup&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#startup&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can start wpnlsp either from inside of 4C where
 you will be automatically connected and the correct app
 and program will be selected and displayed, or you
 can start it manually and go through the connect,
@@ -541,8 +632,8 @@ made to the program since the last time you saved it.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;The Canvas allows you to see and modify your GUI in a WYSIWYG way.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;PanelTV View&lt;span class="hx:absolute hx:-mt-20" id="paneltv-view"&gt;&lt;/span&gt;
-&lt;a href="#paneltv-view" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The PanelTV gives a TreeView view of your Panels
+&lt;h2&gt;PanelTV View&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;paneltv-view&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#paneltv-view&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The PanelTV gives a TreeView view of your Panels
 and DFields.
 You can select items in the PanelTV as well as perform actions on
 them.&lt;/p&gt;
@@ -551,8 +642,8 @@ Panels and DFields in the Canvas.&lt;/p&gt;
 &lt;p&gt;Changes made in the PanelTV are shown immediately in the Canvas
 as well as in the PanelTV.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Canvas View&lt;span class="hx:absolute hx:-mt-20" id="canvas-view"&gt;&lt;/span&gt;
-&lt;a href="#canvas-view" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Canvas view is a close,
+&lt;h2&gt;Canvas View&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;canvas-view&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#canvas-view&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Canvas view is a close,
 although not exact copy of the way your GUI will look.
 The GUI is stretched out and there is more area around borders to
 allow highlighting selected items.
@@ -565,8 +656,8 @@ Panels and DFields in the PanelTV.&lt;/p&gt;
 &lt;p&gt;If the Canvas is too crowded to see things clearly,
 you can Zoom to a single Panel.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;DField View&lt;span class="hx:absolute hx:-mt-20" id="dfield-view"&gt;&lt;/span&gt;
-&lt;a href="#dfield-view" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The DField view allows you to view your Display Fields.
+&lt;h2&gt;DField View&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;dfield-view&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#dfield-view&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The DField view allows you to view your Display Fields.
 You can view one of:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;InUse DFields - These DFields are used in a Panel.&lt;/li&gt;
@@ -576,8 +667,8 @@ You can view one of:&lt;/p&gt;
 &lt;p&gt;Selection in any of the lists in the DField tab work independently
 of selections in any other view.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Selection&lt;span class="hx:absolute hx:-mt-20" id="selection"&gt;&lt;/span&gt;
-&lt;a href="#selection" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Selection here refers only to the PanelTV and the Canvas.
+&lt;h2&gt;Selection&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;selection&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#selection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Selection here refers only to the PanelTV and the Canvas.
 When an item is selected in the PanelTV it is also selected in the
 Canvas and vice versa.
 At any one time you can have either 1 Panel selected or
@@ -600,8 +691,8 @@ Some ways of selecting and deselecting items are:&lt;/p&gt;
 &lt;li&gt;Use the &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt; and arrow keys in the Canvas to change the selected item. &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Left&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Right&amp;gt;&lt;/code&gt; switches selection between siblings. &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Up&amp;gt;&lt;/code&gt; changes the selection to the parent of the FocusItem. &lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Down&amp;gt;&lt;/code&gt; changes the selection to the first child of the FocusItem.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;Undo/Redo&lt;span class="hx:absolute hx:-mt-20" id="undoredo"&gt;&lt;/span&gt;
-&lt;a href="#undoredo" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Any action that changes your GUI in any way can be undone and redone.
+&lt;h2&gt;Undo/Redo&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;undoredo&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#undoredo&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Any action that changes your GUI in any way can be undone and redone.
 If an action results in multiple changes,
 then undoing the action reverses all of the changes together.
 Redoing the action will redo all the changes that were part of the original
@@ -614,8 +705,8 @@ If this turns out not to be enough, it can be changed.&lt;/p&gt;
 &lt;p&gt;There are accelerator keys to allow quick undo and redo.
 Look at the Edit menu to see what these keys are.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Commands&lt;span class="hx:absolute hx:-mt-20" id="commands"&gt;&lt;/span&gt;
-&lt;a href="#commands" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some of the things you can do to an open program are:&lt;/p&gt;
+&lt;h2&gt;Commands&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;commands&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#commands&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some of the things you can do to an open program are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Create a new Panel&lt;/li&gt;
 &lt;li&gt;Save Changes to Current Program. If there are unsaved changes, then the program is written back to the server.&lt;/li&gt;
@@ -642,8 +733,8 @@ or from the context menu.
 If a command allows an accelerator key, this will be shown in
 the menu as well.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Root Panel&lt;span class="hx:absolute hx:-mt-20" id="root-panel"&gt;&lt;/span&gt;
-&lt;a href="#root-panel" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;All Panel programs need to have a Root Panel.
+&lt;h2&gt;Root Panel&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;root-panel&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#root-panel&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;All Panel programs need to have a Root Panel.
 When you open a program without a Root Panel in PanelSP,
 the Canvas will not be displayed.
 Before you can create other Panels or add DFields to any
@@ -651,8 +742,8 @@ Panels, you will need to define the Root Panel.
 There will be a Root Panel in the PanelTV.
 Double click this and define the Root Panel properties.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Creating New Panels&lt;span class="hx:absolute hx:-mt-20" id="creating-new-panels"&gt;&lt;/span&gt;
-&lt;a href="#creating-new-panels" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are 2 ways to create a new Panel.&lt;/p&gt;
+&lt;h2&gt;Creating New Panels&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;creating-new-panels&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#creating-new-panels&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are 2 ways to create a new Panel.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Select NewPanel from the context menu, move the the mouse to the area of the canvas you want to insert the new Panel and click the left mouse button. Notice that the shape of the cursor indicates whether you can insert a new Panel beneath the mouse cursor or not. With some Panel types you will see a drop rectangle (drawn in green) showing where the new Panel will be inserted. The true size of the Panel is not shown by the drop rectangle. Regardless of whether you can insert a new panel at the mouse cursor location or not, a black rectangle will be drawn showing the outline of the innermost Panel below the mouse cursor. Additional info on where you are inserting the new Panel shows up in the StatusArea. This method acts like the drag and drop method of moving Panels and nodes.&lt;/li&gt;
 &lt;li&gt;You can also select a Panel that allows Panel children or siblings and then select Insert==&amp;gt;Panel from the context menu. You will be prompted whether you are inserting a child or sibling Panel and whether you want this to be the first or last child or the prev or next sibling.&lt;/li&gt;
@@ -660,16 +751,16 @@ Double click this and define the Root Panel properties.&lt;/p&gt;
 &lt;p&gt;Both methods of inserting new Panels will take you to the Panel Properties
 to let you specify the details of the new Panel.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Inserting DFields&lt;span class="hx:absolute hx:-mt-20" id="inserting-dfields"&gt;&lt;/span&gt;
-&lt;a href="#inserting-dfields" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are two ways of inserting DFields onto a Panel.&lt;/p&gt;
+&lt;h2&gt;Inserting DFields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;inserting-dfields&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#inserting-dfields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are two ways of inserting DFields onto a Panel.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The easiest way is probably to select one or more DFields from the PanelTV/UnusedDField branch and to drag them to the Canvas. Initiate the drag by holding down the left mouse button above one of the selected DFields and then move the mouse cursor to where you want to drop the DFields. You will see a visual indication of whether dropping the DFields below the mouse cursor is allowed or not as well as some messages in the StatusArea.&lt;/li&gt;
 &lt;li&gt;The other way is to first select one or more DFields from the UnusedDFieldsList and then select either a Panel you want to add the DFields to, or a DField that will be a sibling of the new DFields. Next, select Insert==&amp;gt;&lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt;DFields&amp;hellip; from the context menu. You will be prompted to specify the relative location of the insert.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Only DFields that are already defined to 4C can be added to a Panel.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Deleting Panels&lt;span class="hx:absolute hx:-mt-20" id="deleting-panels"&gt;&lt;/span&gt;
-&lt;a href="#deleting-panels" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can delete a Panel by selecting it and then selecting Delete from
+&lt;h2&gt;Deleting Panels&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;deleting-panels&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#deleting-panels&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can delete a Panel by selecting it and then selecting Delete from
 either the Edit menu or the context menu.&lt;/p&gt;
 &lt;p&gt;If the deleted Panel has any children,
 then the deleted Panel will show up in the Deleted Panels branch of the
@@ -681,16 +772,16 @@ Specifically, you cannot delete the Root or Title Panel.
 Neither can you delete the UnusedPanels or UnusedDFields branch
 from the PanelTV.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Deleting DFields&lt;span class="hx:absolute hx:-mt-20" id="deleting-dfields"&gt;&lt;/span&gt;
-&lt;a href="#deleting-dfields" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can delete DFields from a Panel by selecting the ones you want to
+&lt;h2&gt;Deleting DFields&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;deleting-dfields&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#deleting-dfields&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can delete DFields from a Panel by selecting the ones you want to
 delete and then selecting Delete from either the Edit or Context menu.&lt;/p&gt;
 &lt;p&gt;DFields that are deleted are not deleted from 4C.
 They are just removed from their Panel.
 They will show up in the PanelTV UnusedDFields branch and
 they will also show up in the UnusedDFieldsList.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Drag And Drop&lt;span class="hx:absolute hx:-mt-20" id="drag-and-drop"&gt;&lt;/span&gt;
-&lt;a href="#drag-and-drop" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The PanelSP supports dragging of Panels and of DFields
+&lt;h2&gt;Drag And Drop&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;drag-and-drop&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#drag-and-drop&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The PanelSP supports dragging of Panels and of DFields
 to new locations.&lt;/p&gt;
 &lt;p&gt;To drag a Panel, select it and then initiate the drag by pressing the left
 mouse button while the mouse cursor is over the selected Panel.
@@ -725,8 +816,8 @@ allowed.
 You can still tell that a drop is allowed by the shape of the mouse
 cursor and by the StatusArea messages.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Miscellaneous Dialog Windows&lt;span class="hx:absolute hx:-mt-20" id="miscellaneous-dialog-windows"&gt;&lt;/span&gt;
-&lt;a href="#miscellaneous-dialog-windows" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When the PanelSP needs mor information, it
+&lt;h2&gt;Miscellaneous Dialog Windows&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;miscellaneous-dialog-windows&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#miscellaneous-dialog-windows&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When the PanelSP needs mor information, it
 will pop up a Dialog Window prompting for information.
 All these Dialog Windows work the same way regarding traversal
 between items and ending the Dialog.
@@ -740,20 +831,20 @@ In Particular:&lt;/p&gt;
 &lt;li&gt;When input is not allowed on a certain item, the item will be disabled.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;DField Properties&lt;span class="hx:absolute hx:-mt-20" id="dfield-properties"&gt;&lt;/span&gt;
-&lt;a href="#dfield-properties" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The DField Properties are pretty much the same as what
+&lt;h2&gt;DField Properties&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;dfield-properties&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#dfield-properties&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The DField Properties are pretty much the same as what
 shows up in display field definition in the 4C Bootstraps.
 You can access DField Properties by left double clicking
 on a DField item on either the PanelTV or the Canvas.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Panel Properties&lt;span class="hx:absolute hx:-mt-20" id="panel-properties"&gt;&lt;/span&gt;
-&lt;a href="#panel-properties" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Panel properties correspond to the attributes that you can define
+&lt;h2&gt;Panel Properties&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;panel-properties&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#panel-properties&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Panel properties correspond to the attributes that you can define
 in the sys.pnl_hdr and sys.pnl_det file using the 4C bootstraps.
 You can access Panel Properties by left double clicking
 on a Panel item on either the PanelTV or the Canvas.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Keyboard Shortcuts&lt;span class="hx:absolute hx:-mt-20" id="keyboard-shortcuts"&gt;&lt;/span&gt;
-&lt;a href="#keyboard-shortcuts" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are several standard keyboard combinations used by
+&lt;h2&gt;Keyboard Shortcuts&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;keyboard-shortcuts&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#keyboard-shortcuts&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are several standard keyboard combinations used by
 most panels and dfields.
 Not all panel types or dfields support all of these
 keyboard shortcuts.
@@ -773,8 +864,8 @@ They are:&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;Ctrl&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;Shift&amp;gt;&lt;/code&gt;+&lt;code&gt;&amp;lt;DownArrow&amp;gt;&lt;/code&gt; - Increase the nrows attr of all selected dfields&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;Panel Type Specifics&lt;span class="hx:absolute hx:-mt-20" id="panel-type-specifics"&gt;&lt;/span&gt;
-&lt;a href="#panel-type-specifics" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some behavior in the PanelSP is specific to certain panel types.
+&lt;h2&gt;Panel Type Specifics&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;panel-type-specifics&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#panel-type-specifics&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some behavior in the PanelSP is specific to certain panel types.
 Some of these are temporary peculiarities that will be fixed in the future.
 Others are that way because they need to be.
 Those behaviors are described here.&lt;/p&gt;
@@ -793,8 +884,8 @@ Those behaviors are described here.&lt;/p&gt;
 &lt;li&gt;Title&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;Notes&lt;span class="hx:absolute hx:-mt-20" id="notes"&gt;&lt;/span&gt;
-&lt;a href="#notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Changes made to a 4C program using the PanelSP are made locally
+&lt;h2&gt;Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;notes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Changes made to a 4C program using the PanelSP are made locally
 until you explicitly save your changes.
 Because of this, you need to be careful about switching between
 the PanelSP and the 4C bootstrap programs for making changes.
@@ -817,8 +908,8 @@ you should:&lt;/p&gt;
 &lt;li&gt;Open the program in the PanelSP.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;Currently Unimplemented Features&lt;span class="hx:absolute hx:-mt-20" id="currently-unimplemented-features"&gt;&lt;/span&gt;
-&lt;a href="#currently-unimplemented-features" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some features that currently are not implemented are:&lt;/p&gt;
+&lt;h2&gt;Currently Unimplemented Features&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;currently-unimplemented-features&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#currently-unimplemented-features&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Some features that currently are not implemented are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Even though you can drag from the PanelTV, you cannot drop onto the PanelTV yet.&lt;/li&gt;
 &lt;li&gt;Dragging from DFields/Unused is not implemented yet. However, you can drag from the Unused DField branch of the PanelTV.&lt;/li&gt;
@@ -826,4 +917,10 @@ you should:&lt;/p&gt;
 &lt;li&gt;The bootstraps do not prevent you from making changes to a program that may conflict with changes you are making in the PanelSP.&lt;/li&gt;
 &lt;li&gt;Not all Panel types show the drop rectangle when dragging nodes or inserting new Panels.&lt;/li&gt;
 &lt;li&gt;There is no way to Copy/Paste Panels between different programs.&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
