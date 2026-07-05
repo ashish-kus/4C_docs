@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------
 # CORE SITE SETTINGS
 # ----------------------------------------------------------------------------
-baseURL: "https://127.0.0.1:8080" # <-- change to your real production URL
+baseURL: "https://username.github.io/4C_Docs/"
 title: "4C Language Docs" # <-- your site / language name
 local: "en-us"
 
