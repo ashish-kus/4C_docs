@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------
 # CORE SITE SETTINGS
 # ----------------------------------------------------------------------------
-baseURL: "https://username.github.io/4C_Docs/"
+baseURL: "https://github.com/ashish-kus/4C_docs/blob"
 title: "4C Language Docs" # <-- your site / language name
 local: "en-us"
 
