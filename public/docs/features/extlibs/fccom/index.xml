@@ -1,32 +1,8 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>4C Language Docs – 4C FCCom External Library</title>
-    <link>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/</link>
-    <description>Recent content in 4C FCCom External Library on 4C Language Docs</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	  <atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-    <item>
-      <title>4C FCCom External Library - Examples</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/examples/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/examples/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/&#34;&gt;FCCom Home&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C FCCom External Library</title><link>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/</link><description>Recent content in 4C FCCom External Library on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/index.xml" rel="self" type="application/rss+xml"/><item><title>4C FCCom External Library - Examples</title><link>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/examples/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/examples/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Example 1 - Very simple example of fetching a single page from a normal web server. No authentication is required, SSL is not used and no content is required in the &amp;ldquo;GET&amp;rdquo; request. The most recent version of the 4c demo application duplicates this code almost verbatim. The program is fccom.demo.1. If you need to download the most recent 4c demo programs here&amp;rsquo;s the link: &lt;a href=&#34;https://4csoftware.com/downloads/misc/demo.tar.gz&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;4C Demo Application&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
- &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;li&gt;Example 1 - Very simple example of fetching a single page from a normal web server. No authentication is required, SSL is not used and no content is required in the &amp;ldquo;GET&amp;rdquo; request. The most recent version of the 4c demo application duplicates this code almost verbatim. The program is fccom.demo.1. If you need to download the most recent 4c demo programs here&amp;rsquo;s the link: &lt;a href="https://4csoftware.com/downloads/misc/demo.tar.gz"target="_blank" rel="noopener"&gt;4C Demo Application&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
 &lt;/svg&gt;&lt;/a&gt; &lt;code&gt;/* * Allocate the connection, and specify the Server as 4csoftware.com * This will use the default http port 80. * reply content is set into the 4C var replycontent. * StatusMessage and StatusCode are displayed to the user and are saved in * the 4C variables statuscode and statusmsg. * Any error message is automatically displayed to the user. */ if ((connident = FCCom::Alloc(&amp;quot;Server&amp;quot;,&amp;quot;4csoftware.com&amp;quot;)) &amp;lt; 0) return -1; rc = FCCom::HttpRequest(connident,&amp;quot;GET&amp;quot;,&amp;quot;/index.html&amp;quot;,&amp;quot;reply-content&amp;quot;,replycontent); sys.message(SM_INFO|SM_PIPEDELIM,&amp;quot;Status&amp;quot;,FCCom::GetOption(connident,&amp;quot;Status&amp;quot;),&amp;quot;StatusMessage&amp;quot;,FCCom::GetOption(connident,&amp;quot;StatusMessage&amp;quot;)); statuscode = atoi(FCCom::GetOption(connident,&amp;quot;Status&amp;quot;)); statusmsg = FCCom::GetOption(connident,&amp;quot;StatusMessage&amp;quot;); FCCom::Free(connident);&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Example 2 - Another simple program that uses the google translate api to make a web service request to translate a short piece of text is fccom.demo.2. This program is included in the 4C demo application. It validates itself to google using an API Key specified in the query args of the FCCom::Httprequest using &amp;ldquo;POST&amp;rdquo;. In order to run it without error, you will need to supply your own google cloud services api key. If you do have a google api key, you can set it in the InitPCL of this program rather than enter it every time you run the program. Even without an api key, you should run this application because you will still get a response from google with json content in the reply.&lt;/li&gt;
 &lt;li&gt;Example 3 - Another example of using a &amp;ldquo;POST&amp;rdquo; HttpRequest is in the demo program fccom.demo.3. This program will send a text message using the twilio api. You will need a twilio account with an account sid, authorization token, and phone number to run this program. Twilio will use basic authorization using the acct sid as the username and the authorization token as the password. The body of the request is in application/x-www-form-urlencoded format and specifies the from phone number, the to phone number, and the text message to send. The reply from Twilio is in XML format. You can modify the InitPCL of this program to initialize the necessary variables with your own Twilio account info and avoid having to enter this info every time you run the program.&lt;/li&gt;
@@ -37,89 +13,50 @@ xmllint installed as well as jsonlint (install python-demjson).&lt;/p&gt;
 &lt;p&gt;Setting up a Twilio account and google cloud account is also easy and cheap.
 Google will give you $300 credit for one year and Twilio
 is about $1.00/month for a phone# and 1/2 cent per text message
-sent or received.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Functions</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/</guid>
-      <description>
-        
-        
-        &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/&#34;&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/&#34;&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/alloc/&#34;&gt;Alloc&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/close/&#34;&gt;Close&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/connect/&#34;&gt;Connect&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/count/&#34;&gt;Count&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/disconnect/&#34;&gt;Disconnect&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/freeall/&#34;&gt;FreeAll&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/free/&#34;&gt;Free&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/getoption/&#34;&gt;GetOption&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/getresponseheader/&#34;&gt;GetResponseHeader&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/open/&#34;&gt;Open&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/parseresponsefile/&#34;&gt;ParseResponseFile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/setglobalheader/&#34;&gt;SetGlobalHeader&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/setoption/&#34;&gt;SetOption&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/setreqheader/&#34;&gt;SetReqHeader&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/urldecode/&#34;&gt;URLDecode&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/urlencode/&#34;&gt;URLEncode&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C FCCom External Library - Most Recent Changes</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/fccomchanges/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/fccomchanges/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/&#34;&gt;FCCom Home&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;11 July 2022&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;11-july-2022&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#11-july-2022&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 6.7.5-01 and later&lt;/p&gt;
+sent or received.&lt;/p&gt;</description></item><item><title>Functions</title><link>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/"&gt;FCCom Function List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/alloc/"&gt;Alloc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/close/"&gt;Close&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/connect/"&gt;Connect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/count/"&gt;Count&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/disconnect/"&gt;Disconnect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/freeall/"&gt;FreeAll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/free/"&gt;Free&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/getoption/"&gt;GetOption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/getresponseheader/"&gt;GetResponseHeader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/open/"&gt;Open&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/parseresponsefile/"&gt;ParseResponseFile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/setglobalheader/"&gt;SetGlobalHeader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/setoption/"&gt;SetOption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/setreqheader/"&gt;SetReqHeader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/urldecode/"&gt;URLDecode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/functions/urlencode/"&gt;URLEncode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>4C FCCom External Library - Most Recent Changes</title><link>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/fccomchanges/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/fccomchanges/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;11 July 2022&lt;span class="hx:absolute hx:-mt-20" id="11-july-2022"&gt;&lt;/span&gt;
+&lt;a href="#11-july-2022" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 6.7.5-01 and later&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;There are two new functios, GetResponseHeader() and ParseResponseFile()&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;13 October 2020&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;13-october-2020&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#13-october-2020&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 6.4.7-04 and later&lt;/p&gt;
+&lt;h2&gt;13 October 2020&lt;span class="hx:absolute hx:-mt-20" id="13-october-2020"&gt;&lt;/span&gt;
+&lt;a href="#13-october-2020" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 6.4.7-04 and later&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;You can specify an empty password for a connection that uses Basic Authentication and requires a username but no password.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;04 February 2018&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;04-february-2018&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#04-february-2018&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.8.8-01 and later&lt;/p&gt;
+&lt;h2&gt;04 February 2018&lt;span class="hx:absolute hx:-mt-20" id="04-february-2018"&gt;&lt;/span&gt;
+&lt;a href="#04-february-2018" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.8.8-01 and later&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The maximum content length when content is specified in a separate file no longer has a maximum size. The server you are sending to, though, may still have a maximum content length.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;15 January 2018&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;15-january-2018&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#15-january-2018&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Initial Release and Documentation&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C FCCom External Library - Overview</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/fccomov/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/fccomov/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/&#34;&gt;4C External Libraries Home&lt;/a&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/&#34;&gt;FCCom Home&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;15 January 2018&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;15-january-2018&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#15-january-2018&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The FCCom 4C external library is meant to allow applications to use the
+&lt;h2&gt;15 January 2018&lt;span class="hx:absolute hx:-mt-20" id="15-january-2018"&gt;&lt;/span&gt;
+&lt;a href="#15-january-2018" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;Additional Notes&lt;span class="hx:absolute hx:-mt-20" id="additional-notes"&gt;&lt;/span&gt;
+&lt;a href="#additional-notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Initial Release and Documentation&lt;/p&gt;</description></item><item><title>4C FCCom External Library - Overview</title><link>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/fccomov/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/fccomov/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/"&gt;4C External Libraries Home&lt;/a&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/extlibs/fccom/"&gt;FCCom Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;15 January 2018&lt;span class="hx:absolute hx:-mt-20" id="15-january-2018"&gt;&lt;/span&gt;
+&lt;a href="#15-january-2018" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The FCCom 4C external library is meant to allow applications to use the
 HTTP protocol to access web resources from within a 4C program without
 needing to use external shellscripts and other utilities.
 In order to use this library you should be famiiar with the HTTP protocol.&lt;/p&gt;
@@ -186,10 +123,4 @@ If the the function is returning an error, then sys_ret will be less than
 If the function is returning a valid value without any warning,
 then sys_ret will equal 0.
 if the function is returning a valid value and there is a warning,
-then sys_ret will be &amp;gt; 0.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-  </channel>
-</rss>
+then sys_ret will be &amp;gt; 0.&lt;/p&gt;</description></item></channel></rss>

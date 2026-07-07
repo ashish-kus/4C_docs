@@ -1,60 +1,23 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>4C Language Docs – 4C Version Control</title>
-    <link>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/</link>
-    <description>Recent content in 4C Version Control on 4C Language Docs</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	  <atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-    <item>
-      <title>4C Version Control Change Log</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/changes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/changes/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;28 February 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;28-february-2006&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#28-february-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C Version Control</title><link>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/</link><description>Recent content in 4C Version Control on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/index.xml" rel="self" type="application/rss+xml"/><item><title>4C Version Control Change Log</title><link>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/changes/</guid><description>
+&lt;h2&gt;28 February 2006&lt;span class="hx:absolute hx:-mt-20" id="28-february-2006"&gt;&lt;/span&gt;
+&lt;a href="#28-february-2006" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;The source code control bootstrap programs will no longer allow you to reedit an installed program, file, or layout on the same mod. Reedit can still be used to reedit a completely unedited program, file, or layout.&lt;/li&gt;
 &lt;li&gt;The source code control bootstrap programs will no longer allow you to delete the sc_prog, sc_file, or sc_slhdr rcd for an installed program, file, or layout. You can still delete the rcd corresponding to a completely unedit program, file, or layout.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;09 October 2005&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;09-october-2005&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#09-october-2005&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;h2&gt;09 October 2005&lt;span class="hx:absolute hx:-mt-20" id="09-october-2005"&gt;&lt;/span&gt;
+&lt;a href="#09-october-2005" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;Screen layouts are now part of source code control. They get stored in the SL subdirectory of XLEXP. You will need to create the files sc_slhdr and sc_slcmnt before you can add layouts to a mod.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;07 September 2005&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;07-september-2005&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#07-september-2005&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;There is a better way of moving mods between systems and and applications. See: &lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/&#34;&gt;4C Remote Mod Imports&lt;/a&gt;&lt;/li&gt;
+&lt;h2&gt;07 September 2005&lt;span class="hx:absolute hx:-mt-20" id="07-september-2005"&gt;&lt;/span&gt;
+&lt;a href="#07-september-2005" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;There is a better way of moving mods between systems and and applications. See: &lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/"&gt;4C Remote Mod Imports&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;18 August 2004&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;18-august-2004&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#18-august-2004&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;h2&gt;18 August 2004&lt;span class="hx:absolute hx:-mt-20" id="18-august-2004"&gt;&lt;/span&gt;
+&lt;a href="#18-august-2004" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;xlimport sets the sys.fh_schnum and sys.pr_schnum vars correctly. This makes it possible to xlimport files and programs that are being edited without losing the ability to edit the program or file. Please note, that if you use xlimport to import files or programs, the version control VersionFile is not imported.&lt;/li&gt;
 &lt;li&gt;The program copy and file copy programs will correctly set sys.pr_schnum and sys.fh_schnum.&lt;/li&gt;
-&lt;/ol&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C Remote Mod Import</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/</guid>
-      <description>
-        
-        
-        &lt;p&gt;4C allows an application on one machine to import,
+&lt;/ol&gt;</description></item><item><title>4C Remote Mod Import</title><link>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/</guid><description>
+&lt;p&gt;4C allows an application on one machine to import,
 compile, and install installed and approved SC mods from
 another application on either the same machine or on a remote
 machine.
@@ -63,26 +26,26 @@ This is accomplished by the addition of a few
 installed into the XLLIB/SC directory.&lt;/p&gt;
 &lt;p&gt;How to configure and run remote mod imports is described in the
 following sections:
-&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/&#34;&gt;Quick Start&lt;/a&gt;&lt;/p&gt;
+&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/"&gt;Quick Start&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A quick start overview of how to import a mod,
 assuming both machine/apps are configured correctly.
-&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/&#34;&gt;File Overview&lt;/a&gt;&lt;/li&gt;
+&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/"&gt;File Overview&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;A quick overview of the 4C files used in
 Remote Mod Import.
-&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/&#34;&gt;Program Overview&lt;/a&gt;&lt;/li&gt;
+&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/"&gt;Program Overview&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;A quick overview of the 4C programs used in
 Remote Mod Import
-&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/&#34;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/"&gt;Configuration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;How to set up a machine/app to allow importing
 mods from a remote machine/app
-&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/&#34;&gt;Troubleshooting&lt;/a&gt;&lt;/li&gt;
+&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/"&gt;Troubleshooting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Some troubleshooting tips and answers to the
 most frequently asked questions&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Remote Mod - Quick Start&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-remote-mod---quick-start&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-remote-mod---quick-start&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Assuming you have two machine/apps that are configured
+&lt;h2&gt;4C Remote Mod - Quick Start&lt;span class="hx:absolute hx:-mt-20" id="4c-remote-mod---quick-start"&gt;&lt;/span&gt;
+&lt;a href="#4c-remote-mod---quick-start" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Assuming you have two machine/apps that are configured
 correctly for remote mod import,
 here are the steps to follow in order to import a mod:&lt;/p&gt;
 &lt;ul&gt;
@@ -101,31 +64,31 @@ here are the steps to follow in order to import a mod:&lt;/p&gt;
 &lt;li&gt;Back at the Remote Mod List screen you can select another mod to import and repeat the above steps.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Remote Mod Import - File Overview&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-remote-mod-import---file-overview&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-remote-mod-import---file-overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The new files are:&lt;/p&gt;
+&lt;h2&gt;4C Remote Mod Import - File Overview&lt;span class="hx:absolute hx:-mt-20" id="4c-remote-mod-import---file-overview"&gt;&lt;/span&gt;
+&lt;a href="#4c-remote-mod-import---file-overview" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The new files are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;sc_impcntl - defines the remote machine/application that you will import from.&lt;/li&gt;
 &lt;li&gt;sc_import - keeps a rcd of mods imported.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Remote Mod Import - Program Overview&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-remote-mod-import---program-overview&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-remote-mod-import---program-overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The new programs are:&lt;/p&gt;
+&lt;h2&gt;4C Remote Mod Import - Program Overview&lt;span class="hx:absolute hx:-mt-20" id="4c-remote-mod-import---program-overview"&gt;&lt;/span&gt;
+&lt;a href="#4c-remote-mod-import---program-overview" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The new programs are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;sc.impcntl.fm - Maintains the sc_import file and links to other programs that allow you to view available mods to import as well as mods already imported. This program is accessed from the Mod Import entry on the system treeview menu. Most tasks associated with imported mods are accessible through this program.&lt;/li&gt;
 &lt;li&gt;sc.imp.purge - Simple program for purging old import data. This program is run up to once a day automatically by sc.impcntl.fm. Currently, sc_import rcds are never purged, just data associated with exporting a mod from a remote system to the local system, extracting the programs and files, and installing the mod locally.&lt;/li&gt;
 &lt;li&gt;sc.rmod.s - Called from sc.impcntl.fm, this program allows you to select a range of dates and some other criteria for viewing importable and imported mods.&lt;/li&gt;
 &lt;li&gt;sc.rmod.1 - Called from sc.rmod.s. Depending on the selection criteria selected in sc.rmod.s, this program shows you some or all of the following: Remote Mods not yet imported Remote Mods that have been imported but not installed Remote Mods that have been imported and installed. From this program you can: Import a mod that has not been imported yet Compile a mod that has already been imported Install a mod that has been imported and compiled View the output of a mod import.&lt;/li&gt;
-&lt;li&gt;sc.rmod.imp - Called when you click Import in sc.rmod.1 This program leads you through importing a remote mod. About all you need to do is read the messages and click the Start/Continue/ViewOutput buttons. Errors or Warnings may be generated. You should be real familiar with warnings and errors that can be generated during a mod import and only continue after careful review. The errors and warnings are described in the Mod Import Conflicts section of &lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/vc/&#34;&gt;Version Control&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;sc.rmod.imp - Called when you click Import in sc.rmod.1 This program leads you through importing a remote mod. About all you need to do is read the messages and click the Start/Continue/ViewOutput buttons. Errors or Warnings may be generated. You should be real familiar with warnings and errors that can be generated during a mod import and only continue after careful review. The errors and warnings are described in the Mod Import Conflicts section of &lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/vc/"&gt;Version Control&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;sc.rmod.imp.bld - Called from either sc.rmod.1 when Compile is clicked or from sc.rmod.imp when Continue is clicked after a mod has been successfully imported. Errors generated during compile will be saved. This program will not run if the mod was not successfully imported.&lt;/li&gt;
 &lt;li&gt;sc.rmod.imp.inst - Called from either sc.rmod.1 when Install is clicked, or from sc.rmod.imp.bld after a successful compile and you click Continue during a mod import. This program will not run if the mod was not successfully imported or if it has not been successfully compiled.&lt;/li&gt;
 &lt;li&gt;sc.impout.view.s - Simple starter prog to start the view output program&lt;/li&gt;
 &lt;li&gt;sc.impout.view.1 - Displays one of the output viewer tabs&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Remote Mod Import - Configuration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-remote-mod-import---configuration&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-remote-mod-import---configuration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Before you can configure remote mod import,
+&lt;h2&gt;4C Remote Mod Import - Configuration&lt;span class="hx:absolute hx:-mt-20" id="4c-remote-mod-import---configuration"&gt;&lt;/span&gt;
+&lt;a href="#4c-remote-mod-import---configuration" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Before you can configure remote mod import,
 both machine/apps need to have
-&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/vc/&#34;&gt;4C Version Control&lt;/a&gt;
+&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/vc/"&gt;4C Version Control&lt;/a&gt;
 configured correctly.&lt;/p&gt;
 &lt;p&gt;Configuring an application to use remote import is simply a matter
 of creating the 2 new files, sc_impcntl and sc_import in the application
@@ -137,24 +100,11 @@ you want to use for remote mod import.&lt;/p&gt;
 &lt;li&gt;Run the sc.impcntl.fm program. Do this by double clicking Mod Imports from the system treeview menu. If this is the first time this program has been run for this application, then you will be prompted to create sc_impcntl and sc_import. You should answer &amp;ldquo;y&amp;rdquo; to both create prompts. You will now see a list of current sc_impcntl rcds. You can add new rcds using normal 4C methods. The fields that you need to set for each new sc_impcntl rcd are as follows: scic_name - specify a simple name that indicates the machine and app that will be used for remote mod imports. scic_desc - long description scic_connectstr - A normal 4C connection string in the format Machine=&lt;code&gt;&amp;lt;hostname&amp;gt;&lt;/code&gt;,Port=&lt;code&gt;&amp;lt;portno&amp;gt;&lt;/code&gt;,Type=TCP,App=&lt;code&gt;&amp;lt;app&amp;gt;&lt;/code&gt; It is important that &lt;code&gt;&amp;lt;app&amp;gt;&lt;/code&gt; specifies the remote application exactly as it is in the _4CSRVRCONFIG file on the remote machine. It is case sensitive. scic_keepfor - The number of days to keep the mod import data. This number can be between 7 and 30. For an import that completes with no errors or warnings, there is very little data that is kept until purge. When a mod import has errors or warnings, more data is kept to aid in debugging if necessary. All data kept is stored as text files in the scic_dir. The sc_import file is never purged. scic_dir - The directory to keep import data and import temp files. This directory will be created when first needed, but you should check that permissions are the way you want them. It is safe to use the same directory for multiple sc_impcntl rcds belonging to the same app, but you should not use the same directory for different apps. You may wish to use an application subdirectory for this such as: /usr/4capp/Imports or you may prefer something like: /tmp/Imports/appname This directory will be created the first time you try to import a mod, but depending on the way you have permissions set on your system, it could be created with the wrong permissions. You need to verify that the permissions are correct and that any user who will import mods has sufficient privileges to create subdirectories, create files, read files, and write files in that directory. scic_usr - A convenience that combined with scic_epwd allows you to run the import without being prompted for a logon to the remote machine. scic_epwd - Encrypted PWD (use encode4c &lt;code&gt;&amp;lt;pwd&amp;gt;&lt;/code&gt; to get and encrypted pwd) Do not use this unless your machines are completely isolated from the rest of the world. The reason a logon is required is that the local machine must start a 4ccl local process that connects to the remote machine 4csrvr and run 4C programs that export the mod and copy the mod export file to the local machine. If you do not specify Usr/EPwd, then every time you try to import a mod you will be prompted for a usr/pwd combination. After configuring your app to use remote mod import, you should test it with a safe mod with only a single unimportant temp program or file that has no effect on the running of your application.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Remote Mod Import - Troubleshooting&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-remote-mod-import---troubleshooting&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-remote-mod-import---troubleshooting&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;h2&gt;4C Remote Mod Import - Troubleshooting&lt;span class="hx:absolute hx:-mt-20" id="4c-remote-mod-import---troubleshooting"&gt;&lt;/span&gt;
+&lt;a href="#4c-remote-mod-import---troubleshooting" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;Problem: You see the wrong list of mods when viewing the remote mods Check the connection string in the sc_import file and make sure that the App=&lt;code&gt;&amp;lt;app&amp;gt;&lt;/code&gt; is specified exactly as it is in the _4CSRVRCONFIG file on the remote machine. Check and make sure that the user running 4cfs on the remote machine has permission to run the application specified in the sc_impcntl connection string. This user could be the default user specified in the _4CSRVRCONFIG on the remote machine.&lt;/li&gt;
-&lt;/ol&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C Version Control</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/vc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/vc/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Version 2.3 of June 1994 implements version control for 4C file
+&lt;/ol&gt;</description></item><item><title>4C Version Control</title><link>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/vc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/vc/</guid><description>
+&lt;p&gt;Version 2.3 of June 1994 implements version control for 4C file
 and program specifications.
 Using 4C Version Control, you can:&lt;/p&gt;
 &lt;ol&gt;
@@ -173,16 +123,16 @@ In particular, branching off is not supported.
 and a level number.
 This will be explained in detail later.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Requirements&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---requirements&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---requirements&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to use 4C Version Control, you need:&lt;/p&gt;
+&lt;h2&gt;4C Version Control - Requirements&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---requirements"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---requirements" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to use 4C Version Control, you need:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Either SCCS or RCS. Most SystemV implementations include SCCS as part of Unix development. RCS can be gotten from the Free Software Foundation (FSF) and is included in the 4C distribution tape. Please read the accompanying licence agreement from the FSF.&lt;/li&gt;
 &lt;li&gt;Support for long filenames. The name of the stored files will be program or file name + 2 characters.&lt;/li&gt;
 &lt;li&gt;The utility programs sed, diff, and awk. FSF implementations of theses utilities will be included at a later date.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Setting Up&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---setting-up&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---setting-up&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C Version Control is implemented on a per directory basis.
+&lt;h2&gt;4C Version Control - Setting Up&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---setting-up"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---setting-up" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C Version Control is implemented on a per directory basis.
 Each 4C specification directory can be set to use or not
 use version control.
 Each directory can also independently specify whether to use
@@ -206,8 +156,8 @@ It will probably be helpful to familiarize yourself with the files
 used by 4C version control as well as the files
 in the directories beneath $XLEXP/PROGRAM and $XLEXP/FILE first.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Files&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---files&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---files&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The following files are used by the Version Control System and are
+&lt;h2&gt;4C Version Control - Files&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---files"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---files" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The following files are used by the Version Control System and are
 regular ISAM files.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Uses one rcd with key &amp;ldquo;SC&amp;rdquo; to maintain next mod#. This rcd will be created if it does not exist, the first time you add a mod.&lt;/li&gt;
@@ -231,8 +181,8 @@ directories are also used.&lt;/p&gt;
 &lt;li&gt;The directory of output files for all SCCS or RCS cmds executed for a particular mod. Files in this directory will have a name scmNNNNN where NNNNN refers to a mod#. These files can be viewed with a regular text editor.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Work &amp;amp; Version Files&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---work--version-files&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---work--version-files&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C uses a shell script to facilitate all
+&lt;h2&gt;4C Version Control - Work &amp;amp; Version Files&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---work--version-files"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---work--version-files" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C uses a shell script to facilitate all
 RCS commands and SCCS commands.
 The shell script used for RCS is 4cRcs,
 and the shell script used for SCCS is
@@ -275,8 +225,8 @@ The VersionFile is only used for maintaining the changes to
 a program or file.
 The current version is always in the bootstrap files.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - CheckOut&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---checkout&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---checkout&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to modify a program or file definition now,
+&lt;h2&gt;4C Version Control - CheckOut&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---checkout"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---checkout" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to modify a program or file definition now,
 it must be checked out from RCS or SCCS.
 You check out a program or file by adding it to the
 appropriate mod.
@@ -304,8 +254,8 @@ In addition, each program or file on the mod
 allows multi line comments documenting the change.
 These comments are useful when running the mod reports.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Installing Changes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---installing-changes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---installing-changes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A program or file can be installed when the entire mod is installed
+&lt;h2&gt;4C Version Control - Installing Changes&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---installing-changes"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---installing-changes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A program or file can be installed when the entire mod is installed
 or individually.
 In either case,
 installing involves creating the WorkFile
@@ -318,8 +268,8 @@ This is accomplished thru bootstrap programs.
 All that you need to do is press the appropriate
 function key.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Checkpoints&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---checkpoints&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---checkpoints&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;It is possible to save changes to your
+&lt;h2&gt;4C Version Control - Checkpoints&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---checkpoints"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---checkpoints" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;It is possible to save changes to your
 program or file specs temporarily.
 This is done by checkpointing the file or program,
 or an entire mod.
@@ -341,8 +291,8 @@ you lose the last checkpoint for that file or program.
 Checkpoints are temporary,
 Installs are permanent.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - UndoingChanges&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---undoingchanges&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---undoingchanges&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C Version Control gives you several ways
+&lt;h2&gt;4C Version Control - UndoingChanges&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---undoingchanges"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---undoingchanges" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C Version Control gives you several ways
 to backout changes.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;For a program or file being edited, you can back out ALL changes to that file or program. This gets the previous version of the program or file from the VersionFile and imports it into the 4C spec files. This is called unediting. Unediting also unlocks the VersionFile and sets the mod# to blank in the sys.file_hdr or sys.program rcd. You can only unedit a program or file that is checked out and that has a VersionFile. If this is a new file or program, the VersionFile will not exist yet. Unediting is accomplished by specifying ALL changes to the undo dialog. If a program or file is unedited, it can be reedited, or deleted from the mod.&lt;/li&gt;
@@ -350,8 +300,8 @@ to backout changes.&lt;/p&gt;
 &lt;li&gt;Lastly, you can undo changes to a file or program by getting an earlier installed version of the file or program. In order to do this you MUST: Make sure the file or program is currently edited. Call up the GetOld dialog and select the version that you want to get. The file or program will remain edited until you install or unedit it. Install it. This will create a new version and will not delete any of the other installed versions.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Guide Lines&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---guide-lines&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---guide-lines&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C Version Control is not fool proof.
+&lt;h2&gt;4C Version Control - Guide Lines&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---guide-lines"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---guide-lines" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C Version Control is not fool proof.
 You can bypass the controls and defeat the purpose of using
 it.
 By following a few simple guidelines,
@@ -365,8 +315,8 @@ you should have no problems with it.&lt;/p&gt;
 &lt;li&gt;REMEMBER: Changes that are made but not ever put in the VersionFile WILL GET LOST.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Mod Export&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---mod-export&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---mod-export&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Installed mods can be exported to a single export file.
+&lt;h2&gt;4C Version Control - Mod Export&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---mod-export"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---mod-export" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Installed mods can be exported to a single export file.
 Multiple mods can be exported to the same export file
 as long as the export is done at the same time.
 Once a mod is exported,
@@ -407,29 +357,28 @@ There is no way to separate them.&lt;/p&gt;
 &lt;p&gt;From either sc.fm.active or sc.browse you can export a single
 mod.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Mod Import&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---mod-import&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---mod-import&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Once you have moved the mod export file to another system
+&lt;h2&gt;4C Version Control - Mod Import&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---mod-import"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---mod-import" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Once you have moved the mod export file to another system
 it can be imported using a shell script, scimport.
 For a list of options type:&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scimport -help&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scimport -help&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
-    aria-label=&#34;Copy code&#34;
-    data-copied-label=&#34;Copied!&#34;
-  &gt;
-    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The easiest way to use scimport is to first make sure
@@ -441,30 +390,29 @@ usually /usr/4c/lib.
 If the mods in the mod export file were installed and
 should be added to a new mod on the system they are being imported
 to then just enter the following cmd:&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scimport `&amp;lt;mexpfile&amp;gt;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scimport `&amp;lt;mexpfile&amp;gt;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
-    aria-label=&#34;Copy code&#34;
-    data-copied-label=&#34;Copied!&#34;
-  &gt;
-    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Multiple Machines&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---multiple-machines&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---multiple-machines&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;I will now describe two scenarios for maintaining your 4C source
+&lt;h2&gt;4C Version Control - Multiple Machines&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---multiple-machines"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---multiple-machines" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;I will now describe two scenarios for maintaining your 4C source
 on multiple machines.
 Both will work.
 The first is what I call a master/slave method.
@@ -555,16 +503,16 @@ multiple machines as long as for any one mod you follow the
 rules for the style you are using.
 You must NOT mix the two styles for the same mod.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Remote Mod Imports&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---remote-mod-imports&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---remote-mod-imports&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Another method of moving mods between machine/apps
+&lt;h2&gt;4C Version Control - Remote Mod Imports&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---remote-mod-imports"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---remote-mod-imports" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Another method of moving mods between machine/apps
 is to use
-&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/&#34;&gt;4C Remote Mod Imports&lt;/a&gt;
+&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/versioncontrol/rmodimport/"&gt;4C Remote Mod Imports&lt;/a&gt;
 You will still need to have a concept of Master and slave machines
 and understand what to do when conflicts occur,
 but it is much easier to use.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Mod Import Conflicts&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---mod-import-conflicts&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---mod-import-conflicts&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Following is a list of possible conflicts or errors
+&lt;h2&gt;4C Version Control - Mod Import Conflicts&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---mod-import-conflicts"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---mod-import-conflicts" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Following is a list of possible conflicts or errors
 that you can get while running scimport and how to resolve them.
 If you get warnings,
 you will be allowed to save the warnings and
@@ -594,8 +542,8 @@ the mod.&lt;/p&gt;
 &lt;li&gt;FATAL ERROR: &lt;code&gt;&amp;lt;name&amp;gt;&lt;/code&gt; is already being edited means neither merge nor overwrite was specified, and the file/prog is already being edited on the system being imported to. You will not be allowed to import your mod if you encounter this error.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Version Control - Using&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-version-control---using&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-version-control---using&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Once you set up the 4C Version Control, the default development menu
+&lt;h2&gt;4C Version Control - Using&lt;span class="hx:absolute hx:-mt-20" id="4c-version-control---using"&gt;&lt;/span&gt;
+&lt;a href="#4c-version-control---using" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Once you set up the 4C Version Control, the default development menu
 is the Source Code Control Menu.
 You can get to the System Menu from here, but I hope it will
 be convenient to do most of your development work from here.
@@ -628,10 +576,4 @@ Pressing the &lt;code&gt;&amp;lt;add&amp;gt;&lt;/code&gt; key allows adding a ne
 Once a program is part of a mod,
 it cannot be part of another mod until it has been installed,
 or unedited.
-It can be installed separately or with the entire mod.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-  </channel>
-</rss>
+It can be installed separately or with the entire mod.&lt;/p&gt;</description></item></channel></rss>

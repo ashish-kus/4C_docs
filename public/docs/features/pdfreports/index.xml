@@ -1,46 +1,9 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>4C Language Docs – 4C PDFReport</title>
-    <link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/</link>
-    <description>Recent content in 4C PDFReport on 4C Language Docs</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	  <atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-    <item>
-      <title>4C PDFReport - Most Recent Changes</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-changes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-changes/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/&#34;&gt;PDFReport Home&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;04 March 2025&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;04-march-2025&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#04-march-2025&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;Additional Notes&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;additional-notes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#additional-notes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Initial Release and Documentation&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C PDFReport - Example Programs</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-examples/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-examples/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/&#34;&gt;PDFReport Home&lt;/a&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C PDFReport</title><link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/</link><description>Recent content in 4C PDFReport on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/index.xml" rel="self" type="application/rss+xml"/><item><title>4C PDFReport - Most Recent Changes</title><link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-changes/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/"&gt;PDFReport Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;04 March 2025&lt;span class="hx:absolute hx:-mt-20" id="04-march-2025"&gt;&lt;/span&gt;
+&lt;a href="#04-march-2025" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;Additional Notes&lt;span class="hx:absolute hx:-mt-20" id="additional-notes"&gt;&lt;/span&gt;
+&lt;a href="#additional-notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Initial Release and Documentation&lt;/p&gt;</description></item><item><title>4C PDFReport - Example Programs</title><link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-examples/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-examples/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/"&gt;PDFReport Home&lt;/a&gt;
 The simplest example PDFReport program is one that displays on a single page without using
 any dynamic positioning of fields.
 All fields are part of a single main PDFReport and the report is run from the
@@ -80,39 +43,13 @@ the Program Characteristics, Display Fields and PCLs.&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;There is a lot more that can be done with a PDFReport than just the single page absolute positioning of pdfr.demo.1&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C PDFReports - Issues/Bugs</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-issues/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-issues/</guid>
-      <description>
-        
-        
-        &lt;ul&gt;
+&lt;/ul&gt;</description></item><item><title>4C PDFReports - Issues/Bugs</title><link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-issues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-issues/</guid><description>
+&lt;ul&gt;
 &lt;li&gt;xlexport and xlimport do not read/update sys.pdf_font or sys.pdf_dftype. It is up to the application to make sure any needed sys.pdf_font or sys.pdf_dftype entries exist on the systems that PDFReport programs are imported to. This is true for copy and paste of 4C programs also.&lt;/li&gt;
 &lt;li&gt;Currently the only type of image supported in PDFReports is jpeg. The fullpath of the image must end in one of jpeg, jpg, jpeg2, jpg2, jp2 or jpx with case not significant.&lt;/li&gt;
 &lt;li&gt;It currently is not possible to determine the size of an image so you should always specify the width/height of the image in the row/col width and height of the display field. If necessary, the the image will be shrunk/stretched to fit the specified size.&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C PDFReport - Overview</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-ov/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-ov/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/&#34;&gt;PDFReport Home&lt;/a&gt;
+&lt;/ul&gt;</description></item><item><title>4C PDFReport - Overview</title><link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-ov/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-ov/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/"&gt;PDFReport Home&lt;/a&gt;
 4C Server version 7.0 allows an application to define a report that will be saved as a
 PDF document or displayed immediately in a PDF Document Viewer program.
 All 4C programs with a class of PDFReport will generate a PDF document that makes use
@@ -135,21 +72,8 @@ of the programs defined reports and display fields.&lt;/p&gt;
 &lt;li&gt;Similar to 4C display fields meant to display on a Windows/MacOS PC the PDFReport display fields have a PDF Dfield Type associated with them that is used to determine some defaults such as the font used, the ptsz used, how to position the display field in its &amp;ldquo;rectangle&amp;rdquo;, underline style, if any, and any fg/bg and border colors.&lt;/li&gt;
 &lt;li&gt;You can think of a PDFReport display field as occupying an outer rectangle and an inner rectangle on the page. The outer rectangle encompasses the inner rectangle and adds a border area to it. The border area even when not drawn has a width and a height of whatever the line width for the page is defined as. The default PDFReport line width is initially set at .75 pts but it can be overriden by the 4C program that starts the PDFReport as well as by any page that is added to the PDFReport. The inner rectangle is either the exact size that is specified by width and height of the display field or if not specified it is calculated to be the width/height of the text being displayed. Neither rectangle takes into account any top or side label. Those labels, when used are positioned either above the outer rectangle or to the left of the outer rectangle.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-start/&#34;&gt;Next - Getting Started&lt;/a&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C PDFReport - Getting Started</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-start/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-start/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/&#34;&gt;PDFReport Home&lt;/a&gt;
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-start/"&gt;Next - Getting Started&lt;/a&gt;&lt;/p&gt;</description></item><item><title>4C PDFReport - Getting Started</title><link>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-start/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/"&gt;PDFReport Home&lt;/a&gt;
 To get started using the 4C PDFReport class to generate PDF documents it is important
 to get familiar with several concepts and changes to some 4C system files and programs
 as well as some new Global and System PCLs&lt;/p&gt;
@@ -159,10 +83,4 @@ as well as some new Global and System PCLs&lt;/p&gt;
 &lt;li&gt;The following Global PCLs can be used in PDFReport programs sys.pdf_drawgrid() - This will draw a grid on the current PDFReport page using the current PDF page settings. The 4cSys program for viewing one report of a PDFReport program allows you to specify whether to draw a grid or not. This should be helpful during development. sys.pdf_save(&lt;code&gt;&amp;lt;savetopath&amp;gt;&lt;/code&gt;) - Save the current PDFReport to the fullpath specified in savetopath. After saving the PDFReport can still be modified and have more pages added to it. sys.pdf_view() - Copy the current PDFReport to the client FC_SESSION directory and open call sys.cl_open() to open it in the client systems PDF viewer program. sys.pdfinfo_view() - Display info about the current PDFReport program. This may be useful in debugging.&lt;/li&gt;
 &lt;li&gt;The following System PCLs can be used in PDFReport programs sys.run_rpt sys.pdf_getinfo sys.pdf_getoption sys.pdf_setoption sys.pdf_drawline sys.pdf_drawrect sys.pdf_drawimage sys.pdf_addpage sys.pdf_setfont sys.pdf_textwrite sys.pdf_setdfrgb&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-examples/&#34;&gt;Next - PDFReport examples&lt;/a&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/pdfreports/pdfrpt-examples/"&gt;Next - PDFReport examples&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

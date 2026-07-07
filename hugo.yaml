@@ -156,7 +156,7 @@ params:
       #               pages of full content this can noticeably slow the
       #               browser. Try `forward` first; switch to `full` only
       #               if users complain they can't find mid-word matches.
-      tokenize: forward
+      tokenize: strict
   # To EXCLUDE a page from the search index, put this in its front matter:
   #   excludeSearch: true
 

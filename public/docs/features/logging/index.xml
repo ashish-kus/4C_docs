@@ -1,51 +1,14 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>4C Language Docs – 4C Logging</title>
-    <link>https://github.com/ashish-kus/4C_docs/docs/features/logging/</link>
-    <description>Recent content in 4C Logging on 4C Language Docs</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	  <atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/logging/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-    <item>
-      <title>4C Logging Change Log</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/logging/changes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/logging/changes/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/logging/&#34;&gt;4C Logging Home&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;26 August 2020&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;26-august-2020&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#26-august-2020&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C Logging</title><link>https://github.com/ashish-kus/4C_docs/docs/features/logging/</link><description>Recent content in 4C Logging on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://github.com/ashish-kus/4C_docs/docs/features/logging/index.xml" rel="self" type="application/rss+xml"/><item><title>4C Logging Change Log</title><link>https://github.com/ashish-kus/4C_docs/docs/features/logging/changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/logging/changes/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/logging/"&gt;4C Logging Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;26 August 2020&lt;span class="hx:absolute hx:-mt-20" id="26-august-2020"&gt;&lt;/span&gt;
+&lt;a href="#26-august-2020" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;4C File logging allows you to specify &amp;ldquo;*&amp;rdquo; for the log detail filename and just a directory name for the external name of logged files making it easy to log all files in a directory. You can exclude files that you don&amp;rsquo;t want logged by specifying checking the &amp;ldquo;Ignore 4C Logging&amp;rdquo; chkbox (sys.fh_nologf = &amp;lsquo;y&amp;rsquo;) in the main file definition screen.&lt;/li&gt;
 &lt;li&gt;4C File logging allows using JISAM32 or JISAM64 for the log_idx file.&lt;/li&gt;
 &lt;li&gt;4C File logging allows using eiher a &amp;ldquo;Short&amp;rdquo; or &amp;ldquo;Long&amp;rdquo; naming convention for the log_data sequential files. The &amp;ldquo;Short&amp;rdquo; style will overwrite log_data files every 28 - 31 days depending on the month. The &amp;ldquo;Long&amp;rdquo; style is never automatically overwritten but should still be purged regularly.&lt;/li&gt;
 &lt;li&gt;The date and time used to key the log_idx and log_idx64 files are UTC date and time. This fixes the problem of updates happening during the fall switch to std time. The 4C program that displays the log details converts this time to local time for display.&lt;/li&gt;
-&lt;li&gt;Though not new, there is a program logging facility that has only recently been documented. See &lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/logging/prlogov/&#34;&gt;4C program logging overview&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C Logging - Intro</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/logging/logintro/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/logging/logintro/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/logging/&#34;&gt;4C Logging Home&lt;/a&gt;
+&lt;li&gt;Though not new, there is a program logging facility that has only recently been documented. See &lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/logging/prlogov/"&gt;4C program logging overview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>4C Logging - Intro</title><link>https://github.com/ashish-kus/4C_docs/docs/features/logging/logintro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/logging/logintro/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/logging/"&gt;4C Logging Home&lt;/a&gt;
 4C version 4.0.3 and higher allows you to log
 changes to your data files.
 The reason for introducing the logging capability
@@ -61,8 +24,8 @@ log can be used including the following:&lt;/p&gt;
 &lt;li&gt;Undo/Redo of logged changes&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Logging - Files&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-logging---files&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-logging---files&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The following files are involved
+&lt;h2&gt;4C Logging - Files&lt;span class="hx:absolute hx:-mt-20" id="4c-logging---files"&gt;&lt;/span&gt;
+&lt;a href="#4c-logging---files" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The following files are involved
 in 4C logging and must exist only in the XLSYSTEM
 directory and not in any application directory&lt;/p&gt;
 &lt;ul&gt;
@@ -92,8 +55,8 @@ You can change those permissions but any process that
 updates a file that is being logged must have permission
 to update the log as well.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Logging - Programs&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-logging---programs&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-logging---programs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The lh.fm program is the main log definition program.
+&lt;h2&gt;4C Logging - Programs&lt;span class="hx:absolute hx:-mt-20" id="4c-logging---programs"&gt;&lt;/span&gt;
+&lt;a href="#4c-logging---programs" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The lh.fm program is the main log definition program.
 You can access this program from the sys.menu.tv program under
 Environment/Log Maintenance.
 The display fields shown are:&lt;/p&gt;
@@ -147,20 +110,20 @@ Environment/Log Errors.
 You should run this program regularly until
 you are sure your logging is working properly.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Logging - System PCLs&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-logging---system-pcls&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-logging---system-pcls&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C provides several PCLs for reading
+&lt;h2&gt;4C Logging - System PCLs&lt;span class="hx:absolute hx:-mt-20" id="4c-logging---system-pcls"&gt;&lt;/span&gt;
+&lt;a href="#4c-logging---system-pcls" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4C provides several PCLs for reading
 a log.
 They are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/logopen/&#34;&gt;sys.log_open()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/logclose/&#34;&gt;sys.log_close()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/logseek/&#34;&gt;sys.log_seek()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/logread/&#34;&gt;sys.log_read()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/loggetattr/&#34;&gt;sys.log_getattr()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/loggetname/&#34;&gt;sys.log_getname()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/loggetval/&#34;&gt;sys.log_getval()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/logcopyflds/&#34;&gt;sys.log_copyflds()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/syspcls/logerror/&#34;&gt;sys.log_error()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/syspcls/logopen/"&gt;sys.log_open()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/syspcls/logclose/"&gt;sys.log_close()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/syspcls/logseek/"&gt;sys.log_seek()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/syspcls/logread/"&gt;sys.log_read()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/syspcls/loggetattr/"&gt;sys.log_getattr()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/syspcls/loggetname/"&gt;sys.log_getname()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/syspcls/loggetval/"&gt;sys.log_getval()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/syspcls/logcopyflds/"&gt;sys.log_copyflds()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/syspcls/logerror/"&gt;sys.log_error()&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;When the above PCLs return an error, sys.errno
 will be set to one of the following:&lt;/p&gt;
@@ -179,8 +142,8 @@ will be set to one of the following:&lt;/p&gt;
 to implement a Data Replication Application
 between different 4C Servers.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;4C Logging - Misc&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4c-logging---misc&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#4c-logging---misc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2&gt;4C Logging - Misc&lt;span class="hx:absolute hx:-mt-20" id="4c-logging---misc"&gt;&lt;/span&gt;
+&lt;a href="#4c-logging---misc" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Because the log_data and log_idx files can get large, you should make sure you keep logs only as long as necessary and run the log.purge.1 program regularly.&lt;/li&gt;
 &lt;li&gt;If you are using the log.purge.run program to purge log data, you must verify the doit() PCL. It used to not loop, then at one time it looped continuously without sleeping. The PCL should look like this: &lt;code&gt;while(1) { if (curdate != sys.cur_date) { curdate = sys.cur_date; sys.push_prog(&amp;quot;log.purge.1&amp;quot;); } sleep(3600); }&lt;/code&gt; This has been fixed in 4C Server Version 4.4.6-3 and higher&lt;/li&gt;
 &lt;li&gt;Multiple log definitions are allowed&lt;/li&gt;
@@ -196,21 +159,8 @@ between different 4C Servers.&lt;/p&gt;
 &lt;li&gt;It is very important to make sure your filesystem has enough space for your log files.&lt;/li&gt;
 &lt;li&gt;Even when BeforeImage is selected, it is not always possible to know the BeforeImage rcd. The most common reasons for this are: The application uses F_NODEBLOCK when reading a rcd The Application calls sys.upd_file() without previously calling sys.read_file(). An external program, like the 4c utilities, use FCupdfile() without calling FCreadfile()&lt;/li&gt;
 &lt;li&gt;Currently there is no program that can be used for crash recovery.&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C Program Logging - Overview</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/features/logging/prlogov/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/features/logging/prlogov/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/features/logging/&#34;&gt;4C Logging Home&lt;/a&gt;
+&lt;/ul&gt;</description></item><item><title>4C Program Logging - Overview</title><link>https://github.com/ashish-kus/4C_docs/docs/features/logging/prlogov/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/features/logging/prlogov/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/features/logging/"&gt;4C Logging Home&lt;/a&gt;
 The program logging facility allows you to keep a log of who ran specific programs and the values
 of application specific file variables at specific program states.
 This makes it easy to meet auditing requirements without needing to change any program.
@@ -250,10 +200,4 @@ menu.
 Or, you can just run lprogh.fm.&lt;/p&gt;
 &lt;p&gt;Program logging changes take effect only when 4C Shared memory is initialized,
 that is each time all 4C processes have ended and a new one is started.
-It is not necessary to restart the 4csrvrd process as it does not use 4C shared mem.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-  </channel>
-</rss>
+It is not necessary to restart the 4csrvrd process as it does not use 4C shared mem.&lt;/p&gt;</description></item></channel></rss>

@@ -1,113 +1,63 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>4C Language Docs – 4C Environment Variables and Config Files</title>
-    <link>https://github.com/ashish-kus/4C_docs/docs/config/</link>
-    <description>Recent content in 4C Environment Variables and Config Files on 4C Language Docs</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	  <atom:link href="https://github.com/ashish-kus/4C_docs/docs/config/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-    <item>
-      <title>4C.info</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/config/4cinfo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/config/4cinfo/</guid>
-      <description>
-        
-        
-        &lt;p&gt;The 4C.info file resides in the HOME_4C directory.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>4C Language Docs – 4C Environment Variables and Config Files</title><link>https://github.com/ashish-kus/4C_docs/docs/config/</link><description>Recent content in 4C Environment Variables and Config Files on 4C Language Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://github.com/ashish-kus/4C_docs/docs/config/index.xml" rel="self" type="application/rss+xml"/><item><title>4C.info</title><link>https://github.com/ashish-kus/4C_docs/docs/config/4cinfo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/config/4cinfo/</guid><description>
+&lt;p&gt;The 4C.info file resides in the HOME_4C directory.&lt;/p&gt;
 &lt;p&gt;It is used by the 4C install process to know where
 to install files and how to set the permissions
 on installed files.&lt;/p&gt;
 &lt;p&gt;It is also used by 4c server processes
 to set the default values for some
 env vars if _4CSRVRCONFIG does not set
-them.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>4C Env And Config Files Change Log</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/config/changes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/config/changes/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;22 October 2011&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;22-october-2011&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#22-october-2011&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.0.6 and later&lt;/p&gt;
+them.&lt;/p&gt;</description></item><item><title>4C Env And Config Files Change Log</title><link>https://github.com/ashish-kus/4C_docs/docs/config/changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/config/changes/</guid><description>
+&lt;h2&gt;22 October 2011&lt;span class="hx:absolute hx:-mt-20" id="22-october-2011"&gt;&lt;/span&gt;
+&lt;a href="#22-october-2011" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 5.0.6 and later&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;You can set the &amp;ldquo;Path&amp;rdquo; option in the _4CSRVRCONFIG file to indicate that all following applications should be grouped together under the same menu under Application submenu.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;01 March 2009&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;01-march-2009&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#01-march-2009&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.6.3 and higher&lt;/p&gt;
+&lt;h2&gt;01 March 2009&lt;span class="hx:absolute hx:-mt-20" id="01-march-2009"&gt;&lt;/span&gt;
+&lt;a href="#01-march-2009" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.6.3 and higher&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The follwing are new &lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/config/cl-pref/&#34;&gt;4C Client Preferences&lt;/a&gt; DisableTypeAhead - Disables TypeAhead buffering. ShowUser - Displays authenticated username in the layout title. ShowDate - Displays current date in the layout title. ShowTime - Displays current time in the layout title. PSHDrConnInfo - Prints connection info in the hdr of a PrintScreen page. PSHdrUser - Prints authenticated username in the hdr of a PrintScreen page. PSHdrDate - Prints current date in the hdr of a PrintScreen page. PSHdrTime - Prints current time in the hdr of a PrintScreen page. PSHdrLayoutTitle - Prints the layout title in the hdr of a PrintScreen page.&lt;/li&gt;
+&lt;li&gt;The follwing are new &lt;a href="https://github.com/ashish-kus/4C_docs/docs/config/cl-pref/"&gt;4C Client Preferences&lt;/a&gt; DisableTypeAhead - Disables TypeAhead buffering. ShowUser - Displays authenticated username in the layout title. ShowDate - Displays current date in the layout title. ShowTime - Displays current time in the layout title. PSHDrConnInfo - Prints connection info in the hdr of a PrintScreen page. PSHdrUser - Prints authenticated username in the hdr of a PrintScreen page. PSHdrDate - Prints current date in the hdr of a PrintScreen page. PSHdrTime - Prints current time in the hdr of a PrintScreen page. PSHdrLayoutTitle - Prints the layout title in the hdr of a PrintScreen page.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;12 June 2008&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;12-june-2008&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#12-june-2008&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.8 and higher&lt;/p&gt;
+&lt;h2&gt;12 June 2008&lt;span class="hx:absolute hx:-mt-20" id="12-june-2008"&gt;&lt;/span&gt;
+&lt;a href="#12-june-2008" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.8 and higher&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;You can specify Client Timeouts as well as Server Timeouts in the XLCONFIG file. See: &lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/config/xlconfig/&#34;&gt;XLCONFIG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;You can specify Client Timeouts as well as Server Timeouts in the XLCONFIG file. See: &lt;a href="https://github.com/ashish-kus/4C_docs/docs/config/xlconfig/"&gt;XLCONFIG&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;26 March 2008&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;26-march-2008&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#26-march-2008&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.7 and higher&lt;/p&gt;
+&lt;h2&gt;26 March 2008&lt;span class="hx:absolute hx:-mt-20" id="26-march-2008"&gt;&lt;/span&gt;
+&lt;a href="#26-march-2008" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Version 4.4.7 and higher&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Env vars can be used in the directory path lists used in _4CSRVRCONFIG. For example you could use the following to specify a program path list for a particular application: &lt;code&gt;prog_lst=${HOME}/test1.d:${XLSYSTEM}&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;21 November 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;21-november-2007&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#21-november-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2&gt;21 November 2007&lt;span class="hx:absolute hx:-mt-20" id="21-november-2007"&gt;&lt;/span&gt;
+&lt;a href="#21-november-2007" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;You can specify ReconnectTimeout in the _4CSRVRCONFIG file. If set, you do not need to set AllowReconnect also.&lt;/li&gt;
-&lt;li&gt;You can modify the default values for FC_APPDATA(Unix only), FC_COMMONAPPDATA(Unix Only), FC_DOCUMENTS(Unix only), and FC_TEMP (Win32 and Unix) See: &lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/config/envvars/&#34;&gt;4C Environment Variables&lt;/a&gt; for details.&lt;/li&gt;
+&lt;li&gt;You can modify the default values for FC_APPDATA(Unix only), FC_COMMONAPPDATA(Unix Only), FC_DOCUMENTS(Unix only), and FC_TEMP (Win32 and Unix) See: &lt;a href="https://github.com/ashish-kus/4C_docs/docs/config/envvars/"&gt;4C Environment Variables&lt;/a&gt; for details.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;28 June 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;28-june-2007&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#28-june-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/config/cl-conn/&#34;&gt;Client Connection Files&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/config/cl-pref/&#34;&gt;Client Preferences Files&lt;/a&gt;&lt;/li&gt;
+&lt;h2&gt;28 June 2007&lt;span class="hx:absolute hx:-mt-20" id="28-june-2007"&gt;&lt;/span&gt;
+&lt;a href="#28-june-2007" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/config/cl-conn/"&gt;Client Connection Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ashish-kus/4C_docs/docs/config/cl-pref/"&gt;Client Preferences Files&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;01 May 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;01-may-2007&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#01-may-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2&gt;01 May 2007&lt;span class="hx:absolute hx:-mt-20" id="01-may-2007"&gt;&lt;/span&gt;
+&lt;a href="#01-may-2007" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Env var FC_SESSION will be set for both 4C server and 4C client processes, version 4.4.4 and higher. It will be different for each 4C process and will be deleted at the end of the session.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;05 March 2007&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;05-march-2007&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#05-march-2007&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;The following env vars will be guaranteed to be set for both clients and servers running Version 4.4.2 or higher. FC_APPDATA FC_COMMONAPPDATA FC_DOCUMENTS FC_HOME FC_TEMP See &lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/config/envvars/&#34;&gt;EnvVars&lt;/a&gt; for more details.&lt;/li&gt;
+&lt;h2&gt;05 March 2007&lt;span class="hx:absolute hx:-mt-20" id="05-march-2007"&gt;&lt;/span&gt;
+&lt;a href="#05-march-2007" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The following env vars will be guaranteed to be set for both clients and servers running Version 4.4.2 or higher. FC_APPDATA FC_COMMONAPPDATA FC_DOCUMENTS FC_HOME FC_TEMP See &lt;a href="https://github.com/ashish-kus/4C_docs/docs/config/envvars/"&gt;EnvVars&lt;/a&gt; for more details.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;18 December 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;18-december-2006&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#18-december-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2&gt;18 December 2006&lt;span class="hx:absolute hx:-mt-20" id="18-december-2006"&gt;&lt;/span&gt;
+&lt;a href="#18-december-2006" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;There are 2 new options you can set in the _4CSRVRCONFIG file. They are: AllowReconnect - Set this to True to allow clients to reconnect to the same 4c srvr process if the network connection is lost. ContinueWork - Set this to true to allow 4C programs to continue running when the client is no longer there.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;27 November 2006&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;27-november-2006&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#27-november-2006&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;There is a little info on how to configure the 4C shared memory in &lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/config/sysmem/&#34;&gt;Configuring 4C Shared Memory&lt;/a&gt;&lt;/li&gt;
+&lt;h2&gt;27 November 2006&lt;span class="hx:absolute hx:-mt-20" id="27-november-2006"&gt;&lt;/span&gt;
+&lt;a href="#27-november-2006" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;There is a little info on how to configure the 4C shared memory in &lt;a href="https://github.com/ashish-kus/4C_docs/docs/config/sysmem/"&gt;Configuring 4C Shared Memory&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;05 July 2005&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;05-july-2005&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#05-july-2005&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2&gt;05 July 2005&lt;span class="hx:absolute hx:-mt-20" id="05-july-2005"&gt;&lt;/span&gt;
+&lt;a href="#05-july-2005" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;You can specify MinClientVersion in the the application section of the _4CSRVRCONFIG file.&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Client Connections</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/config/cl-conn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/config/cl-conn/</guid>
-      <description>
-        
-        
-        &lt;p&gt;For 4C Client Versions 4.4.4 and higher,
+&lt;/ul&gt;</description></item><item><title>Client Connections</title><link>https://github.com/ashish-kus/4C_docs/docs/config/cl-conn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/config/cl-conn/</guid><description>
+&lt;p&gt;For 4C Client Versions 4.4.4 and higher,
 connection info is stored in one or more connection files
 rather than in the windows registry.
 These files are simple text files that can be edited with a text editor
@@ -128,211 +78,196 @@ The format of the connection text file is as follows:&lt;/p&gt;
 but if you need to store connection info for hundreds of users,
 it will be worthwhile to organize this file a bit.
 Here&amp;rsquo;s an example of a simple connection file:&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 4CClient Connections
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name Global
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection fedora4c
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.16,Type=TCP,Port=1414
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection localhost
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=localhost,Type=TCP,Port=1412
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kevin&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 4CClient Connections
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Name Global
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection fedora4c
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=10.0.0.16,Type=TCP,Port=1414
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection localhost
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=localhost,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=kevin&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
-    aria-label=&#34;Copy code&#34;
-    data-copied-label=&#34;Copied!&#34;
-  &gt;
-    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Here&amp;rsquo;s a little more complicated one:&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;span class="lnt"&gt;43
+&lt;/span&gt;&lt;span class="lnt"&gt;44
+&lt;/span&gt;&lt;span class="lnt"&gt;45
+&lt;/span&gt;&lt;span class="lnt"&gt;46
+&lt;/span&gt;&lt;span class="lnt"&gt;47
+&lt;/span&gt;&lt;span class="lnt"&gt;48
+&lt;/span&gt;&lt;span class="lnt"&gt;49
+&lt;/span&gt;&lt;span class="lnt"&gt;50
+&lt;/span&gt;&lt;span class="lnt"&gt;51
+&lt;/span&gt;&lt;span class="lnt"&gt;52
+&lt;/span&gt;&lt;span class="lnt"&gt;53
+&lt;/span&gt;&lt;span class="lnt"&gt;54
+&lt;/span&gt;&lt;span class="lnt"&gt;55
+&lt;/span&gt;&lt;span class="lnt"&gt;56
+&lt;/span&gt;&lt;span class="lnt"&gt;57
+&lt;/span&gt;&lt;span class="lnt"&gt;58
+&lt;/span&gt;&lt;span class="lnt"&gt;59
+&lt;/span&gt;&lt;span class="lnt"&gt;60
+&lt;/span&gt;&lt;span class="lnt"&gt;61
+&lt;/span&gt;&lt;span class="lnt"&gt;62
+&lt;/span&gt;&lt;span class="lnt"&gt;63
+&lt;/span&gt;&lt;span class="lnt"&gt;64
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 4CClient Connections
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name Private
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Path /Main
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection fedora4c
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.16,Type=TCP,Port=1414
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection 4cDemoMachine
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=4chelp.com,Type=TCP,Port=1412
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Separator
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Path /Trafxs/System1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection Production
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.65,Type=TCP,Port=1412
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=trafxs
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Path /Trafxs/System2
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection &amp;#34;Test&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=test1,Type=TCP,Port=1412
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=trafxs
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection &amp;#34;Production&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=prod1,Type=TCP,Port=1412
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=trafxs
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Path /Main
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection fedora4c-dsl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=206.228.139.110,Type=TCP,Port=1416
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection centos4c
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.17,Type=TCP,Port=1412
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection fc60
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.60,Type=TCP,Port=1412
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection vista-23
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.23,Type=TCP,Port=1412
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kevin
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection localhost
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=localhost,Type=TCP,Port=1412
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kevin
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connection centos4c-dev
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Machine=10.0.0.17,Type=TCP,Port=1414
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version=444
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usr=kjenglish
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ping=300&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 4CClient Connections
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Name Private
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Path /Main
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection fedora4c
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=10.0.0.16,Type=TCP,Port=1414
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection 4cDemoMachine
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=4chelp.com,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Separator
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Path /Trafxs/System1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection Production
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=10.0.0.65,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=trafxs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Path /Trafxs/System2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection &amp;#34;Test&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=test1,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=trafxs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection &amp;#34;Production&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=prod1,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=trafxs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Path /Main
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection fedora4c-dsl
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=206.228.139.110,Type=TCP,Port=1416
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection centos4c
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=10.0.0.17,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection fc60
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=10.0.0.60,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection vista-23
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=10.0.0.23,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=kevin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection localhost
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=localhost,Type=TCP,Port=1412
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=kevin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection centos4c-dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Machine=10.0.0.17,Type=TCP,Port=1414
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Version=444
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usr=kjenglish
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Ping=300&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
-    aria-label=&#34;Copy code&#34;
-    data-copied-label=&#34;Copied!&#34;
-  &gt;
-    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Client Preferences</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/config/cl-pref/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/config/cl-pref/</guid>
-      <description>
-        
-        
-        &lt;p&gt;4C Client version 4.4.4 and higher stores client preferences in text files
+&lt;/div&gt;</description></item><item><title>Client Preferences</title><link>https://github.com/ashish-kus/4C_docs/docs/config/cl-pref/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/config/cl-pref/</guid><description>
+&lt;p&gt;4C Client version 4.4.4 and higher stores client preferences in text files
 rather than in the clseqf.sxl file.
 There are two client preferences file.
 Both are text files that can be easily edited with a text editor
@@ -374,21 +309,8 @@ The preferences file has the following format:&lt;/p&gt;
 &lt;li&gt;MaxInstanceOverride - This is an All Users preference only. If set, then this is the max number of w4ccl sessions that any one user can run no matter how high they set their own MaxInstances preference.&lt;/li&gt;
 &lt;li&gt;WarnAfter - This is the number of w4ccl sessions you are allowed to run per user before getting a warning that there are alread so many sessions running. It defaults to 1.&lt;/li&gt;
 &lt;li&gt;SysAddr - This is a global preference only. There should be no reason to change this preference, so leave it alone unless you really know what you are doing. It is the address that 4cclients will attach their shared memory at. Here are some possible values: -2 - Use the operating system default address. Only use this if the only client you run is w4ccl. If you run any other 4c clients, such as wpnlsp, wpcled, or 4ccl it will probably cause conflicts . -1 - Disable using shared memory. 0 - Let 4C determine where memory should be attached. Currently this is at 200M and works on all systems tested. &amp;gt; 0 and &amp;lt;= 10 - Ignored - same as 0 &amp;gt; 10 - Then attach the shared mem at &lt;code&gt;&amp;lt;n&amp;gt;&lt;/code&gt; * 1M. If you specify 20, then the shared mem segment will be attached at address: 0x01400000. Be careful changing this parameter. Setting it improperly may prevent w4ccl from being able to run. If this happens, then use notepad to change it, or start w4ccl with the &amp;ldquo;&amp;ndash;noshare&amp;rdquo; option.&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Environment Variables</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/config/envvars/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/config/envvars/</guid>
-      <description>
-        
-        
-        &lt;p&gt;The following are environment variables used by 4C.&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>Environment Variables</title><link>https://github.com/ashish-kus/4C_docs/docs/config/envvars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/config/envvars/</guid><description>
+&lt;p&gt;The following are environment variables used by 4C.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;HOME_4C - This must be set in order to install 4C. It is the name of the main 4C system directory. It is the home of the 4C.info file This should be set by the script that starts the 4C Server Daemon process. It should also be set in _4CSRVRCONFIG.&lt;/li&gt;
 &lt;li&gt;_4CSRVRCONFIG - The name of the 4C Server Config file. This should be set by the script that starts the 4C Server Daemon process.&lt;/li&gt;
@@ -437,21 +359,8 @@ They are:&lt;/p&gt;
 &lt;li&gt;FC_HOME - This the directory where 4C is installed and is the same as ${HOME_4C}.&lt;/li&gt;
 &lt;li&gt;FC_TEMP - This is the 4C temp directory and is ${HOME_4C}/tmp I&amp;rsquo;ve done my best to make sure that this directory has permissions set so that all users can create,read and delete files there on all systems running 4.4.2 or higher. This is a good directory to use for storing temp files. If you create a lot of temp files, you need to remember to remove them as well. There are lots of techniques for doing this. Dont leave 10000 files in FC_TEMP or anywhere else. You can change the default location of this directory by adding an Env line in the XLCONFIG file. This will work on any system.&lt;/li&gt;
 &lt;li&gt;FC_SESSION - This the directory that both 4C server and 4C client processes create at startup. Each process will have a different FC_SESSION. Only 4C server and 4C client versions 4.4.4 and higher create the session directory set the FC_SESION env var. On the client machine, it is currently used for storing non permanent images. It could be used by the application to store non permanent data on either the client or server. This directory is created everytime a 4c process starts and it is removed, along with all files in it, when the process exits.&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>JISCONFIG</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/config/jisconfig/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/config/jisconfig/</guid>
-      <description>
-        
-        
-        &lt;p&gt;JISCONFIG is used to define options necessary
+&lt;/ul&gt;</description></item><item><title>JISCONFIG</title><link>https://github.com/ashish-kus/4C_docs/docs/config/jisconfig/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/config/jisconfig/</guid><description>
+&lt;p&gt;JISCONFIG is used to define options necessary
 for JISAM to work.
 Use the isconfig program for setting these options.
 The most important thing to know about JISCONFIG
@@ -469,21 +378,8 @@ other than:&lt;/p&gt;
 &lt;li&gt;-F - Max number of open files per user&lt;/li&gt;
 &lt;li&gt;-b - Number of JISAM buffers&lt;/li&gt;
 &lt;li&gt;-B - Max number of buffers per file&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>_4CSRVRCONFIG</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/config/srvrcnf/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/config/srvrcnf/</guid>
-      <description>
-        
-        
-        &lt;p&gt;_4CSRVRCONFIG, named for the env var you use to name it,
+&lt;/ul&gt;</description></item><item><title>_4CSRVRCONFIG</title><link>https://github.com/ashish-kus/4C_docs/docs/config/srvrcnf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/config/srvrcnf/</guid><description>
+&lt;p&gt;_4CSRVRCONFIG, named for the env var you use to name it,
 is the main server side configuration file.
 There must be a unique _4CSRVRCONFIG file for each 4csrvrd daemon
 running.
@@ -509,10 +405,10 @@ The system options that can be specified are:&lt;/p&gt;
 &lt;li&gt;MaxProcesses - The maximum number of 4c server processes to allow to run from this _4CSRVRCONFIG. You should not need to specify this unless you expect to have more than 500 4c server processes running at a time.&lt;/li&gt;
 &lt;li&gt;DpyAlarm - How frequently should the 4csrvr check and see if client needs update of display fields. Nothing will be sent if no changes. The default, if not specified in _4CSRVRCONFIG, is 60 seconds.&lt;/li&gt;
 &lt;li&gt;ClUpdAlarm - How often should the 4csrvr force flushing data being sent to the client. The default is 60 seconds, unless specified in _4CSRVRCONFIG.&lt;/li&gt;
-&lt;li&gt;DataEncryption - This is meant to be a temporary measure to secure application data transmitted across the network. This can be one of: None - no encryption is done. 4C - A weak encryption scheme is used. Both client and server need to be version 4.0.6 or higher for this to work. If either is an earlier version, then no data is encrypted. Please note that the algorithm used for 4C data encryption is weak and is no where near current cryptograpy standards. There will be a strong encryption algorithm sometime in the future. This option is ignored when both Client and Server are at versions 4.4 or higher as long as one of the more secure encryption methods is specified in the &lt;a href=&#34;https://www.4csoftware.com/docs/Security/config.html&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Security Configuration.&lt;svg class=&#34;hx:inline hx:rtl:rotate-270 hx:align-baseline&#34; height=&#34;1em&#34; aria-hidden=&#34;true&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; viewBox=&#34;0 0 24 24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
- &lt;path d=&#34;m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;/&gt;
+&lt;li&gt;DataEncryption - This is meant to be a temporary measure to secure application data transmitted across the network. This can be one of: None - no encryption is done. 4C - A weak encryption scheme is used. Both client and server need to be version 4.0.6 or higher for this to work. If either is an earlier version, then no data is encrypted. Please note that the algorithm used for 4C data encryption is weak and is no where near current cryptograpy standards. There will be a strong encryption algorithm sometime in the future. This option is ignored when both Client and Server are at versions 4.4 or higher as long as one of the more secure encryption methods is specified in the &lt;a href="https://www.4csoftware.com/docs/Security/config.html"target="_blank" rel="noopener"&gt;Security Configuration.&lt;svg class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;path d="m9.1716 7.7574h7.0711m0 0v7.0711m0-7.0711-8.4853 8.4853" stroke-linecap="round" stroke-linejoin="round"/&gt;
 &lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;DefaultLogon - Can be specified to allow remote 4csrvrs to connect to a 4cfs process, without supplying a login and password, and read 4C files from this machine. Think twice before using this option and never use root. This option should not be used on version 4.4 or higher servers. Use methods found in &lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/security/&#34;&gt;4C Security&lt;/a&gt; instead.&lt;/li&gt;
+&lt;li&gt;DefaultLogon - Can be specified to allow remote 4csrvrs to connect to a 4cfs process, without supplying a login and password, and read 4C files from this machine. Think twice before using this option and never use root. This option should not be used on version 4.4 or higher servers. Use methods found in &lt;a href="https://github.com/ashish-kus/4C_docs/docs/security/"&gt;4C Security&lt;/a&gt; instead.&lt;/li&gt;
 &lt;li&gt;LogonSecurity - How 4C checks a logon. This can be one of: Default PAM MD5 Default, will work on most systems, except where PAM is used.&lt;/li&gt;
 &lt;li&gt;AllowReconnect - Set this to True to allow interactive clients to reconnect to the same 4csrvr process if a connection is lost due to network problems. In most cases the client will be able to reconnect and continue work exactly where they were. Other than the delay in reconnecting there will be no detrimental effect on either the 4client process of the 4c srvr process. In some cases a reconnect may not be possible and the client will exit as it always has. Both client and server need to be running version 4.4.1 or higher.&lt;/li&gt;
 &lt;li&gt;ReconnectTimeout - Number of seconds that a 4csrvr process should wait for a client to try to reconnect. The default is 120. If you set this option to a value &amp;lt;= 0, then AllowReconnect is automatically set to False. If you set this option to a value &amp;gt; 0, then AllowReconnect is automatically set to True. The default value for the timeout, if not set is 2 minutes.&lt;/li&gt;
@@ -533,21 +429,8 @@ of most of the above options.&lt;/p&gt;
 this file must be readable by any user allowed to connect to 4C.&lt;/p&gt;
 &lt;p&gt;For 4C Server versions 4.4 and higher,
 this file should only be readable by the root/administrator users.&lt;/p&gt;
-&lt;p&gt;It should not be writable except by the root/administrator users.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>SysMemory</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/config/sysmem/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/config/sysmem/</guid>
-      <description>
-        
-        
-        &lt;p&gt;The SysMemory option in XLCONFIG tells 4C how much
+&lt;p&gt;It should not be writable except by the root/administrator users.&lt;/p&gt;</description></item><item><title>SysMemory</title><link>https://github.com/ashish-kus/4C_docs/docs/config/sysmem/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/config/sysmem/</guid><description>
+&lt;p&gt;The SysMemory option in XLCONFIG tells 4C how much
 shared memory to allocate.
 SysMemory is used for storing data that
 may be needed my multiple processes at the
@@ -612,29 +495,28 @@ You can only get them right by monitoring
 new installations and by checking older ones as usage changes.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s one scenario to start with.&lt;/p&gt;
 &lt;p&gt;Set the SysMemory, Files, and Programs as follows:&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SysMemory 16384 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Files 1000
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Programs 100&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;SysMemory 16384 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Files 1000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Programs 100&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
-    aria-label=&#34;Copy code&#34;
-    data-copied-label=&#34;Copied!&#34;
-  &gt;
-    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;This allocates 16meg shared memory all as one segment,
@@ -657,46 +539,32 @@ you should run this program:&lt;/p&gt;
 &lt;li&gt;On any system experiencing mysterious crashes or strange 4C errors.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Another way of checking for 4C shared memory problems is to run:&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xlview -v
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;or
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xlview -V&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;xlview -v
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;or
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;xlview -V&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
-    title=&#34;Copy code&#34;
-    aria-label=&#34;Copy code&#34;
-    data-copied-label=&#34;Copied!&#34;
-  &gt;
-    &lt;div class=&#34;hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-&lt;div class=&#34;hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;from a command line.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>XLCONFIG</title>
-      <link>https://github.com/ashish-kus/4C_docs/docs/config/xlconfig/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://github.com/ashish-kus/4C_docs/docs/config/xlconfig/</guid>
-      <description>
-        
-        
-        &lt;p&gt;XLCONFIG is used to define the size
+&lt;p&gt;from a command line.&lt;/p&gt;</description></item><item><title>XLCONFIG</title><link>https://github.com/ashish-kus/4C_docs/docs/config/xlconfig/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://github.com/ashish-kus/4C_docs/docs/config/xlconfig/</guid><description>
+&lt;p&gt;XLCONFIG is used to define the size
 of shared memory and the number of
 file definitions and program definitions
 that will be kept in shared memory for
@@ -746,11 +614,5 @@ This may imply one or more of:&lt;/p&gt;
 &lt;p&gt;You should monitor a newly installed system by running this program
 during peak usage and also when system usage changes.&lt;/p&gt;
 &lt;p&gt;Please see
-&lt;a href=&#34;https://github.com/ashish-kus/4C_docs/docs/config/sysmem/&#34;&gt;Configuring 4C Shared Memory&lt;/a&gt;
-for some hints on best practices for configuring 4c shared memory&lt;/p&gt;
-
-      </description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;a href="https://github.com/ashish-kus/4C_docs/docs/config/sysmem/"&gt;Configuring 4C Shared Memory&lt;/a&gt;
+for some hints on best practices for configuring 4c shared memory&lt;/p&gt;</description></item></channel></rss>
